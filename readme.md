@@ -11,9 +11,6 @@
     </a>
 </p>
 
-## Installation
-
-
 ## Usage
 
 1. Install via your preferred package manager
@@ -75,4 +72,3 @@ require('rose-pine.functions').select_variant('moon')
 ## Thanks to
 
 - [mvllow](https://github.com/mvllow)
-
