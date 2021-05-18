@@ -32,6 +32,20 @@ require('rose-pine').set()
 colorscheme rose-pine
 ```
 
+## Gallery
+
+**Rosé Pine**
+
+![Rosé Pine with Neovim](assets/rose-pine.png)
+
+**Rosé Pine Moon**
+
+![Rosé Pine Moon with Neovim](assets/rose-pine-moon.png)
+
+**Rosé Pine Dawn**
+
+![Rosé Pine Dawn with Neovim](assets/rose-pine-dawn.png)
+
 ## Options
 
 ```lua
@@ -55,19 +69,17 @@ require('rose-pine.functions').toggle_variant({'base', 'dawn'})
 require('rose-pine.functions').select_variant('moon')
 ```
 
-## Gallery
+## Keymaps
 
-**Rosé Pine**
+```lua
+-- Toggle variant
+vim.api.nvim_set_keymap('n', '<c-m>', [[<cmd>lua require('rose-pine.functions').toggle_variant()<cr>]], { noremap = true, silent = true })
 
-![Rosé Pine with Neovim](assets/rose-pine.png)
-
-**Rosé Pine Moon**
-
-![Rosé Pine Moon with Neovim](assets/rose-pine-moon.png)
-
-**Rosé Pine Dawn**
-
-![Rosé Pine Dawn with Neovim](assets/rose-pine-dawn.png)
+-- Select each variant
+vim.api.nvim_set_keymap('n', '<c-8>', [[<cmd>lua require('rose-pine.functions').select_variant('dawn')<cr>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<c-9>', [[<cmd>lua require('rose-pine.functions').select_variant('moon')<cr>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<c-0>', [[<cmd>lua require('rose-pine.functions').select_variant('base')<cr>]], { noremap = true, silent = true })
+```
 
 ## Thanks to
 
