@@ -17,7 +17,7 @@
 
 ```lua
 -- Packer
-use('rose-pine/nvim')
+use('rose-pine/neovim')
 ```
 
 2. Require or set `rose-pine` colorscheme
