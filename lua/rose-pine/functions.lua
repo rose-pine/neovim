@@ -4,7 +4,8 @@ end
 
 local select_variant = function(variant)
 	vim.g.rose_pine_variant = variant
-	print("Rosé Pine", variant)
+	local formatted_variant = variant:sub(1, 1):upper() .. variant:sub(2)
+	print("Rosé Pine", formatted_variant)
 	vim.cmd([[colorscheme rose-pine]])
 end
 
