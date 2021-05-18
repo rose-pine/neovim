@@ -39,7 +39,7 @@ colorscheme rose-pine
 vim.g.rose_pine_variant = 'base'
 
 -- Use terminal background
-vim.g.rose_pine_remove_background = false
+vim.g.rose_pine_disable_background = false
 ```
 
 ## Functions
