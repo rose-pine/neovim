@@ -35,6 +35,7 @@ theme.loadSyntax = function()
 		String = { fg = p.gold },
 		Structure = { fg = p.foam },
 		Tag = { fg = p.rose },
+		Title = { fg = p.text },
 		Todo = { fg = p.iris },
 		Type = { fg = p.foam },
 		Typedef = { fg = p.foam },
