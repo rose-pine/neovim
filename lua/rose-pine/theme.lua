@@ -97,7 +97,7 @@ theme.loadEditor = function()
 		-- SpellLocal = {},
 		-- SpellRare = {},
 		SignColumn = {},
-		-- StatusLine = {},
+		StatusLine = { fg = p.surface },
 		-- StatusLineNC = {},
 		-- StatusLineTerm = {},
 		-- StatusLineTermNC = {},
