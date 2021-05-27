@@ -17,10 +17,7 @@
 
 ```lua
 -- Packer
-use('rose-pine/neovim')
-
--- Use dev branch
-use({ 'rose-pine/neovim', branch = 'dev' })
+use({ 'rose-pine/neovim', as = 'rose-pine' })
 ```
 
 2. Require or set `rose-pine` colorscheme
