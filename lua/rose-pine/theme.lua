@@ -240,6 +240,12 @@ theme.loadPlugins = function()
 		BufferVisible = { fg = p.subtle },
 		BufferVisibleMod = { fg = p.foam },
 		BufferVisibleSign = { fg = p.subtle },
+
+		-- gitsigns.nvim
+		-- https://github.com/lewis6991/gitsigns.nvim
+		GitSignsAdd = { fg = p.foam },
+		GitSignsChange = { fg = p.rose },
+		GitSignsDelete = { fg = p.love },
 	}
 
 	return plugins
