@@ -52,6 +52,9 @@ colorscheme rose-pine
 -- Can be 'base', 'moon', 'dawn'
 vim.g.rose_pine_variant = 'base'
 
+-- Enable italics
+vim.g.rose_pine_enable_italics = true
+
 -- Use terminal background
 vim.g.rose_pine_disable_background = false
 ```
