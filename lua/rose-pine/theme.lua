@@ -246,6 +246,17 @@ theme.loadPlugins = function()
 		GitSignsAdd = { fg = p.foam },
 		GitSignsChange = { fg = p.rose },
 		GitSignsDelete = { fg = p.love },
+
+		-- nvim-tree.lua
+		-- https://github.com/kyazdani42/nvim-tree.lua
+		NvimTreeEmptyFolderName = { fg = p.inactive },
+		NvimTreeFolderIcon = { fg = p.subtle },
+		NvimTreeGitDeleted = {},
+		NvimTreeGitDirty = {},
+		NvimTreeGitMerge = {},
+		NvimTreeGitNew = {},
+		NvimTreeGitRenamed = {},
+		NvimTreeGitStaged = {},
 	}
 
 	return plugins
