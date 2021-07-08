@@ -54,11 +54,11 @@ theme.loadEditor = function()
 		-- CursorIM = {},
 		CursorLine = { bg = p.highlight_inactive },
 		CursorLineNr = { fg = p.text },
-		DiffAdd = { fg = '', bg = '' },
-		DiffChange = { fg = '', bg = '' },
-		DiffDelete = { fg = '', bg = '' },
-		DiffText = { fg = '', bg = '' },
-		Directory = { fg = p.foam },
+		DiffAdd = { fg = p.foam },
+		DiffChange = { fg = p.rose },
+		DiffDelete = { fg = p.love },
+		DiffText = { fg = p.text },
+		Directory = { fg = p.foam, bg = p.none },
 		-- EndOfBuffer = {},
 		ErrorMsg = { fg = p.love, style = 'bold' },
 		-- FoldColumn = {},
@@ -243,20 +243,37 @@ theme.loadPlugins = function()
 
 		-- gitsigns.nvim
 		-- https://github.com/lewis6991/gitsigns.nvim
+		SignAdd = { fg = p.foam },
+		SignChange = { fg = p.rose },
+		SignDelete = { fg = p.love },
 		GitSignsAdd = { fg = p.foam },
 		GitSignsChange = { fg = p.rose },
 		GitSignsDelete = { fg = p.love },
 
 		-- nvim-tree.lua
 		-- https://github.com/kyazdani42/nvim-tree.lua
+		NvimTreeNormal = { fg = p.text },
+
 		NvimTreeEmptyFolderName = { fg = p.inactive },
 		NvimTreeFolderIcon = { fg = p.subtle },
-		NvimTreeGitDeleted = {},
-		NvimTreeGitDirty = {},
-		NvimTreeGitMerge = {},
-		NvimTreeGitNew = {},
-		NvimTreeGitRenamed = {},
-		NvimTreeGitStaged = {},
+		NvimTreeFolderName = { fg = p.foam },
+		NvimTreeOpenedFile = { fg = p.text, bg = p.highlight },
+		NvimTreeOpenedFolderName = { fg = p.foam },
+		NvimTreeRootFolder = { fg = p.iris },
+
+		NvimTreeGitDeleted = { fg = p.love },
+		NvimTreeGitDirty = { fg = p.rose },
+		NvimTreeGitMerge = { fg = p.iris },
+		NvimTreeGitNew = { fg = p.foam },
+		NvimTreeGitRenamed = { fg = p.pine },
+		NvimTreeGitStaged = { fg = p.iris },
+
+		NvimTreeFileDeleted = { fg = p.love },
+		NvimTreeFileDirty = { fg = p.rose },
+		NvimTreeFileMerge = { fg = p.iris },
+		NvimTreeFileNew = { fg = p.foam },
+		NvimTreeFileRenamed = { fg = p.pine },
+		NvimTreeFileStaged = { fg = p.iris },
 	}
 
 	return plugins
