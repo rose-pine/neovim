@@ -289,6 +289,15 @@ theme.loadPlugins = function()
 		NvimTreeFileNew = { fg = p.foam },
 		NvimTreeFileRenamed = { fg = p.pine },
 		NvimTreeFileStaged = { fg = p.iris },
+
+		-- which-key.nvim
+		-- https://github.com/folke/which-key.nvim
+		WhichKey = { fg = p.iris },
+		WhichKeyGroup = { fg = p.foam },
+		WhichKeySeparator = { fg = p.subtle },
+		WhichKeyDesc = { fg = p.gold },
+		WhichKeyFloat = { bg = p.surface },
+		WhichKeyValue = { fg = p.rose },
 	}
 
 	return plugins
