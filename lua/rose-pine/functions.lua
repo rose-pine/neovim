@@ -22,7 +22,9 @@ local toggle_variant = function(variants)
 		vim.g.rose_pine_variant_switch = index[vim.g.rose_pine_variant] or 0
 	end
 
-	vim.g.rose_pine_variant_switch = (vim.g.rose_pine_variant_switch % table.getn(options)) + 1
+	vim.g.rose_pine_variant_switch = (
+			vim.g.rose_pine_variant_switch % table.getn(options)
+		) + 1
 
 	select_variant(options[vim.g.rose_pine_variant_switch])
 end

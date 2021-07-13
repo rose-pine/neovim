@@ -144,7 +144,10 @@ theme.loadTreesitter = function()
 		-- TSAttribute = {},
 		TSBoolean = { fg = p.rose },
 		-- TSCharacter = {},
-		TSComment = { fg = p.subtle, style = vim.g.rose_pine_enable_italics and 'italic' },
+		TSComment = {
+			fg = p.subtle,
+			style = vim.g.rose_pine_enable_italics and 'italic',
+		},
 		-- TSConditional = {},
 		TSConstBuiltin = { fg = p.love },
 		-- TSConstMacro = {},
@@ -169,9 +172,15 @@ theme.loadTreesitter = function()
 		-- TSNone = {},
 		-- TSNumber = {},
 		TSOperator = { fg = p.pine },
-		TSParameter = { fg = p.iris, style = vim.g.rose_pine_enable_italics and 'italic' },
+		TSParameter = {
+			fg = p.iris,
+			style = vim.g.rose_pine_enable_italics and 'italic',
+		},
 		-- TSParameterReference = {},
-		TSProperty = { fg = p.iris, style = vim.g.rose_pine_enable_italics and 'italic' },
+		TSProperty = {
+			fg = p.iris,
+			style = vim.g.rose_pine_enable_italics and 'italic',
+		},
 		TSPunctBracket = { fg = p.subtle },
 		TSPunctDelimiter = { fg = p.subtle },
 		TSPunctSpecial = { fg = p.subtle },
@@ -189,7 +198,10 @@ theme.loadTreesitter = function()
 		-- TSTypeBuiltin = {},
 		TSURI = { fg = p.gold, style = 'underline' },
 		-- TSUnderline = {},
-		TSVariable = { fg = p.text, style = vim.g.rose_pine_enable_italics and 'italic' },
+		TSVariable = {
+			fg = p.text,
+			style = vim.g.rose_pine_enable_italics and 'italic',
+		},
 		TSVariableBuiltin = { fg = p.love },
 	}
 
