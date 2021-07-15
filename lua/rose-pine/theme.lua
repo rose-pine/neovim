@@ -54,6 +54,7 @@ theme.loadEditor = function()
 		-- CursorIM = {},
 		CursorLine = { bg = p.highlight_inactive },
 		CursorLineNr = { fg = p.text },
+		DarkenedPanel = { bg = p.surface },
 		DiffAdd = { fg = p.foam },
 		DiffChange = { fg = p.rose },
 		DiffDelete = { fg = p.love },
