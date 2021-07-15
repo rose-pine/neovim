@@ -116,23 +116,23 @@ theme.loadTerminal = function()
 	vim.g.terminal_color_0 = p.overlay
 	vim.g.terminal_color_8 = p.subtle
 	-- red
-	vim.g.terminal_color_4 = p.love
-	vim.g.terminal_color_12 = p.love
+	vim.g.terminal_color_1 = p.love
+	vim.g.terminal_color_9 = p.love
 	-- green
 	vim.g.terminal_color_2 = p.pine
 	vim.g.terminal_color_10 = p.pine
 	-- yellow
-	vim.g.terminal_color_6 = p.gold
-	vim.g.terminal_color_14 = p.gold
+	vim.g.terminal_color_3 = p.gold
+	vim.g.terminal_color_11 = p.gold
 	-- blue
-	vim.g.terminal_color_1 = p.foam
-	vim.g.terminal_color_9 = p.foam
+	vim.g.terminal_color_4 = p.foam
+	vim.g.terminal_color_12 = p.foam
 	-- magenta
 	vim.g.terminal_color_5 = p.iris
 	vim.g.terminal_color_13 = p.iris
 	-- cyan
-	vim.g.terminal_color_3 = p.rose
-	vim.g.terminal_color_11 = p.rose
+	vim.g.terminal_color_6 = p.rose
+	vim.g.terminal_color_14 = p.rose
 	-- white
 	vim.g.terminal_color_7 = p.text
 	vim.g.terminal_color_15 = p.text
