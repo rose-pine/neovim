@@ -56,6 +56,7 @@ vim.g.rose_pine_variant = 'base'
 vim.g.rose_pine_enable_italics = true
 
 -- Use terminal background
+-- Note: Set to true to fix any funky background colors
 vim.g.rose_pine_disable_background = false
 ```
 
