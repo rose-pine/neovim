@@ -6,7 +6,10 @@ theme.loadSyntax = function()
 	local syntax = {
 		Boolean = { fg = p.gold },
 		Character = { fg = p.gold },
-		Comment = { fg = p.subtle, style = 'italic' },
+		Comment = {
+			fg = p.subtle,
+			style = vim.g.rose_pine_enable_italics and 'italic',
+		},
 		Conditional = { fg = p.pine },
 		Constant = { fg = p.gold },
 		Debug = { fg = p.rose },
