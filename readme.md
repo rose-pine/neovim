@@ -49,7 +49,8 @@ colorscheme rose-pine
 ## Options
 
 ```lua
--- Can be 'base', 'moon', 'dawn'
+-- Set variant
+-- @usage 'base' | 'moon' | 'dawn' | 'rose-pine[-moon][-dawn]'
 vim.g.rose_pine_variant = 'base'
 
 -- Enable italics
