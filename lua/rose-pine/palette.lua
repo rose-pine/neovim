@@ -17,7 +17,10 @@ local palette = {
 	none = 'NONE',
 }
 
-if vim.g.rose_pine_variant == 'dawn' then
+if
+	vim.g.rose_pine_variant == 'dawn'
+	or vim.g.rose_pine_variant == 'rose-pine-dawn'
+then
 	palette = {
 		base = '#faf4ed',
 		surface = '#fffaf3',
@@ -35,7 +38,10 @@ if vim.g.rose_pine_variant == 'dawn' then
 		highlight_inactive = '#f2ede9',
 		highlight_overlay = '#e4dfde',
 	}
-elseif vim.g.rose_pine_variant == 'moon' then
+elseif
+	vim.g.rose_pine_variant == 'moon'
+	or vim.g.rose_pine_variant == 'rose-pine-moon'
+then
 	palette = {
 		base = '#232136',
 		surface = '#2a273f',
