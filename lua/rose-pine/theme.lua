@@ -66,6 +66,7 @@ theme.loadEditor = function()
 		Directory = { fg = p.foam, bg = p.none },
 		-- EndOfBuffer = {},
 		ErrorMsg = { fg = p.love, style = 'bold' },
+		FloatBorder = { fg = p.highlight, bg = p.surface },
 		-- FoldColumn = {},
 		Folded = { fg = p.text, bg = p.surface },
 		IncSearch = { bg = p.highlight },
