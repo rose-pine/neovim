@@ -29,10 +29,13 @@ function util.load()
 	if vim.fn.exists('syntax_on') then
 		vim.cmd('syntax reset')
 	end
-	if vim.g.rose_pine_variant == 'dawn' then
-		vim.o.background = 'light'
+	if
+		vim.g.rose_pine_variant == 'dawn'
+		or vim.g.rose_pine_variant == 'rose-pine-dawn'
+	then
+		vim.opt.background = 'light'
 	else
-		vim.o.background = 'dark'
+		vim.opt.background = 'dark'
 	end
 	vim.o.termguicolors = true
 	vim.g.colors_name = 'rose-pine'
