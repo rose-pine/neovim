@@ -271,6 +271,13 @@ theme.loadPlugins = function()
 		GitSignsChange = { fg = p.rose },
 		GitSignsDelete = { fg = p.love },
 
+		-- modes.nvim
+		-- https://github.com/mvllow/modes.nvim
+		ModesCopy = { bg = p.gold },
+		ModesDelete = { bg = p.love },
+		ModesInsert = { bg = p.foam },
+		ModesVisual = { bg = p.iris },
+
 		-- nvim-tree.lua
 		-- https://github.com/kyazdani42/nvim-tree.lua
 		NvimTreeNormal = { fg = p.text },
