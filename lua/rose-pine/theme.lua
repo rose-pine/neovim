@@ -217,8 +217,6 @@ theme.loadTreesitter = function()
 			style = vim.g.rose_pine_enable_italics and 'italic',
 		},
 		TSVariableBuiltin = { fg = p.love },
-
-		-- html
 	}
 
 	return treesitter
