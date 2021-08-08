@@ -43,6 +43,14 @@ theme.loadSyntax = function()
 		Type = { fg = p.foam },
 		Typedef = { fg = p.foam },
 		Underlined = { fg = p.foam, style = 'underline' },
+
+		-- html
+		htmlArg = { fg = p.iris },
+		htmlEndTag = { fg = p.subtle },
+		htmlLink = { fg = p.text },
+		htmlTag = { fg = p.subtle },
+		htmlTagN = { fg = p.love },
+		htmlTagName = { fg = p.foam },
 	}
 
 	return syntax
@@ -192,23 +200,25 @@ theme.loadTreesitter = function()
 		TSPunctSpecial = { fg = p.subtle },
 		-- TSRepeat = {},
 		-- TSStrike = {},
-		-- TSString = {},
+		TSString = { fg = p.gold },
 		TSStringEscape = { fg = p.pine },
 		-- TSStringRegex = {},
 		-- TSSymbol = {},
 		TSTag = { fg = p.foam },
 		TSTagDelimiter = { fg = p.subtle },
-		-- TSText = {},
+		TSText = { fg = p.text },
 		-- TSTitle = {},
 		-- TSType = {},
 		-- TSTypeBuiltin = {},
-		TSURI = { fg = p.gold, style = 'underline' },
+		TSURI = { fg = p.gold },
 		-- TSUnderline = {},
 		TSVariable = {
 			fg = p.text,
 			style = vim.g.rose_pine_enable_italics and 'italic',
 		},
 		TSVariableBuiltin = { fg = p.love },
+
+		-- html
 	}
 
 	return treesitter
