@@ -319,6 +319,32 @@ theme.loadPlugins = function()
 		WhichKeyDesc = { fg = p.gold },
 		WhichKeyFloat = { bg = p.surface },
 		WhichKeyValue = { fg = p.rose },
+
+		-- folke/todo-comments.nvim
+		-- https://github.com/folke/todo-comments.nvim
+		TodoBgFIX = { fg = p.base, bg = p.love },
+		TodoFgFIX = { fg = p.love, bg = p.base },
+		TodoSignFIX = { fg = p.love, bg = p.base },
+
+		TodoBgTODO = { fg = p.base, bg = p.rose },
+		TodoFgTODO = { fg = p.rose, bg = p.base },
+		TodoSignTODO = { fg = p.rose, bg = p.base },
+
+		TodoBgHACK = { fg = p.text, bg = p.pine },
+		TodoFgHACK = { fg = p.pine, bg = p.text },
+		TodoSignHACK = { fg = p.pine, bg = p.text },
+
+		TodoBgWARN = { fg = p.base, bg = p.gold },
+		TodoFgWARN = { fg = p.gold, bg = p.base },
+		TodoSignWARN = { fg = p.gold, bg = p.base },
+
+		TodoBgPERF = { fg = p.base, bg = p.foam },
+		TodoFgPERF = { fg = p.foam, bg = p.base },
+		TodoSignPERF = { fg = p.foam, bg = p.base },
+
+		TodoBgNOTE = { fg = p.base, bg = p.gold },
+		TodoFgNOTE = { fg = p.gold, bg = p.base },
+		TodoSignNOTE = { fg = p.gold, bg = p.base },
 	}
 
 	return plugins
