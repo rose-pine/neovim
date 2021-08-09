@@ -320,30 +320,30 @@ theme.loadPlugins = function()
 		WhichKeyFloat = { bg = p.surface },
 		WhichKeyValue = { fg = p.rose },
 
-		-- folke/todo-comments.nvim
+		-- todo-comments.nvim
 		-- https://github.com/folke/todo-comments.nvim
 		TodoBgFIX = { fg = '#000000', bg = p.love },
-		TodoFgFIX = { fg = '#000000', bg = p.love },
+		TodoFgFIX = { fg = p.love, bg = p.love },
 		TodoSignFIX = { fg = p.love, bg = p.base },
 
 		TodoBgTODO = { fg = '#000000', bg = p.rose },
-		TodoFgTODO = { fg = '#000000', bg = p.rose },
+		TodoFgTODO = { fg = p.rose, bg = p.rose },
 		TodoSignTODO = { fg = p.rose, bg = p.base },
 
 		TodoBgHACK = { fg = '#ffffff', bg = p.pine },
-		TodoFgHACK = { fg = '#ffffff', bg = p.pine },
+		TodoFgHACK = { fg = p.pine, bg = p.pine },
 		TodoSignHACK = { fg = p.pine, bg = p.base },
 
 		TodoBgWARN = { fg = '#000000', bg = p.gold },
-		TodoFgWARN = { fg = '#000000', bg = p.gold },
+		TodoFgWARN = { fg = p.gold, bg = p.gold },
 		TodoSignWARN = { fg = p.gold, bg = p.base },
 
 		TodoBgPERF = { fg = '#000000', bg = p.foam },
-		TodoFgPERF = { fg = '#000000', bg = p.foam },
+		TodoFgPERF = { fg = p.foam, bg = p.foam },
 		TodoSignPERF = { fg = p.foam, bg = p.base },
 
 		TodoBgNOTE = { fg = '#000000', bg = p.iris },
-		TodoFgNOTE = { fg = '#000000', bg = p.iris },
+		TodoFgNOTE = { fg = p.iris, bg = p.iris },
 		TodoSignNOTE = { fg = p.iris, bg = p.base },
 	}
 
