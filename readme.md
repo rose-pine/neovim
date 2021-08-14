@@ -11,26 +11,51 @@
     </a>
 </p>
 
-## Usage
+## Install
 
-1. Install via your preferred package manager
+Install via your preferred package manager
 
 ```lua
 -- Packer
 use({ 'rose-pine/neovim', as = 'rose-pine' })
 ```
 
-2. Require or set `rose-pine` colorscheme
+## Usage
+
+Enable `rose-pine` colorscheme
 
 ```lua
 -- Lua
-require('rose-pine').set()
+vim.cmd('colorscheme rose-pine')
 ```
 
 ```vim
 " Vimscript
 colorscheme rose-pine
 ```
+
+Enable [lualine](https://github.com/hoob3rt/lualine.nvim) plugin
+
+```lua
+-- Lua
+require('lualine').setup({
+    options = {
+        theme = 'rose-pine'
+    }
+})
+```
+
+## Plugin Support
+
+- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [LSP diagnostics](https://neovim.io/doc/user/lsp.html)
+- [Barbar](https://github.com/romgrk/barbar.nvim)
+- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [Modes](https://github.com/mvllow/modes.nvim)
+- [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
+- [WhichKey](https://github.com/folke/which-key.nvim)
+- [Todo Comments](https://github.com/folke/todo-comments.nvim)
+- [Lualine](https://github.com/hoob3rt/lualine.nvim)
 
 ## Gallery
 
