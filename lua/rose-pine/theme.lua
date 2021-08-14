@@ -61,7 +61,7 @@ theme.loadEditor = function()
 		-- ColorColumn = {},
 		-- Conceal = {},
 		-- Cursor = {},
-		-- CursorColumn = {},
+		CursorColumn = { bg = p.highlight_overlay },
 		-- CursorIM = {},
 		CursorLine = { bg = p.highlight_inactive },
 		CursorLineNr = { fg = p.text },
