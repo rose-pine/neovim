@@ -58,7 +58,7 @@ end
 
 theme.loadEditor = function()
 	local editor = {
-		ColorColumn = { bg = p.highlight_inactive },
+		ColorColumn = { bg = p.highlight_overlay },
 		-- Conceal = {},
 		-- Cursor = {},
 		-- CursorColumn = {},
