@@ -75,7 +75,7 @@ theme.loadEditor = function()
 		-- EndOfBuffer = {},
 		ErrorMsg = { fg = p.love, style = 'bold' },
 		FloatBorder = { fg = p.highlight, bg = p.surface },
-		FoldColumn = { bg = p.base },
+		FoldColumn = {},
 		Folded = { fg = p.text, bg = p.surface },
 		IncSearch = { bg = p.highlight },
 		LineNr = { fg = p.inactive },
