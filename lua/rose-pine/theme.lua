@@ -170,7 +170,7 @@ theme.loadTreesitter = function()
 		-- TSEmphasis = {},
 		-- TSError = {},
 		-- TSException = {},
-		-- TSField = {},
+		TSField = { fg = p.foam },
 		-- TSFloat = {},
 		TSFuncBuiltin = { fg = p.love },
 		-- TSFuncMacro = {},
