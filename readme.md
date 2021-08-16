@@ -73,6 +73,8 @@ require('lualine').setup({
 
 ## Options
 
+> Options should be set before the colorscheme
+
 ```lua
 -- Set variant
 -- @usage 'base' | 'moon' | 'dawn' | 'rose-pine[-moon][-dawn]'
@@ -84,6 +86,9 @@ vim.g.rose_pine_enable_italics = true
 -- Use terminal background
 -- Note: Set to true to fix any funky background colors
 vim.g.rose_pine_disable_background = false
+
+-- Set colorscheme after options
+vim.cmd('colorscheme rose-pine')
 ```
 
 ## Functions
