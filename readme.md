@@ -25,19 +25,12 @@ use({ 'rose-pine/neovim', as = 'rose-pine' })
 Enable `rose-pine` colorscheme
 
 ```lua
--- Lua
 vim.cmd('colorscheme rose-pine')
-```
-
-```vim
-" Vimscript
-colorscheme rose-pine
 ```
 
 Enable [lualine](https://github.com/hoob3rt/lualine.nvim) plugin
 
 ```lua
--- Lua
 require('lualine').setup({
     options = {
         theme = 'rose-pine'
