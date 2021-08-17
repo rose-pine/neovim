@@ -296,6 +296,7 @@ theme.loadPlugins = function()
 		NvimTreeOpenedFile = { fg = p.text, bg = p.highlight },
 		NvimTreeOpenedFolderName = { fg = p.foam },
 		NvimTreeRootFolder = { fg = p.iris },
+		NvimTreeSpecialFile = { link = 'NvimTreeNormal' },
 
 		NvimTreeGitDeleted = { fg = p.love },
 		NvimTreeGitDirty = { fg = p.rose },
