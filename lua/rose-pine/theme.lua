@@ -290,6 +290,13 @@ theme.loadPlugins = function()
 		-- https://github.com/kyazdani42/nvim-tree.lua
 		NvimTreeNormal = { fg = p.text },
 
+		NvimTreeFileDeleted = { fg = p.love },
+		NvimTreeFileDirty = { fg = p.rose },
+		NvimTreeFileMerge = { fg = p.iris },
+		NvimTreeFileNew = { fg = p.foam },
+		NvimTreeFileRenamed = { fg = p.pine },
+		NvimTreeFileStaged = { fg = p.iris },
+
 		NvimTreeEmptyFolderName = { fg = p.inactive },
 		NvimTreeFolderIcon = { fg = p.subtle },
 		NvimTreeFolderName = { fg = p.foam },
@@ -305,13 +312,6 @@ theme.loadPlugins = function()
 		NvimTreeGitNew = { fg = p.foam },
 		NvimTreeGitRenamed = { fg = p.pine },
 		NvimTreeGitStaged = { fg = p.iris },
-
-		NvimTreeFileDeleted = { fg = p.love },
-		NvimTreeFileDirty = { fg = p.rose },
-		NvimTreeFileMerge = { fg = p.iris },
-		NvimTreeFileNew = { fg = p.foam },
-		NvimTreeFileRenamed = { fg = p.pine },
-		NvimTreeFileStaged = { fg = p.iris },
 
 		-- which-key.nvim
 		-- https://github.com/folke/which-key.nvim
