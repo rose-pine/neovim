@@ -300,6 +300,7 @@ theme.loadPlugins = function()
 
 		NvimTreeGitDeleted = { fg = p.love },
 		NvimTreeGitDirty = { fg = p.rose },
+		NvimTreeGitIgnored = { fg = p.subtle },
 		NvimTreeGitMerge = { fg = p.iris },
 		NvimTreeGitNew = { fg = p.foam },
 		NvimTreeGitRenamed = { fg = p.pine },
