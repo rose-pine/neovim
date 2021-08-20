@@ -31,7 +31,7 @@ function util.load()
 	vim.o.termguicolors = true
 	vim.g.colors_name = 'rose-pine'
 
-	if vim.o.background == 'light' then
+	if vim.o.background == 'light' and vim.g.rose_pine_variant == nil then
 		vim.g.rose_pine_variant = 'dawn'
 	elseif
 		vim.g.rose_pine_variant == 'dawn'
