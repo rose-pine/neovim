@@ -67,7 +67,7 @@ require('lualine').setup({
 
 ## Options
 
-> Options should be set before the colorscheme
+> Options should be set before colorscheme
 
 ```lua
 -- Set variant
@@ -78,7 +78,6 @@ vim.g.rose_pine_variant = 'base'
 vim.g.rose_pine_disable_italics = false
 
 -- Use terminal background
--- Note: Set to true to fix any funky background colors
 vim.g.rose_pine_disable_background = false
 
 -- Set colorscheme after options
