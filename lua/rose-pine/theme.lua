@@ -292,6 +292,9 @@ theme.plugins = {
 	NvimTreeGitRenamed = { fg = p.pine },
 	NvimTreeGitStaged = { fg = p.iris },
 
+	-- telescope.nvim
+	-- https://github.com/nvim-telescope/telescope.nvim
+	TelescopeBorder = { fg = p.overlay },
 
 	-- todo-comments.nvim
 	-- https://github.com/folke/todo-comments.nvim
