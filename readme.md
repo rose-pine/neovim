@@ -73,8 +73,8 @@ require('lualine').setup({
 -- @usage 'base' | 'moon' | 'dawn' | 'rose-pine[-moon][-dawn]'
 vim.g.rose_pine_variant = 'base'
 
--- Enable italics
-vim.g.rose_pine_enable_italics = true
+-- Disable italics
+vim.g.rose_pine_disable_italics = false
 
 -- Use terminal background
 -- Note: Set to true to fix any funky background colors
