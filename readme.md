@@ -71,6 +71,7 @@ require('lualine').setup({
 
 ```lua
 -- Set variant
+-- Defaults to 'dawn' if vim background is light
 -- @usage 'base' | 'moon' | 'dawn' | 'rose-pine[-moon][-dawn]'
 vim.g.rose_pine_variant = 'base'
 
