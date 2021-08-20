@@ -299,7 +299,7 @@ theme.plugins = {
 
 	-- telescope.nvim
 	-- https://github.com/nvim-telescope/telescope.nvim
-	TelescopeBorder = { fg = p.overlay },
+	TelescopeBorder = { fg = p.subtle },
 
 	-- todo-comments.nvim
 	-- https://github.com/folke/todo-comments.nvim
