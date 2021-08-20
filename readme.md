@@ -48,7 +48,6 @@ require('lualine').setup({
 - [Modes](https://github.com/mvllow/modes.nvim)
 - [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
 - [WhichKey](https://github.com/folke/which-key.nvim)
-- [Todo Comments](https://github.com/folke/todo-comments.nvim)
 - [Lualine](https://github.com/hoob3rt/lualine.nvim)
 
 ## Gallery
