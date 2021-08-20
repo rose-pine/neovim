@@ -1,5 +1,4 @@
 local util = {}
-local theme = require('rose-pine.theme')
 
 util.highlight = function(group, color)
 	local style = color.style and 'gui=' .. color.style or 'gui=NONE'
@@ -25,11 +24,13 @@ util.highlight = function(group, color)
 end
 
 function util.load()
-	vim.cmd('hi clear')
-	if vim.fn.exists('syntax_on') then
-		vim.cmd('syntax reset')
+	if vim.g.colors_name then
+		vim.cmd('hi clear')
 	end
-	if
+
+	vim.o.termguicolors = true
+	vim.g.colors_name = 'rose-pine'
+
 		vim.g.rose_pine_variant == 'dawn'
 		or vim.g.rose_pine_variant == 'rose-pine-dawn'
 	then
@@ -37,25 +38,18 @@ function util.load()
 	else
 		vim.opt.background = 'dark'
 	end
-	vim.o.termguicolors = true
-	vim.g.colors_name = 'rose-pine'
+
+	local theme = require('rose-pine.theme')
 
 	local async
 	async = vim.loop.new_async(vim.schedule_wrap(function()
-		theme.loadTerminal()
-		local plugins = theme.loadPlugins()
-		local treesitter = theme.loadTreesitter()
-		local lsp = theme.loadLsp()
+		theme.load_terminal()
 
-		for group, colors in pairs(plugins) do
+		for group, colors in pairs(theme.treesitter) do
 			util.highlight(group, colors)
 		end
 
-		for group, colors in pairs(treesitter) do
-			util.highlight(group, colors)
-		end
-
-		for group, colors in pairs(lsp) do
+		for group, colors in pairs(theme.plugins) do
 			util.highlight(group, colors)
 		end
 
@@ -63,18 +57,11 @@ function util.load()
 	end))
 
 	-- load priority groups first
-	local editor = theme.loadEditor()
-	local syntax = theme.loadSyntax()
-
-	for group, colors in pairs(editor) do
+	for group, colors in pairs(theme.base) do
 		util.highlight(group, colors)
 	end
 
-	for group, colors in pairs(syntax) do
-		util.highlight(group, colors)
-	end
-
-	-- load enhancements (eg. lsp, treesitter, plugins)
+	-- load enhancements (eg. treesitter, plugins)
 	async:send()
 end
 
