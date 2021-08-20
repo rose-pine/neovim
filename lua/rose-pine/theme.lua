@@ -301,32 +301,6 @@ theme.plugins = {
 	-- https://github.com/nvim-telescope/telescope.nvim
 	TelescopeBorder = { fg = p.subtle },
 
-	-- todo-comments.nvim
-	-- https://github.com/folke/todo-comments.nvim
-	TodoBgFIX = { fg = '#000000', bg = p.love },
-	TodoFgFIX = { fg = p.love, bg = p.base },
-	TodoSignFIX = { fg = p.love, bg = p.base },
-
-	TodoBgTODO = { fg = '#000000', bg = p.rose },
-	TodoFgTODO = { fg = p.rose, bg = p.base },
-	TodoSignTODO = { fg = p.rose, bg = p.base },
-
-	TodoBgHACK = { fg = '#ffffff', bg = p.pine },
-	TodoFgHACK = { fg = p.pine, bg = p.base },
-	TodoSignHACK = { fg = p.pine, bg = p.base },
-
-	TodoBgWARN = { fg = '#000000', bg = p.gold },
-	TodoFgWARN = { fg = p.gold, bg = p.base },
-	TodoSignWARN = { fg = p.gold, bg = p.base },
-
-	TodoBgPERF = { fg = '#000000', bg = p.foam },
-	TodoFgPERF = { fg = p.foam, bg = p.base },
-	TodoSignPERF = { fg = p.foam, bg = p.base },
-
-	TodoBgNOTE = { fg = '#000000', bg = p.iris },
-	TodoFgNOTE = { fg = p.iris, bg = p.base },
-	TodoSignNOTE = { fg = p.iris, bg = p.base },
-
 	-- which-key.nvim
 	-- https://github.com/folke/which-key.nvim
 	WhichKey = { fg = p.iris },
