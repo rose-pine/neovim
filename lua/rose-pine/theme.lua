@@ -2,9 +2,14 @@ local p = require('rose-pine.palette')
 
 local theme = {}
 local maybe_base = p.base
+local maybe_italic = 'italic'
 
 if vim.g.rose_pine_disable_background then
 	maybe_base = p.none
+end
+
+if vim.g.rose_pine_disable_italics then
+	maybe_italic = nil
 end
 
 theme.base = {
@@ -67,7 +72,7 @@ theme.base = {
 	Character = { fg = p.gold },
 	Comment = {
 		fg = p.subtle,
-		style = vim.g.rose_pine_enable_italics and 'italic',
+		style = maybe_italic,
 	},
 	Conditional = { fg = p.pine },
 	Constant = { fg = p.gold },
@@ -173,7 +178,7 @@ theme.treesitter = {
 	-- TSCharacter = {},
 	TSComment = {
 		fg = p.subtle,
-		style = vim.g.rose_pine_enable_italics and 'italic',
+		style = maybe_italic,
 	},
 	-- TSConditional = {},
 	TSConstBuiltin = { fg = p.love },
@@ -201,12 +206,12 @@ theme.treesitter = {
 	TSOperator = { fg = p.pine },
 	TSParameter = {
 		fg = p.iris,
-		style = vim.g.rose_pine_enable_italics and 'italic',
+		style = maybe_italic,
 	},
 	-- TSParameterReference = {},
 	TSProperty = {
 		fg = p.iris,
-		style = vim.g.rose_pine_enable_italics and 'italic',
+		style = maybe_italic,
 	},
 	TSPunctBracket = { fg = p.subtle },
 	TSPunctDelimiter = { fg = p.subtle },
@@ -227,7 +232,7 @@ theme.treesitter = {
 	-- TSUnderline = {},
 	TSVariable = {
 		fg = p.text,
-		style = vim.g.rose_pine_enable_italics and 'italic',
+		style = maybe_italic,
 	},
 	TSVariableBuiltin = { fg = p.love },
 }
