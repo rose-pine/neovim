@@ -31,12 +31,13 @@ function util.load()
 	vim.o.termguicolors = true
 	vim.g.colors_name = 'rose-pine'
 
+	if vim.o.background == 'light' then
+		vim.g.rose_pine_variant = 'dawn'
+	elseif
 		vim.g.rose_pine_variant == 'dawn'
 		or vim.g.rose_pine_variant == 'rose-pine-dawn'
 	then
-		vim.opt.background = 'light'
-	else
-		vim.opt.background = 'dark'
+		vim.o.background = 'light'
 	end
 
 	local theme = require('rose-pine.theme')
