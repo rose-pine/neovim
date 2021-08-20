@@ -1,7 +1,9 @@
 local util = require('rose-pine.util')
 
-local set = function()
+local M = {}
+
+function M.set()
 	util.load()
 end
 
-return { set = set }
+return M
