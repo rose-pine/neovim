@@ -40,6 +40,7 @@ require('lualine').setup({
 
 ## Plugin Support
 
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [LSP diagnostics](https://neovim.io/doc/user/lsp.html)
 - [Barbar](https://github.com/romgrk/barbar.nvim)
