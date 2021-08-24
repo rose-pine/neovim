@@ -297,10 +297,6 @@ theme.plugins = {
 	NvimTreeGitRenamed = { fg = p.pine },
 	NvimTreeGitStaged = { fg = p.iris },
 
-	-- telescope.nvim
-	-- https://github.com/nvim-telescope/telescope.nvim
-	TelescopeBorder = { fg = p.subtle },
-
 	-- which-key.nvim
 	-- https://github.com/folke/which-key.nvim
 	WhichKey = { fg = p.iris },
