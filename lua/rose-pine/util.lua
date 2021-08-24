@@ -42,28 +42,19 @@ function util.load()
 
 	local theme = require('rose-pine.theme')
 
-	local async
-	async = vim.loop.new_async(vim.schedule_wrap(function()
-		theme.load_terminal()
+	theme.load_terminal()
 
-		for group, colors in pairs(theme.treesitter) do
-			util.highlight(group, colors)
-		end
-
-		for group, colors in pairs(theme.plugins) do
-			util.highlight(group, colors)
-		end
-
-		async:close()
-	end))
-
-	-- load priority groups first
 	for group, colors in pairs(theme.base) do
 		util.highlight(group, colors)
 	end
 
-	-- load enhancements (eg. treesitter, plugins)
-	async:send()
+	for group, colors in pairs(theme.treesitter) do
+		util.highlight(group, colors)
+	end
+
+	for group, colors in pairs(theme.plugins) do
+		util.highlight(group, colors)
+	end
 end
 
 return util
