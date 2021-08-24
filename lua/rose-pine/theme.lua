@@ -14,7 +14,7 @@ end
 
 theme.base = {
 	ColorColumn = { bg = p.highlight_overlay },
-	-- Conceal = {},
+    Conceal = { bg = p.none },
 	-- Cursor = {},
 	CursorColumn = { bg = p.highlight },
 	-- CursorIM = {},
