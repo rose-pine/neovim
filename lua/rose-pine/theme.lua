@@ -297,6 +297,8 @@ theme.plugins = {
 	NvimTreeGitRenamed = { fg = p.pine },
 	NvimTreeGitStaged = { fg = p.iris },
 
+	NvimTreeWindowPicker = { fg = p.base, bg = p.iris },
+
 	-- which-key.nvim
 	-- https://github.com/folke/which-key.nvim
 	WhichKey = { fg = p.iris },
