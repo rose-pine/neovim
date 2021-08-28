@@ -17,7 +17,7 @@ Install via your preferred package manager
 
 ```lua
 -- Packer
-use({ 'rose-pine/neovim', as = 'rose-pine' })
+use('rose-pine/neovim')
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ Enable `rose-pine` colorscheme
 vim.cmd('colorscheme rose-pine')
 ```
 
-Enable [lualine](https://github.com/hoob3rt/lualine.nvim) plugin
+Optionally, enable [lualine](https://github.com/hoob3rt/lualine.nvim) theme
 
 ```lua
 require('lualine').setup({
