@@ -38,6 +38,19 @@ require('lualine').setup({
 })
 ```
 
+Otherwise if you use [galaxyline](https://github.com/glepnir/galaxyline.nvim)
+
+```lua
+-- This should be in your galaxyline configuration file
+local colors = require("galaxyline.themes.colors")["rose-pine"]
+```
+
+> **IMPORTANT**:
+> 
+> 1. This requires [NTBBloodbath's galaxyline fork](https://github.com/NTBBloodbath/galaxyline.nvim) in order to work.
+> 
+> 2. You can see the list of available colors [here](https://github.com/NTBBloodbath/galaxyline.nvim/blob/main/docs/themes.md#colors-standards).
+
 ## Plugin Support
 
 - [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
