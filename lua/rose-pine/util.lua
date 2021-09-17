@@ -55,6 +55,9 @@ function util.load()
 	for group, colors in pairs(theme.plugins) do
 		util.highlight(group, colors)
 	end
+
+	-- Load galaxyline theme
+	require("rose-pine.galaxyline.theme")
 end
 
 return util
