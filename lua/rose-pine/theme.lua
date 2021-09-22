@@ -307,6 +307,10 @@ theme.plugins = {
 	WhichKeyDesc = { fg = p.gold },
 	WhichKeyFloat = { bg = p.surface },
 	WhichKeyValue = { fg = p.rose },
+
+	-- indent-blankline.nvim
+	-- https://github.com/lukas-reineke/indent-blankline.nvim
+	IndentBlanklineChar = { fg = p.subtle },
 }
 
 return theme
