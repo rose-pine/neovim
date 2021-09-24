@@ -115,33 +115,58 @@ theme.base = {
 	htmlTagName = { fg = p.foam },
 
 	DiagnosticDefaultHint = { fg = p.iris },
-	DiagnosticDefaultInformation = { fg = p.foam },
-	DiagnosticDefaultWarning = { fg = p.gold },
+	DiagnosticDefaultInfo = { fg = p.foam },
+	DiagnosticDefaultWarn = { fg = p.gold },
 	DiagnosticDefaultError = { fg = p.love },
 
 	DiagnosticFloatingHint = { fg = p.iris },
-	DiagnosticFloatingInformation = { fg = p.foam },
-	DiagnosticFloatingWarning = { fg = p.gold },
+	DiagnosticFloatingInfo = { fg = p.foam },
+	DiagnosticFloatingWarn = { fg = p.gold },
 	DiagnosticFloatingError = { fg = p.love },
 
 	DiagnosticSignHint = { fg = p.iris },
-	DiagnosticSignInformation = { fg = p.foam },
-	DiagnosticSignWarning = { fg = p.gold },
+	DiagnosticSignInfo = { fg = p.foam },
+	DiagnosticSignWarn = { fg = p.gold },
 	DiagnosticSignError = { fg = p.love },
 
 	DiagnosticUnderlineHint = { style = 'undercurl', sp = p.iris },
-	DiagnosticUnderlineInformation = { style = 'undercurl', sp = p.foam },
-	DiagnosticUnderlineWarning = { style = 'undercurl', sp = p.gold },
+	DiagnosticUnderlineInfo = { style = 'undercurl', sp = p.foam },
+	DiagnosticUnderlineWarn = { style = 'undercurl', sp = p.gold },
 	DiagnosticUnderlineError = { style = 'undercurl', sp = p.love },
 
 	DiagnosticVirtualTextHint = { fg = p.iris },
-	DiagnosticVirtualTextInformation = { fg = p.foam },
-	DiagnosticVirtualTextWarning = { fg = p.gold },
+	DiagnosticVirtualTextInfo = { fg = p.foam },
+	DiagnosticVirtualTextWarn = { fg = p.gold },
 	DiagnosticVirtualTextError = { fg = p.love },
 
 	LspReferenceText = { fg = p.rose, bg = p.highlight },
 	LspReferenceRead = { fg = p.rose, bg = p.highlight },
 	LspReferenceWrite = { fg = p.rose, bg = p.highlight },
+
+	--Lsp color groups for nvim 0.5.x
+	LspDiagnosticsSignWarning =            { link = "DiagnosticSignWarn" },
+	LspDiagnosticsDefaultWarning =         { link = "DiagnosticDefaultWarn" },
+	LspDiagnosticsFloatingWarning =        { link = "DiagnosticFloatingWarn" },
+	LspDiagnosticsVirtualTextWarning =     { link = "DiagnosticVirtualTextWarn" },
+	LspDiagnosticsUnderlineWarning =       { link = "DiagnosticUnderlineWarn" },
+
+	LspDiagnosticsSignHint =               { link = "DiagnosticSignHint" },
+	LspDiagnosticsDefaultHint =            { link = "DiagnosticDefaultHint" },
+	LspDiagnosticsVirtualTextHint =        { link = "DiagnosticFloatingHint" },
+	LspDiagnosticsFloatingHint =           { link = "DiagnosticVirtualTextHint" },
+	LspDiagnosticsUnderlineHint =          { link = "DiagnosticUnderlineHint" },
+
+	LspDiagnosticsSignError =              { link = "DiagnosticSignError" },
+	LspDiagnosticsDefaultError =           { link = "DiagnosticDefaultError" },
+	LspDiagnosticsFloatingError =          { link = "DiagnosticFloatingError" },
+	LspDiagnosticsVirtualTextError =       { link = "DiagnosticVirtualTextError" },
+	LspDiagnosticsUnderlineError =         { link = "DiagnosticUnderlineError" },
+
+	LspDiagnosticsSignInformation =        { link = "DiagnosticSignInfo" },
+	LspDiagnosticsDefaultInformation =     { link = "DiagnosticDefaultInfo" },
+	LspDiagnosticsFloatingInformation =    { link = "DiagnosticFloatingInfo" },
+	LspDiagnosticsVirtualTextInformation = { link = "DiagnosticVirtualTextInfo" },
+	LspDiagnosticsUnderlineInformation =   { link = "DiagnosticUnderlineInfo" },
 }
 
 function theme.load_terminal()
