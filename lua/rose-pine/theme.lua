@@ -142,6 +142,31 @@ theme.base = {
 	LspReferenceText = { fg = p.rose, bg = p.highlight },
 	LspReferenceRead = { fg = p.rose, bg = p.highlight },
 	LspReferenceWrite = { fg = p.rose, bg = p.highlight },
+
+	--Lsp color groups for nvim 0.5.x
+	LspDiagnosticsSignWarning =            { link = "DiagnosticSignWarn" },
+	LspDiagnosticsDefaultWarning =         { link = "DiagnosticDefaultWarn" },
+	LspDiagnosticsFloatingWarning =        { link = "DiagnosticFloatingWarn" },
+	LspDiagnosticsVirtualTextWarning =     { link = "DiagnosticVirtualTextWarn" },
+	LspDiagnosticsUnderlineWarning =       { link = "DiagnosticUnderlineWarn" },
+
+	LspDiagnosticsSignHint =               { link = "DiagnosticSignHint" },
+	LspDiagnosticsDefaultHint =            { link = "DiagnosticDefaultHint" },
+	LspDiagnosticsVirtualTextHint =        { link = "DiagnosticFloatingHint" },
+	LspDiagnosticsFloatingHint =           { link = "DiagnosticVirtualTextHint" },
+	LspDiagnosticsUnderlineHint =          { link = "DiagnosticUnderlineHint" },
+
+	LspDiagnosticsSignError =              { link = "DiagnosticSignError" },
+	LspDiagnosticsDefaultError =           { link = "DiagnosticDefaultError" },
+	LspDiagnosticsFloatingError =          { link = "DiagnosticFloatingError" },
+	LspDiagnosticsVirtualTextError =       { link = "DiagnosticVirtualTextError" },
+	LspDiagnosticsUnderlineError =         { link = "DiagnosticUnderlineError" },
+
+	LspDiagnosticsSignInformation =        { link = "DiagnosticSignInfo" },
+	LspDiagnosticsDefaultInformation =     { link = "DiagnosticDefaultInfo" },
+	LspDiagnosticsFloatingInformation =    { link = "DiagnosticFloatingInfo" },
+	LspDiagnosticsVirtualTextInformation = { link = "DiagnosticVirtualTextInfo" },
+	LspDiagnosticsUnderlineInformation =   { link = "DiagnosticUnderlineInfo" },
 }
 
 function theme.load_terminal()
