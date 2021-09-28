@@ -342,7 +342,7 @@ theme.plugins = {
 	CmpItemKind = { fg = p.iris },
 	CmpItemAbbr = { fg = p.subtle },
 	CmpItemAbbrMatch = { fg = p.text, style = 'bold' },
-  CmpItemAbbrMatchFuzzy = { fg = p.text, style = 'bold' },
+	CmpItemAbbrMatchFuzzy = { fg = p.text, style = 'bold' },
 	CmpItemAbbrDeprecated = { fg = p.subtle, style = 'strikethrough' },
 }
 
