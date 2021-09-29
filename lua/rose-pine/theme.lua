@@ -346,6 +346,14 @@ theme.plugins = {
 	CmpItemAbbrMatch = { fg = p.text, style = 'bold' },
 	CmpItemAbbrMatchFuzzy = { fg = p.text, style = 'bold' },
 	CmpItemAbbrDeprecated = { fg = p.subtle, style = 'strikethrough' },
+
+	-- neogit
+	-- https://github.com/TimUntersberger/neogit
+	NeogitDiffAddHighlight = { fg = p.foam, bg = p.highlight_overlay },
+	NeogitDiffDeleteHighlight = { fg = p.love, bg = p.highlight_overlay },
+	NeogitDiffContextHighlight = { bg = p.highlight },
+	NeogitHunkHeader = { bg = p.highlight },
+	NeogitHunkHeaderHighlight = { bg = p.highlight },
 }
 
 return theme
