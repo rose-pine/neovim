@@ -93,6 +93,9 @@ vim.g.rose_pine_disable_italics = false
 -- Use terminal background
 vim.g.rose_pine_disable_background = false
 
+-- Use bold vertical split line
+vim.g.rose_pine_bold_vertical_split_line = true
+
 -- Set colorscheme after options
 vim.cmd('colorscheme rose-pine')
 ```

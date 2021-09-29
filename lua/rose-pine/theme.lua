@@ -3,6 +3,7 @@ local p = require('rose-pine.palette')
 local theme = {}
 local maybe_base = p.base
 local maybe_italic = 'italic'
+local maybe_bold_vert_split = { fg = p.overlay }
 
 if vim.g.rose_pine_disable_background then
 	maybe_base = p.none
@@ -10,6 +11,10 @@ end
 
 if vim.g.rose_pine_disable_italics then
 	maybe_italic = nil
+end
+
+if vim.g.rose_pine_bold_vertical_split_line then
+	maybe_bold_vert_split = { fg = p.surface, bg = p.surface }
 end
 
 theme.base = {
@@ -61,7 +66,7 @@ theme.base = {
 	-- TabLineFill = {},
 	-- TabLineSel = {},
 	Title = { fg = p.rose },
-	VertSplit = { fg = p.overlay },
+	VertSplit = maybe_bold_vert_split,
 	Visual = { bg = p.highlight },
 	-- VisualNOS = {},
 	WarningMsg = { fg = p.gold },
