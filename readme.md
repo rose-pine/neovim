@@ -62,6 +62,7 @@ local colors = require("galaxyline.themes.colors")["rose-pine"]
 - [WhichKey](https://github.com/folke/which-key.nvim)
 - [Lualine](https://github.com/hoob3rt/lualine.nvim)
 - [Indent-Blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Neogit](https://github.com/TimUntersberger/neogit)
 
 ## Gallery
 
