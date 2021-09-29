@@ -149,29 +149,31 @@ theme.base = {
 	LspReferenceWrite = { fg = p.rose, bg = p.highlight },
 
 	--Lsp color groups for nvim 0.5.x
-	LspDiagnosticsSignWarning =            { link = "DiagnosticSignWarn" },
-	LspDiagnosticsDefaultWarning =         { link = "DiagnosticDefaultWarn" },
-	LspDiagnosticsFloatingWarning =        { link = "DiagnosticFloatingWarn" },
-	LspDiagnosticsVirtualTextWarning =     { link = "DiagnosticVirtualTextWarn" },
-	LspDiagnosticsUnderlineWarning =       { link = "DiagnosticUnderlineWarn" },
+	LspDiagnosticsSignWarning = { link = 'DiagnosticSignWarn' },
+	LspDiagnosticsDefaultWarning = { link = 'DiagnosticDefaultWarn' },
+	LspDiagnosticsFloatingWarning = { link = 'DiagnosticFloatingWarn' },
+	LspDiagnosticsVirtualTextWarning = { link = 'DiagnosticVirtualTextWarn' },
+	LspDiagnosticsUnderlineWarning = { link = 'DiagnosticUnderlineWarn' },
 
-	LspDiagnosticsSignHint =               { link = "DiagnosticSignHint" },
-	LspDiagnosticsDefaultHint =            { link = "DiagnosticDefaultHint" },
-	LspDiagnosticsVirtualTextHint =        { link = "DiagnosticFloatingHint" },
-	LspDiagnosticsFloatingHint =           { link = "DiagnosticVirtualTextHint" },
-	LspDiagnosticsUnderlineHint =          { link = "DiagnosticUnderlineHint" },
+	LspDiagnosticsSignHint = { link = 'DiagnosticSignHint' },
+	LspDiagnosticsDefaultHint = { link = 'DiagnosticDefaultHint' },
+	LspDiagnosticsVirtualTextHint = { link = 'DiagnosticFloatingHint' },
+	LspDiagnosticsFloatingHint = { link = 'DiagnosticVirtualTextHint' },
+	LspDiagnosticsUnderlineHint = { link = 'DiagnosticUnderlineHint' },
 
-	LspDiagnosticsSignError =              { link = "DiagnosticSignError" },
-	LspDiagnosticsDefaultError =           { link = "DiagnosticDefaultError" },
-	LspDiagnosticsFloatingError =          { link = "DiagnosticFloatingError" },
-	LspDiagnosticsVirtualTextError =       { link = "DiagnosticVirtualTextError" },
-	LspDiagnosticsUnderlineError =         { link = "DiagnosticUnderlineError" },
+	LspDiagnosticsSignError = { link = 'DiagnosticSignError' },
+	LspDiagnosticsDefaultError = { link = 'DiagnosticDefaultError' },
+	LspDiagnosticsFloatingError = { link = 'DiagnosticFloatingError' },
+	LspDiagnosticsVirtualTextError = { link = 'DiagnosticVirtualTextError' },
+	LspDiagnosticsUnderlineError = { link = 'DiagnosticUnderlineError' },
 
-	LspDiagnosticsSignInformation =        { link = "DiagnosticSignInfo" },
-	LspDiagnosticsDefaultInformation =     { link = "DiagnosticDefaultInfo" },
-	LspDiagnosticsFloatingInformation =    { link = "DiagnosticFloatingInfo" },
-	LspDiagnosticsVirtualTextInformation = { link = "DiagnosticVirtualTextInfo" },
-	LspDiagnosticsUnderlineInformation =   { link = "DiagnosticUnderlineInfo" },
+	LspDiagnosticsSignInformation = { link = 'DiagnosticSignInfo' },
+	LspDiagnosticsDefaultInformation = { link = 'DiagnosticDefaultInfo' },
+	LspDiagnosticsFloatingInformation = { link = 'DiagnosticFloatingInfo' },
+	LspDiagnosticsVirtualTextInformation = {
+		link = 'DiagnosticVirtualTextInfo',
+	},
+	LspDiagnosticsUnderlineInformation = { link = 'DiagnosticUnderlineInfo' },
 }
 
 function theme.load_terminal()
@@ -349,6 +351,14 @@ theme.plugins = {
 	CmpItemAbbrMatch = { fg = p.text, style = 'bold' },
 	CmpItemAbbrMatchFuzzy = { fg = p.text, style = 'bold' },
 	CmpItemAbbrDeprecated = { fg = p.subtle, style = 'strikethrough' },
+
+	-- neogit
+	-- https://github.com/TimUntersberger/neogit
+	NeogitDiffAddHighlight = { fg = p.foam, bg = p.highlight_overlay },
+	NeogitDiffDeleteHighlight = { fg = p.love, bg = p.highlight_overlay },
+	NeogitDiffContextHighlight = { bg = p.highlight },
+	NeogitHunkHeader = { bg = p.highlight },
+	NeogitHunkHeaderHighlight = { bg = p.highlight },
 }
 
 return theme
