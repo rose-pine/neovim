@@ -336,6 +336,14 @@ theme.plugins = {
 	-- indent-blankline.nvim
 	-- https://github.com/lukas-reineke/indent-blankline.nvim
 	IndentBlanklineChar = { fg = p.subtle },
+
+	-- nvim-cmp
+	-- https://github.com/hrsh7th/nvim-cmp
+	CmpItemKind = { fg = p.iris },
+	CmpItemAbbr = { fg = p.subtle },
+	CmpItemAbbrMatch = { fg = p.text, style = 'bold' },
+	CmpItemAbbrMatchFuzzy = { fg = p.text, style = 'bold' },
+	CmpItemAbbrDeprecated = { fg = p.subtle, style = 'strikethrough' },
 }
 
 return theme
