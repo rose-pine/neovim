@@ -179,6 +179,11 @@ theme.base = {
 		link = 'DiagnosticVirtualTextInfo',
 	},
 	LspDiagnosticsUnderlineInformation = { link = 'DiagnosticUnderlineInfo' },
+
+	-- RedrawDebugNormal
+	RedrawDebugClear = { fg = '#ffffff', bg = p.gold },
+	RedrawDebugComposed = { fg = '#ffffff', bg = p.pine },
+	RedrawDebugRecompose = { fg = '#ffffff', bg - p.love },
 }
 
 function theme.load_terminal()
