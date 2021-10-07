@@ -119,6 +119,11 @@ theme.base = {
 	htmlTagN = { fg = p.love },
 	htmlTagName = { fg = p.foam },
 
+	DiagnosticHint = { fg = p.iris },
+	DiagnosticInfo = { fg = p.foam },
+	DiagnosticWarn = { fg = p.gold },
+	DiagnosticError = { fg = p.love },
+
 	DiagnosticDefaultHint = { fg = p.iris },
 	DiagnosticDefaultInfo = { fg = p.foam },
 	DiagnosticDefaultWarn = { fg = p.gold },
