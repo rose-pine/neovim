@@ -184,6 +184,8 @@ theme.base = {
 	RedrawDebugClear = { fg = '#ffffff', bg = p.gold },
 	RedrawDebugComposed = { fg = '#ffffff', bg = p.pine },
 	RedrawDebugRecompose = { fg = '#ffffff', bg - p.love },
+
+	NvimInternalError = { fg = '#ffffff', bg = p.love },
 }
 
 function theme.load_terminal()
