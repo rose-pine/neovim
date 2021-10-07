@@ -328,7 +328,7 @@ theme.plugins = {
 	NvimTreeEmptyFolderName = { fg = p.inactive },
 	NvimTreeFolderIcon = { fg = p.subtle },
 	NvimTreeFolderName = { fg = p.foam },
-	NvimTreeImageFile = { fg = p.gold },
+	NvimTreeImageFile = { fg = p.text },
 	NvimTreeOpenedFile = { fg = p.text, bg = p.highlight },
 	NvimTreeOpenedFolderName = { fg = p.foam },
 	NvimTreeRootFolder = { fg = p.iris },
