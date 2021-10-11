@@ -116,7 +116,7 @@ theme.base = {
 	htmlEndTag = { fg = p.subtle },
 	htmlLink = { fg = p.text },
 	htmlTag = { fg = p.subtle },
-	htmlTagN = { fg = p.love },
+	htmlTagN = { fg = p.text },
 	htmlTagName = { fg = p.foam },
 
 	DiagnosticHint = { fg = p.iris },
