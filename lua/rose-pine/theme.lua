@@ -65,7 +65,7 @@ theme.base = {
 	TabLine = { fg = p.subtle, bg = p.overlay },
 	TabLineFill = { bg = p.surface },
 	TabLineSel = { fg = p.text, bg = p.inactive },
-	Title = { fg = p.rose },
+	Title = { fg = p.text },
 	VertSplit = maybe_bold_vert_split,
 	Visual = { bg = p.highlight },
 	-- VisualNOS = {},
