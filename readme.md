@@ -46,9 +46,9 @@ local colors = require("galaxyline.themes.colors")["rose-pine"]
 ```
 
 > **IMPORTANT**:
-> 
+>
 > 1. This requires [NTBBloodbath's galaxyline fork](https://github.com/NTBBloodbath/galaxyline.nvim) in order to work.
-> 
+>
 > 2. You can see the list of available colors [here](https://github.com/NTBBloodbath/galaxyline.nvim/blob/main/docs/themes.md#colors-standards).
 
 ## Plugin Support
@@ -96,6 +96,15 @@ vim.g.rose_pine_disable_background = false
 
 -- Use bold vertical split line
 vim.g.rose_pine_bold_vertical_split_line = true
+
+-- Override theme groups
+vim.g.rose_pine_colors = {
+	comment = '#ffffff',
+  hint = '#9745be',
+  info = '#78ccc5',
+  warn = '#f5c359',
+  error = '#c75c6a',
+}
 
 -- Set colorscheme after options
 vim.cmd('colorscheme rose-pine')
