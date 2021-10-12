@@ -2,6 +2,7 @@ local p = require('rose-pine.palette')
 
 local user_colors = vim.g.rose_pine_colors or {}
 local groups = {
+	punctuation = user_colors.punctuation or p.subtle,
 	comment = user_colors.comment or p.subtle,
 	hint = user_colors.hint or p.iris,
 	info = user_colors.info or p.foam,
@@ -266,9 +267,9 @@ theme.treesitter = {
 		fg = p.iris,
 		style = maybe_italic,
 	},
-	TSPunctBracket = { fg = p.subtle },
-	TSPunctDelimiter = { fg = p.subtle },
-	TSPunctSpecial = { fg = p.subtle },
+	TSPunctBracket = { fg = groups.punctuation },
+	TSPunctDelimiter = { fg = groups.punctuation },
+	TSPunctSpecial = { fg = groups.punctuation },
 	-- TSRepeat = {},
 	-- TSStrike = {},
 	TSString = { fg = p.gold },
