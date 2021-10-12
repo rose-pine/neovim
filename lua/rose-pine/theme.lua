@@ -1,5 +1,14 @@
 local p = require('rose-pine.palette')
 
+local user_colors = vim.g.rose_pine_colors or {}
+local groups = {
+	comment = user_colors.comment or p.subtle,
+	hint = user_colors.hint or p.iris,
+	info = user_colors.info or p.foam,
+	warn = user_colors.warn or p.gold,
+	error = user_colors.error or p.love,
+}
+
 local theme = {}
 local maybe_base = p.base
 local maybe_italic = 'italic'
@@ -76,7 +85,7 @@ theme.base = {
 	Boolean = { fg = p.gold },
 	Character = { fg = p.gold },
 	Comment = {
-		fg = p.subtle,
+		fg = groups.comment,
 		style = maybe_italic,
 	},
 	Conditional = { fg = p.pine },
@@ -119,35 +128,35 @@ theme.base = {
 	htmlTagN = { fg = p.text },
 	htmlTagName = { fg = p.foam },
 
-	DiagnosticHint = { fg = p.iris },
-	DiagnosticInfo = { fg = p.foam },
-	DiagnosticWarn = { fg = p.gold },
-	DiagnosticError = { fg = p.love },
+	DiagnosticHint = { fg = groups.hint },
+	DiagnosticInfo = { fg = groups.info },
+	DiagnosticWarn = { fg = groups.warn },
+	DiagnosticError = { fg = groups.error },
 
-	DiagnosticDefaultHint = { fg = p.iris },
-	DiagnosticDefaultInfo = { fg = p.foam },
-	DiagnosticDefaultWarn = { fg = p.gold },
-	DiagnosticDefaultError = { fg = p.love },
+	DiagnosticDefaultHint = { fg = groups.hint },
+	DiagnosticDefaultInfo = { fg = groups.info },
+	DiagnosticDefaultWarn = { fg = groups.warn },
+	DiagnosticDefaultError = { fg = groups.error },
 
-	DiagnosticFloatingHint = { fg = p.iris },
-	DiagnosticFloatingInfo = { fg = p.foam },
-	DiagnosticFloatingWarn = { fg = p.gold },
-	DiagnosticFloatingError = { fg = p.love },
+	DiagnosticFloatingHint = { fg = groups.hint },
+	DiagnosticFloatingInfo = { fg = groups.info },
+	DiagnosticFloatingWarn = { fg = groups.warn },
+	DiagnosticFloatingError = { fg = groups.error },
 
-	DiagnosticSignHint = { fg = p.iris },
-	DiagnosticSignInfo = { fg = p.foam },
-	DiagnosticSignWarn = { fg = p.gold },
-	DiagnosticSignError = { fg = p.love },
+	DiagnosticSignHint = { fg = groups.hint },
+	DiagnosticSignInfo = { fg = groups.info },
+	DiagnosticSignWarn = { fg = groups.warn },
+	DiagnosticSignError = { fg = groups.error },
 
-	DiagnosticUnderlineHint = { style = 'undercurl', sp = p.iris },
-	DiagnosticUnderlineInfo = { style = 'undercurl', sp = p.foam },
-	DiagnosticUnderlineWarn = { style = 'undercurl', sp = p.gold },
-	DiagnosticUnderlineError = { style = 'undercurl', sp = p.love },
+	DiagnosticUnderlineHint = { style = 'undercurl', sp = groups.hint },
+	DiagnosticUnderlineInfo = { style = 'undercurl', sp = groups.info },
+	DiagnosticUnderlineWarn = { style = 'undercurl', sp = groups.warn },
+	DiagnosticUnderlineError = { style = 'undercurl', sp = groups.error },
 
-	DiagnosticVirtualTextHint = { fg = p.iris },
-	DiagnosticVirtualTextInfo = { fg = p.foam },
-	DiagnosticVirtualTextWarn = { fg = p.gold },
-	DiagnosticVirtualTextError = { fg = p.love },
+	DiagnosticVirtualTextHint = { fg = groups.hint },
+	DiagnosticVirtualTextInfo = { fg = groups.info },
+	DiagnosticVirtualTextWarn = { fg = groups.warn },
+	DiagnosticVirtualTextError = { fg = groups.error },
 
 	LspReferenceText = { fg = p.rose, bg = p.highlight },
 	LspReferenceRead = { fg = p.rose, bg = p.highlight },
@@ -221,7 +230,7 @@ theme.treesitter = {
 	TSBoolean = { fg = p.rose },
 	-- TSCharacter = {},
 	TSComment = {
-		fg = p.subtle,
+		fg = groups.comment,
 		style = maybe_italic,
 	},
 	-- TSConditional = {},
