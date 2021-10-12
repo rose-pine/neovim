@@ -99,6 +99,7 @@ vim.g.rose_pine_bold_vertical_split_line = true
 
 -- Override theme groups
 vim.g.rose_pine_colors = {
+  punctuation = '#fa8072',
 	comment = '#ffffff',
   hint = '#9745be',
   info = '#78ccc5',
