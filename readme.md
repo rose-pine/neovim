@@ -11,58 +11,46 @@
     </a>
 </p>
 
-## Install
-
-Install via your preferred package manager
-
-```lua
--- Packer
-use('rose-pine/neovim')
-```
-
 ## Usage
 
-Enable `rose-pine` colorscheme
-
 ```lua
-vim.cmd('colorscheme rose-pine')
-```
+use({
+    'rose-pine/neovim',
+    config = function()
+        -- Options (see available options below)
+        vim.g.rose_pine_variant = 'base'
 
-Optionally, enable [lualine](https://github.com/hoob3rt/lualine.nvim) theme
-
-```lua
-require('lualine').setup({
-    options = {
-        theme = 'rose-pine'
-    }
+        -- Load colorscheme after options
+        vim.cmd('colorscheme rose-pine')
+    end
 })
 ```
 
-Otherwise if you use [galaxyline](https://github.com/glepnir/galaxyline.nvim)
+## Plugins
 
-```lua
--- This should be in your galaxyline configuration file
-local colors = require("galaxyline.themes.colors")["rose-pine"]
-```
+> PR's are more than welcome if your favourite plugin is missing
 
-> **IMPORTANT**:
->
-> 1. This requires [NTBBloodbath's galaxyline fork](https://github.com/NTBBloodbath/galaxyline.nvim) in order to work.
->
-> 2. You can see the list of available colors [here](https://github.com/NTBBloodbath/galaxyline.nvim/blob/main/docs/themes.md#colors-standards).
-
-## Plugin Support
-
-- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [LSP diagnostics](https://neovim.io/doc/user/lsp.html)
-- [Barbar](https://github.com/romgrk/barbar.nvim)
-- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
-- [Modes](https://github.com/mvllow/modes.nvim)
-- [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
-- [WhichKey](https://github.com/folke/which-key.nvim)
-- [Lualine](https://github.com/hoob3rt/lualine.nvim)
-- [Indent-Blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [Neogit](https://github.com/TimUntersberger/neogit)
+- **[Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)**
+- **[Diagnostics](https://neovim.io/doc/user/lsp.html)**
+- **[Barbar](https://github.com/romgrk/barbar.nvim)**
+- **[Gitsigns](https://github.com/lewis6991/gitsigns.nvim)**
+- **[Modes](https://github.com/mvllow/modes.nvim)**
+- **[NvimTree](https://github.com/kyazdani42/nvim-tree.lua)**
+- **[WhichKey](https://github.com/folke/which-key.nvim)**
+- **[Indent-Blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)**
+- **[Neogit](https://github.com/TimUntersberger/neogit)**
+- **[Lualine](https://github.com/hoob3rt/lualine.nvim)**
+  ```lua
+  require('lualine').setup({
+      options = { theme = 'rose-pine' }
+  })
+  ```
+- **[Galaxyline fork](https://github.com/NTBBloodbath/galaxyline.nvim)**
+  > This fork by NTBBloodbath allows [custom colors](https://github.com/NTBBloodbath/galaxyline.nvim/blob/main/docs/themes.md#colors-standards)
+  ```lua
+  -- Set colors in your galaxyline config
+  local colors = require("galaxyline.themes.colors")["rose-pine"]
+  ```
 
 ## Gallery
 
@@ -82,6 +70,8 @@ local colors = require("galaxyline.themes.colors")["rose-pine"]
 
 > Options should be set before colorscheme
 
+### Interface
+
 ```lua
 -- Set variant
 -- Defaults to 'dawn' if vim background is light
@@ -96,8 +86,11 @@ vim.g.rose_pine_disable_background = false
 
 -- Use bold vertical split line
 vim.g.rose_pine_bold_vertical_split_line = true
+```
 
--- Override theme groups
+### Custom colours
+
+```lua
 vim.g.rose_pine_colors = {
   punctuation = '#fa8072',
   comment = '#ffffff',
@@ -106,7 +99,11 @@ vim.g.rose_pine_colors = {
   warn = '#f5c359',
   error = '#c75c6a',
 }
+```
 
+Be sure to set the colorscheme _after_ options
+
+```lua
 -- Set colorscheme after options
 vim.cmd('colorscheme rose-pine')
 ```
