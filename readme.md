@@ -16,6 +16,7 @@
 ```lua
 use({
     'rose-pine/neovim',
+    as = 'rose-pine',
     config = function()
         -- Options (see available options below)
         vim.g.rose_pine_variant = 'base'
