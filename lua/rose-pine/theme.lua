@@ -129,6 +129,12 @@ theme.base = {
 	htmlTagN = { fg = p.text },
 	htmlTagName = { fg = p.foam },
 
+	markdownH1 = { fg = p.love },
+	markdownH2 = { fg = p.rose },
+	markdownH3 = { fg = p.iris },
+	markdownH4 = { fg = p.pine },
+	markdownH5 = { fg = p.foam },
+
 	DiagnosticHint = { fg = groups.hint },
 	DiagnosticInfo = { fg = groups.info },
 	DiagnosticWarn = { fg = groups.warn },
