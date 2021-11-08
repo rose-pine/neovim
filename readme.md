@@ -99,6 +99,13 @@ vim.g.rose_pine_colors = {
   info = '#78ccc5',
   warn = '#f5c359',
   error = '#c75c6a',
+  headings = {
+    h1 = '#999999',
+    h2 = '#888888',
+    h3 = '#777777',
+    h4 = '#666666',
+    h5 = '#555555',
+  }
 }
 ```
 
