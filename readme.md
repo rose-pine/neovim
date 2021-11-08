@@ -133,3 +133,10 @@ vim.api.nvim_set_keymap('n', '<c-8>', [[<cmd>lua require('rose-pine.functions').
 vim.api.nvim_set_keymap('n', '<c-9>', [[<cmd>lua require('rose-pine.functions').select_variant('moon')<cr>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<c-0>', [[<cmd>lua require('rose-pine.functions').select_variant('base')<cr>]], { noremap = true, silent = true })
 ```
+
+## Contributing
+
+We welcome and appreciate any help in creating a lovely experience for all.
+
+- [Get highlight groups under cursor](https://github.com/nvim-treesitter/playground#show-treesitter-and-syntax-highlight-groups-under-the-cursor)
+- [Adding new highlight groups](https://github.com/rose-pine/neovim/issues/6#issuecomment-962466323)
