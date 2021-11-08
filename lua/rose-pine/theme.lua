@@ -8,6 +8,13 @@ local groups = {
 	info = user_colors.info or p.foam,
 	warn = user_colors.warn or p.gold,
 	error = user_colors.error or p.love,
+	headings = user_colors.headings or {
+		h1 = p.love,
+		h2 = p.rose,
+		h3 = p.iris,
+		h4 = p.pine,
+		h5 = p.foam,
+	},
 }
 
 local theme = {}
@@ -125,11 +132,11 @@ theme.base = {
 	htmlArg = { fg = p.iris },
 	htmlBold = { fg = p.text, style = 'bold' },
 	htmlEndTag = { fg = p.subtle },
-	htmlH1 = { fg = p.love, style = 'bold' },
-	htmlH2 = { fg = p.rose, style = 'bold' },
-	htmlH3 = { fg = p.iris, style = 'bold' },
-	htmlH4 = { fg = p.pine, style = 'bold' },
-	htmlH5 = { fg = p.foam, style = 'bold' },
+	htmlH1 = { fg = groups.headings.h1, style = 'bold' },
+	htmlH2 = { fg = groups.headings.h2, style = 'bold' },
+	htmlH3 = { fg = groups.headings.h3, style = 'bold' },
+	htmlH4 = { fg = groups.headings.h4, style = 'bold' },
+	htmlH5 = { fg = groups.headings.h5, style = 'bold' },
 	htmlItalic = { fg = p.text, style = maybe_italic },
 	htmlLink = { fg = p.text },
 	htmlTag = { fg = p.subtle },
