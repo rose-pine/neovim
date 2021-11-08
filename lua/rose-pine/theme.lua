@@ -8,7 +8,7 @@ local groups = {
 	info = user_colors.info or p.foam,
 	warn = user_colors.warn or p.gold,
 	error = user_colors.error or p.love,
-	headings = user_colors.headings or {
+	headings = {
 		h1 = p.love,
 		h2 = p.rose,
 		h3 = p.iris,
@@ -16,6 +16,12 @@ local groups = {
 		h5 = p.foam,
 	},
 }
+
+groups.headings = vim.tbl_extend(
+	'force',
+	groups.headings,
+	user_colors.headings or {}
+)
 
 local theme = {}
 local maybe_base = p.base
