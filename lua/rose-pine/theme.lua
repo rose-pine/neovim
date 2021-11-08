@@ -294,7 +294,7 @@ theme.treesitter = {
 theme.plugins = {
 	-- barbar.nvim
 	-- https://github.com/romgrk/barbar.nvim
-	BufferTabpageFill = { bg = p.none },
+	BufferTabpageFill = { fg = p.base, bg = p.base },
 	BufferCurrent = { fg = p.text, bg = p.overlay },
 	BufferCurrentIndex = { fg = p.text, bg = p.overlay },
 	BufferCurrentMod = { fg = p.foam, bg = p.overlay },
@@ -302,11 +302,11 @@ theme.plugins = {
 	BufferInactive = { fg = p.subtle },
 	BufferInactiveIndex = { fg = p.subtle },
 	BufferInactiveMod = { fg = p.foam },
-	BufferInactiveSign = { fg = p.subtle },
+	BufferInactiveSign = { fg = p.inactive },
 	BufferVisible = { fg = p.subtle },
 	BufferVisibleIndex = { fg = p.subtle },
 	BufferVisibleMod = { fg = p.foam },
-	BufferVisibleSign = { fg = p.subtle },
+	BufferVisibleSign = { fg = p.inactive },
 
 	-- gitsigns.nvim
 	-- https://github.com/lewis6991/gitsigns.nvim
