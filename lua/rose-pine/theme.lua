@@ -164,6 +164,11 @@ theme.base = {
 	mkdRule = { fg = p.subtle },
 	mkdURL = { fg = p.foam, style = 'underline' },
 
+	-- Fix background mismatch if user sets custom float background
+	-- In LSP hover float: (paramater)
+	--                     ^         ^
+	typescriptParens = { bg = p.none },
+
 	DiagnosticHint = { fg = groups.hint },
 	DiagnosticInfo = { fg = groups.info },
 	DiagnosticWarn = { fg = groups.warn },
