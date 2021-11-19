@@ -67,7 +67,7 @@ theme.base = {
 	MoreMsg = { fg = p.iris },
 	NonText = { fg = p.inactive },
 	Normal = { fg = p.text, bg = maybe_base },
-	-- NormalFloat = {},
+	NormalFloat = { fg = p.text, bg = p.surface },
 	Pmenu = { fg = p.subtle, bg = p.surface },
 	PmenuSbar = { bg = p.overlay },
 	PmenuSel = { fg = p.text, bg = p.overlay },
