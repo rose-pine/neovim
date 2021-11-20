@@ -422,6 +422,20 @@ theme.plugins = {
 	NeogitDiffContextHighlight = { bg = p.highlight },
 	NeogitHunkHeader = { bg = p.highlight },
 	NeogitHunkHeaderHighlight = { bg = p.highlight },
+
+	-- VimWiki
+	-- https://github.com/vimwiki/vimwiki
+	VimwikiHR = { fg = p.subtle },
+	VimwikiHeader1 = { fg = p.foam, style = 'bold' },
+	VimwikiHeader2 = { fg = p.foam, style = 'bold' },
+	VimwikiHeader3 = { fg = p.foam, style = 'bold' },
+	VimwikiHeader4 = { fg = p.foam, style = 'bold' },
+	VimwikiHeader5 = { fg = p.foam, style = 'bold' },
+	VimwikiHeader6 = { fg = p.foam, style = 'bold' },
+	VimwikiHeaderChar = { fg = p.pine },
+	VimwikiLink = { fg = p.rose },
+	VimwikiList = { fg = p.iris },
+	VimwikiNoExistsLink = { fg = p.love },
 }
 
 return theme
