@@ -420,8 +420,6 @@ theme.plugins = {
 	CmpItemKindFunction = { fg = p.iris },
 	CmpItemKindMethod = { fg = p.iris },
 	CmpItemKindSnippet = { fg = p.iris },
-	CmpItemKindKeyword = { fg = p.subtle },
-	CmpItemKindText = { fg = p.subtle },
 
 	-- neogit
 	-- https://github.com/TimUntersberger/neogit
