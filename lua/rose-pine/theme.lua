@@ -414,6 +414,14 @@ theme.plugins = {
 	CmpItemAbbrMatch = { fg = p.text, style = 'bold' },
 	CmpItemAbbrMatchFuzzy = { fg = p.text, style = 'bold' },
 	CmpItemAbbrDeprecated = { fg = p.subtle, style = 'strikethrough' },
+	CmpItemKindVariable = { fg = p.foam },
+	CmpItemKindClass = { fg = p.gold },
+	CmpItemKindInterface = { fg = p.gold },
+	CmpItemKindFunction = { fg = p.iris },
+	CmpItemKindMethod = { fg = p.iris },
+	CmpItemKindSnippet = { fg = p.iris },
+	CmpItemKindKeyword = { fg = p.subtle },
+	CmpItemKindText = { fg = p.subtle },
 
 	-- neogit
 	-- https://github.com/TimUntersberger/neogit
