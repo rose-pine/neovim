@@ -11,9 +11,9 @@ local palette = {
 	pine = '#31748f',
 	foam = '#9ccfd8',
 	iris = '#c4a7e7',
-	highlight = '#2a2837',
-	highlight_inactive = '#211f2d',
-	highlight_overlay = '#3a384a',
+	highlight_low = '#21202e',
+	highlight_med = '#403d52',
+	highlight_high = '#524f67',
 	none = 'NONE',
 }
 
@@ -34,9 +34,9 @@ then
 		pine = '#286983',
 		foam = '#56949f',
 		iris = '#907aa9',
-		highlight = '#eee9e6',
-		highlight_inactive = '#f2ede9',
-		highlight_overlay = '#e4dfde',
+		highlight_low = '#f4ede8',
+		highlight_med = '#dfdad9',
+		highlight_high = '#cecacd',
 	}
 elseif
 	vim.g.rose_pine_variant == 'moon'
@@ -55,9 +55,9 @@ then
 		pine = '#3e8fb0',
 		foam = '#9ccfd8',
 		iris = '#c4a7e7',
-		highlight = '#312f44',
-		highlight_inactive = '#2a283d',
-		highlight_overlay = '#3f3c53',
+		highlight_low = '#2a283e',
+		highlight_med = '#44415a',
+		highlight_high = '#56526E',
 	}
 end
 
