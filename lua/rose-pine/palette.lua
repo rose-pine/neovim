@@ -57,7 +57,7 @@ then
 		iris = '#c4a7e7',
 		highlight_low = '#2a283e',
 		highlight_med = '#44415a',
-		highlight_high = '#56526E',
+		highlight_high = '#56526e',
 	}
 end
 
