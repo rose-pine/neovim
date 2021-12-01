@@ -41,12 +41,12 @@ if vim.g.rose_pine_bold_vertical_split_line then
 end
 
 theme.base = {
-	ColorColumn = { bg = p.highlight_overlay },
+	ColorColumn = { bg = p.highlight_high },
 	Conceal = { bg = p.none },
 	-- Cursor = {},
-	CursorColumn = { bg = p.highlight },
+	CursorColumn = { bg = p.highlight_med },
 	-- CursorIM = {},
-	CursorLine = { bg = p.highlight_inactive },
+	CursorLine = { bg = p.highlight_low },
 	CursorLineNr = { fg = p.text },
 	DarkenedPanel = { bg = p.surface },
 	DarkenedStatusline = { bg = p.surface },
@@ -60,7 +60,7 @@ theme.base = {
 	FloatBorder = { fg = p.subtle },
 	FoldColumn = {},
 	Folded = { fg = p.text, bg = p.surface },
-	IncSearch = { bg = p.highlight },
+	IncSearch = { bg = p.highlight_med },
 	LineNr = { fg = p.inactive },
 	MatchParen = { fg = p.text, bg = p.overlay },
 	-- ModeMsg = {},
@@ -74,7 +74,7 @@ theme.base = {
 	PmenuThumb = { bg = p.inactive },
 	Question = { fg = p.gold },
 	-- QuickFixLine = {},
-	Search = { fg = p.iris, bg = p.highlight_overlay },
+	Search = { fg = p.iris, bg = p.highlight_high },
 	SpecialKey = { fg = p.foam },
 	SpellBad = { style = 'undercurl', sp = p.love },
 	SpellCap = { style = 'undercurl', sp = p.subtle },
@@ -90,7 +90,7 @@ theme.base = {
 	TabLineSel = { fg = p.text, bg = p.inactive },
 	Title = { fg = p.text },
 	VertSplit = maybe_bold_vert_split,
-	Visual = { bg = p.highlight },
+	Visual = { bg = p.highlight_med },
 	-- VisualNOS = {},
 	WarningMsg = { fg = p.gold },
 	-- Whitespace = {},
@@ -199,9 +199,9 @@ theme.base = {
 	DiagnosticVirtualTextWarn = { fg = groups.warn },
 	DiagnosticVirtualTextError = { fg = groups.error },
 
-	LspReferenceText = { fg = p.rose, bg = p.highlight },
-	LspReferenceRead = { fg = p.rose, bg = p.highlight },
-	LspReferenceWrite = { fg = p.rose, bg = p.highlight },
+	LspReferenceText = { fg = p.rose, bg = p.highlight_med },
+	LspReferenceRead = { fg = p.rose, bg = p.highlight_med },
+	LspReferenceWrite = { fg = p.rose, bg = p.highlight_med },
 
 	--Lsp color groups for nvim 0.5.x
 	LspDiagnosticsSignWarning = { link = 'DiagnosticSignWarn' },
@@ -379,7 +379,7 @@ theme.plugins = {
 	NvimTreeFolderIcon = { fg = p.subtle },
 	NvimTreeFolderName = { fg = p.foam },
 	NvimTreeImageFile = { fg = p.text },
-	NvimTreeOpenedFile = { fg = p.text, bg = p.highlight },
+	NvimTreeOpenedFile = { fg = p.text, bg = p.highlight_med },
 	NvimTreeOpenedFolderName = { fg = p.foam },
 	NvimTreeRootFolder = { fg = p.iris },
 	NvimTreeSpecialFile = { link = 'NvimTreeNormal' },
@@ -423,11 +423,11 @@ theme.plugins = {
 
 	-- neogit
 	-- https://github.com/TimUntersberger/neogit
-	NeogitDiffAddHighlight = { fg = p.foam, bg = p.highlight_overlay },
-	NeogitDiffDeleteHighlight = { fg = p.love, bg = p.highlight_overlay },
-	NeogitDiffContextHighlight = { bg = p.highlight },
-	NeogitHunkHeader = { bg = p.highlight },
-	NeogitHunkHeaderHighlight = { bg = p.highlight },
+	NeogitDiffAddhighlight_med = { fg = p.foam, bg = p.highlight_high },
+	NeogitDiffDeletehighlight_med = { fg = p.love, bg = p.highlight_high },
+	NeogitDiffContexthighlight_med = { bg = p.highlight_med },
+	NeogitHunkHeader = { bg = p.highlight_med },
+	NeogitHunkHeaderhighlight_med = { bg = p.highlight_med },
 
 	-- VimWiki
 	-- https://github.com/vimwiki/vimwiki
