@@ -70,7 +70,7 @@ theme.base = {
 	NormalFloat = { fg = p.subtle },
 	Pmenu = { fg = p.subtle },
 	PmenuSbar = { bg = p.overlay },
-	PmenuSel = { fg = p.text, bg = p.foam },
+	PmenuSel = { fg = p.text, bg = p.overlay },
 	PmenuThumb = { bg = p.inactive },
 	Question = { fg = p.gold },
 	-- QuickFixLine = {},
