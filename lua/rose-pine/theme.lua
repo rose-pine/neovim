@@ -423,11 +423,11 @@ theme.plugins = {
 
 	-- neogit
 	-- https://github.com/TimUntersberger/neogit
-	NeogitDiffAddhighlight = { fg = p.foam, bg = p.highlight_med },
-	NeogitDiffDeletehighlight = { fg = p.love, bg = p.highlight_med },
-	NeogitDiffContexthighlight = { bg = p.highlight_low },
+	NeogitDiffAddHighlight = { fg = p.foam, bg = p.highlight_med },
+	NeogitDiffDeleteHighlight = { fg = p.love, bg = p.highlight_med },
+	NeogitDiffContextHighlight = { bg = p.highlight_low },
 	NeogitHunkHeader = { bg = p.highlight_low },
-	NeogitHunkHeaderhighlight = { bg = p.highlight_low },
+	NeogitHunkHeaderHighlight = { bg = p.highlight_low },
 
 	-- VimWiki
 	-- https://github.com/vimwiki/vimwiki
