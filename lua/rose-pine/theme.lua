@@ -67,8 +67,8 @@ theme.base = {
 	MoreMsg = { fg = p.iris },
 	NonText = { fg = p.inactive },
 	Normal = { fg = p.text, bg = maybe_base },
-	NormalFloat = { fg = p.text, bg = p.surface },
-	Pmenu = { fg = p.subtle, bg = p.surface },
+	NormalFloat = { fg = p.subtle },
+	Pmenu = { fg = p.subtle },
 	PmenuSbar = { bg = p.overlay },
 	PmenuSel = { fg = p.text, bg = p.overlay },
 	PmenuThumb = { bg = p.inactive },
@@ -410,6 +410,7 @@ theme.plugins = {
 	-- nvim-cmp
 	-- https://github.com/hrsh7th/nvim-cmp
 	CmpItemKind = { fg = p.iris },
+	CmpItemMenu = { fg = p.subtle },
 	CmpItemAbbr = { fg = p.subtle },
 	CmpItemAbbrMatch = { fg = p.text, style = 'bold' },
 	CmpItemAbbrMatchFuzzy = { fg = p.text, style = 'bold' },
