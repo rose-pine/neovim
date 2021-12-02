@@ -410,8 +410,8 @@ theme.plugins = {
 	-- nvim-cmp
 	-- https://github.com/hrsh7th/nvim-cmp
 	CmpItemKind = { fg = p.iris },
-    CmpItemMenu = { fg = p.subtle},
-    CmpItemAbbr = { fg = p.subtle },
+	CmpItemMenu = { fg = p.subtle },
+	CmpItemAbbr = { fg = p.subtle },
 	CmpItemAbbrMatch = { fg = p.text, style = 'bold' },
 	CmpItemAbbrMatchFuzzy = { fg = p.text, style = 'bold' },
 	CmpItemAbbrDeprecated = { fg = p.subtle, style = 'strikethrough' },
