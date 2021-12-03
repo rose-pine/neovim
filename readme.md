@@ -88,7 +88,7 @@ vim.g.rose_pine_colors = {
 	info = p.foam,
 	warn = p.gold,
 	error = p.love,
-	heading_prefix = p.subtle
+
 	-- Or set all headings to one colour: `headings = p.text`
 	headings = {
 		h1 = p.iris,
