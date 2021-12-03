@@ -78,6 +78,7 @@ use({
 vim.g.rose_pine_variant = 'dawn'
 
 vim.g.rose_pine_bold_vertical_split_line = true
+vim.g.rose_pine_inactive_background = false
 vim.g.rose_pine_disable_background = false
 vim.g.rose_pine_disable_float_background = false
 vim.g.rose_pine_disable_italics = false

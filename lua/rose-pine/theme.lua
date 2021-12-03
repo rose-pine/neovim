@@ -2,8 +2,9 @@ local config = require('rose-pine.config')
 local p = require('rose-pine.palette')
 
 -- TODO: Refactor `maybe` logic
-local maybe_base = p.base
-local maybe_surface = p.surface
+local maybe_inactive_background = p.none
+local maybe_background = p.base
+local maybe_float_background = p.surface
 local maybe_italic = 'italic'
 local maybe_bold_vert_split = { fg = p.overlay }
 
@@ -11,12 +12,16 @@ if config.bold_vert_split then
 	maybe_bold_vert_split = { fg = p.surface, bg = p.surface }
 end
 
+if config.inactive_background then
+	maybe_inactive_background = p.surface
+end
+
 if config.no_background then
-	maybe_base = p.none
+	maybe_background = p.none
 end
 
 if config.no_float_background then
-	maybe_surface = p.none
+	maybe_float_background = p.none
 end
 
 if config.no_italics then
@@ -52,9 +57,10 @@ local theme = {
 	ModeMsg = { fg = p.subtle },
 	MoreMsg = { fg = p.iris },
 	NonText = { fg = p.inactive },
-	Normal = { fg = p.text, bg = maybe_base },
-	NormalFloat = { fg = p.text, bg = maybe_surface },
-	Pmenu = { fg = p.subtle, bg = maybe_surface },
+	Normal = { fg = p.text, bg = maybe_background },
+	NormalNC = { fg = p.text, bg = maybe_inactive_background },
+	NormalFloat = { fg = p.text, bg = maybe_float_background },
+	Pmenu = { fg = p.subtle, bg = maybe_float_background },
 	PmenuSbar = { bg = p.overlay },
 	PmenuSel = { fg = p.text, bg = p.overlay },
 	PmenuThumb = { bg = p.inactive },
@@ -66,7 +72,7 @@ local theme = {
 	SpellCap = { style = 'undercurl', sp = p.subtle },
 	SpellLocal = { style = 'undercurl', sp = p.subtle },
 	SpellRare = { style = 'undercurl', sp = p.subtle },
-	SignColumn = { fg = p.text, bg = maybe_base },
+	SignColumn = { fg = p.text, bg = maybe_background },
 	StatusLine = { fg = p.text, bg = p.surface },
 	StatusLineNC = { fg = p.subtle, bg = p.surface },
 	-- StatusLineTerm = {},
