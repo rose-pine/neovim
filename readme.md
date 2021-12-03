@@ -119,26 +119,28 @@ vim.cmd('colorscheme rose-pine')
 ## Functions
 
 ```lua
--- Toggle between the three variants
-require('rose-pine.functions').toggle_variant()
+-- Toggle between all variants
+require('rose-pine').toggle()
 
--- Toggle between base and dawn
-require('rose-pine.functions').toggle_variant({'base', 'dawn'})
+-- Toggle between some variants
+require('rose-pine').toggle({'main', 'dawn'})
 
--- Switch to specified variant
-require('rose-pine.functions').select_variant('moon')
+-- Set specific variant
+require('rose-pine').set('moon')
 ```
 
 ## Keymaps
 
-```lua
--- Toggle variant
-vim.api.nvim_set_keymap('n', '<c-m>', [[<cmd>lua require('rose-pine.functions').toggle_variant()<cr>]], { noremap = true, silent = true })
+> These are only suggestions; no keymaps are set by the theme
 
--- Select each variant
-vim.api.nvim_set_keymap('n', '<c-8>', [[<cmd>lua require('rose-pine.functions').select_variant('dawn')<cr>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<c-9>', [[<cmd>lua require('rose-pine.functions').select_variant('moon')<cr>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<c-0>', [[<cmd>lua require('rose-pine.functions').select_variant('base')<cr>]], { noremap = true, silent = true })
+```lua
+-- Toggle variants
+vim.api.nvim_set_keymap('n', '<c-m>', [[<cmd>lua require('rose-pine').toggle()<cr>]], { noremap = true, silent = true })
+
+-- Set variant
+vim.api.nvim_set_keymap('n', '<c-0>', [[<cmd>lua require('rose-pine').set('main')<cr>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<c-9>', [[<cmd>lua require('rose-pine').set('moon')<cr>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<c-8>', [[<cmd>lua require('rose-pine').set('dawn')<cr>]], { noremap = true, silent = true })
 ```
 
 ## Contributing

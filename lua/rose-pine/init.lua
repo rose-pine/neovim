@@ -47,4 +47,28 @@ function M.colorscheme()
 	require('rose-pine.galaxyline.theme')
 end
 
+function M.set(variant)
+	vim.g.rose_pine_variant = variant
+	vim.cmd([[colorscheme rose-pine]])
+end
+
+function M.toggle(variants)
+	variants = variants or { 'main', 'moon', 'dawn' }
+
+	local index = {}
+	for k, v in pairs(variants) do
+		index[v] = k
+	end
+
+	if vim.g.rose_pine_current_variant == nil then
+		vim.g.rose_pine_current_variant = index[vim.g.rose_pine_variant] or 0
+	end
+
+	vim.g.rose_pine_current_variant = (
+			vim.g.rose_pine_current_variant % #variants
+		) + 1
+
+	M.set(variants[vim.g.rose_pine_current_variant])
+end
+
 return M
