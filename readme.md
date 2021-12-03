@@ -19,7 +19,7 @@ use({
     as = 'rose-pine',
     config = function()
         -- Options (see available options below)
-        vim.g.rose_pine_variant = 'base'
+        vim.g.rose_pine_variant = 'main'
 
         -- Load colorscheme after options
         vim.cmd('colorscheme rose-pine')
