@@ -23,11 +23,11 @@ local config = {
 
 		---@type string|table<string, string>
 		headings = {
-			h1 = palette.foam,
+			h1 = palette.iris,
 			h2 = palette.foam,
-			h3 = palette.foam,
-			h4 = palette.foam,
-			h5 = palette.foam,
+			h3 = palette.rose,
+			h4 = palette.gold,
+			h5 = palette.pine,
 			h6 = palette.foam,
 		},
 	},
