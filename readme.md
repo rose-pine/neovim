@@ -69,49 +69,36 @@ use({
 
 ## Options
 
-> Options should be set before colorscheme
-
-### Interface
+> Options should be set **before** colorscheme
 
 ```lua
--- Set variant
--- Defaults to 'dawn' if vim background is light
--- @usage 'base' | 'moon' | 'dawn' | 'rose-pine[-moon][-dawn]'
-vim.g.rose_pine_variant = 'base'
+-- Set theme variant
+-- Matches terminal theme if unset
+-- @usage 'main' | 'moon' | 'dawn'
+vim.g.rose_pine_variant = 'dawn'
 
--- Disable italics
+vim.g.rose_pine_bold_vertical_split_line = true
+vim.g.rose_pine_disable_background = false
 vim.g.rose_pine_disable_italics = false
 
--- Use terminal background
-vim.g.rose_pine_disable_background = false
-
--- Use bold vertical split line
-vim.g.rose_pine_bold_vertical_split_line = true
-```
-
-### Custom colours
-
-```lua
+local p = require('rose-pine.palette')
 vim.g.rose_pine_colors = {
-  punctuation = '#fa8072',
-  comment = '#ffffff',
-  hint = '#9745be',
-  info = '#78ccc5',
-  warn = '#f5c359',
-  error = '#c75c6a',
-  headings = {
-    h1 = '#999999',
-    h2 = '#888888',
-    h3 = '#777777',
-    h4 = '#666666',
-    h5 = '#555555',
-  }
+	punctuation = p.subtle,
+	comment = p.subtle,
+	hint = p.iris,
+	info = p.foam,
+	warn = p.gold,
+	error = p.love,
+	headings = {
+		h1 = p.foam,
+		h2 = p.foam,
+		h3 = p.foam,
+		h4 = p.foam,
+		h5 = p.foam,
+		h6 = p.foam,
+	},
 }
-```
 
-Be sure to set the colorscheme _after_ options
-
-```lua
 -- Set colorscheme after options
 vim.cmd('colorscheme rose-pine')
 ```
