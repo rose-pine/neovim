@@ -17,11 +17,8 @@
 use({
     'rose-pine/neovim',
     as = 'rose-pine',
+	tag = 'v0.1.0', -- Optional tag release
     config = function()
-        -- Options (see available options below)
-        vim.g.rose_pine_variant = 'main'
-
-        -- Load colorscheme after options
         vim.cmd('colorscheme rose-pine')
     end
 })
