@@ -72,9 +72,9 @@ use({
 -- Set theme variant
 -- Matches terminal theme if unset
 -- @usage 'main' | 'moon' | 'dawn'
-vim.g.rose_pine_variant = 'dawn'
+vim.g.rose_pine_variant = ''
 
-vim.g.rose_pine_bold_vertical_split_line = true
+vim.g.rose_pine_bold_vertical_split_line = false
 vim.g.rose_pine_inactive_background = false
 vim.g.rose_pine_disable_background = false
 vim.g.rose_pine_disable_float_background = false
