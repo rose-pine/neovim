@@ -69,49 +69,36 @@ use({
 
 ## Options
 
-> Options should be set before colorscheme
-
-### Interface
+> Options should be set **before** colorscheme
 
 ```lua
--- Set variant
--- Defaults to 'dawn' if vim background is light
--- @usage 'base' | 'moon' | 'dawn' | 'rose-pine[-moon][-dawn]'
-vim.g.rose_pine_variant = 'base'
+-- Set theme variant
+-- Matches terminal theme if unset
+-- @usage 'main' | 'moon' | 'dawn'
+vim.g.rose_pine_variant = 'dawn'
 
--- Disable italics
+vim.g.rose_pine_bold_vertical_split_line = true
+vim.g.rose_pine_disable_background = false
 vim.g.rose_pine_disable_italics = false
 
--- Use terminal background
-vim.g.rose_pine_disable_background = false
-
--- Use bold vertical split line
-vim.g.rose_pine_bold_vertical_split_line = true
-```
-
-### Custom colours
-
-```lua
+local p = require('rose-pine.palette')
 vim.g.rose_pine_colors = {
-  punctuation = '#fa8072',
-  comment = '#ffffff',
-  hint = '#9745be',
-  info = '#78ccc5',
-  warn = '#f5c359',
-  error = '#c75c6a',
-  headings = {
-    h1 = '#999999',
-    h2 = '#888888',
-    h3 = '#777777',
-    h4 = '#666666',
-    h5 = '#555555',
-  }
+	punctuation = p.subtle,
+	comment = p.subtle,
+	hint = p.iris,
+	info = p.foam,
+	warn = p.gold,
+	error = p.love,
+	headings = {
+		h1 = p.foam,
+		h2 = p.foam,
+		h3 = p.foam,
+		h4 = p.foam,
+		h5 = p.foam,
+		h6 = p.foam,
+	},
 }
-```
 
-Be sure to set the colorscheme _after_ options
-
-```lua
 -- Set colorscheme after options
 vim.cmd('colorscheme rose-pine')
 ```
@@ -119,26 +106,28 @@ vim.cmd('colorscheme rose-pine')
 ## Functions
 
 ```lua
--- Toggle between the three variants
-require('rose-pine.functions').toggle_variant()
+-- Toggle between all variants
+require('rose-pine').toggle()
 
--- Toggle between base and dawn
-require('rose-pine.functions').toggle_variant({'base', 'dawn'})
+-- Toggle between some variants
+require('rose-pine').toggle({'main', 'dawn'})
 
--- Switch to specified variant
-require('rose-pine.functions').select_variant('moon')
+-- Set specific variant
+require('rose-pine').set('moon')
 ```
 
 ## Keymaps
 
-```lua
--- Toggle variant
-vim.api.nvim_set_keymap('n', '<c-m>', [[<cmd>lua require('rose-pine.functions').toggle_variant()<cr>]], { noremap = true, silent = true })
+> These are only suggestions; no keymaps are set by the theme
 
--- Select each variant
-vim.api.nvim_set_keymap('n', '<c-8>', [[<cmd>lua require('rose-pine.functions').select_variant('dawn')<cr>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<c-9>', [[<cmd>lua require('rose-pine.functions').select_variant('moon')<cr>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<c-0>', [[<cmd>lua require('rose-pine.functions').select_variant('base')<cr>]], { noremap = true, silent = true })
+```lua
+-- Toggle variants
+vim.api.nvim_set_keymap('n', '<c-m>', [[<cmd>lua require('rose-pine').toggle()<cr>]], { noremap = true, silent = true })
+
+-- Set variant
+vim.api.nvim_set_keymap('n', '<c-0>', [[<cmd>lua require('rose-pine').set('main')<cr>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<c-9>', [[<cmd>lua require('rose-pine').set('moon')<cr>]], { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<c-8>', [[<cmd>lua require('rose-pine').set('dawn')<cr>]], { noremap = true, silent = true })
 ```
 
 ## Contributing
