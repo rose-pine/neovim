@@ -3,6 +3,7 @@ local p = require('rose-pine.palette')
 
 -- TODO: Refactor `maybe` logic
 local maybe_base = p.base
+local maybe_surface = p.surface
 local maybe_italic = 'italic'
 local maybe_bold_vert_split = { fg = p.overlay }
 
@@ -12,6 +13,10 @@ end
 
 if config.no_background then
 	maybe_base = p.none
+end
+
+if config.no_float_background then
+	maybe_surface = p.none
 end
 
 if config.no_italics then
@@ -48,8 +53,8 @@ local theme = {
 	MoreMsg = { fg = p.iris },
 	NonText = { fg = p.inactive },
 	Normal = { fg = p.text, bg = maybe_base },
-	NormalFloat = { fg = p.text, bg = p.surface },
-	Pmenu = { fg = p.subtle, bg = p.surface },
+	NormalFloat = { fg = p.text, bg = maybe_surface },
+	Pmenu = { fg = p.subtle, bg = maybe_surface },
 	PmenuSbar = { bg = p.overlay },
 	PmenuSel = { fg = p.text, bg = p.overlay },
 	PmenuThumb = { bg = p.inactive },
