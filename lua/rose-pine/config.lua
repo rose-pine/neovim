@@ -21,6 +21,7 @@ local config = {
 		-- ['function'] = '',
 		-- method = '',
 
+		heading_prefix = palette.subtle,
 		---@type string|table<string, string>
 		headings = {
 			h1 = palette.iris,

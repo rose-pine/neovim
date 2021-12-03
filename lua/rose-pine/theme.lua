@@ -98,7 +98,7 @@ local theme = {
 	Constant = { fg = p.gold },
 	Debug = { fg = p.rose },
 	Define = { fg = p.iris },
-	Delimiter = { fg = p.rose },
+	Delimiter = { fg = config.colors.heading_prefix },
 	Error = { fg = p.love },
 	Exception = { fg = p.pine },
 	Float = { fg = p.gold },
