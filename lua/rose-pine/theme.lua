@@ -53,7 +53,7 @@ local theme = {
 	Folded = { fg = p.text, bg = p.surface },
 	IncSearch = { bg = p.highlight_med },
 	LineNr = { fg = p.inactive },
-	MatchParen = { fg = p.text, bg = p.overlay },
+	MatchParen = { fg = p.text, bg = p.highlight_med },
 	ModeMsg = { fg = p.subtle },
 	MoreMsg = { fg = p.iris },
 	NonText = { fg = p.inactive },
