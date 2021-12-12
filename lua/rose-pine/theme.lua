@@ -428,6 +428,29 @@ local theme = {
 	NeorgHeading6Title = { fg = config.colors.headings.h6, style = 'bold' },
 
 	NeorgMarkerTitle = { fg = p.text, style = 'bold' },
+	-- LspSaga
+	-- https://github.com/tami5/lspsaga.nvim (fork of https://github.com/glepnir/lspsaga.nvim)
+	-- CodeActions
+	LspSagaCodeActionTitle = {
+		fg = p.gold,
+		style = 'bold',
+	},
+	LspSagaCodeActionBorder = { fg = p.subtle },
+	LspSagaCodeActionTruncateLine = { link = 'LspSagaCodeActionBorder' },
+	LspSagaCodeActionContent = { fg = p.foam },
+
+	-- Diagnostics
+	DiagnosticInformation = { link = 'DiagnosticInfo' },
+	DiagnosticWarning = { link = 'DiagnosticWarn' },
+
+	-- DiagnosticPopUp
+	LspSagaDiagnosticBorder = { fg = p.subtle },
+	LspSagaDiagnosticHeader = {
+		fg = p.gold,
+		style = 'bold',
+	},
+	LspSagaDiagnosticTruncateLine = { link = 'LspSagaDiagnosticBorder' },
+
 }
 
 vim.g.terminal_color_0 = p.overlay -- black
