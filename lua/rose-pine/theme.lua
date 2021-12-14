@@ -290,7 +290,7 @@ local theme = {
 	TSTag = { fg = p.foam },
 	TSTagDelimiter = { fg = p.subtle },
 	TSText = { fg = p.text },
-	-- TSTitle = {},
+	TSTitle = { fg = config.colors.headings.h1, style = 'bold' },
 	-- TSType = {},
 	-- TSTypeBuiltin = {},
 	TSURI = { fg = p.gold },
