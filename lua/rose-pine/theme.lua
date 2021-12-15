@@ -434,6 +434,37 @@ local theme = {
 	},
 	LspSagaDiagnosticTruncateLine = { link = 'LspSagaDiagnosticBorder' },
 
+	-- Finder
+	LspSagaFinderSelection = { fg = p.gold },
+	LspSagaLspFinderBorder = { fg = p.subtle },
+    LspSagaAutoPreview = { fg = p.subtle },
+    LspSagaDefPreviewBorder = { fg = p.subtle },
+
+	-- Definition
+	DefinitionIcon = { fg = p.rose },
+    DefinitionCount = { fg = p.rose },
+    DefintionPreviewTitle = {
+        fg = p.gold,
+        style = "bold",
+    },
+	LspSagaRenamePromptPrefix = { fg = p.love },
+	LspSagaRenameBorder = { fg = p.subtle },
+
+    -- Float
+    LspFloatWinNormal = { bg = p.base },
+    LspFloatWinBorder = { fg = p.subtle },
+    LspSagaDocTruncateLine = { link = "LspSagaHoverBorder" },
+    LspSagaHoverBorder = { fg = p.subtle},
+
+    -- Signature
+    LspSagaSignatureHelpBorder = { fg = p.subtle },
+    LspSagaShTruncateLine = { link = "LspSagaSignatureHelpBorder" },
+
+    -- Others
+    SagaShadow = { fg = p.overlay, bg = p.overlay },
+
+    ReferencesIcon = { fg = p.rose },
+    ReferencesCount = { fg = p.rose },
 }
 
 vim.g.terminal_color_0 = p.overlay -- black

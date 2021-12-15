@@ -1,0 +1,93 @@
+@document.meta
+    title: todo
+    description: 
+    author: axolotl
+    categories: 
+    created: 2021-12-12
+    version: 0.1
+@end
+
+This is just so that people can keep track of what still needs to get done,
+nothing permanent.
+
+LspSagaBorderTitle
+TargetWord
+ReferencesCount
+TargetFileName
+LineDiagTuncateLine
+LspLinesDiagBorder
+
+* code action
+  - [x] LspSagaCodeActionTitle  
+  - [x] LspSagaCodeActionTruncateLine   
+  - [x] LspSagaCodeActionContent    
+  - [x] LspSagaCodeActionBorder     
+
+* Diagnostics
+  - [x] DiagnosticError 	
+  - [x] DiagnosticWarning 	
+  - [x] DiagnosticInformation 	
+  - [x] DiagnosticHint 
+
+* Definition
+  - [x] DefinitionIcon
+  - [x] DefinitionCount
+  - [x] DefintionPreviewTitle
+
+* diagnostic
+  - [x] LspSagaDiagnosticBorder
+  - [x] LspSagaDiagnosticHeader
+  - [x] LspSagaDiagnosticTruncateLine
+
+* The lightbulb that doesn't appear
+  - [ ] LspSagaLightBulb
+  - [ ] LspSagaLightBulbSign
+
+* float
+  - [x] LspFloatWinNormal
+  - [x] LspFloatWinBorder
+  - [x] LspSagaHoverBorder
+
+* finder
+  - [x] LspSagaFinderSelection
+  - [x] LspSagaLspFinderBorder
+
+* rename
+  - [x] LspSagaRenamePromptPrefix
+  - [x] LspSagaRenameBorder
+
+* others
+  - [x] LspSagaAutoPreview
+  - [x] LspSagaDefPreviewBorder
+  - [x] LspSagaDocTruncateLine
+  - [x] LspSagaHoverBorder
+  - [x] LspSagaShTruncateLine
+  - [x] LspSagaSignatureHelpBorder
+  - [x] SagaShadow
+  - [x] ReferencesIcon
+  - [ ] ProviderTruncateLine
+  - [ ] 
+
+
+@code lua
+-- LspSaga
+DiagnosticWarning = { link = "DiagnosticWarn" },
+DiagnosticInformation = { link = "DiagnosticInfo" },
+
+LspFloatWinNormal = { bg = c.bg_float },
+LspFloatWinBorder = { fg = c.border_highlight },
+LspSagaBorderTitle = { fg = c.cyan },
+LspSagaHoverBorder = { fg = c.blue },
+LspSagaRenameBorder = { fg = c.green },
+LspSagaDefPreviewBorder = { fg = c.green },
+LspSagaCodeActionBorder = { fg = c.blue },
+LspSagaFinderSelection = { fg = c.bg_visual },
+LspSagaCodeActionTitle = { fg = c.blue1 },
+LspSagaCodeActionContent = { fg = c.purple },
+LspSagaSignatureHelpBorder = { fg = c.red },
+ReferencesCount = { fg = c.purple },
+DefinitionCount = { fg = c.purple },
+DefinitionIcon = { fg = c.blue },
+ReferencesIcon = { fg = c.blue },
+TargetWord = { fg = c.cyan },
+@end
