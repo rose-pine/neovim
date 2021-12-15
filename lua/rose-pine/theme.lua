@@ -1,52 +1,40 @@
+local config = require('rose-pine.config')
 local p = require('rose-pine.palette')
 
-local user_colors = vim.g.rose_pine_colors or {}
-local groups = {
-	punctuation = user_colors.punctuation or p.subtle,
-	comment = user_colors.comment or p.subtle,
-	hint = user_colors.hint or p.iris,
-	info = user_colors.info or p.foam,
-	warn = user_colors.warn or p.gold,
-	error = user_colors.error or p.love,
-	headings = {
-		h1 = p.love,
-		h2 = p.rose,
-		h3 = p.iris,
-		h4 = p.pine,
-		h5 = p.foam,
-	},
-}
-
-groups.headings = vim.tbl_extend(
-	'force',
-	groups.headings,
-	user_colors.headings or {}
-)
-
-local theme = {}
-local maybe_base = p.base
+-- TODO: Refactor `maybe` logic
+local maybe_inactive_background = p.none
+local maybe_background = p.base
+local maybe_float_background = p.surface
 local maybe_italic = 'italic'
 local maybe_bold_vert_split = { fg = p.overlay }
 
-if vim.g.rose_pine_disable_background then
-	maybe_base = p.none
-end
-
-if vim.g.rose_pine_disable_italics then
-	maybe_italic = nil
-end
-
-if vim.g.rose_pine_bold_vertical_split_line then
+if config.bold_vert_split then
 	maybe_bold_vert_split = { fg = p.surface, bg = p.surface }
 end
 
-theme.base = {
-	ColorColumn = { bg = p.highlight_overlay },
+if config.inactive_background then
+	maybe_inactive_background = p.surface
+end
+
+if config.no_background then
+	maybe_background = p.none
+end
+
+if config.no_float_background then
+	maybe_float_background = p.none
+end
+
+if config.no_italics then
+	maybe_italic = nil
+end
+
+local theme = {
+	ColorColumn = { bg = p.highlight_high },
 	Conceal = { bg = p.none },
 	-- Cursor = {},
-	CursorColumn = { bg = p.highlight },
+	CursorColumn = { bg = p.highlight_med },
 	-- CursorIM = {},
-	CursorLine = { bg = p.highlight_inactive },
+	CursorLine = { bg = p.highlight_low },
 	CursorLineNr = { fg = p.text },
 	DarkenedPanel = { bg = p.surface },
 	DarkenedStatusline = { bg = p.surface },
@@ -54,33 +42,37 @@ theme.base = {
 	DiffChange = { fg = p.rose },
 	DiffDelete = { fg = p.love },
 	DiffText = { fg = p.text },
+	diffAdded = { link = 'DiffAdd' },
+	diffChanged = { link = 'DiffChange' },
+	diffRemoved = { link = 'DiffDelete' },
 	Directory = { fg = p.foam, bg = p.none },
 	-- EndOfBuffer = {},
 	ErrorMsg = { fg = p.love, style = 'bold' },
 	FloatBorder = { fg = p.subtle },
 	FoldColumn = {},
 	Folded = { fg = p.text, bg = p.surface },
-	IncSearch = { bg = p.highlight },
+	IncSearch = { bg = p.highlight_med },
 	LineNr = { fg = p.inactive },
-	MatchParen = { fg = p.text, bg = p.overlay },
-	-- ModeMsg = {},
+	MatchParen = { fg = p.text, bg = p.highlight_med },
+	ModeMsg = { fg = p.subtle },
 	MoreMsg = { fg = p.iris },
 	NonText = { fg = p.inactive },
-	Normal = { fg = p.text, bg = maybe_base },
-	NormalFloat = { fg = p.text, bg = p.surface },
-	Pmenu = { fg = p.subtle, bg = p.surface },
+	Normal = { fg = p.text, bg = maybe_background },
+	NormalNC = { fg = p.text, bg = maybe_inactive_background },
+	NormalFloat = { fg = p.text, bg = maybe_float_background },
+	Pmenu = { fg = p.subtle, bg = maybe_float_background },
 	PmenuSbar = { bg = p.overlay },
 	PmenuSel = { fg = p.text, bg = p.overlay },
 	PmenuThumb = { bg = p.inactive },
 	Question = { fg = p.gold },
 	-- QuickFixLine = {},
-	Search = { fg = p.iris, bg = p.highlight_overlay },
+	Search = { fg = p.iris, bg = p.highlight_high },
 	SpecialKey = { fg = p.foam },
 	SpellBad = { style = 'undercurl', sp = p.love },
 	SpellCap = { style = 'undercurl', sp = p.subtle },
 	SpellLocal = { style = 'undercurl', sp = p.subtle },
 	SpellRare = { style = 'undercurl', sp = p.subtle },
-	SignColumn = { fg = p.text, bg = maybe_base },
+	SignColumn = { fg = p.text, bg = maybe_background },
 	StatusLine = { fg = p.text, bg = p.surface },
 	StatusLineNC = { fg = p.subtle, bg = p.surface },
 	-- StatusLineTerm = {},
@@ -90,7 +82,7 @@ theme.base = {
 	TabLineSel = { fg = p.text, bg = p.inactive },
 	Title = { fg = p.text },
 	VertSplit = maybe_bold_vert_split,
-	Visual = { bg = p.highlight },
+	Visual = { bg = p.highlight_med },
 	-- VisualNOS = {},
 	WarningMsg = { fg = p.gold },
 	-- Whitespace = {},
@@ -99,14 +91,14 @@ theme.base = {
 	Boolean = { fg = p.gold },
 	Character = { fg = p.gold },
 	Comment = {
-		fg = groups.comment,
+		fg = config.colors.comment,
 		style = maybe_italic,
 	},
 	Conditional = { fg = p.pine },
 	Constant = { fg = p.gold },
 	Debug = { fg = p.rose },
 	Define = { fg = p.iris },
-	Delimiter = { fg = p.rose },
+	Delimiter = { fg = p.subtle },
 	Error = { fg = p.love },
 	Exception = { fg = p.pine },
 	Float = { fg = p.gold },
@@ -138,17 +130,30 @@ theme.base = {
 	htmlArg = { fg = p.iris },
 	htmlBold = { fg = p.text, style = 'bold' },
 	htmlEndTag = { fg = p.subtle },
-	htmlH1 = { fg = groups.headings.h1, style = 'bold' },
-	htmlH2 = { fg = groups.headings.h2, style = 'bold' },
-	htmlH3 = { fg = groups.headings.h3, style = 'bold' },
-	htmlH4 = { fg = groups.headings.h4, style = 'bold' },
-	htmlH5 = { fg = groups.headings.h5, style = 'bold' },
+	htmlH1 = { fg = config.colors.headings.h1, style = 'bold' },
+	htmlH2 = { fg = config.colors.headings.h2, style = 'bold' },
+	htmlH3 = { fg = config.colors.headings.h3, style = 'bold' },
+	htmlH4 = { fg = config.colors.headings.h4, style = 'bold' },
+	htmlH5 = { fg = config.colors.headings.h5, style = 'bold' },
 	htmlItalic = { fg = p.text, style = maybe_italic },
 	htmlLink = { fg = p.text },
 	htmlTag = { fg = p.subtle },
 	htmlTagN = { fg = p.text },
 	htmlTagName = { fg = p.foam },
 
+	markdownH1 = { fg = config.colors.headings.h1, style = 'bold' },
+	markdownH1Delimiter = { fg = config.colors.headings.h1 },
+	markdownH2 = { fg = config.colors.headings.h2, style = 'bold' },
+	markdownH2Delimiter = { fg = config.colors.headings.h2 },
+	markdownH3 = { fg = config.colors.headings.h3, style = 'bold' },
+	markdownH3Delimiter = { fg = config.colors.headings.h3 },
+	markdownH4 = { fg = config.colors.headings.h4, style = 'bold' },
+	markdownH4Delimiter = { fg = config.colors.headings.h4 },
+	markdownH5 = { fg = config.colors.headings.h5, style = 'bold' },
+	markdownH5Delimiter = { fg = config.colors.headings.h5 },
+	markdownH6 = { fg = config.colors.headings.h6, style = 'bold' },
+	markdownH6Delimiter = { fg = config.colors.headings.h6 },
+	markdownDelimiter = { fg = p.subtle },
 	markdownLinkText = { fg = p.iris, style = 'underline' },
 	markdownUrl = { fg = p.iris, style = 'underline' },
 	mkdCode = { fg = p.foam, style = maybe_italic },
@@ -169,59 +174,54 @@ theme.base = {
 	--                     ^         ^
 	typescriptParens = { bg = p.none },
 
-	DiagnosticHint = { fg = groups.hint },
-	DiagnosticInfo = { fg = groups.info },
-	DiagnosticWarn = { fg = groups.warn },
-	DiagnosticError = { fg = groups.error },
+	DiagnosticHint = { fg = config.colors.hint },
+	DiagnosticInfo = { fg = config.colors.info },
+	DiagnosticWarn = { fg = config.colors.warn },
+	DiagnosticError = { fg = config.colors.error },
+	DiagnosticDefaultHint = { fg = config.colors.hint },
+	DiagnosticDefaultInfo = { fg = config.colors.info },
+	DiagnosticDefaultWarn = { fg = config.colors.warn },
+	DiagnosticDefaultError = { fg = config.colors.error },
+	DiagnosticFloatingHint = { fg = config.colors.hint },
+	DiagnosticFloatingInfo = { fg = config.colors.info },
+	DiagnosticFloatingWarn = { fg = config.colors.warn },
+	DiagnosticFloatingError = { fg = config.colors.error },
+	DiagnosticSignHint = { fg = config.colors.hint },
+	DiagnosticSignInfo = { fg = config.colors.info },
+	DiagnosticSignWarn = { fg = config.colors.warn },
+	DiagnosticSignError = { fg = config.colors.error },
+	DiagnosticUnderlineHint = { style = 'undercurl', sp = config.colors.hint },
+	DiagnosticUnderlineInfo = { style = 'undercurl', sp = config.colors.info },
+	DiagnosticUnderlineWarn = { style = 'undercurl', sp = config.colors.warn },
+	DiagnosticUnderlineError = {
+		style = 'undercurl',
+		sp = config.colors.error,
+	},
+	DiagnosticVirtualTextHint = { fg = config.colors.hint },
+	DiagnosticVirtualTextInfo = { fg = config.colors.info },
+	DiagnosticVirtualTextWarn = { fg = config.colors.warn },
+	DiagnosticVirtualTextError = { fg = config.colors.error },
 
-	DiagnosticDefaultHint = { fg = groups.hint },
-	DiagnosticDefaultInfo = { fg = groups.info },
-	DiagnosticDefaultWarn = { fg = groups.warn },
-	DiagnosticDefaultError = { fg = groups.error },
+	LspReferenceText = { fg = p.rose, bg = p.highlight_med },
+	LspReferenceRead = { fg = p.rose, bg = p.highlight_med },
+	LspReferenceWrite = { fg = p.rose, bg = p.highlight_med },
 
-	DiagnosticFloatingHint = { fg = groups.hint },
-	DiagnosticFloatingInfo = { fg = groups.info },
-	DiagnosticFloatingWarn = { fg = groups.warn },
-	DiagnosticFloatingError = { fg = groups.error },
-
-	DiagnosticSignHint = { fg = groups.hint },
-	DiagnosticSignInfo = { fg = groups.info },
-	DiagnosticSignWarn = { fg = groups.warn },
-	DiagnosticSignError = { fg = groups.error },
-
-	DiagnosticUnderlineHint = { style = 'undercurl', sp = groups.hint },
-	DiagnosticUnderlineInfo = { style = 'undercurl', sp = groups.info },
-	DiagnosticUnderlineWarn = { style = 'undercurl', sp = groups.warn },
-	DiagnosticUnderlineError = { style = 'undercurl', sp = groups.error },
-
-	DiagnosticVirtualTextHint = { fg = groups.hint },
-	DiagnosticVirtualTextInfo = { fg = groups.info },
-	DiagnosticVirtualTextWarn = { fg = groups.warn },
-	DiagnosticVirtualTextError = { fg = groups.error },
-
-	LspReferenceText = { fg = p.rose, bg = p.highlight },
-	LspReferenceRead = { fg = p.rose, bg = p.highlight },
-	LspReferenceWrite = { fg = p.rose, bg = p.highlight },
-
-	--Lsp color groups for nvim 0.5.x
+	-- TODO: Deprecate in favour of 0.6.0 groups
 	LspDiagnosticsSignWarning = { link = 'DiagnosticSignWarn' },
 	LspDiagnosticsDefaultWarning = { link = 'DiagnosticDefaultWarn' },
 	LspDiagnosticsFloatingWarning = { link = 'DiagnosticFloatingWarn' },
 	LspDiagnosticsVirtualTextWarning = { link = 'DiagnosticVirtualTextWarn' },
 	LspDiagnosticsUnderlineWarning = { link = 'DiagnosticUnderlineWarn' },
-
 	LspDiagnosticsSignHint = { link = 'DiagnosticSignHint' },
 	LspDiagnosticsDefaultHint = { link = 'DiagnosticDefaultHint' },
 	LspDiagnosticsVirtualTextHint = { link = 'DiagnosticFloatingHint' },
 	LspDiagnosticsFloatingHint = { link = 'DiagnosticVirtualTextHint' },
 	LspDiagnosticsUnderlineHint = { link = 'DiagnosticUnderlineHint' },
-
 	LspDiagnosticsSignError = { link = 'DiagnosticSignError' },
 	LspDiagnosticsDefaultError = { link = 'DiagnosticDefaultError' },
 	LspDiagnosticsFloatingError = { link = 'DiagnosticFloatingError' },
 	LspDiagnosticsVirtualTextError = { link = 'DiagnosticVirtualTextError' },
 	LspDiagnosticsUnderlineError = { link = 'DiagnosticUnderlineError' },
-
 	LspDiagnosticsSignInformation = { link = 'DiagnosticSignInfo' },
 	LspDiagnosticsDefaultInformation = { link = 'DiagnosticDefaultInfo' },
 	LspDiagnosticsFloatingInformation = { link = 'DiagnosticFloatingInfo' },
@@ -236,42 +236,13 @@ theme.base = {
 	RedrawDebugRecompose = { fg = '#ffffff', bg = p.love },
 
 	NvimInternalError = { fg = '#ffffff', bg = p.love },
-}
 
-function theme.load_terminal()
-	-- black
-	vim.g.terminal_color_0 = p.overlay
-	vim.g.terminal_color_8 = p.subtle
-	-- red
-	vim.g.terminal_color_1 = p.love
-	vim.g.terminal_color_9 = p.love
-	-- green
-	vim.g.terminal_color_2 = p.pine
-	vim.g.terminal_color_10 = p.pine
-	-- yellow
-	vim.g.terminal_color_3 = p.gold
-	vim.g.terminal_color_11 = p.gold
-	-- blue
-	vim.g.terminal_color_4 = p.foam
-	vim.g.terminal_color_12 = p.foam
-	-- magenta
-	vim.g.terminal_color_5 = p.iris
-	vim.g.terminal_color_13 = p.iris
-	-- cyan
-	vim.g.terminal_color_6 = p.rose
-	vim.g.terminal_color_14 = p.rose
-	-- white
-	vim.g.terminal_color_7 = p.text
-	vim.g.terminal_color_15 = p.text
-end
-
-theme.treesitter = {
 	-- TSAnnotation = {},
 	-- TSAttribute = {},
 	TSBoolean = { fg = p.rose },
 	-- TSCharacter = {},
 	TSComment = {
-		fg = groups.comment,
+		fg = config.colors.comment,
 		style = maybe_italic,
 	},
 	-- TSConditional = {},
@@ -307,9 +278,9 @@ theme.treesitter = {
 		fg = p.iris,
 		style = maybe_italic,
 	},
-	TSPunctBracket = { fg = groups.punctuation },
-	TSPunctDelimiter = { fg = groups.punctuation },
-	TSPunctSpecial = { fg = groups.punctuation },
+	TSPunctBracket = { fg = config.colors.punctuation },
+	TSPunctDelimiter = { fg = config.colors.punctuation },
+	TSPunctSpecial = { fg = config.colors.punctuation },
 	-- TSRepeat = {},
 	-- TSStrike = {},
 	TSString = { fg = p.gold },
@@ -319,7 +290,7 @@ theme.treesitter = {
 	TSTag = { fg = p.foam },
 	TSTagDelimiter = { fg = p.subtle },
 	TSText = { fg = p.text },
-	-- TSTitle = {},
+	TSTitle = { fg = config.colors.headings.h1, style = 'bold' },
 	-- TSType = {},
 	-- TSTypeBuiltin = {},
 	TSURI = { fg = p.gold },
@@ -329,9 +300,7 @@ theme.treesitter = {
 		style = maybe_italic,
 	},
 	TSVariableBuiltin = { fg = p.love },
-}
 
-theme.plugins = {
 	-- barbar.nvim
 	-- https://github.com/romgrk/barbar.nvim
 	BufferTabpageFill = { fg = p.base, bg = p.base },
@@ -367,23 +336,20 @@ theme.plugins = {
 	-- nvim-tree.lua
 	-- https://github.com/kyazdani42/nvim-tree.lua
 	NvimTreeNormal = { fg = p.text },
-
 	NvimTreeFileDeleted = { fg = p.love },
 	NvimTreeFileDirty = { fg = p.rose },
 	NvimTreeFileMerge = { fg = p.iris },
 	NvimTreeFileNew = { fg = p.foam },
 	NvimTreeFileRenamed = { fg = p.pine },
 	NvimTreeFileStaged = { fg = p.iris },
-
 	NvimTreeEmptyFolderName = { fg = p.inactive },
 	NvimTreeFolderIcon = { fg = p.subtle },
 	NvimTreeFolderName = { fg = p.foam },
 	NvimTreeImageFile = { fg = p.text },
-	NvimTreeOpenedFile = { fg = p.text, bg = p.highlight },
+	NvimTreeOpenedFile = { fg = p.text, bg = p.highlight_med },
 	NvimTreeOpenedFolderName = { fg = p.foam },
 	NvimTreeRootFolder = { fg = p.iris },
 	NvimTreeSpecialFile = { link = 'NvimTreeNormal' },
-
 	NvimTreeGitDeleted = { fg = p.love },
 	NvimTreeGitDirty = { fg = p.rose },
 	NvimTreeGitIgnored = { fg = p.subtle },
@@ -391,7 +357,6 @@ theme.plugins = {
 	NvimTreeGitNew = { fg = p.foam },
 	NvimTreeGitRenamed = { fg = p.pine },
 	NvimTreeGitStaged = { fg = p.iris },
-
 	NvimTreeWindowPicker = { fg = p.base, bg = p.iris },
 
 	-- which-key.nvim
@@ -414,24 +379,33 @@ theme.plugins = {
 	CmpItemAbbrMatch = { fg = p.text, style = 'bold' },
 	CmpItemAbbrMatchFuzzy = { fg = p.text, style = 'bold' },
 	CmpItemAbbrDeprecated = { fg = p.subtle, style = 'strikethrough' },
+	CmpItemKindVariable = { fg = p.foam },
+	CmpItemKindClass = { fg = p.gold },
+	CmpItemKindInterface = { fg = p.gold },
+	CmpItemKindFunction = { fg = p.iris },
+	CmpItemKindMethod = { fg = p.iris },
+	CmpItemKindSnippet = { fg = p.iris },
 
 	-- neogit
 	-- https://github.com/TimUntersberger/neogit
-	NeogitDiffAddHighlight = { fg = p.foam, bg = p.highlight_overlay },
-	NeogitDiffDeleteHighlight = { fg = p.love, bg = p.highlight_overlay },
-	NeogitDiffContextHighlight = { bg = p.highlight },
-	NeogitHunkHeader = { bg = p.highlight },
-	NeogitHunkHeaderHighlight = { bg = p.highlight },
+	NeogitDiffAddHighlight = { fg = p.foam, bg = p.highlight_med },
+	NeogitDiffDeleteHighlight = {
+		fg = p.love,
+		bg = p.highlight_med,
+	},
+	NeogitDiffContextHighlight = { bg = p.highlight_low },
+	NeogitHunkHeader = { bg = p.highlight_low },
+	NeogitHunkHeaderHighlight = { bg = p.highlight_low },
 
 	-- VimWiki
 	-- https://github.com/vimwiki/vimwiki
 	VimwikiHR = { fg = p.subtle },
-	VimwikiHeader1 = { fg = p.foam, style = 'bold' },
-	VimwikiHeader2 = { fg = p.foam, style = 'bold' },
-	VimwikiHeader3 = { fg = p.foam, style = 'bold' },
-	VimwikiHeader4 = { fg = p.foam, style = 'bold' },
-	VimwikiHeader5 = { fg = p.foam, style = 'bold' },
-	VimwikiHeader6 = { fg = p.foam, style = 'bold' },
+	VimwikiHeader1 = { fg = config.colors.headings.h1, style = 'bold' },
+	VimwikiHeader2 = { fg = config.colors.headings.h2, style = 'bold' },
+	VimwikiHeader3 = { fg = config.colors.headings.h3, style = 'bold' },
+	VimwikiHeader4 = { fg = config.colors.headings.h4, style = 'bold' },
+	VimwikiHeader5 = { fg = config.colors.headings.h5, style = 'bold' },
+	VimwikiHeader6 = { fg = config.colors.headings.h6, style = 'bold' },
 	VimwikiHeaderChar = { fg = p.pine },
 	VimwikiLink = { fg = p.rose },
 	VimwikiList = { fg = p.iris },
@@ -455,5 +429,22 @@ theme.plugins = {
 
 	NeorgMarkerTitle = { fg = p.text, style = 'bold' },
 }
+
+vim.g.terminal_color_0 = p.overlay -- black
+vim.g.terminal_color_8 = p.subtle -- bright black
+vim.g.terminal_color_1 = p.love -- red
+vim.g.terminal_color_9 = p.love -- bright red
+vim.g.terminal_color_2 = p.pine -- green
+vim.g.terminal_color_10 = p.pine -- bright green
+vim.g.terminal_color_3 = p.gold -- yellow
+vim.g.terminal_color_11 = p.gold -- bright yellow
+vim.g.terminal_color_4 = p.foam -- blue
+vim.g.terminal_color_12 = p.foam -- bright blue
+vim.g.terminal_color_5 = p.iris -- magenta
+vim.g.terminal_color_13 = p.iris -- bright magenta
+vim.g.terminal_color_6 = p.rose -- cyan
+vim.g.terminal_color_14 = p.rose -- bright cyan
+vim.g.terminal_color_7 = p.text -- white
+vim.g.terminal_color_15 = p.text -- bright white
 
 return theme
