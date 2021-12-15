@@ -411,21 +411,21 @@ local theme = {
 	VimwikiList = { fg = p.iris },
 	VimwikiNoExistsLink = { fg = p.love },
 
-    -- Neorg
-    -- https://github.com/nvim-neorg/neorg
-	NeorgHeading1Prefix = { fg = p.iris, style = 'bold' },
-	NeorgHeading2Prefix =  { fg = p.foam, style = 'bold' },
-	NeorgHeading3Prefix = { fg = p.rose, style = 'bold' },
-	NeorgHeading4Prefix = { fg =  p.gold, style = 'bold' },
-	NeorgHeading5Prefix = { fg = p.pine, style = 'bold' },
-	NeorgHeading6Prefix = { fg = p.foam, style = 'bold' },
+	-- Neorg
+	-- https://github.com/nvim-neorg/neorg
+	NeorgHeading1Prefix = { fg = config.colors.headings.h1, style = 'bold' },
+	NeorgHeading2Prefix = { fg = config.colors.headings.h2, style = 'bold' },
+	NeorgHeading3Prefix = { fg = config.colors.headings.h3, style = 'bold' },
+	NeorgHeading4Prefix = { fg = config.colors.headings.h4, style = 'bold' },
+	NeorgHeading5Prefix = { fg = config.colors.headings.h5, style = 'bold' },
+	NeorgHeading6Prefix = { fg = config.colors.headings.h6, style = 'bold' },
 
-	NeorgHeading1Title = { fg = p.iris, style = 'bold' },
-	NeorgHeading2Title =  { fg = p.foam, style = 'bold' },
-	NeorgHeading3Title = { fg = p.rose, style = 'bold' },
-	NeorgHeading4Title = { fg =  p.gold, style = 'bold' },
-	NeorgHeading5Title = { fg = p.pine, style = 'bold' },
-	NeorgHeading6Title = { fg = p.foam, style = 'bold' },
+	NeorgHeading1Title = { fg = config.colors.headings.h1, style = 'bold' },
+	NeorgHeading2Title = { fg = config.colors.headings.h2, style = 'bold' },
+	NeorgHeading3Title = { fg = config.colors.headings.h3, style = 'bold' },
+	NeorgHeading4Title = { fg = config.colors.headings.h4, style = 'bold' },
+	NeorgHeading5Title = { fg = config.colors.headings.h5, style = 'bold' },
+	NeorgHeading6Title = { fg = config.colors.headings.h6, style = 'bold' },
 
 	NeorgMarkerTitle = { fg = p.text, style = 'bold' },
 }
