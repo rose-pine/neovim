@@ -437,7 +437,7 @@ local theme = {
     DefinitionCount = { fg = p.rose },
     ReferencesCount = { fg = p.rose },
     ReferencesIcon = { fg = p.rose },
-    DefintionPreviewTitle = {
+    DefinitionPreviewTitle = {
         fg = p.rose,
         style = "bold",
     },
