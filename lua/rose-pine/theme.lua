@@ -415,7 +415,7 @@ local theme = {
 	-- https://github.com/tami5/lspsaga.nvim (fork of https://github.com/glepnir/lspsaga.nvim)
 	-- CodeActions
 	LspSagaCodeActionTitle = {
-		fg = p.gold,
+		fg = p.rose,
 		style = 'bold',
 	},
 	LspSagaCodeActionBorder = { fg = p.subtle },
@@ -429,7 +429,7 @@ local theme = {
 	-- DiagnosticPopUp
 	LspSagaDiagnosticBorder = { fg = p.subtle },
 	LspSagaDiagnosticHeader = {
-		fg = p.gold,
+		fg = p.foam,
 		style = 'bold',
 	},
 	LspSagaDiagnosticTruncateLine = { link = 'LspSagaDiagnosticBorder' },
@@ -443,12 +443,15 @@ local theme = {
 	-- Definition
 	DefinitionIcon = { fg = p.rose },
     DefinitionCount = { fg = p.rose },
+    ReferencesCount = { fg = p.rose },
+    ReferencesIcon = { fg = p.rose },
+
     DefintionPreviewTitle = {
-        fg = p.gold,
+        fg = p.rose,
         style = "bold",
     },
 	LspSagaRenamePromptPrefix = { fg = p.love },
-	LspSagaRenameBorder = { fg = p.subtle },
+	LspSagaRenameBorder = { fg = p.pine },
 
     -- Float
     LspFloatWinNormal = { bg = p.base },
@@ -457,14 +460,14 @@ local theme = {
     LspSagaHoverBorder = { fg = p.subtle},
 
     -- Signature
-    LspSagaSignatureHelpBorder = { fg = p.subtle },
+    LspSagaSignatureHelpBorder = { fg = p.pine },
     LspSagaShTruncateLine = { link = "LspSagaSignatureHelpBorder" },
 
-    -- Others
-    SagaShadow = { fg = p.overlay, bg = p.overlay },
+    -- TargetWord
+    TargetWord = { fg = p.iris },
 
-    ReferencesIcon = { fg = p.rose },
-    ReferencesCount = { fg = p.rose },
+    -- Others
+    SagaShadow = { bg = p.overlay },
 }
 
 vim.g.terminal_color_0 = p.overlay -- black
