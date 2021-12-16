@@ -452,6 +452,7 @@ local theme = {
     TargetWord = { fg = p.iris },
 
     SagaShadow = { bg = p.overlay },
+    LspSagaBorderTitle = { fg = p.pine },
 }
 
 vim.g.terminal_color_0 = p.overlay -- black
