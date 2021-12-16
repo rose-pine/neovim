@@ -413,7 +413,9 @@ local theme = {
 
 	-- LspSaga
 	-- https://github.com/tami5/lspsaga.nvim (fork of https://github.com/glepnir/lspsaga.nvim)
-	-- CodeActions
+	DiagnosticInformation = { link = 'DiagnosticInfo' },
+	DiagnosticWarning = { link = 'DiagnosticWarn' },
+
 	LspSagaCodeActionTitle = {
 		fg = p.rose,
 		style = 'bold',
@@ -421,52 +423,34 @@ local theme = {
 	LspSagaCodeActionBorder = { fg = p.subtle },
 	LspSagaCodeActionTruncateLine = { link = 'LspSagaCodeActionBorder' },
 	LspSagaCodeActionContent = { fg = p.foam },
-
-	-- Diagnostics
-	DiagnosticInformation = { link = 'DiagnosticInfo' },
-	DiagnosticWarning = { link = 'DiagnosticWarn' },
-
-	-- DiagnosticPopUp
 	LspSagaDiagnosticBorder = { fg = p.subtle },
 	LspSagaDiagnosticHeader = {
 		fg = p.foam,
 		style = 'bold',
 	},
 	LspSagaDiagnosticTruncateLine = { link = 'LspSagaDiagnosticBorder' },
-
-	-- Finder
 	LspSagaFinderSelection = { fg = p.gold },
 	LspSagaLspFinderBorder = { fg = p.subtle },
     LspSagaAutoPreview = { fg = p.subtle },
     LspSagaDefPreviewBorder = { fg = p.subtle },
-
-	-- Definition
 	DefinitionIcon = { fg = p.rose },
     DefinitionCount = { fg = p.rose },
     ReferencesCount = { fg = p.rose },
     ReferencesIcon = { fg = p.rose },
-
     DefintionPreviewTitle = {
         fg = p.rose,
         style = "bold",
     },
 	LspSagaRenamePromptPrefix = { fg = p.love },
 	LspSagaRenameBorder = { fg = p.pine },
-
-    -- Float
     LspFloatWinNormal = { bg = p.base },
     LspFloatWinBorder = { fg = p.subtle },
     LspSagaDocTruncateLine = { link = "LspSagaHoverBorder" },
     LspSagaHoverBorder = { fg = p.subtle},
-
-    -- Signature
     LspSagaSignatureHelpBorder = { fg = p.pine },
     LspSagaShTruncateLine = { link = "LspSagaSignatureHelpBorder" },
-
-    -- TargetWord
     TargetWord = { fg = p.iris },
 
-    -- Others
     SagaShadow = { bg = p.overlay },
 }
 
