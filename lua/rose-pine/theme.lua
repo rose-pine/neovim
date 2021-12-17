@@ -292,7 +292,7 @@ local theme = {
 	TSTag = { fg = p.foam },
 	TSTagDelimiter = { fg = p.subtle },
 	TSText = { fg = p.text },
-	-- TSTitle = {},
+	TSTitle = { fg = config.colors.headings.h1, style = 'bold' },
 	-- TSType = {},
 	-- TSTypeBuiltin = {},
 	TSURI = { fg = p.gold },
@@ -452,6 +452,23 @@ local theme = {
 
     SagaShadow = { bg = p.overlay },
     LspSagaBorderTitle = { fg = p.pine },
+	-- Neorg
+	-- https://github.com/nvim-neorg/neorg
+	NeorgHeading1Prefix = { fg = config.colors.headings.h1, style = 'bold' },
+	NeorgHeading2Prefix = { fg = config.colors.headings.h2, style = 'bold' },
+	NeorgHeading3Prefix = { fg = config.colors.headings.h3, style = 'bold' },
+	NeorgHeading4Prefix = { fg = config.colors.headings.h4, style = 'bold' },
+	NeorgHeading5Prefix = { fg = config.colors.headings.h5, style = 'bold' },
+	NeorgHeading6Prefix = { fg = config.colors.headings.h6, style = 'bold' },
+
+	NeorgHeading1Title = { fg = config.colors.headings.h1, style = 'bold' },
+	NeorgHeading2Title = { fg = config.colors.headings.h2, style = 'bold' },
+	NeorgHeading3Title = { fg = config.colors.headings.h3, style = 'bold' },
+	NeorgHeading4Title = { fg = config.colors.headings.h4, style = 'bold' },
+	NeorgHeading5Title = { fg = config.colors.headings.h5, style = 'bold' },
+	NeorgHeading6Title = { fg = config.colors.headings.h6, style = 'bold' },
+
+	NeorgMarkerTitle = { fg = p.text, style = 'bold' },
 }
 
 vim.g.terminal_color_0 = p.overlay -- black
