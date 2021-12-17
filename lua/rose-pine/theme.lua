@@ -176,9 +176,7 @@ local theme = {
 
 	DiagnosticHint = { fg = config.colors.hint },
 	DiagnosticInfo = { fg = config.colors.info },
-	DiagnosticInformation = { link = 'DiagnosticInfo' },
 	DiagnosticWarn = { fg = config.colors.warn },
-	DiagnosticWarning = { link = 'DiagnosticWarn' },
 	DiagnosticError = { fg = config.colors.error },
 	DiagnosticDefaultHint = { fg = config.colors.hint },
 	DiagnosticDefaultInfo = { fg = config.colors.info },
@@ -413,45 +411,6 @@ local theme = {
 	VimwikiList = { fg = p.iris },
 	VimwikiNoExistsLink = { fg = p.love },
 
-	-- LspSaga
-	-- https://github.com/tami5/lspsaga.nvim (fork of https://github.com/glepnir/lspsaga.nvim)
-	LspSagaCodeActionTitle = {
-		fg = p.rose,
-		style = 'bold',
-	},
-	LspSagaCodeActionBorder = { fg = p.subtle },
-	LspSagaCodeActionTruncateLine = { link = 'LspSagaCodeActionBorder' },
-	LspSagaCodeActionContent = { fg = p.foam },
-	LspSagaDiagnosticBorder = { fg = p.subtle },
-	LspSagaDiagnosticHeader = {
-		fg = p.foam,
-		style = 'bold',
-	},
-	LspSagaDiagnosticTruncateLine = { link = 'LspSagaDiagnosticBorder' },
-	LspSagaFinderSelection = { fg = p.gold },
-	LspSagaLspFinderBorder = { fg = p.subtle },
-    LspSagaAutoPreview = { fg = p.subtle },
-    LspSagaDefPreviewBorder = { fg = p.subtle },
-	DefinitionIcon = { fg = p.rose },
-    DefinitionCount = { fg = p.rose },
-    ReferencesCount = { fg = p.rose },
-    ReferencesIcon = { fg = p.rose },
-    DefinitionPreviewTitle = {
-        fg = p.rose,
-        style = "bold",
-    },
-	LspSagaRenamePromptPrefix = { fg = p.love },
-	LspSagaRenameBorder = { fg = p.pine },
-    LspFloatWinNormal = { bg = p.base },
-    LspFloatWinBorder = { fg = p.subtle },
-    LspSagaDocTruncateLine = { link = "LspSagaHoverBorder" },
-    LspSagaHoverBorder = { fg = p.subtle},
-    LspSagaSignatureHelpBorder = { fg = p.pine },
-    LspSagaShTruncateLine = { link = "LspSagaSignatureHelpBorder" },
-    TargetWord = { fg = p.iris },
-
-    SagaShadow = { bg = p.overlay },
-    LspSagaBorderTitle = { fg = p.pine },
 	-- Neorg
 	-- https://github.com/nvim-neorg/neorg
 	NeorgHeading1Prefix = { fg = config.colors.headings.h1, style = 'bold' },

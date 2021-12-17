@@ -37,7 +37,6 @@ use({
 - **[WhichKey](https://github.com/folke/which-key.nvim)**
 - **[Indent-Blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)**
 - **[Neogit](https://github.com/TimUntersberger/neogit)**
-- **[Lspsaga](https://github.com/tami5/lspsaga.nvim)**
 - **[Neorg](https://github.com/nvim-neorg/neorg)**
 - **[Lualine](https://github.com/hoob3rt/lualine.nvim)**
   ```lua
