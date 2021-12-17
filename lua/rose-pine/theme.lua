@@ -176,7 +176,9 @@ local theme = {
 
 	DiagnosticHint = { fg = config.colors.hint },
 	DiagnosticInfo = { fg = config.colors.info },
+	DiagnosticInformation = { link = 'DiagnosticInfo' },
 	DiagnosticWarn = { fg = config.colors.warn },
+	DiagnosticWarning = { link = 'DiagnosticWarn' },
 	DiagnosticError = { fg = config.colors.error },
 	DiagnosticDefaultHint = { fg = config.colors.hint },
 	DiagnosticDefaultInfo = { fg = config.colors.info },
@@ -430,9 +432,6 @@ local theme = {
 	NeorgMarkerTitle = { fg = p.text, style = 'bold' },
 	-- LspSaga
 	-- https://github.com/tami5/lspsaga.nvim (fork of https://github.com/glepnir/lspsaga.nvim)
-	DiagnosticInformation = { link = 'DiagnosticInfo' },
-	DiagnosticWarning = { link = 'DiagnosticWarn' },
-
 	LspSagaCodeActionTitle = {
 		fg = p.gold,
 		style = 'bold',
