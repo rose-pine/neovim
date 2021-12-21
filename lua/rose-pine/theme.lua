@@ -1,4 +1,5 @@
 local config = require('rose-pine.config')
+local util = require('rose-pine.util')
 local p = require('rose-pine.palette')
 
 -- TODO: Refactor `maybe` logic
@@ -38,10 +39,11 @@ local theme = {
 	CursorLineNr = { fg = p.text },
 	DarkenedPanel = { bg = p.surface },
 	DarkenedStatusline = { bg = p.surface },
-	DiffAdd = { fg = p.foam },
-	DiffChange = { fg = p.rose },
-	DiffDelete = { fg = p.love },
-	DiffText = { fg = p.text },
+	-- TODO: Allow diff overrides. This is a good reason to refactor our config logic to allow setting both fg and bg
+	DiffAdd = { bg = util.blend(p.foam, p.base, 0.1) },
+	DiffChange = { bg = util.blend(p.rose, p.base, 0.1) },
+	DiffDelete = { bg = util.blend(p.love, p.base, 0.1) },
+	DiffText = { bg = util.blend(p.subtle, p.base, 0.1) },
 	diffAdded = { link = 'DiffAdd' },
 	diffChanged = { link = 'DiffChange' },
 	diffRemoved = { link = 'DiffDelete' },
