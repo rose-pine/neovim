@@ -290,6 +290,7 @@ local theme = {
 	TSString = { fg = p.gold },
 	TSStringEscape = { fg = p.pine },
 	-- TSStringRegex = {},
+	TSStringSpecial = { link = 'TSString' },
 	-- TSSymbol = {},
 	TSTag = { fg = p.foam },
 	TSTagDelimiter = { fg = p.subtle },
