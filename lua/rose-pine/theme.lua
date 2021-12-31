@@ -313,14 +313,17 @@ local theme = {
 	BufferCurrentIndex = { fg = p.text, bg = p.overlay },
 	BufferCurrentMod = { fg = p.foam, bg = p.overlay },
 	BufferCurrentSign = { fg = p.subtle, bg = p.overlay },
+	BufferCurrentTarget = { fg = p.gold, bg = p.overlay },
 	BufferInactive = { fg = p.subtle },
 	BufferInactiveIndex = { fg = p.subtle },
 	BufferInactiveMod = { fg = p.foam },
 	BufferInactiveSign = { fg = p.inactive },
+	BufferInactiveTarget = { fg = p.gold },
 	BufferVisible = { fg = p.subtle },
 	BufferVisibleIndex = { fg = p.subtle },
 	BufferVisibleMod = { fg = p.foam },
 	BufferVisibleSign = { fg = p.inactive },
+	BufferVisibleTarget = { fg = p.gold },
 
 	-- gitsigns.nvim
 	-- https://github.com/lewis6991/gitsigns.nvim
