@@ -474,6 +474,10 @@ local theme = {
 	TargetWord = { fg = p.iris },
 
 	SagaShadow = { bg = p.overlay },
+
+	-- Lsp_Signature
+	-- https://github.com/ray-x/lsp_signature.nvim
+	LspSignatureActiveParameter = { bg = p.overlay },
 }
 
 vim.g.terminal_color_0 = p.overlay -- black
