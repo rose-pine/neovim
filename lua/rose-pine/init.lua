@@ -23,16 +23,7 @@ function M.colorscheme()
 		local bg = color.bg and 'guibg=' .. color.bg or 'guibg=NONE'
 		local sp = color.sp and 'guisp=' .. color.sp or ''
 
-		local hl = 'highlight '
-			.. group
-			.. ' '
-			.. style
-			.. ' '
-			.. fg
-			.. ' '
-			.. bg
-			.. ' '
-			.. sp
+		local hl = 'highlight ' .. group .. ' ' .. style .. ' ' .. fg .. ' ' .. bg .. ' ' .. sp
 
 		vim.cmd(hl)
 		if color.link then
@@ -49,7 +40,7 @@ end
 
 function M.set(variant)
 	vim.g.rose_pine_variant = variant
-	vim.cmd([[colorscheme rose-pine]])
+	vim.cmd('colorscheme rose-pine')
 end
 
 function M.toggle(variants)
@@ -64,9 +55,7 @@ function M.toggle(variants)
 		vim.g.rose_pine_current_variant = index[vim.g.rose_pine_variant] or 0
 	end
 
-	vim.g.rose_pine_current_variant = (
-			vim.g.rose_pine_current_variant % #variants
-		) + 1
+	vim.g.rose_pine_current_variant = (vim.g.rose_pine_current_variant % #variants) + 1
 
 	M.set(variants[vim.g.rose_pine_current_variant])
 end
