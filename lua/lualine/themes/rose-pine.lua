@@ -27,8 +27,8 @@ return {
 		c = { bg = p.base, fg = p.text },
 	},
 	inactive = {
-		a = { bg = p.base, fg = p.inactive, gui = 'bold' },
-		b = { bg = p.base, fg = p.inactive },
-		c = { bg = p.base, fg = p.inactive },
+		a = { bg = p.base, fg = p.muted, gui = 'bold' },
+		b = { bg = p.base, fg = p.muted },
+		c = { bg = p.base, fg = p.muted },
 	},
 }
