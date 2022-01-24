@@ -40,11 +40,14 @@ use({
 - **[Neorg](https://github.com/nvim-neorg/neorg)**
 - **[Lspsaga](https://github.com/tami5/lspsaga.nvim)**
 - **[Lualine](https://github.com/hoob3rt/lualine.nvim)**
+- [Pounce](https://github.com/rlane/pounce.nvim)
+
   ```lua
   require('lualine').setup({
       options = { theme = 'rose-pine' }
   })
   ```
+
 - **[Galaxyline fork](https://github.com/NTBBloodbath/galaxyline.nvim)**
   > This fork by NTBBloodbath allows [custom colors](https://github.com/NTBBloodbath/galaxyline.nvim/blob/main/docs/themes.md#colors-standards)
   ```lua
