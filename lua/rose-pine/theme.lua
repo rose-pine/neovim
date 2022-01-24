@@ -481,10 +481,10 @@ local theme = {
 
 	-- Pounce
 	-- https://github.com/rlane/pounce.nvim
-	PounceMatch = { bg = p.love, fg = p.base },
-	PounceGap = { bg = p.foam, fg = p.base },
-	PounceAccept = { bg = p.gold, fg = p.base },
-	PounceAcceptBest = { bg = p.iris, fg = p.base },
+	PounceMatch = { bg = p.love, fg = p.overlay },
+	PounceGap = { bg = p.foam, fg = p.overlay },
+	PounceAccept = { bg = p.gold, fg = p.overlay },
+	PounceAcceptBest = { bg = p.iris, fg = p.overlay },
 }
 
 vim.g.terminal_color_0 = p.overlay -- black
