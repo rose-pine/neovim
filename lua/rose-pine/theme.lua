@@ -478,6 +478,13 @@ local theme = {
 	-- Lsp_Signature
 	-- https://github.com/ray-x/lsp_signature.nvim
 	LspSignatureActiveParameter = { bg = p.overlay },
+
+	-- Pounce
+	-- https://github.com/rlane/pounce.nvim
+	PounceMatch = { bg = p.love, fg = p.base },
+	PounceGap = { bg = p.foam, fg = p.base },
+	PounceAccept = { bg = p.gold, fg = p.base },
+	PounceAcceptBest = { bg = p.iris, fg = p.base },
 }
 
 vim.g.terminal_color_0 = p.overlay -- black
