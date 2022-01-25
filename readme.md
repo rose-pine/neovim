@@ -39,8 +39,8 @@ use({
 - **[Neogit](https://github.com/TimUntersberger/neogit)**
 - **[Neorg](https://github.com/nvim-neorg/neorg)**
 - **[Lspsaga](https://github.com/tami5/lspsaga.nvim)**
-- **[Lualine](https://github.com/hoob3rt/lualine.nvim)**
 - **[Pounce](https://github.com/rlane/pounce.nvim)**
+- **[Lualine](https://github.com/hoob3rt/lualine.nvim)**
 
   ```lua
   require('lualine').setup({
