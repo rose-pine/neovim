@@ -415,7 +415,7 @@ local theme = {
 	VimwikiHeader5 = { fg = config.colors.headings.h5, style = 'bold' },
 	VimwikiHeader6 = { fg = config.colors.headings.h6, style = 'bold' },
 	VimwikiHeaderChar = { fg = p.pine },
-	VimwikiLink = { fg = p.rose },
+	VimwikiLink = { fg = p.rose, style = 'underline' },
 	VimwikiList = { fg = p.iris },
 	VimwikiNoExistsLink = { fg = p.love },
 
