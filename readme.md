@@ -40,6 +40,8 @@ use({
 - **[Neorg](https://github.com/nvim-neorg/neorg)**
 - **[Lspsaga](https://github.com/tami5/lspsaga.nvim)**
 - **[Lualine](https://github.com/hoob3rt/lualine.nvim)**
+- **[Pounce](https://github.com/rlane/pounce.nvim)**
+
   ```lua
   require('lualine').setup({
       options = { theme = 'rose-pine' }
