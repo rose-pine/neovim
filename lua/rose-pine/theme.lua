@@ -51,7 +51,7 @@ local theme = {
 	-- EndOfBuffer = {},
 	ErrorMsg = { fg = p.love, style = 'bold' },
 	FloatBorder = { fg = p.subtle },
-	FoldColumn = {},
+	FoldColumn = { fg = p.muted },
 	Folded = { fg = p.text, bg = p.surface },
 	IncSearch = { bg = p.highlight_med },
 	LineNr = { fg = p.muted },
