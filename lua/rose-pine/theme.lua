@@ -489,7 +489,7 @@ local theme = {
 	TelescopeMatching = { fg = p.rose },
 	TelescopePromptPrefix = { fg = p.subtle },
 	TelescopeSelection = { fg = p.text, bg = p.highlight_low },
-	TelescopeSelectionCaret = { fg = p.rose },
+	TelescopeSelectionCaret = { fg = p.rose, bg = p.highlight_low },
 	TelescopeTitle = { fg = p.subtle },
 }
 
