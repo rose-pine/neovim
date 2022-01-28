@@ -40,6 +40,7 @@ use({
 - **[Neorg](https://github.com/nvim-neorg/neorg)**
 - **[Lspsaga](https://github.com/tami5/lspsaga.nvim)**
 - **[Pounce](https://github.com/rlane/pounce.nvim)**
+- **[Telescope](https://github.com/nvim-telescope/telescope.nvim)**
 - **[Lualine](https://github.com/hoob3rt/lualine.nvim)**
 
   ```lua
@@ -47,6 +48,7 @@ use({
       options = { theme = 'rose-pine' }
   })
   ```
+
 - **[Galaxyline fork](https://github.com/NTBBloodbath/galaxyline.nvim)**
   > This fork by NTBBloodbath allows [custom colors](https://github.com/NTBBloodbath/galaxyline.nvim/blob/main/docs/themes.md#colors-standards)
   ```lua
@@ -88,6 +90,7 @@ local p = require('rose-pine.palette')
 vim.g.rose_pine_colors = {
 	punctuation = p.subtle,
 	comment = p.subtle,
+	border = p.highlight_med,
 	hint = p.iris,
 	info = p.foam,
 	warn = p.gold,
