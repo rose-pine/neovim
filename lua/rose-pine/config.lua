@@ -9,6 +9,7 @@ local config = {
 	colors = {
 		punctuation = palette.subtle,
 		comment = palette.subtle,
+		border = palette.highlight_med,
 		hint = palette.iris,
 		info = palette.foam,
 		warn = palette.gold,
