@@ -16,17 +16,17 @@ end
 
 ---@param fg string foreground color
 ---@param bg string background color
----@param alpha number number between 0 and 1. 0 results in bg, 1 results in fg
+---@param alpha number number between 0 (background) and 1 (foreground)
 function util.blend(fg, bg, alpha)
 	bg = get_color(bg)
 	fg = get_color(fg)
 
-	local blendChannel = function(i)
+	local function blend_channel(i)
 		local ret = (alpha * fg[i] + ((1 - alpha) * bg[i]))
 		return math.floor(math.min(math.max(0, ret), 255) + 0.5)
 	end
 
-	return string.format('#%02X%02X%02X', blendChannel(1), blendChannel(2), blendChannel(3))
+	return string.format('#%02X%02X%02X', blend_channel(1), blend_channel(2), blend_channel(3))
 end
 
 return util
