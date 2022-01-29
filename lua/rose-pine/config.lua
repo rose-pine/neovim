@@ -1,7 +1,7 @@
 local palette = require('rose-pine.palette')
 
 local config = {
-	bold_vert_split = vim.g.rose_pine_bold_verical_split_line or false,
+	bold_vert_split = vim.g.rose_pine_bold_vertical_split_line or false,
 	inactive_background = vim.g.rose_pine_inactive_background or false,
 	no_background = vim.g.rose_pine_disable_background or false,
 	no_float_background = vim.g.rose_pine_disable_float_background or false,
