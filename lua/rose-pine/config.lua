@@ -1,26 +1,48 @@
 local palette = require('rose-pine.palette')
 
+local function opt(key, default)
+	key = 'rose_pine_' .. key
+
+	if vim.g[key] == nil then
+		return default
+	end
+
+	if vim.g[key] == 0 or vim.g[key] == false then
+		return false
+	end
+
+	return vim.g[key]
+end
+
 local config = {
-	bold_vert_split = vim.g.rose_pine_bold_verical_split_line or false,
-	inactive_background = vim.g.rose_pine_inactive_background or false,
-	no_background = vim.g.rose_pine_disable_background or false,
-	no_float_background = vim.g.rose_pine_disable_float_background or false,
-	no_italics = vim.g.rose_pine_disable_italics or false,
+	variant = opt('variant', 'main'),
+
+	bold_vertical_split_line = opt('bold_vertical_split_line', false),
+	disable_italics = opt('disable_italics', false),
+	disable_background = opt('disable_background', false),
+	disable_float_background = opt('disable_float_background', false),
+	inactive_background = opt('inactive_background', false),
+
 	colors = {
-		punctuation = palette.subtle,
-		comment = palette.subtle,
 		border = palette.highlight_med,
+		comment = palette.muted,
+		link = palette.iris,
+		punctuation = palette.subtle,
+
+		error = palette.love,
 		hint = palette.iris,
 		info = palette.foam,
 		warn = palette.gold,
-		error = palette.love,
 
-		-- TODO: Expose these once matched with syntax and cmp kind
-		-- variable = '',
-		-- class = '',
-		-- interface = '',
-		-- ['function'] = '',
-		-- method = '',
+		git_add = palette.foam,
+		git_change = palette.rose,
+		git_delete = palette.love,
+		git_dirty = palette.rose,
+		git_ignore = palette.muted,
+		git_merge = palette.iris,
+		git_rename = palette.pine,
+		git_stage = palette.iris,
+		git_text = palette.rose,
 
 		---@type string|table<string, string>
 		headings = {
