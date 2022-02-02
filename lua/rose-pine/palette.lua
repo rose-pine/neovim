@@ -15,6 +15,7 @@ local variants = {
 		highlight_low = '#21202e',
 		highlight_med = '#403d52',
 		highlight_high = '#524f67',
+		opacity = 0.1,
 	},
 	moon = {
 		base = '#232136',
@@ -32,6 +33,7 @@ local variants = {
 		highlight_low = '#2a283e',
 		highlight_med = '#44415a',
 		highlight_high = '#56526e',
+		opacity = 0.1,
 	},
 	dawn = {
 		base = '#faf4ed',
@@ -49,6 +51,7 @@ local variants = {
 		highlight_low = '#f4ede8',
 		highlight_med = '#dfdad9',
 		highlight_high = '#cecacd',
+		opacity = 0.05,
 	},
 }
 

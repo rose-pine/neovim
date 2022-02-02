@@ -17,7 +17,7 @@
 use({
     'rose-pine/neovim',
     as = 'rose-pine',
-    tag = 'v0.1.0', -- Optional tag release
+    -- tag = '...',
     config = function()
         vim.cmd('colorscheme rose-pine')
     end
@@ -42,7 +42,6 @@ use({
 - [Pounce](https://github.com/rlane/pounce.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Lualine](https://github.com/hoob3rt/lualine.nvim)
-
 
 ```lua
 require('lualine').setup({
@@ -75,35 +74,46 @@ local colors = require("galaxyline.themes.colors")["rose-pine"]
 > Options should be set **before** colorscheme
 
 ```lua
--- Set theme variant
--- Matches terminal theme if unset
+-- set theme variant, matching terminal theme if unset
 -- @usage 'main' | 'moon' | 'dawn'
 vim.g.rose_pine_variant = ''
 
 vim.g.rose_pine_bold_vertical_split_line = false
-vim.g.rose_pine_inactive_background = false
 vim.g.rose_pine_disable_background = false
 vim.g.rose_pine_disable_float_background = false
 vim.g.rose_pine_disable_italics = false
+vim.g.rose_pine_inactive_background = false
 
-local p = require('rose-pine.palette')
+local palette = require('rose-pine.palette')
 vim.g.rose_pine_colors = {
-	punctuation = p.subtle,
-	comment = p.subtle,
-	border = p.highlight_med,
-	hint = p.iris,
-	info = p.foam,
-	warn = p.gold,
-	error = p.love,
+	border = palette.highlight_med,
+	comment = palette.muted,
+	link = palette.iris,
+	punctuation = palette.subtle,
 
-	-- Or set all headings to one colour: `headings = p.text`
+	error = palette.love,
+	hint = palette.iris,
+	info = palette.foam,
+	warn = palette.gold,
+
+	git_add = palette.foam,
+	git_change = palette.rose,
+	git_delete = palette.love,
+	git_dirty = palette.rose,
+	git_ignore = palette.muted,
+	git_merge = palette.iris,
+	git_rename = palette.pine,
+	git_stage = palette.iris,
+	git_text = palette.rose,
+
+	-- or set all headings to one colour: `headings = palette.text`
 	headings = {
-		h1 = p.iris,
-		h2 = p.foam,
-		h3 = p.rose,
-		h4 = p.gold,
-		h5 = p.pine,
-		h6 = p.foam,
+		h1 = palette.iris,
+		h2 = palette.foam,
+		h3 = palette.rose,
+		h4 = palette.gold,
+		h5 = palette.pine,
+		h6 = palette.foam,
 	},
 }
 
@@ -111,31 +121,19 @@ vim.g.rose_pine_colors = {
 vim.cmd('colorscheme rose-pine')
 ```
 
-## Functions
+## Suggested keymaps
 
 ```lua
--- Toggle between all variants
-require('rose-pine').toggle()
+-- toggle between all variants
+vim.keymap.set('n', '<leader>tt', require('rose-pine').toggle)
 
--- Toggle between some variants
-require('rose-pine').toggle({'main', 'dawn'})
+-- or toggle between some variants
+vim.keymap.set('n', '<leader>tt', function() return require('rose-pine').toggle({'moon', 'dawn'}) end)
 
--- Set specific variant
-require('rose-pine').set('moon')
-```
-
-## Keymaps
-
-> These are only suggestions; no keymaps are set by the theme
-
-```lua
--- Toggle variants
-vim.api.nvim_set_keymap('n', '<c-m>', [[<cmd>lua require('rose-pine').toggle()<cr>]], { noremap = true, silent = true })
-
--- Set variant
-vim.api.nvim_set_keymap('n', '<c-0>', [[<cmd>lua require('rose-pine').set('main')<cr>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<c-9>', [[<cmd>lua require('rose-pine').set('moon')<cr>]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<c-8>', [[<cmd>lua require('rose-pine').set('dawn')<cr>]], { noremap = true, silent = true })
+-- set variant
+vim.keymap.set('n', '<leader>t1', function() return require('rose-pine').set('main') end)
+vim.keymap.set('n', '<leader>t2', function() return require('rose-pine').set('moon') end)
+vim.keymap.set('n', '<leader>t3', function() return require('rose-pine').set('dawn') end)
 ```
 
 ## Contributing
