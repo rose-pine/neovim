@@ -9,12 +9,25 @@ if config.disable_italics == true then
 	maybe_italic = nil
 end
 
-local background = config.disable_background and palette.base or palette.none
-local float_background = config.disable_float_background and palette.surface or palette.none
-local inactive_background = config.inactive_background
-		and util.blend('#000000', palette.base, palette.opacity)
-	or palette.none
-local vert_split_background = config.bold_vertical_split_line and palette.overlay or palette.none
+local background = palette.base
+if config.disable_background then
+	background = palette.none
+end
+
+local float_background = palette.surface
+if config.disable_float_background then
+	float_background = palette.none
+end
+
+local inactive_background = palette.none
+if config.inactive_background then
+	inactive_background = util.blend('#000000', palette.base, palette.opacity)
+end
+
+local vert_split_background = palette.none
+if config.bold_vertical_split_line then
+	vert_split_background = palette.overlay
+end
 
 local theme = {
 	ColorColumn = { bg = palette.highlight_high },
