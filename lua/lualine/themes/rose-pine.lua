@@ -1,34 +1,35 @@
-local p = require('rose-pine.palette')
+local palette = require('rose-pine.palette')
+local colors = palette[vim.g.rose_pine_variant or 'main']
 
 return {
 	normal = {
-		a = { bg = p.rose, fg = p.base, gui = 'bold' },
-		b = { bg = p.overlay, fg = p.rose },
-		c = { bg = p.base, fg = p.text },
+		a = { bg = colors.rose, fg = colors.base, gui = 'bold' },
+		b = { bg = colors.overlay, fg = colors.rose },
+		c = { bg = colors.base, fg = colors.text },
 	},
 	insert = {
-		a = { bg = p.foam, fg = p.base, gui = 'bold' },
-		b = { bg = p.overlay, fg = p.foam },
-		c = { bg = p.base, fg = p.text },
+		a = { bg = colors.foam, fg = colors.base, gui = 'bold' },
+		b = { bg = colors.overlay, fg = colors.foam },
+		c = { bg = colors.base, fg = colors.text },
 	},
 	visual = {
-		a = { bg = p.iris, fg = p.base, gui = 'bold' },
-		b = { bg = p.overlay, fg = p.iris },
-		c = { bg = p.base, fg = p.text },
+		a = { bg = colors.iris, fg = colors.base, gui = 'bold' },
+		b = { bg = colors.overlay, fg = colors.iris },
+		c = { bg = colors.base, fg = colors.text },
 	},
 	replace = {
-		a = { bg = p.pine, fg = p.base, gui = 'bold' },
-		b = { bg = p.overlay, fg = p.pine },
-		c = { bg = p.base, fg = p.text },
+		a = { bg = colors.pine, fg = colors.base, gui = 'bold' },
+		b = { bg = colors.overlay, fg = colors.pine },
+		c = { bg = colors.base, fg = colors.text },
 	},
 	command = {
-		a = { bg = p.love, fg = p.base, gui = 'bold' },
-		b = { bg = p.overlay, fg = p.love },
-		c = { bg = p.base, fg = p.text },
+		a = { bg = colors.love, fg = colors.base, gui = 'bold' },
+		b = { bg = colors.overlay, fg = colors.love },
+		c = { bg = colors.base, fg = colors.text },
 	},
 	inactive = {
-		a = { bg = p.base, fg = p.muted, gui = 'bold' },
-		b = { bg = p.base, fg = p.muted },
-		c = { bg = p.base, fg = p.muted },
+		a = { bg = colors.base, fg = colors.muted, gui = 'bold' },
+		b = { bg = colors.base, fg = colors.muted },
+		c = { bg = colors.base, fg = colors.muted },
 	},
 }
