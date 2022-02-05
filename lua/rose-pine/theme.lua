@@ -5,7 +5,7 @@ local M = {}
 
 function M.get(config)
 	local theme = {}
-	local groups = config.groups or {}
+	local groups = config.groups
 	local colors = palette[config.variant or 'main']
 	local styles = {
 		italic = (config.disable_italics and 'italic') or 'NONE',
@@ -25,10 +25,10 @@ function M.get(config)
 		CursorLineNr = { fg = colors.text },
 		DarkenedPanel = { bg = colors.surface },
 		DarkenedStatusline = { bg = colors.surface },
-		DiffAdd = { bg = blend(groups.git.add, colors.base, 0.5) },
+		DiffAdd = { bg = blend(groups.git_add, colors.base, 0.5) },
 		DiffChange = { bg = colors.overlay },
-		DiffDelete = { bg = blend(groups.git.delete, colors.base, 0.5) },
-		DiffText = { bg = blend(groups.git.text, colors.base, 0.5) },
+		DiffDelete = { bg = blend(groups.git_delete, colors.base, 0.5) },
+		DiffText = { bg = blend(groups.git_text, colors.base, 0.5) },
 		diffAdded = { link = 'DiffAdd' },
 		diffChanged = { link = 'DiffChange' },
 		diffRemoved = { link = 'DiffDelete' },
@@ -255,9 +255,9 @@ function M.get(config)
 		BufferVisibleTarget = { fg = colors.gold },
 
 		-- lewis6991/gitsigns.nvim
-		GitSignsAdd = { fg = groups.git.add },
-		GitSignsChange = { fg = groups.git.change },
-		GitSignsDelete = { fg = groups.git.delete },
+		GitSignsAdd = { fg = groups.git_add },
+		GitSignsChange = { fg = groups.git_change },
+		GitSignsDelete = { fg = groups.git_delete },
 		SignAdd = { link = 'GitSignsAdd' },
 		SignChange = { link = 'GitSignsChange' },
 		SignDelete = { link = 'GitSignsDelete' },
@@ -278,13 +278,13 @@ function M.get(config)
 		NvimTreeFileStaged = { fg = colors.iris },
 		NvimTreeFolderIcon = { fg = colors.subtle },
 		NvimTreeFolderName = { fg = colors.foam },
-		NvimTreeGitDeleted = { fg = groups.git.delete },
-		NvimTreeGitDirty = { fg = groups.git.dirty },
-		NvimTreeGitIgnored = { fg = groups.git.ignore },
-		NvimTreeGitMerge = { fg = groups.git.merge },
-		NvimTreeGitNew = { fg = groups.git.add },
-		NvimTreeGitRenamed = { fg = groups.git.rename },
-		NvimTreeGitStaged = { fg = groups.git.stage },
+		NvimTreeGitDeleted = { fg = groups.git_delete },
+		NvimTreeGitDirty = { fg = groups.git_dirty },
+		NvimTreeGitIgnored = { fg = groups.git_ignore },
+		NvimTreeGitMerge = { fg = groups.git_merge },
+		NvimTreeGitNew = { fg = groups.git_add },
+		NvimTreeGitRenamed = { fg = groups.git_rename },
+		NvimTreeGitStaged = { fg = groups.git_stage },
 		NvimTreeImageFile = { fg = colors.text },
 		NvimTreeNormal = { fg = colors.text },
 		NvimTreeOpenedFile = { fg = colors.text, bg = colors.highlight_med },

@@ -68,17 +68,15 @@ function M.setup(opts)
 			info = 'foam',
 			warn = 'gold',
 
-			git = {
-				add = 'foam',
-				change = 'rose',
-				delete = 'love',
-				dirty = 'rose',
-				ignore = 'muted',
-				merge = 'iris',
-				rename = 'pine',
-				stage = 'iris',
-				text = 'rose',
-			},
+			git_add = 'foam',
+			git_change = 'rose',
+			git_delete = 'love',
+			git_dirty = 'rose',
+			git_ignore = 'muted',
+			git_merge = 'iris',
+			git_rename = 'pine',
+			git_stage = 'iris',
+			git_text = 'rose',
 
 			headings = {
 				h1 = 'iris',
