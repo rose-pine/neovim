@@ -91,15 +91,14 @@ function M.setup(opts)
 		},
 	}
 
-	local groups = opts.groups or {}
-	if type(groups.headings) == 'string' then
-		groups.headings = {
-			h1 = groups.headings,
-			h2 = groups.headings,
-			h3 = groups.headings,
-			h4 = groups.headings,
-			h5 = groups.headings,
-			h6 = groups.headings,
+	if opts.groups and type(opts.groups.headings) == 'string' then
+		opts.groups.headings = {
+			h1 = opts.groups.headings,
+			h2 = opts.groups.headings,
+			h3 = opts.groups.headings,
+			h4 = opts.groups.headings,
+			h5 = opts.groups.headings,
+			h6 = opts.groups.headings,
 		}
 	end
 
