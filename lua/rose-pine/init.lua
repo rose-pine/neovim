@@ -1,5 +1,3 @@
-local palette = require('rose-pine.palette')
-
 local M = {}
 
 ---@class RosePineConfig
@@ -47,6 +45,7 @@ local config = {}
 
 ---@param opts RosePineConfig
 function M.setup(opts)
+	opts = opts or {}
 	vim.g.rose_pine_variant = opts.variant or 'main'
 
 	local default_config = {
@@ -112,22 +111,12 @@ function M.colorscheme()
 	vim.opt.termguicolors = true
 	vim.g.colors_name = 'rose-pine'
 
-	-- match variant to vim background
-	if config.user_variant == nil and vim.o.background == 'light' then
-		config.variant = 'dawn'
-	end
-
-	-- match vim background to variant
-	if config.user_variant == 'main' or config.user_variant == 'moon' then
-		vim.o.background = 'dark'
-	elseif config.user_variant == 'dawn' then
-		vim.o.background = 'light'
-	end
-
 	---@param color string
 	local function get_palette_color(color)
+		local p = require('rose-pine.palette')
+
 		if color and not color:find('#') then
-			return palette[config.variant][color:lower()]
+			return p[color:lower()]
 		end
 
 		return color:lower()
