@@ -11,6 +11,8 @@
     </a>
 </p>
 
+> !!! You are looking at the canary branch. Documentation has not yet been updated on this branch and is NOT accurate.
+
 ## Usage
 
 ```lua
