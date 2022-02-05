@@ -5,7 +5,7 @@ local M = {}
 
 function M.get(config)
 	local theme = {}
-	local groups = config.groups
+	local groups = config.groups or {}
 	local colors = palette[config.variant or 'main']
 	local styles = {
 		italic = (config.disable_italics and 'italic') or 'NONE',
