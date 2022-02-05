@@ -1,4 +1,5 @@
-local p = require('rose-pine.palette')
+local palette = require('rose-pine.palette')
+local colors = palette[vim.g.rose_pine_variant or 'main']
 
 -- TODO: Someone who uses bufferline.nvim is free to PR with this addition
 --       `:h bufferline-highlights`
@@ -13,11 +14,11 @@ local p = require('rose-pine.palette')
 --       ```
 return {
 	fill = {
-		guifg = p.text,
-		guibg = p.base,
+		guifg = colors.text,
+		guibg = colors.base,
 	},
 	background = {
-		guifg = p.text,
-		guibg = p.base,
+		guifg = colors.text,
+		guibg = colors.base,
 	},
 }
