@@ -1,6 +1,4 @@
-local palette = {}
-
-palette = {
+local variants = {
 	main = {
 		base = '#191724',
 		surface = '#1f1d2e',
@@ -56,6 +54,14 @@ palette = {
 		opacity = 0.05,
 	},
 }
+
+local palette = {}
+
+if vim.o.background == 'light' then
+	palette = variants.dawn
+else
+	palette = variants[(vim.g.rose_pine_variant == 'moon' and 'moon') or 'main']
+end
 
 vim.tbl_deep_extend('force', palette, { none = 'NONE' })
 
