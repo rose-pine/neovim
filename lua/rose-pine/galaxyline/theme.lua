@@ -4,16 +4,17 @@ if not present then
 end
 
 local palette = require('rose-pine.palette')
+local colors = palette[vim.g.rose_pine_variant or 'main']
 
 galaxyline_colors['rose-pine'] = {
-	bg = palette.overlay,
-	fg = palette.text,
-	fg_alt = palette.subtle,
-	blue = palette.foam,
-	cyan = palette.foam,
-	green = palette.muted,
-	magenta = palette.iris,
-	orange = palette.rose,
-	red = palette.love,
-	yellow = palette.gold,
+	bg = colors.overlay,
+	fg = colors.text,
+	fg_alt = colors.subtle,
+	blue = colors.foam,
+	cyan = colors.foam,
+	green = colors.muted,
+	magenta = colors.iris,
+	orange = colors.rose,
+	red = colors.love,
+	yellow = colors.gold,
 }
