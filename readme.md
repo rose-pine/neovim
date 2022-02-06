@@ -30,28 +30,38 @@ use({
 
 > PR's are more than welcome if your favourite plugin is missing
 
-- [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [Diagnostics](https://neovim.io/doc/user/lsp.html)
-- [Barbar](https://github.com/romgrk/barbar.nvim)
-- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
-- [Modes](https://github.com/mvllow/modes.nvim)
-- [NvimTree](https://github.com/kyazdani42/nvim-tree.lua)
-- [WhichKey](https://github.com/folke/which-key.nvim)
-- [Indent-Blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [Neogit](https://github.com/TimUntersberger/neogit)
-- [Neorg](https://github.com/nvim-neorg/neorg)
-- [Lspsaga](https://github.com/tami5/lspsaga.nvim)
-- [Pounce](https://github.com/rlane/pounce.nvim)
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [Lualine](https://github.com/hoob3rt/lualine.nvim)
+- [neovim diagnostics](https://neovim.io/doc/user/lsp.html)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [barbar.nvim](https://github.com/romgrk/barbar.nvim)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [mode.nvim](https://github.com/mvllow/modes.nvim)
+- [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
+- [which-key.nvim](https://github.com/folke/which-key.nvim)
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [neogit](https://github.com/TimUntersberger/neogit)
+- [neorg](https://github.com/nvim-neorg/neorg)
+- [lspsaga.nvim](https://github.com/tami5/lspsaga.nvim)
+- [pounce.nvim](https://github.com/rlane/pounce.nvim)
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
 ```lua
-require('lualine').setup({
-	options = { theme = 'rose-pine' }
+use({
+	'nvim-lualine/lualine.nvim',
+	-- Fix mismatch palette between variants
+	event = 'ColorScheme',
+	config = function()
+		require('lualine').setup({
+			options = {
+				---@usage 'rose-pine' | 'rose-pine-alt'
+				theme = 'rose-pine'
+			}
+		})
+	end
 })
 ```
 
-- [Galaxyline fork](https://github.com/NTBBloodbath/galaxyline.nvim)
+- [galaxyline.nvim fork](https://github.com/NTBBloodbath/galaxyline.nvim)
 
 ```lua
 local colors = require("galaxyline.themes.colors")["rose-pine"]
