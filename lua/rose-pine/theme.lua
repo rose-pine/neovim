@@ -52,7 +52,7 @@ local theme = {
 	FloatBorder = { fg = group.border },
 	FoldColumn = { fg = palette.muted },
 	Folded = { fg = palette.text, bg = palette.surface },
-	IncSearch = { bg = palette.highlight_high },
+	IncSearch = { fg = palette.base, bg = palette.rose },
 	LineNr = { fg = palette.muted },
 	MatchParen = { fg = palette.text, bg = palette.highlight_med },
 	ModeMsg = { fg = palette.subtle },
