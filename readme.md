@@ -11,15 +11,13 @@
     </a>
 </p>
 
-> !!! You are looking at the canary branch. Documentation has not yet been updated on this branch and is NOT accurate.
-
 ## Usage
 
 ```lua
 use({
     'rose-pine/neovim',
     as = 'rose-pine',
-    tag = '0.5.0',
+	branch = 'canary',
     config = function()
         vim.cmd('colorscheme rose-pine')
     end
@@ -86,66 +84,40 @@ local colors = require("galaxyline.themes.colors")["rose-pine"]
 > Options should be set **before** colorscheme
 
 ```lua
--- set theme variant, matching terminal theme if unset
--- @usage 'main' | 'moon' | 'dawn'
-vim.g.rose_pine_variant = ''
+require('rose-pine').setup({
+	variant = 'main',
+	bold_vert_split = false,
+	dim_nc_background = false,
+	disable_background = false,
+	disable_float_background = false,
+	disable_italics = false,
+	---@usage string hex value or named color from rosepinetheme.com/palette
+	groups = {
+		border = 'highlight_med',
+		comment = 'muted',
+		link = 'iris',
+		punctuation = 'subtle',
 
-vim.g.rose_pine_bold_vertical_split_line = false
-vim.g.rose_pine_disable_background = false
-vim.g.rose_pine_disable_float_background = false
-vim.g.rose_pine_disable_italics = false
-vim.g.rose_pine_inactive_background = false
+		error = 'love',
+		hint = 'iris',
+		info = 'foam',
+		warn = 'gold',
 
-local palette = require('rose-pine.palette')
-vim.g.rose_pine_colors = {
-	border = palette.highlight_med,
-	comment = palette.muted,
-	link = palette.iris,
-	punctuation = palette.subtle,
-
-	error = palette.love,
-	hint = palette.iris,
-	info = palette.foam,
-	warn = palette.gold,
-
-	git_add = palette.foam,
-	git_change = palette.rose,
-	git_delete = palette.love,
-	git_dirty = palette.rose,
-	git_ignore = palette.muted,
-	git_merge = palette.iris,
-	git_rename = palette.pine,
-	git_stage = palette.iris,
-	git_text = palette.rose,
-
-	-- or set all headings to one colour: `headings = palette.text`
-	headings = {
-		h1 = palette.iris,
-		h2 = palette.foam,
-		h3 = palette.rose,
-		h4 = palette.gold,
-		h5 = palette.pine,
-		h6 = palette.foam,
-	},
-}
+		headings = {
+			h1 = 'iris',
+			h2 = 'foam',
+			h3 = 'rose',
+			h4 = 'gold',
+			h5 = 'pine',
+			h6 = 'foam',
+		}
+		-- or set all headings at once
+		-- headings = 'subtle'
+	}
+})
 
 -- Set colorscheme after options
 vim.cmd('colorscheme rose-pine')
-```
-
-## Suggested keymaps
-
-```lua
--- toggle between all variants
-vim.keymap.set('n', '<leader>tt', require('rose-pine').toggle)
-
--- or toggle between some variants
-vim.keymap.set('n', '<leader>tt', function() return require('rose-pine').toggle({'moon', 'dawn'}) end)
-
--- set variant
-vim.keymap.set('n', '<leader>t1', function() return require('rose-pine').set('main') end)
-vim.keymap.set('n', '<leader>t2', function() return require('rose-pine').set('moon') end)
-vim.keymap.set('n', '<leader>t3', function() return require('rose-pine').set('dawn') end)
 ```
 
 ## Contributing
