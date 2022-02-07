@@ -8,7 +8,7 @@ function M.get(config)
 	local theme = {}
 	local groups = config.groups or {}
 	local styles = {
-		italic = (config.disable_italics and 'italic') or 'NONE',
+		italic = (config.disable_italics and 'NONE') or 'italic',
 		vert_split = (config.bold_vert_split and p.surface) or p.none,
 		background = (config.disable_background and p.none) or p.base,
 		float_background = (config.disable_float_background and p.none) or p.surface,
