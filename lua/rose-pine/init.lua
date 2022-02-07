@@ -1,4 +1,55 @@
 local M = {}
+local show_init_messages = true
+
+local function check_for_deprecated_opts()
+	local alerts = {}
+	local should_alert = false
+
+	-- Deprecated options
+	if vim.g.rose_pine_bold_vertical_split_line ~= nil then
+		should_alert = true
+		table.insert(alerts, 'vim.g.rose_pine_bold_vertical_split_line renamed to bold_vert_split')
+	end
+
+	if vim.g.rose_pine_inactive_background ~= nil then
+		should_alert = true
+		table.insert(alerts, 'vim.g.rose_pine_inactive_background renamed to dim_nc_background')
+	end
+
+	if vim.g.rose_pine_disable_background ~= nil then
+		should_alert = true
+		table.insert(alerts, 'vim.g.rose_pine_disable_background renamed to disable_background')
+	end
+
+	if vim.g.rose_pine_disable_float_background ~= nil then
+		should_alert = true
+		table.insert(
+			alerts,
+			'vim.g.rose_pine_disable_float_background renamed to disable_float_background'
+		)
+	end
+
+	if vim.g.rose_pine_disable_italics ~= nil then
+		should_alert = true
+		table.insert(alerts, 'vim.g.rose_pine_disable_italics renamed to disable_italics')
+	end
+
+	if vim.g.rose_pine_colors ~= nil then
+		should_alert = true
+		table.insert(alerts, 'vim.g.rose_pine_colors renamed to groups')
+	end
+
+	if should_alert then
+		local prefix = '   '
+		print('Rosé Pine – https://github.com/rose-pine/neovim')
+		print(prefix .. 'vim.g.rose_pine_<option> moved to lua setup:')
+		print(prefix .. "   require('rose-pine').setup({ ... })")
+		for _, message in ipairs(alerts) do
+			print(prefix .. message)
+		end
+		should_alert = false
+	end
+end
 
 ---@class RosePineConfig
 ---@field variant 'main'|'moon'|'dawn'
@@ -108,6 +159,11 @@ function M.colorscheme()
 
 	vim.opt.termguicolors = true
 	vim.g.colors_name = 'rose-pine'
+
+	if show_init_messages then
+		check_for_deprecated_opts()
+		show_init_messages = false
+	end
 
 	---@param color string
 	local function get_palette_color(color)
