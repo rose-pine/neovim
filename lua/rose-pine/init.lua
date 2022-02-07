@@ -41,52 +41,50 @@ local M = {}
 ---@field h6 string
 
 ---@type RosePineConfig
-local config = {}
+local config = {
+	variant = 'main',
+	bold_vert_split = false,
+	dim_nc_background = false,
+	disable_background = false,
+	disable_float_background = false,
+	disable_italics = false,
+
+	groups = {
+		border = 'highlight_med',
+		comment = 'muted',
+		link = 'iris',
+		punctuation = 'subtle',
+
+		error = 'love',
+		hint = 'iris',
+		info = 'foam',
+		warn = 'gold',
+
+		git_add = 'foam',
+		git_change = 'rose',
+		git_delete = 'love',
+		git_dirty = 'rose',
+		git_ignore = 'muted',
+		git_merge = 'iris',
+		git_rename = 'pine',
+		git_stage = 'iris',
+		git_text = 'rose',
+
+		headings = {
+			h1 = 'iris',
+			h2 = 'foam',
+			h3 = 'rose',
+			h4 = 'gold',
+			h5 = 'pine',
+			h6 = 'foam',
+		},
+	},
+}
 
 ---@param opts RosePineConfig
 function M.setup(opts)
 	opts = opts or {}
 	vim.g.rose_pine_variant = opts.variant or 'main'
-
-	local default_config = {
-		variant = 'main',
-		bold_vert_split = false,
-		dim_nc_background = false,
-		disable_background = false,
-		disable_float_background = false,
-		disable_italics = false,
-
-		groups = {
-			border = 'highlight_med',
-			comment = 'muted',
-			link = 'iris',
-			punctuation = 'subtle',
-
-			error = 'love',
-			hint = 'iris',
-			info = 'foam',
-			warn = 'gold',
-
-			git_add = 'foam',
-			git_change = 'rose',
-			git_delete = 'love',
-			git_dirty = 'rose',
-			git_ignore = 'muted',
-			git_merge = 'iris',
-			git_rename = 'pine',
-			git_stage = 'iris',
-			git_text = 'rose',
-
-			headings = {
-				h1 = 'iris',
-				h2 = 'foam',
-				h3 = 'rose',
-				h4 = 'gold',
-				h5 = 'pine',
-				h6 = 'foam',
-			},
-		},
-	}
 
 	if opts.groups and type(opts.groups.headings) == 'string' then
 		opts.groups.headings = {
@@ -100,7 +98,7 @@ function M.setup(opts)
 	end
 
 	config.user_variant = opts.variant or nil
-	config = vim.tbl_deep_extend('force', default_config, opts)
+	config = vim.tbl_deep_extend('force', config, opts)
 end
 
 function M.colorscheme()
