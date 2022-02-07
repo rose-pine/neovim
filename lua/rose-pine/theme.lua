@@ -12,7 +12,7 @@ function M.get(config)
 		vert_split = (config.bold_vert_split and p.surface) or p.none,
 		background = (config.disable_background and p.none) or p.base,
 		float_background = (config.disable_float_background and p.none) or p.surface,
-		inactive_background = (config.dim_nc_background and p.surface) or p.base,
+		nc_background = (config.dim_nc_background and p.surface) or p.base,
 	}
 
 	theme = {
@@ -46,7 +46,7 @@ function M.get(config)
 		NonText = { fg = p.muted },
 		Normal = { fg = p.text, bg = styles.background },
 		NormalFloat = { fg = p.text, bg = styles.float_background },
-		NormalNC = { fg = p.text, bg = styles.inactive_background },
+		NormalNC = { fg = p.text, bg = styles.nc_background },
 		NvimInternalError = { fg = '#ffffff', bg = p.love },
 		Pmenu = { fg = p.subtle, bg = styles.float_background },
 		PmenuSbar = { bg = p.highlight_low },
