@@ -438,6 +438,23 @@ local theme = {
 	TelescopeSelection = { fg = palette.text, bg = palette.overlay },
 	TelescopeSelectionCaret = { fg = palette.rose, bg = palette.overlay },
 	TelescopeTitle = { fg = palette.subtle },
+
+	-- rcarriga/nvim-notify
+	NotifyINFOBorder = { fg = palette.foam },
+	NotifyINFOTitle = { link = 'NotifyINFOBorder' },
+	NotifyINFOIcon = { link = 'NotifyINFOBorder' },
+	NotifyWARNBorder = { fg = palette.gold },
+	NotifyWARNTitle = { link = 'NotifyWARNBorder' },
+	NotifyWARNIcon = { link = 'NotifyWARNBorder' },
+	NotifyDEBUGBorder = { fg = palette.muted },
+	NotifyDEBUGTitle = { link = 'NotifyDEBUGBorder' },
+	NotifyDEBUGIcon = { link = 'NotifyDEBUGBorder' },
+	NotifyTRACEBorder = { fg = palette.iris },
+	NotifyTRACETitle = { link = 'NotifyTRACEBorder' },
+	NotifyTRACEIcon = { link = 'NotifyTRACEBorder' },
+	NotifyERRORBorder = { fg = palette.love },
+	NotifyERRORTitle = { link = 'NotifyERRORBorder' },
+	NotifyERRORIcon = { link = 'NotifyERRORBorder' },
 }
 
 vim.g.terminal_color_0 = palette.overlay -- black
