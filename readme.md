@@ -41,6 +41,7 @@ use({
 - [lspsaga.nvim](https://github.com/tami5/lspsaga.nvim)
 - [pounce.nvim](https://github.com/rlane/pounce.nvim)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 
 ```lua
