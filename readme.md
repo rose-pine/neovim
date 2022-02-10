@@ -17,7 +17,7 @@
 use({
     'rose-pine/neovim',
     as = 'rose-pine',
-    tag = '0.5.0',
+    tag = 'v0.*',
     config = function()
         vim.cmd('colorscheme rose-pine')
     end
