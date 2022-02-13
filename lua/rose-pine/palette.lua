@@ -55,12 +55,12 @@ local variants = {
 	},
 }
 
-local palette = variants.main
+local palette = {}
 
-if string.match(vim.g.rose_pine_variant or '', 'moon') then
-	palette = variants.moon
-elseif string.match(vim.g.rose_pine_variant or '', 'dawn') then
+if vim.o.background == 'light' then
 	palette = variants.dawn
+else
+	palette = variants[(vim.g.rose_pine_variant == 'moon' and 'moon') or 'main']
 end
 
 vim.tbl_deep_extend('force', palette, { none = 'NONE' })

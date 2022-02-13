@@ -3,17 +3,17 @@ if not present then
 	return
 end
 
-local palette = require('rose-pine.palette')
+local p = require('rose-pine.palette')
 
 galaxyline_colors['rose-pine'] = {
-	bg = palette.overlay,
-	fg = palette.text,
-	fg_alt = palette.subtle,
-	blue = palette.foam,
-	cyan = palette.foam,
-	green = palette.muted,
-	magenta = palette.iris,
-	orange = palette.rose,
-	red = palette.love,
-	yellow = palette.gold,
+	bg = p.overlay,
+	fg = p.text,
+	fg_alt = p.subtle,
+	blue = p.foam,
+	cyan = p.foam,
+	green = p.muted,
+	magenta = p.iris,
+	orange = p.rose,
+	red = p.love,
+	yellow = p.gold,
 }
