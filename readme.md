@@ -47,7 +47,7 @@ use({
 ```lua
 use({
 	'nvim-lualine/lualine.nvim',
-	-- Fix mismatch palette between variants
+	-- fix mismatch palette between variants
 	event = 'ColorScheme',
 	config = function()
 		require('lualine').setup({
@@ -86,7 +86,8 @@ local colors = require("galaxyline.themes.colors")["rose-pine"]
 
 ```lua
 require('rose-pine').setup({
-	variant = 'main',
+	---@usage 'main'|'moon'
+	dark_variant = 'main',
 	bold_vert_split = false,
 	dim_nc_background = false,
 	disable_background = false,
@@ -117,7 +118,7 @@ require('rose-pine').setup({
 	}
 })
 
--- Set colorscheme after options
+-- set colorscheme after options
 vim.cmd('colorscheme rose-pine')
 ```
 

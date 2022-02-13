@@ -52,8 +52,8 @@ local function check_for_deprecated_opts()
 end
 
 ---@class RosePineConfig
----@field variant 'main'|'moon'|'dawn'
 ---@field bold_vert_split boolean
+---@field dark_variant 'main'|'moon'
 ---@field dim_nc_background boolean
 ---@field disable_background boolean
 ---@field disable_float_background boolean
@@ -93,8 +93,8 @@ end
 
 ---@type RosePineConfig
 local config = {
-	variant = 'main',
 	bold_vert_split = false,
+	dark_variant = 'main',
 	dim_nc_background = false,
 	disable_background = false,
 	disable_float_background = false,
@@ -135,7 +135,7 @@ local config = {
 ---@param opts RosePineConfig
 function M.setup(opts)
 	opts = opts or {}
-	vim.g.rose_pine_variant = opts.variant or 'main'
+	vim.g.rose_pine_variant = opts.dark_variant or 'main'
 
 	if opts.groups and type(opts.groups.headings) == 'string' then
 		opts.groups.headings = {
@@ -148,7 +148,7 @@ function M.setup(opts)
 		}
 	end
 
-	config.user_variant = opts.variant or nil
+	config.user_variant = opts.dark_variant or nil
 	config = vim.tbl_deep_extend('force', config, opts)
 end
 
