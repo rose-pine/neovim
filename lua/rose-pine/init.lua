@@ -167,13 +167,14 @@ function M.colorscheme()
 
 	---@param color string
 	local function get_palette_color(color)
+		color = color:lower()
 		local p = require('rose-pine.palette')
 
-		if color and not color:find('#') then
-			return p[color:lower()]
+		if color and not color:find('#') and color ~= 'none' then
+			return p[color]
 		end
 
-		return color:lower()
+		return color
 	end
 
 	---@param group string
