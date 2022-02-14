@@ -32,7 +32,7 @@ use({
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [barbar.nvim](https://github.com/romgrk/barbar.nvim)
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [mode.nvim](https://github.com/mvllow/modes.nvim)
+- [modes.nvim](https://github.com/mvllow/modes.nvim)
 - [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
