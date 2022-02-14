@@ -84,6 +84,8 @@ local colors = require("galaxyline.themes.colors")["rose-pine"]
 
 > Options should be set **before** colorscheme
 
+Variant now respects `vim.o.background`, using dawn when light (`vim.cmd("set background=light")`) and dark_variant when dark
+
 ```lua
 require('rose-pine').setup({
 	---@usage 'main'|'moon'
