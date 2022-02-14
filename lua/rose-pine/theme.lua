@@ -8,12 +8,12 @@ function M.get(config)
 	local theme = {}
 	local groups = config.groups or {}
 	local styles = {
-		italic = (config.disable_italics and 'NONE') or 'italic',
-		vert_split = (config.bold_vert_split and p.surface) or p.none,
+		italic = (config.disable_italics and p.none) or 'italic',
+		vert_split = (config.bold_vert_split and groups.border) or p.none,
 		background = (config.disable_background and p.none) or p.base,
 		float_background = (config.disable_float_background and p.none) or p.surface,
-		nc_background = (config.dim_nc_background and p.surface) or p.base,
 	}
+	styles.nc_background = (config.dim_nc_background and p.surface) or styles.background
 
 	theme = {
 		ColorColumn = { bg = p.highlight_high },
@@ -65,15 +65,15 @@ function M.get(config)
 		SpellLocal = { sp = p.subtle, style = 'undercurl' },
 		SpellRare = { sp = p.subtle, style = 'undercurl' },
 		SignColumn = { fg = p.text, bg = styles.background },
-		StatusLine = { fg = p.subtle, bg = p.surface },
-		StatusLineNC = { fg = p.muted, bg = p.base },
+		StatusLine = { fg = p.subtle, bg = styles.float_background },
+		StatusLineNC = { fg = p.muted, bg = styles.background },
 		StatusLineTerm = { link = 'StatusLine' },
 		StatusLineTermNC = { link = 'StatusLineNC' },
-		TabLine = { fg = p.subtle, bg = p.surface },
-		TabLineFill = { bg = p.surface },
+		TabLine = { fg = p.subtle, bg = styles.float_background },
+		TabLineFill = { bg = styles.float_background },
 		TabLineSel = { fg = p.text, bg = p.overlay },
 		Title = { fg = p.text },
-		VertSplit = { fg = p.overlay, bg = styles.vert_split },
+		VertSplit = { fg = groups.border, bg = styles.vert_split },
 		Visual = { bg = p.highlight_med },
 		-- VisualNOS = {},
 		WarningMsg = { fg = p.gold },

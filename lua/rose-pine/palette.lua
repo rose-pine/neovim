@@ -16,6 +16,7 @@ local variants = {
 		highlight_med = '#403d52',
 		highlight_high = '#524f67',
 		opacity = 0.1,
+		none = 'NONE',
 	},
 	moon = {
 		base = '#232136',
@@ -34,6 +35,7 @@ local variants = {
 		highlight_med = '#44415a',
 		highlight_high = '#56526e',
 		opacity = 0.1,
+		none = 'NONE',
 	},
 	dawn = {
 		base = '#faf4ed',
@@ -52,6 +54,7 @@ local variants = {
 		highlight_med = '#dfdad9',
 		highlight_high = '#cecacd',
 		opacity = 0.05,
+		none = 'NONE',
 	},
 }
 
@@ -62,7 +65,5 @@ if vim.o.background == 'light' then
 else
 	palette = variants[(vim.g.rose_pine_variant == 'moon' and 'moon') or 'main']
 end
-
-vim.tbl_deep_extend('force', palette, { none = 'NONE' })
 
 return palette
