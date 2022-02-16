@@ -104,7 +104,7 @@ local config = {
 		border = 'highlight_med',
 		comment = 'muted',
 		link = 'iris',
-		punctuation = 'subtle',
+		punctuation = 'muted',
 
 		error = 'love',
 		hint = 'iris',
