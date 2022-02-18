@@ -1,3 +1,5 @@
+local util = require('rose-pine.util')
+
 local M = {}
 local show_init_messages = true
 
@@ -165,37 +167,9 @@ function M.colorscheme()
 		show_init_messages = false
 	end
 
-	---@param color string
-	local function get_palette_color(color)
-		color = color:lower()
-		local p = require('rose-pine.palette')
-
-		if color and not color:find('#') and color ~= 'none' then
-			return p[color]
-		end
-
-		return color
-	end
-
-	---@param group string
-	---@param color table<string, string>
-	local function highlight(group, color)
-		local style = color.style and 'gui=' .. color.style or 'gui=NONE'
-		local fg = color.fg and 'guifg=' .. get_palette_color(color.fg) or 'guifg=NONE'
-		local bg = color.bg and 'guibg=' .. get_palette_color(color.bg) or 'guibg=NONE'
-		local sp = color.sp and 'guisp=' .. get_palette_color(color.sp) or ''
-
-		local hl = 'highlight ' .. group .. ' ' .. style .. ' ' .. fg .. ' ' .. bg .. ' ' .. sp
-
-		vim.cmd(hl)
-		if color.link then
-			vim.cmd('highlight! link ' .. group .. ' ' .. color.link)
-		end
-	end
-
 	local theme = require('rose-pine.theme').get(config)
 	for group, color in pairs(theme) do
-		highlight(group, color)
+		util.highlight(group, color)
 	end
 
 	require('rose-pine.galaxyline.theme')
