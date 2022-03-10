@@ -402,6 +402,23 @@ function M.get(config)
 		TelescopeSelection = { fg = p.text, bg = p.overlay },
 		TelescopeSelectionCaret = { fg = p.rose, bg = p.overlay },
 		TelescopeTitle = { fg = p.subtle },
+
+		-- rcarriga/nvim-notify
+		NotifyINFOBorder = { fg = p.foam },
+		NotifyINFOTitle = { link = 'NotifyINFOBorder' },
+		NotifyINFOIcon = { link = 'NotifyINFOBorder' },
+		NotifyWARNBorder = { fg = p.gold },
+		NotifyWARNTitle = { link = 'NotifyWARNBorder' },
+		NotifyWARNIcon = { link = 'NotifyWARNBorder' },
+		NotifyDEBUGBorder = { fg = p.muted },
+		NotifyDEBUGTitle = { link = 'NotifyDEBUGBorder' },
+		NotifyDEBUGIcon = { link = 'NotifyDEBUGBorder' },
+		NotifyTRACEBorder = { fg = p.iris },
+		NotifyTRACETitle = { link = 'NotifyTRACEBorder' },
+		NotifyTRACEIcon = { link = 'NotifyTRACEBorder' },
+		NotifyERRORBorder = { fg = p.love },
+		NotifyERRORTitle = { link = 'NotifyERRORBorder' },
+		NotifyERRORIcon = { link = 'NotifyERRORBorder' },
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
