@@ -103,6 +103,8 @@ local config = {
 	disable_italics = false,
 
 	groups = {
+		background = 'base',
+		panel = 'surface',
 		border = 'highlight_med',
 		comment = 'muted',
 		link = 'iris',
