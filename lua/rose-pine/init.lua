@@ -134,6 +134,7 @@ local config = {
 			h6 = 'foam',
 		},
 	},
+	highlight_groups = {},
 }
 
 ---@param opts RosePineConfig
@@ -171,7 +172,11 @@ function M.colorscheme()
 
 	local theme = require('rose-pine.theme').get(config)
 	for group, color in pairs(theme) do
-		util.highlight(group, color)
+		if config.highlight_groups[group] ~= nil then
+			util.highlight(group, config.highlight_groups[group])
+		else
+			util.highlight(group, color)
+		end
 	end
 
 	require('rose-pine.galaxyline.theme')
