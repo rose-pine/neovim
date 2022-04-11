@@ -240,6 +240,11 @@ function M.get(config)
 		TSVariable = { fg = p.text, style = styles.italic },
 		TSVariableBuiltin = { fg = p.love },
 
+		-- vim.lsp.buf.document_highlight()
+		LspReferenceText = { bg = p.highlight_med },
+		LspReferenceRead = { bg = p.highlight_med },
+		LspReferenceWrite = { bg = p.highlight_med },
+
 		-- romgrk/barbar.nvim
 		BufferCurrent = { fg = p.text, bg = p.overlay },
 		BufferCurrentIndex = { fg = p.text, bg = p.overlay },
