@@ -84,7 +84,6 @@ use({
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 
 ```lua
-require('toggleterm').setup({ highlights = highlights })
 use({
 	'akinsho/toggleterm.nvim',
 	event = 'ColorScheme',
