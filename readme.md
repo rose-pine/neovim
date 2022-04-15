@@ -66,6 +66,35 @@ use({
 local colors = require("galaxyline.themes.colors")["rose-pine"]
 ```
 
+- [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
+
+> PR's welcome to improve support
+
+```lua
+use({
+	'akinsho/bufferline.nvim',
+	event = 'ColorScheme',
+	config = function()
+		local highlights = require('rose-pine.plugins.bufferline')
+		require('bufferline').setup({ highlights = highlights })
+	end
+})
+```
+
+- [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
+
+```lua
+require('toggleterm').setup({ highlights = highlights })
+use({
+	'akinsho/toggleterm.nvim',
+	event = 'ColorScheme',
+	config = function()
+		local highlights = require('rose-pine.plugins.toggleterm')
+		require('toggleterm').setup({ highlights = highlights })
+	end
+})
+```
+
 ## Gallery
 
 **Rosé Pine**
