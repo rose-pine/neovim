@@ -4,10 +4,11 @@
 ---	local highlights = require('rose-pine.plugins.toggleterm')
 ---	require('toggleterm').setup({ highlights = highlights })
 
-local p = require('rose-pine.palette')
-
 return {
-	Normal = {
-		guibg = p.base,
-	},
+	Normal = { link = 'Normal' },
+	NormalFloat = { link = 'Normal' },
+	FloatBorder = { link = 'FloatBorder' },
+	SignColumn = { link = 'SignColumn' },
+	StatusLine = { link = 'StatusLine' },
+	StatusLineNC = { link = 'StatusLineNC' },
 }
