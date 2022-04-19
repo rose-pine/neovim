@@ -26,7 +26,7 @@ use({
 
 ## Plugins
 
-> PR's are more than welcome if your favourite plugin is missing
+> PRs are more than welcome if your favourite plugin is missing
 
 - [neovim diagnostics](https://neovim.io/doc/user/lsp.html)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
@@ -70,15 +70,15 @@ local colors = require("galaxyline.themes.colors")["rose-pine"]
 
 **Rosé Pine**
 
-![Rosé Pine with Neovim](assets/rose-pine.png)
+![Rosé Pine with Neovim](https://user-images.githubusercontent.com/1973/163921570-0f577baf-3199-4f09-9779-a7eb9238151a.png)
 
 **Rosé Pine Moon**
 
-![Rosé Pine Moon with Neovim](assets/rose-pine-moon.png)
+![Rosé Pine Moon with Neovim](https://user-images.githubusercontent.com/1973/163921620-d3acd0d2-d227-4d28-a5e8-97ff22e56c6d.png)
 
 **Rosé Pine Dawn**
 
-![Rosé Pine Dawn with Neovim](assets/rose-pine-dawn.png)
+![Rosé Pine Dawn with Neovim](https://user-images.githubusercontent.com/1973/163921656-644a2db3-c55c-4e89-9bdd-39cdd7a2681b.png)
 
 ## Options
 
