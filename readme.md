@@ -68,8 +68,6 @@ local colors = require("galaxyline.themes.colors")["rose-pine"]
 
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 
-> PR's welcome to improve support
-
 ```lua
 use({
 	'akinsho/bufferline.nvim',
