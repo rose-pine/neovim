@@ -245,6 +245,10 @@ function M.get(config)
 		LspReferenceRead = { bg = p.highlight_med },
 		LspReferenceWrite = { bg = p.highlight_med },
 
+		-- lsp-highlight-codelens
+		LspCodeLens = { fg = p.subtle }, -- virtual text of code lens
+		LspCodeLensSeparator = { fg = p.highlight_high }, -- separator between two or more code lens
+
 		-- romgrk/barbar.nvim
 		BufferCurrent = { fg = p.text, bg = p.overlay },
 		BufferCurrentIndex = { fg = p.text, bg = p.overlay },
