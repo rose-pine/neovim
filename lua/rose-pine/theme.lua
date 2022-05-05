@@ -18,6 +18,7 @@ function M.get(config)
 	theme = {
 		ColorColumn = { bg = p.highlight_high },
 		Conceal = { bg = p.none },
+		CurSearch = { link = 'IncSearch' },
 		-- Cursor = {},
 		CursorColumn = { bg = p.highlight_low },
 		-- CursorIM = {},
