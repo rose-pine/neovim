@@ -13,6 +13,8 @@
 
 ## Usage
 
+> With [packer.nvim](https://github.com/wbthomason/packer.nvim)
+
 ```lua
 use({
     'rose-pine/neovim',
