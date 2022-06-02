@@ -37,6 +37,7 @@ function M.get(config)
 		-- EndOfBuffer = {},
 		ErrorMsg = { fg = p.love, style = 'bold' },
 		FloatBorder = { fg = groups.border },
+		FloatTitle = { fg = p.muted },
 		FoldColumn = { fg = p.muted },
 		Folded = { fg = p.text, bg = groups.panel },
 		IncSearch = { fg = p.base, bg = p.rose },
