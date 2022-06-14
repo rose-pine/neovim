@@ -16,7 +16,7 @@ function M.get(config)
 	styles.nc_background = (config.dim_nc_background and groups.panel) or styles.background
 
 	theme = {
-		ColorColumn = { bg = p.highlight_high },
+		ColorColumn = { bg = p.overlay },
 		Conceal = { bg = p.none },
 		CurSearch = { link = 'IncSearch' },
 		-- Cursor = {},
