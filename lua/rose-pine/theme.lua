@@ -80,7 +80,7 @@ function M.get(config)
 		-- VisualNOS = {},
 		WarningMsg = { fg = p.gold },
 		-- Whitespace = {},
-		-- WildMenu = {},
+		WildMenu = { link = 'IncSearch' },
 
 		Boolean = { fg = p.rose },
 		Character = { fg = p.gold },
