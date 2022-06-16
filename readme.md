@@ -26,73 +26,7 @@ use({
 })
 ```
 
-## Plugins
-
-> PRs are more than welcome if your favourite plugin is missing
-
-- [neovim diagnostics](https://neovim.io/doc/user/lsp.html)
-- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [barbar.nvim](https://github.com/romgrk/barbar.nvim)
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
-- [modes.nvim](https://github.com/mvllow/modes.nvim)
-- [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
-- [which-key.nvim](https://github.com/folke/which-key.nvim)
-- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [neogit](https://github.com/TimUntersberger/neogit)
-- [neorg](https://github.com/nvim-neorg/neorg)
-- [lspsaga.nvim](https://github.com/tami5/lspsaga.nvim)
-- [pounce.nvim](https://github.com/rlane/pounce.nvim)
-- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [nvim-notify](https://github.com/rcarriga/nvim-notify)
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-
-```lua
-use({
-	'nvim-lualine/lualine.nvim',
-	-- fix mismatch palette between variants
-	event = 'ColorScheme',
-	config = function()
-		require('lualine').setup({
-			options = {
-				---@usage 'rose-pine' | 'rose-pine-alt'
-				theme = 'rose-pine'
-			}
-		})
-	end
-})
-```
-
-- [galaxyline.nvim fork](https://github.com/NTBBloodbath/galaxyline.nvim)
-
-```lua
-local colors = require("galaxyline.themes.colors")["rose-pine"]
-```
-
-- [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
-
-```lua
-use({
-	'akinsho/bufferline.nvim',
-	event = 'ColorScheme',
-	config = function()
-		local highlights = require('rose-pine.plugins.bufferline')
-		require('bufferline').setup({ highlights = highlights })
-	end
-})
-```
-
-- [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
-
-```lua
-use({
-	'akinsho/toggleterm.nvim',
-	event = 'ColorScheme',
-	config = function()
-		local highlights = require('rose-pine.plugins.toggleterm')
-		require('toggleterm').setup({ highlights = highlights })
-	end
-})
-```
+_Supported plugins are listed in the [wiki](https://github.com/rose-pine/neovim/wiki#supported-plugins)_
 
 ## Gallery
 
@@ -116,14 +50,15 @@ Variant respects `vim.o.background`, using dawn when light and `dark_variant` wh
 
 ```lua
 require('rose-pine').setup({
-	---@usage 'main'|'moon'
+	--- @usage 'main' | 'moon'
 	dark_variant = 'main',
 	bold_vert_split = false,
 	dim_nc_background = false,
 	disable_background = false,
 	disable_float_background = false,
 	disable_italics = false,
-	---@usage string hex value or named color from rosepinetheme.com/palette
+
+	--- @usage string hex value or named color from rosepinetheme.com/palette
 	groups = {
 		background = 'base',
 		panel = 'surface',
@@ -148,6 +83,7 @@ require('rose-pine').setup({
 		-- or set all headings at once
 		-- headings = 'subtle'
 	},
+
 	-- Change specific vim highlight groups
 	highlight_groups = {
 		ColorColumn = { bg = 'rose' }
