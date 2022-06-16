@@ -10,10 +10,13 @@ function M.get(config)
 	local styles = {
 		italic = (config.disable_italics and p.none) or 'italic',
 		vert_split = (config.bold_vert_split and groups.border) or p.none,
-		background = (config.disable_background and p.none) or groups.background,
-		float_background = (config.disable_float_background and p.none) or groups.panel,
+		background = (config.disable_background and p.none)
+			or groups.background,
+		float_background = (config.disable_float_background and p.none)
+			or groups.panel,
 	}
-	styles.nc_background = (config.dim_nc_background and groups.panel) or styles.background
+	styles.nc_background = (config.dim_nc_background and groups.panel)
+		or styles.background
 
 	theme = {
 		ColorColumn = { bg = p.overlay },

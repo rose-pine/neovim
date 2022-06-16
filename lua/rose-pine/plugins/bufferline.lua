@@ -1,8 +1,9 @@
----Rosé Pine
----@plugin akinsho/bufferline.nvim
----@usage
----	local highlights = require('rose-pine.plugins.bufferline')
----	require('bufferline').setup({ highlights = highlights })
+--- Rosé Pine for bufferline
+--- https://github.com/akinsho/bufferline.nvim
+---
+--- @usage
+--- local highlights = require('rose-pine.plugins.bufferline')
+--- require('bufferline').setup({ highlights = highlights })
 
 local p = require('rose-pine.palette')
 
@@ -20,7 +21,7 @@ return {
 	-- 	guibg = '<color-value-here>',
 	-- },
 	-- tab_selected = {
-	-- 	guifg = tabline_sel_bg,
+	-- 	guifg = '<color-value-here>',
 	-- 	guibg = '<color-value-here>',
 	-- },
 	-- tab_close = {

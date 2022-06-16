@@ -22,7 +22,8 @@ local function parse_color(color)
 	color = color:lower()
 
 	if not color:find('#') and color ~= 'none' then
-		color = require('rose-pine.palette')[color] or vim.api.nvim_get_color_by_name(color)
+		color = require('rose-pine.palette')[color]
+			or vim.api.nvim_get_color_by_name(color)
 	end
 
 	return color
@@ -40,7 +41,12 @@ util.blend = function(fg, bg, alpha)
 		return math.floor(math.min(math.max(0, ret), 255) + 0.5)
 	end
 
-	return string.format('#%02X%02X%02X', blend_channel(1), blend_channel(2), blend_channel(3))
+	return string.format(
+		'#%02X%02X%02X',
+		blend_channel(1),
+		blend_channel(2),
+		blend_channel(3)
+	)
 end
 
 ---@param group string
@@ -55,7 +61,6 @@ util.highlight = function(group, color)
 
 	if color.link then
 		vim.cmd(string.format('highlight! link %s %s', group, color.link))
-		-- vim.cmd('highlight! link ' .. group .. ' ' .. color.link)
 	end
 end
 
