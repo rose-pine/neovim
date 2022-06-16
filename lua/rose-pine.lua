@@ -73,12 +73,18 @@ function M.colorscheme()
 	vim.g.colors_name = 'rose-pine'
 
 	local theme = require('rose-pine.theme').get(config)
+
+	-- Set theme highlights
 	for group, color in pairs(theme) do
-		if config.highlight_groups[group] ~= nil then
-			util.highlight(group, config.highlight_groups[group])
-		else
+		-- Skip highlight group if user overrides
+		if config.highlight_groups[group] == nil then
 			util.highlight(group, color)
 		end
+	end
+
+	-- Set user highlights
+	for group, color in pairs(config.highlight_groups) do
+		util.highlight(group, color)
 	end
 end
 
