@@ -306,7 +306,7 @@ function M.get(config)
 		NvimTreeImageFile = { fg = p.text },
 		NvimTreeNormal = { fg = p.text },
 		NvimTreeOpenedFile = { fg = p.text, bg = p.highlight_med },
-		NvimTreeOpenedFolderName = { fg = p.foam },
+		NvimTreeOpenedFolderName = { link = 'NvimTreeFolderName' },
 		NvimTreeRootFolder = { fg = p.iris },
 		NvimTreeSpecialFile = { link = 'NvimTreeNormal' },
 		NvimTreeWindowPicker = { fg = groups.background, bg = p.iris },
