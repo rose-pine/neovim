@@ -100,3 +100,4 @@ We welcome and appreciate any help in creating a lovely experience for all.
 
 - [Get highlight groups under cursor](https://github.com/nvim-treesitter/playground#show-treesitter-and-syntax-highlight-groups-under-the-cursor)
 - [Adding new highlight groups](https://github.com/rose-pine/neovim/issues/6#issuecomment-962466323)
+- [Palette reference by name](https://rosepinetheme.com/palette)
