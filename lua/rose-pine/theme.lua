@@ -433,6 +433,27 @@ function M.get(config)
 		NotifyERRORBorder = { fg = p.love },
 		NotifyERRORTitle = { link = 'NotifyERRORBorder' },
 		NotifyERRORIcon = { link = 'NotifyERRORBorder' },
+
+		-- rcarriga/nvim-dap-ui
+		DapUIVariable = { link = 'Normal' },
+		DapUIValue = { link = 'Normal' },
+		DapUIFrameName = { link = 'Normal' },
+		DapUIThread = { fg = p.gold },
+		DapUIWatchesValue = { link = 'DapUIThread' },
+		DapUIBreakpointsInfo = { link = 'DapUIThread' },
+		DapUIBreakpointsCurrentLine = { fg = p.gold, style = 'bold' },
+		DapUIWatchesEmpty = { fg = p.love },
+		DapUIWatchesError = { link = 'DapUIWatchesEmpty' },
+		DapUIBreakpointsDisabledLine = { fg = p.muted },
+		DapUISource = { fg = p.iris },
+		DapUIBreakpointsPath = { fg = p.foam },
+		DapUIScope = { link = 'DapUIBreakpointsPath' },
+		DapUILineNumber = { link = 'DapUIBreakpointsPath' },
+		DapUIBreakpointsLine = { link = 'DapUIBreakpointsPath' },
+		DapUIFloatBorder = { link = 'DapUIBreakpointsPath' },
+		DapUIStoppedThread = { link = 'DapUIBreakpointsPath' },
+		DapUIDecoration = { link = 'DapUIBreakpointsPath' },
+		DapUIModifiedValue = { fg = p.foam, style = 'bold' },
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
