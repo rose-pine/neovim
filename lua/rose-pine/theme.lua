@@ -454,6 +454,12 @@ function M.get(config)
 		DapUIStoppedThread = { link = 'DapUIBreakpointsPath' },
 		DapUIDecoration = { link = 'DapUIBreakpointsPath' },
 		DapUIModifiedValue = { fg = p.foam, style = 'bold' },
+
+		-- glepnir/dashboard-nvim
+		DashboardShortcut = { fg = p.love },
+		DashboardHeader = { fg = p.pine },
+		DashboardCenter = { fg = p.gold },
+		DashboardFooter = { fg = p.iris },
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
