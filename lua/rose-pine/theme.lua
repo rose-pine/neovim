@@ -65,7 +65,7 @@ function M.get(config)
 		RedrawDebugRecompose = { fg = '#ffffff', bg = p.love },
 		Search = { bg = p.highlight_med },
 		SpecialKey = { fg = p.foam },
-		SpellBad = { sp = p.love, style = 'undercurl' },
+		SpellBad = { sp = p.subtle, style = 'undercurl' },
 		SpellCap = { sp = p.subtle, style = 'undercurl' },
 		SpellLocal = { sp = p.subtle, style = 'undercurl' },
 		SpellRare = { sp = p.subtle, style = 'undercurl' },
