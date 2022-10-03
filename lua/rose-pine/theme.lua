@@ -193,6 +193,11 @@ function M.get(config)
 		DiagnosticVirtualTextInfo = { fg = groups.info },
 		DiagnosticVirtualTextWarn = { fg = groups.warn },
 
+		-- healthcheck
+		healthError = { fg = groups.error },
+		healthSuccess = { fg = groups.info },
+		healthWarning = { fg = groups.warn },
+
 		-- TSAttribute = {},
 		TSBoolean = { link = 'Boolean' },
 		TSCharacter = { link = 'Character' },
