@@ -2,21 +2,50 @@ local blend = require('rose-pine.util').blend
 
 local M = {}
 
-function M.get(config)
+function M.get()
 	local p = require('rose-pine.palette')
 
 	local theme = {}
-	local groups = config.groups or {}
-	local styles = {
-		italic = (config.disable_italics and p.none) or 'italic',
-		vert_split = (config.bold_vert_split and groups.border) or p.none,
-		background = (config.disable_background and p.none)
-			or groups.background,
-		float_background = (config.disable_float_background and p.none)
-			or groups.panel,
+	local groups = {
+		background = 'base',
+		panel = 'surface',
+		border = 'highlight_med',
+		comment = 'muted',
+		link = 'iris',
+		punctuation = 'muted',
+
+		error = 'love',
+		hint = 'iris',
+		info = 'foam',
+		warn = 'gold',
+
+		git_add = 'foam',
+		git_change = 'rose',
+		git_delete = 'love',
+		git_dirty = 'rose',
+		git_ignore = 'muted',
+		git_merge = 'iris',
+		git_rename = 'pine',
+		git_stage = 'iris',
+		git_text = 'rose',
+
+		headings = {
+			h1 = 'iris',
+			h2 = 'foam',
+			h3 = 'rose',
+			h4 = 'gold',
+			h5 = 'pine',
+			h6 = 'foam',
+		},
 	}
-	styles.nc_background = (config.dim_nc_background and groups.panel)
-		or styles.background
+
+	local styles = {
+		italic = 'italic',
+		vert_split = p.none,
+		background = groups.background,
+		float_background = groups.panel,
+	}
+	styles.nc_background = styles.background
 
 	theme = {
 		ColorColumn = { bg = p.overlay },
