@@ -142,7 +142,7 @@ function M.get()
 		SpecialComment = { fg = p.iris },
 		Statement = { fg = p.pine },
 		StorageClass = { fg = p.foam },
-		String = { fg = p.gold },
+		String = { fg = p.green },
 		Structure = { fg = p.foam },
 		Tag = { fg = p.rose },
 		Todo = { fg = p.iris },

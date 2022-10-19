@@ -8,6 +8,7 @@ local palette = {
     love = '#eb6f92',
     gold = '#f69957',
     rose = '#ebbcba',
+    calm = '#23ff87',
     pine = '#cd51d5',
     foam = '#9ccfd8',
     iris = '#c4a7e7',
