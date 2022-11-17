@@ -1,5 +1,6 @@
 local palette = {
-  base = '#171524',
+  -- base = '#171524',
+  base = '#10101a',
   surface = '#1f1d2e',
   overlay = '#26233a',
   muted = '#6e6a86',
