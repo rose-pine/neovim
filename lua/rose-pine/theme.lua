@@ -14,14 +14,14 @@ function M.get()
     link = 'iris',
     punctuation = 'muted',
 
-    error = 'love',
+    error = 'crimson',
     hint = 'iris',
     info = 'foam',
     warn = 'gold',
 
     git_add = 'foam',
     git_change = 'rose',
-    git_delete = 'love',
+    git_delete = 'crimson',
     git_dirty = 'rose',
     git_ignore = 'muted',
     git_merge = 'iris',
@@ -67,7 +67,7 @@ function M.get()
     diffRemoved = {link = 'DiffDelete'},
     Directory = {fg = p.foam, bg = p.none},
     -- EndOfBuffer = {},
-    ErrorMsg = {fg = p.love, style = 'bold'},
+    ErrorMsg = {fg = p.crimson, style = 'bold'},
     FloatBorder = {fg = groups.border},
     FloatTitle = {fg = p.muted},
     FoldColumn = {fg = p.muted},
@@ -82,7 +82,7 @@ function M.get()
     Normal = {fg = p.text, bg = styles.background},
     NormalFloat = {fg = p.text, bg = styles.float_background},
     NormalNC = {fg = p.text, bg = styles.nc_background},
-    NvimInternalError = {fg = '#ffffff', bg = p.love},
+    NvimInternalError = {fg = '#ffffff', bg = p.crimson},
     Pmenu = {fg = p.subtle, bg = styles.float_background},
     PmenuSbar = {bg = p.highlight_low},
     PmenuSel = {fg = p.text, bg = p.overlay},
@@ -92,7 +92,7 @@ function M.get()
     -- RedrawDebugNormal = {}
     RedrawDebugClear = {fg = '#ffffff', bg = p.gold},
     RedrawDebugComposed = {fg = '#ffffff', bg = p.pine},
-    RedrawDebugRecompose = {fg = '#ffffff', bg = p.love},
+    RedrawDebugRecompose = {fg = '#ffffff', bg = p.crimson},
     Search = {bg = p.highlight_med},
     SpecialKey = {fg = p.foam},
     SpellBad = {sp = p.subtle, style = 'undercurl'},
@@ -115,7 +115,7 @@ function M.get()
     -- Whitespace = {},
     WildMenu = {link = 'IncSearch'},
 
-    Boolean = {fg = p.rose},
+    Boolean = {fg = p.blu},
     Character = {fg = p.gold},
     Comment = {fg = groups.comment, style = styles.italic},
     Conditional = {fg = p.pine},
@@ -123,10 +123,10 @@ function M.get()
     Debug = {fg = p.rose},
     Define = {fg = p.iris},
     Delimiter = {fg = p.subtle},
-    Error = {fg = p.love},
+    Error = {fg = p.crimson},
     Exception = {fg = p.pine},
     Float = {fg = p.gold},
-    Function = {fg = p.rose},
+    Function = {fg = p.ocean},
     Identifier = {fg = p.rose},
     -- Ignore = {},
     Include = {fg = p.iris},
@@ -244,7 +244,7 @@ function M.get()
     -- TSFloat = {},
     TSFuncBuiltin = {fg = p.love},
     -- TSFuncMacro = {},
-    TSFunction = {fg = p.rose},
+    TSFunction = {fg = p.ocean},
     TSInclude = {fg = p.pine},
     TSKeyword = {fg = p.pine},
     -- TSKeywordFunction = {},
@@ -317,13 +317,13 @@ function M.get()
 
     -- mvllow/modes.nvim
     ModesCopy = {bg = p.gold},
-    ModesDelete = {bg = p.love},
+    ModesDelete = {bg = p.crimson},
     ModesInsert = {bg = p.foam},
     ModesVisual = {bg = p.iris},
 
     -- kyazdani42/nvim-tree.lua
     NvimTreeEmptyFolderName = {fg = p.muted},
-    NvimTreeFileDeleted = {fg = p.love},
+    NvimTreeFileDeleted = {fg = p.crimson},
     NvimTreeFileDirty = {fg = p.rose},
     NvimTreeFileMerge = {fg = p.iris},
     NvimTreeFileNew = {fg = p.foam},
@@ -373,7 +373,7 @@ function M.get()
     -- TimUntersberger/neogit
     NeogitDiffAddHighlight = {fg = p.foam, bg = p.highlight_med},
     NeogitDiffContextHighlight = {bg = p.highlight_low},
-    NeogitDiffDeleteHighlight = {fg = p.love, bg = p.highlight_med},
+    NeogitDiffDeleteHighlight = {fg = p.crimson, bg = p.highlight_med},
     NeogitHunkHeader = {bg = p.highlight_low},
     NeogitHunkHeaderHighlight = {bg = p.highlight_low},
 
@@ -388,7 +388,7 @@ function M.get()
     VimwikiHeaderChar = {fg = p.pine},
     VimwikiLink = {fg = groups.link, style = 'underline'},
     VimwikiList = {fg = p.iris},
-    VimwikiNoExistsLink = {fg = p.love},
+    VimwikiNoExistsLink = {fg = p.crimson},
 
     -- nvim-neorg/neorg
     NeorgHeading1Prefix = {fg = groups.headings.h1, style = 'bold'},
@@ -465,7 +465,7 @@ function M.get()
     NotifyTRACEBorder = {fg = p.iris},
     NotifyTRACETitle = {link = 'NotifyTRACEBorder'},
     NotifyTRACEIcon = {link = 'NotifyTRACEBorder'},
-    NotifyERRORBorder = {fg = p.love},
+    NotifyERRORBorder = {fg = p.crimson},
     NotifyERRORTitle = {link = 'NotifyERRORBorder'},
     NotifyERRORIcon = {link = 'NotifyERRORBorder'},
 
@@ -477,7 +477,7 @@ function M.get()
     DapUIWatchesValue = {link = 'DapUIThread'},
     DapUIBreakpointsInfo = {link = 'DapUIThread'},
     DapUIBreakpointsCurrentLine = {fg = p.gold, style = 'bold'},
-    DapUIWatchesEmpty = {fg = p.love},
+    DapUIWatchesEmpty = {fg = p.crimson},
     DapUIWatchesError = {link = 'DapUIWatchesEmpty'},
     DapUIBreakpointsDisabledLine = {fg = p.muted},
     DapUISource = {fg = p.iris},
