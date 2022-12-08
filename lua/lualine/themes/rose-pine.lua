@@ -2,7 +2,7 @@ local p = require("rose-pine.palette")
 
 return {
   normal = {
-    a = {bg = p.rose, fg = p.base, gui = "bold"},
+    a = {bg = p.pink, fg = p.base, gui = "bold"},
     b = {bg = p.overlay, fg = p.rose},
     c = {bg = p.base, fg = p.text}
   },
