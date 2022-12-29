@@ -406,6 +406,8 @@ function M.get_theme()
 
     -- luka-reineke/indent-blankline.nvim
     IndentBlanklineChar = {fg = p.muted},
+    IndentBlanklineSpaceChar = {fg = p.muted},
+    IndentBlanklineSpaceCharBlankline = {fg = p.muted},
 
     -- hrsh7th/nvim-cmp
     CmpItemAbbr = {fg = p.subtle},
