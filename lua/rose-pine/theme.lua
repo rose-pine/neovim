@@ -258,7 +258,7 @@ function M.get_theme()
     TSOperator = {fg = p.subtle},
     TSParameter = {fg = p.iris, style = styles.italic},
     -- TSParameterReference = {},
-    TSProperty = {fg = p.iris, style = styles.italic},
+    TSProperty = {fg = p.rose, style = styles.italic},
     TSPunctBracket = {fg = groups.punctuation},
     TSPunctDelimiter = {fg = groups.punctuation},
     TSPunctSpecial = {fg = groups.punctuation},
