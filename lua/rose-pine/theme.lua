@@ -465,10 +465,10 @@ function M.get(config)
 		PounceMatch = { link = 'Search' },
 
 		-- nvim-telescope/telescope.nvim
-		TelescopeBorder = { fg = groups.border },
+		TelescopeBorder = { fg = groups.border, bg = styles.float_background },
 		TelescopeMatching = { fg = p.rose },
-		TelescopeNormal = { fg = p.subtle },
-		TelescopePromptNormal = { fg = p.text },
+		TelescopeNormal = { fg = p.subtle, bg = styles.float_background },
+		TelescopePromptNormal = { fg = p.text, bg = styles.float_background },
 		TelescopePromptPrefix = { fg = p.subtle },
 		TelescopeSelection = { fg = p.text, bg = p.overlay },
 		TelescopeSelectionCaret = { fg = p.rose, bg = p.overlay },
