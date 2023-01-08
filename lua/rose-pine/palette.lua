@@ -1,3 +1,5 @@
+local options = require('rose-pine.config').options
+
 local variants = {
 	main = {
 		base = '#191724',
@@ -55,12 +57,5 @@ local variants = {
 	},
 }
 
-local palette = {}
-
-if vim.o.background == 'light' then
-	palette = variants.dawn
-else
-	palette = variants[(vim.g.rose_pine_variant == 'moon' and 'moon') or 'main']
-end
-
-return palette
+return vim.o.background == 'light' and variants.dawn
+	or variants[options.dark_variant or 'main']
