@@ -1,5 +1,3 @@
-local blend = require('rose-pine.util').blend
-
 local M = {}
 
 function M.get(config)
@@ -29,10 +27,10 @@ function M.get(config)
 		CursorLineNr = { fg = p.text },
 		DarkenedPanel = { bg = groups.panel },
 		DarkenedStatusline = { bg = groups.panel },
-		DiffAdd = { bg = blend(groups.git_add, groups.background, 0.2) },
+		DiffAdd = { bg = groups.git_add, blend = 20 },
 		DiffChange = { bg = p.overlay },
-		DiffDelete = { bg = blend(groups.git_delete, groups.background, 0.2) },
-		DiffText = { bg = blend(groups.git_text, groups.background, 0.2) },
+		DiffDelete = { bg = groups.git_delete, blend = 20 },
+		DiffText = { bg = groups.git_text, blend = 20 },
 		diffAdded = { link = 'DiffAdd' },
 		diffChanged = { link = 'DiffChange' },
 		diffRemoved = { link = 'DiffDelete' },
