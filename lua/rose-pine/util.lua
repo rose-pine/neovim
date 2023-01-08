@@ -52,16 +52,12 @@ end
 ---@param group string
 ---@param color table<string, string>
 util.highlight = function(group, color)
-	local style = color.style and 'gui=' .. color.style or 'gui=NONE'
-	local fg = color.fg and 'guifg=' .. parse_color(color.fg) or 'guifg=NONE'
-	local bg = color.bg and 'guibg=' .. parse_color(color.bg) or 'guibg=NONE'
-	local sp = color.sp and 'guisp=' .. parse_color(color.sp) or ''
+	local fg = color.fg and parse_color(color.fg) or 'none'
+	local bg = color.bg and parse_color(color.bg) or 'none'
+	local sp = color.sp and parse_color(color.sp) or ''
 
-	vim.cmd(string.format('highlight %s %s %s %s %s', group, style, fg, bg, sp))
-
-	if color.link then
-		vim.cmd(string.format('highlight! link %s %s', group, color.link))
-	end
+	color = vim.tbl_extend('force', color, { fg = fg, bg = bg, sp = sp })
+	vim.api.nvim_set_hl(0, group, color)
 end
 
 return util
