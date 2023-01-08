@@ -195,58 +195,6 @@ function M._load(options)
 	h('healthSuccess', { fg = groups.info })
 	h('healthWarning', { fg = groups.warn })
 
-	-- TSAttribute = {},
-	h('TSBoolean', { link = 'Boolean' })
-	h('TSCharacter', { link = 'Character' })
-	h('TSComment', { link = 'Comment' })
-	h('TSConditional', { link = 'Conditional' })
-	h('TSConstBuiltin', { fg = p.love })
-	-- TSConstMacro = {},
-	h('TSConstant', { fg = p.foam })
-	h('TSConstructor', { fg = p.foam })
-	-- TSEmphasis = {},
-	-- TSError = {},
-	-- TSException = {},
-	h('TSField', { fg = p.foam })
-	-- TSFloat = {},
-	h('TSFuncBuiltin', { fg = p.love })
-	-- TSFuncMacro = {},
-	h('TSFunction', { fg = p.rose })
-	h('TSInclude', { fg = p.pine })
-	h('TSKeyword', { fg = p.pine })
-	-- TSKeywordFunction = {},
-	h('TSKeywordOperator', { fg = p.subtle })
-	h('TSLabel', { fg = p.foam })
-	-- TSLiteral = {},
-	-- TSMethod = {},
-	-- TSNamespace = {},
-	-- TSNone = {},
-	h('TSNumber', { link = 'Number' })
-	h('TSOperator', { fg = p.subtle })
-	h('TSParameter', { fg = p.iris, italic = maybe.italic })
-	-- TSParameterReference = {},
-	h('TSProperty', { fg = p.iris, italic = maybe.italic })
-	h('TSPunctBracket', { fg = groups.punctuation })
-	h('TSPunctDelimiter', { fg = groups.punctuation })
-	h('TSPunctSpecial', { fg = groups.punctuation })
-	-- TSRepeat = {},
-	-- TSStrike = {},
-	h('TSString', { link = 'String' })
-	h('TSStringEscape', { fg = p.pine })
-	-- TSStringRegex = {},
-	h('TSStringSpecial', { link = 'TSString' })
-	-- TSSymbol = {},
-	h('TSTag', { fg = p.foam })
-	h('TSTagDelimiter', { fg = p.subtle })
-	h('TSText', { fg = p.text })
-	h('TSTitle', { fg = groups.headings.h1, bold = true })
-	h('TSType', { link = 'Type' })
-	-- TSTypeBuiltin = {},
-	h('TSURI', { fg = groups.link })
-	-- TSUnderline = {},
-	h('TSVariable', { fg = p.text, italic = maybe.italic })
-	h('TSVariableBuiltin', { fg = p.love })
-
 	-- Treesitter
 	h('@annotation', { link = 'PreProc' })
 	h('@attribute', { link = 'PreProc' })
