@@ -1,0 +1,80 @@
+name: Bug Report
+description: File a bug/issue
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before** reporting an issue, make sure to read the [documentation](https://github.com/rose-pine/neovim) and search [existing issues](https://github.com/rose-pine/neovim/issues). Usage questions such as ***"How do I...?"*** belong in [Discussions](https://github.com/rose-pine/neovim/discussions) and will be closed.
+  - type: input
+    attributes:
+      label: "Neovim version (nvim -v)"
+      placeholder: "0.8.0 commit db1b0ee3b30f"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: "Terminal"
+      placeholder: "Kitty"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. Please include any related errors you see in Neovim.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: A concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Repro
+      description: Minimal `init.lua` to reproduce this issue. Save as `repro.lua` and run with `nvim -u repro.lua`
+      value: |
+        -- DO NOT change the paths and do not remove the colorscheme
+        local root = vim.fn.fnamemodify("./.repro", ":p")
+
+        -- Set stdpaths to use .repro
+        for _, name in ipairs({ "config", "data", "state", "cache" }) do
+          vim.env[("XDG_%s_HOME"):format(name:upper())] = root .. "/" .. name
+        end
+
+        -- Bootstrap lazy.nvim
+        local lazypath = root .. "/plugins/lazy.nvim"
+        if not vim.loop.fs_stat(lazypath) then
+          vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", lazypath, })
+        end
+        vim.opt.runtimepath:prepend(lazypath)
+
+        -- Install plugins
+        local plugins = {
+          "rose-pine/neovim.nvim",
+		  config = function()
+            -- Add relevant Rosé Pine config below
+		    require("rose-pine").setup({})
+		  end
+        }
+        require("lazy").setup(plugins, {
+          root = root .. "/plugins",
+        })
+
+        vim.cmd.colorscheme("rose-pine")
+        -- Add anything else here
+      render: Lua
+    validations:
+      required: false
