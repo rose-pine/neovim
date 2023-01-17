@@ -392,6 +392,8 @@ function M.get(config)
 		CmpItemKindSnippet = { fg = p.iris },
 		CmpItemKindVariable = { fg = p.foam },
 
+		-- SmiteshP/nvim-navic
+
 		-- TimUntersberger/neogit
 		NeogitDiffAddHighlight = { fg = p.foam, bg = p.highlight_med },
 		NeogitDiffContextHighlight = { bg = p.highlight_low },
