@@ -69,8 +69,8 @@ local variants = {
 		-- rose = '#a18069',
 
 		-- pine = '#286983',
-		-- pine = '#008080',
-		pine = '#35A34A',
+		pine = '#008080',
+		-- pine = '#35A34A',
 		-- pine = '#689d6a',
 		-- pine = '#397a94',
 		-- pine = '#599ab4',
