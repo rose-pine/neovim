@@ -63,7 +63,10 @@ body:
 
         -- Install plugins
         local plugins = {
-          "rose-pine/neovim.nvim",
+          "rose-pine/neovim",
+          name = "rose-pine",
+          lazy = false,
+          priority = 1000,
           config = function()
             -- Add relevant Rosé Pine config below
             require("rose-pine").setup({})
