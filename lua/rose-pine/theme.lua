@@ -397,6 +397,7 @@ function M.get(config)
 		CmpItemKindMethod = { fg = p.iris },
 		CmpItemKindSnippet = { fg = p.iris },
 		CmpItemKindVariable = { fg = p.foam },
+		GhostText = { fg = p.muted },
 
 		-- SmiteshP/nvim-navic
 		NavicIconsNamespace     = { link = "@namespace"       },
