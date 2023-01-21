@@ -573,6 +573,10 @@ function M.get(config)
 		AlphaHeader = { fg = "pine", style="bold"},
 		AlphaFooter = { fg = "muted"},
 		AlphaButton = { fg = "foam", style="bold"},
+
+		-- p00f/nvim-ts-rainbow
+		rainbowcol1 = { link = "SpecialKey" },
+
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
