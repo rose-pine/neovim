@@ -558,6 +558,9 @@ function M.get(config)
 		-- akinsho/nvim-bufferline.lua
 		ToggleTermNormalFloat = { bg = p.base },
 
+		-- akinsho/nvim-bufferline.lua
+		BufferLineOffsetHeading = { bg = "overlay", style = "bold" },
+
 		-- winbar
 		WinBar     = { link       = "NavicText" },
 		WinBarNC   = { bg=p.mute, fg=p.mute},
