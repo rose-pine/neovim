@@ -401,7 +401,7 @@ function M.get(config)
 		CmpItemKindSnippet = { fg = p.iris },
 		CmpItemKindVariable = { fg = p.foam },
 		CmpItemKindBoolean  = { link = "Boolean"         },
-		CmpItemKindProperty = { link = "Function"      },
+		CmpItemKindProperty = { fg="text"},
 		CmpItemKindString   = { fg = p.rose            },
 		CmpItemKindText     = { fg   = p.pine            },
 		-- -- TODO: turn to highlight_low for light mode, high for dark
