@@ -581,6 +581,10 @@ function M.get(config)
       IndentBlanklineContextChar  = { link  = "foam"              },
       IndentBlanklineContextStart = { style = "underline", sp = "foam"},
 
+		--- RRethy/vim-illuminate
+		IlluminatedWordRead  = { link = "MatchWord" },
+      IlluminatedWordText  = { link = "MatchWord" },
+      IlluminatedWordWrite = { link = "MatchWord" },
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
