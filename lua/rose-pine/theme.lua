@@ -608,6 +608,10 @@ function M.get(config)
 		-- color of label of other n and N's
 		HlSearchLens = { fg=p.rose, bg=p.surface,},
 
+		-- kevinhwang91/nvim-ufo
+		UfoFoldedBg             = { link = 'Visual' },
+		UfoFoldedEllipsisCustom = { fg   = p.text,  bg = p.highlight_med },
+
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
