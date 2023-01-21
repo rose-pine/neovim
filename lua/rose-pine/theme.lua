@@ -404,10 +404,7 @@ function M.get(config)
 		CmpItemKindProperty = { fg="text"},
 		CmpItemKindString   = { fg = p.rose            },
 		CmpItemKindText     = { fg   = p.pine            },
-		-- -- TODO: turn to highlight_low for light mode, high for dark
-		CmpPmenuSel         = { bg   = 'highlight_high'   },
-		-- CmpPmenuSel         = { bg   = p.highlight_med   },
-		-- CmpPmenuSel         = { bg   = p.overlay   },
+		CmpPmenusel = { bg = (vim.opt.background:get()=='light') and "highlight_low" or "highlight_high"  },
 		GhostText = { fg = p.muted },
 
 		-- SmiteshP/nvim-navic
