@@ -582,8 +582,8 @@ function M.get(config)
 		rainbowcol1 = { link = "SpecialKey" },
 
 		--- lukas-reineke/indent-blankline.nvim
-      IndentBlanklineContextChar  = { link  = "foam"              },
-      IndentBlanklineContextStart = { style = "underline", sp = "foam"},
+		IndentBlanklineContextChar  = { fg  = p.foam              },
+		IndentBlanklineContextStart = { style = "underline", sp = p.foam},
 
 		--- RRethy/vim-illuminate
 		IlluminatedWordRead  = { link = "MatchWord" },
