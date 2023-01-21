@@ -563,6 +563,10 @@ function M.get(config)
 		-- petertriho/nvim-scrollbar
 		ScrollbarHandle = { bg="muted", fg="muted"},
 
+		-- goolord/alpha-nvim
+		AlphaHeader = { fg = "pine", style="bold"},
+		AlphaFooter = { fg = "muted"},
+		AlphaButton = { fg = "foam", style="bold"},
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
