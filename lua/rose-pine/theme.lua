@@ -305,6 +305,9 @@ function M.get(config)
 		LspReferenceRead = { bg = p.highlight_med },
 		LspReferenceWrite = { bg = p.highlight_med },
 
+		-- lsp border
+      LspInfoBorder = { link = "FloatBorder" },
+
 		-- lsp-highlight-codelens
 		LspCodeLens = { fg = p.subtle }, -- virtual text of code lens
 		LspCodeLensSeparator = { fg = p.highlight_high }, -- separator between two or more code lens
