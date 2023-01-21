@@ -398,7 +398,7 @@ function M.get(config)
 		CmpItemKindFunction = { fg = p.iris },
 		CmpItemKindInterface = { fg = p.gold },
 		CmpItemKindMethod = { fg = p.iris },
-		CmpItemKindSnippet = { fg = p.iris },
+		CmpItemKindSnippet = { fg = p.gold },
 		CmpItemKindVariable = { fg = p.foam },
 		CmpItemKindBoolean  = { link = "Boolean"         },
 		CmpItemKindProperty = { fg="text"},
