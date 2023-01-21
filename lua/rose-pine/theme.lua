@@ -555,7 +555,7 @@ function M.get(config)
 		DashboardCenter = { fg = p.gold },
 		DashboardFooter = { fg = p.iris },
 
-		-- akinsho/nvim-bufferline.lua
+		-- akinsho/toggleterm.nvim
 		ToggleTermNormalFloat = { bg = p.base },
 
 		-- akinsho/nvim-bufferline.lua
