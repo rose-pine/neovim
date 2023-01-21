@@ -560,6 +560,9 @@ function M.get(config)
 		WinBarDirSeparator = { fg   = p.muted     },
 		WinBarDirIcon      = { link = "Directory" },
 
+		-- petertriho/nvim-scrollbar
+		ScrollbarHandle = { bg="muted", fg="muted"},
+
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
