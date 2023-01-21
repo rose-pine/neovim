@@ -589,6 +589,17 @@ function M.get(config)
 		IlluminatedWordRead  = { link = "MatchWord" },
       IlluminatedWordText  = { link = "MatchWord" },
       IlluminatedWordWrite = { link = "MatchWord" },
+
+		--- kevinhwang91/nvim-hlslens
+		-- active word
+		HlSearchNear = { fg=p.rose, bg = "none", style="underline,bold"},
+		-- label of active word
+		HlSearchLensNear = { fg=p.rose, bg=p.surface, style="bold"},
+		-- nearest text for the floating window
+		-- HlSearchFloat = { fg="foam", bg="love",},
+		-- color of label of other n and N's
+		HlSearchLens = { fg=p.rose, bg=p.surface,},
+
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
