@@ -547,6 +547,10 @@ function M.get(config)
 		DashboardHeader = { fg = p.pine },
 		DashboardCenter = { fg = p.gold },
 		DashboardFooter = { fg = p.iris },
+
+		-- akinsho/nvim-bufferline.lua
+		ToggleTermNormalFloat = { bg = p.base },
+
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
