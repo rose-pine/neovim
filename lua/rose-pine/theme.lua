@@ -551,6 +551,15 @@ function M.get(config)
 		-- akinsho/nvim-bufferline.lua
 		ToggleTermNormalFloat = { bg = p.base },
 
+		-- winbar
+		WinBar     = { link       = "NavicText" },
+		WinBarNC   = { bg=p.mute, fg=p.mute},
+		WinBarFile = { fg=p.text },
+		WinbarPath = { fg = p.foam},
+		WinBarSeparator    = { fg   = p.muted     },
+		WinBarDirSeparator = { fg   = p.muted     },
+		WinBarDirIcon      = { link = "Directory" },
+
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
