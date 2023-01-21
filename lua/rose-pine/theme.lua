@@ -393,6 +393,34 @@ function M.get(config)
 		CmpItemKindVariable = { fg = p.foam },
 
 		-- SmiteshP/nvim-navic
+		NavicIconsNamespace     = { link = "@namespace"       },
+		NavicIconsPackage       = { fg   = p.iris             },
+		NavicIconsClass         = { link = "CmpItemKindClass" },
+		NavicIconsMethod        = { link = "Method"           },
+		NavicIconsProperty      = { link = "TSProperty"       },
+		NavicIconsField         = { link = "TsField"          },
+		NavicIconsConstructor   = { link = "TsConstructor"    },
+		NavicIconsEnum          = { link = "LspType"          },
+		NavicIconsInterface     = { link = "LspInterface"     },
+		NavicIconsFunction      = { link = "Function"         },
+		NavicIconsVariable      = { fg   = p.foam             },
+		NavicIconsConstant      = { link = "Constant"         },
+		NavicIconsString        = { link = "String"           },
+		NavicIconsNumber        = { link = "Number"           },
+		NavicIconsBoolean       = { link = "Boolean"          },
+		NavicIconsArray         = { fg   = p.subtle             },
+		NavicIconsObject        = { fg   = p.subtle             },
+		NavicIconsKey           = { fg   = p.gold             },
+		NavicIconsEvent         = { link = "TsProperty"       },
+		NavicIconsOperator      = { link = "Operator"         },
+		NavicIconsTypeParameter = { fg   = p.iris             },
+		NavicText               = { link = "Normal"           },
+		NavicSeparator          = { fg   = p.muted            },
+		-- NavicIconsFile
+		NavicIconsModule        = { fg = p.rose},
+		-- NavicIconsNull
+		-- NavicIconsEnumMember
+		-- NavicIconsStruct
 
 		-- TimUntersberger/neogit
 		NeogitDiffAddHighlight = { fg = p.foam, bg = p.highlight_med },
