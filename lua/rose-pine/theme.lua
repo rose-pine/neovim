@@ -577,6 +577,10 @@ function M.get(config)
 		-- p00f/nvim-ts-rainbow
 		rainbowcol1 = { link = "SpecialKey" },
 
+		--- lukas-reineke/indent-blankline.nvim
+      IndentBlanklineContextChar  = { link  = "foam"              },
+      IndentBlanklineContextStart = { style = "underline", sp = "foam"},
+
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
