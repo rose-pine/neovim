@@ -594,6 +594,7 @@ function M.get(config)
 		IndentBlanklineContextStart = { style = "underline", sp = p.foam},
 
 		--- RRethy/vim-illuminate
+		MatchWord = { bg = (vim.opt.background:get()=='light') and "highlight_low" or "highlight_med" },
 		IlluminatedWordRead  = { link = "MatchWord" },
       IlluminatedWordText  = { link = "MatchWord" },
       IlluminatedWordWrite = { link = "MatchWord" },
