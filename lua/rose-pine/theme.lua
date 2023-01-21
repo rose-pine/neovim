@@ -400,6 +400,14 @@ function M.get(config)
 		CmpItemKindMethod = { fg = p.iris },
 		CmpItemKindSnippet = { fg = p.iris },
 		CmpItemKindVariable = { fg = p.foam },
+		CmpItemKindBoolean  = { link = "Boolean"         },
+		CmpItemKindProperty = { link = "Function"      },
+		CmpItemKindString   = { fg = p.rose            },
+		CmpItemKindText     = { fg   = p.pine            },
+		-- -- TODO: turn to highlight_low for light mode, high for dark
+		CmpPmenuSel         = { bg   = 'highlight_high'   },
+		-- CmpPmenuSel         = { bg   = p.highlight_med   },
+		-- CmpPmenuSel         = { bg   = p.overlay   },
 		GhostText = { fg = p.muted },
 
 		-- SmiteshP/nvim-navic
