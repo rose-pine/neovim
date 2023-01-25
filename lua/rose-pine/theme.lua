@@ -18,7 +18,7 @@ function M._load(options)
 	h('ColorColumn', { bg = p.overlay })
 	h('Conceal', { bg = p.none })
 	h('CurSearch', { link = 'IncSearch' })
-	-- Cursor = {},
+	h('Cursor', { fg = p.text, bg = p.highlight_high })
 	h('CursorColumn', { bg = p.highlight_low })
 	-- CursorIM = {},
 	h('CursorLine', { bg = p.highlight_low })
