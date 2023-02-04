@@ -387,7 +387,6 @@ function M.get(config)
 		IndentBlanklineChar = { fg = p.muted },
 		IndentBlanklineSpaceChar = {
 			fg = blend(p.muted, groups.background, 0.5),
-			-- fg = p.muted,
 		}, -- visible indentation (also includes tabs)
 		IndentBlanklineSpaceCharBlankline = { fg = p.muted },
 		IndentBlanklineContextChar = { fg = p.foam },
