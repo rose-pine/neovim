@@ -385,8 +385,14 @@ function M.get(config)
 
 		-- luka-reineke/indent-blankline.nvim
 		IndentBlanklineChar = { fg = p.muted },
-		IndentBlanklineSpaceChar = { fg = p.muted },
+		IndentBlanklineSpaceChar = {
+			fg = blend(p.muted, groups.background, 0.5),
+			-- fg = p.muted,
+		}, -- visible indentation (also includes tabs)
 		IndentBlanklineSpaceCharBlankline = { fg = p.muted },
+		IndentBlanklineContextChar = { fg = p.foam },
+		IndentBlanklineContextStart = { style = 'underline', sp = p.foam },
+		IndentBlanklineIndentVisible = { fg = p.love, style = 'nocombine' },
 
 		-- hrsh7th/nvim-cmp
 		CmpItemAbbr = { fg = p.subtle },
