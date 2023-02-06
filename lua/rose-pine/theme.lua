@@ -145,7 +145,10 @@ function M._load(options)
 	h('markdownH5Delimiter', { link = 'markdownH5' })
 	h('markdownH6', { fg = groups.headings.h6, bold = true })
 	h('markdownH6Delimiter', { link = 'markdownH6' })
-	h('markdownLinkText', { fg = groups.link, underline = true })
+	h(
+		'markdownLinkText',
+		{ fg = groups.link, sp = groups.link, underline = true }
+	)
 	h('markdownUrl', { link = 'markdownLinkText' })
 
 	h('mkdCode', { fg = p.foam, italic = maybe.italic })
