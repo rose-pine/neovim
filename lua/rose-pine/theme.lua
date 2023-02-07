@@ -269,6 +269,7 @@ function M.get(config)
 		['@label'] = { fg = p.foam },
 		['@namespace'] = { link = 'Include' },
 		['@number'] = { link = 'Number' },
+		['@float'] = { link = 'Number' },
 		['@operator'] = { fg = p.subtle },
 		['@parameter'] = { fg = p.iris, style = styles.italic },
 		['@property'] = { fg = p.iris, style = styles.italic },
