@@ -263,6 +263,7 @@ function M.get(config)
 		['@field'] = { fg = p.foam },
 		['@function'] = { fg = p.rose },
 		['@function.builtin'] = { fg = p.love },
+		['@function.call'] = { fg = p.foam, style = 'bold' },
 		['@include'] = { fg = p.pine },
 		['@keyword'] = { fg = p.pine },
 		['@keyword.operator'] = { fg = p.subtle },
