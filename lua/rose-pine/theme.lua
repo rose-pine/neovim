@@ -13,7 +13,7 @@ function M._load(options)
 	}
 	maybe.bold_vert_split = (options.bold_vert_split and groups.border)
 		or p.none
-	maybe.dim_nc_background = (options.dim_nc_background and groups.panel)
+	maybe.dim_nc_background = (options.dim_nc_background and p.nc)
 
 	h('ColorColumn', { bg = p.overlay })
 	h('Conceal', { bg = p.none })
@@ -66,7 +66,10 @@ function M._load(options)
 	h('SpellCap', { sp = p.subtle, undercurl = true })
 	h('SpellLocal', { sp = p.subtle, undercurl = true })
 	h('SpellRare', { sp = p.subtle, undercurl = true })
-	h('SignColumn', { fg = p.text, bg = maybe.base })
+	h('SignColumn', {
+		fg = p.text,
+		bg = (options.dim_nc_background and p.none) or maybe.base,
+	})
 	h('StatusLine', { fg = p.subtle, bg = p.surface })
 	h('StatusLineNC', { fg = p.muted, bg = maybe.base })
 	h('StatusLineTerm', { link = 'StatusLine' })
@@ -427,7 +430,13 @@ function M._load(options)
 	h('TelescopeBorder', { fg = groups.border, bg = maybe.surface })
 	h('TelescopeMatching', { fg = p.rose })
 	h('TelescopeNormal', { fg = p.subtle, bg = maybe.surface })
-	h('TelescopePromptNormal', { fg = p.text, bg = maybe.surface })
+	h('TelescopePromptNormal', {
+		fg = p.text,
+		bg = (
+			options.dim_nc_background
+			and (options.disable_float_background and p.nc or p.surface)
+		) or maybe.surface,
+	})
 	h('TelescopePromptPrefix', { fg = p.subtle })
 	h('TelescopeSelection', { fg = p.text, bg = p.overlay })
 	h('TelescopeSelectionCaret', { fg = p.rose, bg = p.overlay })
