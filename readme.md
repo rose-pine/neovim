@@ -13,6 +13,21 @@
 
 ## Usage
 
+> With [lazy.nvim](https://github.com/folke/lazy.nvim)
+
+```lua
+{
+    'rose-pine/neovim',
+    name = 'rose-pine',
+    lazy = false,
+    priority = 1000,
+    config = function()
+        require("rose-pine").setup()
+        vim.cmd('colorscheme rose-pine')
+    end
+}
+```
+
 > With [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
@@ -20,6 +35,7 @@ use({
     'rose-pine/neovim',
     as = 'rose-pine',
     config = function()
+        require("rose-pine").setup()
         vim.cmd('colorscheme rose-pine')
     end
 })
