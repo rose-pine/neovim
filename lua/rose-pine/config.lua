@@ -31,7 +31,8 @@ local M = {}
 ---@field h6 string
 
 ---@class Config
----@field dark_variant 'main'|'moon'
+---@field variant 'auto'|'main'|'moon'|'dawn'
+---@field dark_variant 'main'|'moon'|'dawn'
 ---@field bold_vert_split boolean
 ---@field dim_nc_background boolean
 ---@field disable_background boolean
@@ -40,6 +41,7 @@ local M = {}
 ---@field groups Groups
 ---@field highlight_groups table<string, any>
 local defaults = {
+	variant = 'auto',
 	dark_variant = 'main',
 	bold_vert_split = false,
 	dim_nc_background = false,

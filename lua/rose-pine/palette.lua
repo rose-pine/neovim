@@ -60,5 +60,15 @@ local variants = {
 	},
 }
 
+if options.variant == 'main' then
+	return variants.main
+end
+if options.variant == 'moon' then
+	return variants.moon
+end
+if options.variant == 'dawn' then
+	return variants.dawn
+end
+
 return vim.o.background == 'light' and variants.dawn
 	or variants[options.dark_variant or 'main']
