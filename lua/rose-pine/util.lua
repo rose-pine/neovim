@@ -33,11 +33,11 @@ end
 ---@param bg string background color
 ---@param alpha number number between 0 (background) and 1 (foreground)
 util.blend = function(fg, bg, alpha)
-	fg = rgb(parse_color(fg))
-	bg = rgb(parse_color(bg))
+	local fg_rgb = rgb(parse_color(fg))
+	local bg_rgb = rgb(parse_color(bg))
 
 	local function blend_channel(i)
-		local ret = (alpha * fg[i] + ((1 - alpha) * bg[i]))
+		local ret = (alpha * fg_rgb[i] + ((1 - alpha) * bg_rgb[i]))
 		return math.floor(math.min(math.max(0, ret), 255) + 0.5)
 	end
 
@@ -50,18 +50,22 @@ util.blend = function(fg, bg, alpha)
 end
 
 ---@param group string
----@param color table<string, string>
+---@param color table<string, any>
 util.highlight = function(group, color)
-	local style = color.style and 'gui=' .. color.style or 'gui=NONE'
-	local fg = color.fg and 'guifg=' .. parse_color(color.fg) or 'guifg=NONE'
-	local bg = color.bg and 'guibg=' .. parse_color(color.bg) or 'guibg=NONE'
-	local sp = color.sp and 'guisp=' .. parse_color(color.sp) or ''
+	local fg = color.fg and parse_color(color.fg) or 'none'
+	local bg = color.bg and parse_color(color.bg) or 'none'
+	local sp = color.sp and parse_color(color.sp) or ''
 
-	vim.cmd(string.format('highlight %s %s %s %s %s', group, style, fg, bg, sp))
-
-	if color.link then
-		vim.cmd(string.format('highlight! link %s %s', group, color.link))
+	if
+		color.blend ~= nil
+		and (color.blend >= 0 or color.blend <= 100)
+		and bg ~= nil
+	then
+		bg = util.blend(bg, parse_color('base') or '', color.blend / 100)
 	end
+
+	color = vim.tbl_extend('force', color, { fg = fg, bg = bg, sp = sp })
+	vim.api.nvim_set_hl(0, group, color)
 end
 
 return util
