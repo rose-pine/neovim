@@ -1,5 +1,8 @@
+local options = require('rose-pine.config').options
+
 local variants = {
 	main = {
+		nc = '#16141f',
 		base = '#191724',
 		surface = '#1f1d2e',
 		overlay = '#26233a',
@@ -18,6 +21,7 @@ local variants = {
 		none = 'NONE',
 	},
 	moon = {
+		nc = '#1f1d30',
 		base = '#232136',
 		surface = '#2a273f',
 		overlay = '#393552',
@@ -36,6 +40,7 @@ local variants = {
 		none = 'NONE',
 	},
 	dawn = {
+		nc = '#f8f0e7',
 		base = '#faf4ed',
 		surface = '#fffaf3',
 		overlay = '#f2e9e1',
@@ -55,12 +60,15 @@ local variants = {
 	},
 }
 
-local palette = {}
-
-if vim.o.background == 'light' then
-	palette = variants.dawn
-else
-	palette = variants[(vim.g.rose_pine_variant == 'moon' and 'moon') or 'main']
+if options.variant == 'main' then
+	return variants.main
+end
+if options.variant == 'moon' then
+	return variants.moon
+end
+if options.variant == 'dawn' then
+	return variants.dawn
 end
 
-return palette
+return vim.o.background == 'light' and variants.dawn
+	or variants[options.dark_variant or 'main']

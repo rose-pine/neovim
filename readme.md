@@ -65,7 +65,9 @@ Variant respects `vim.o.background`, using dawn when light and `dark_variant` wh
 
 ```lua
 require('rose-pine').setup({
-	--- @usage 'main' | 'moon'
+	--- @usage 'auto'|'main'|'moon'|'dawn'
+	variant = 'auto',
+	--- @usage 'main'|'moon'|'dawn'
 	dark_variant = 'main',
 	bold_vert_split = false,
 	dim_nc_background = false,
@@ -101,7 +103,11 @@ require('rose-pine').setup({
 
 	-- Change specific vim highlight groups
 	highlight_groups = {
-		ColorColumn = { bg = 'rose' }
+		ColorColumn = { bg = 'rose' },
+
+		-- Blend colours against the "base" background
+		CursorLine = { bg = 'foam', blend = 10 },
+		StatusLine = { fg = 'love', bg = 'love', blend = 10 },
 	}
 })
 
