@@ -102,6 +102,7 @@ require('rose-pine').setup({
 	},
 
 	-- Change specific vim highlight groups
+	-- https://github.com/rose-pine/neovim/wiki/Recipes
 	highlight_groups = {
 		ColorColumn = { bg = 'rose' },
 
