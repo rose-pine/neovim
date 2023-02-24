@@ -78,7 +78,9 @@ require('rose-pine').setup({
 	--- @usage string hex value or named color from rosepinetheme.com/palette
 	groups = {
 		background = 'base',
+		background_nc = '_experimental_nc',
 		panel = 'surface',
+		panel_nc = 'base',
 		border = 'highlight_med',
 		comment = 'muted',
 		link = 'iris',
