@@ -36,7 +36,7 @@ function M._load(options)
 	h('Directory', { fg = p.foam, bg = p.none })
 	-- EndOfBuffer = {},
 	h('ErrorMsg', { fg = p.love, bold = true })
-	h('FloatBorder', { fg = groups.border })
+	h('FloatBorder', { fg = groups.border, bg = maybe.surface })
 	h('FloatTitle', { fg = p.muted })
 	h('FoldColumn', { fg = p.muted })
 	h('Folded', { fg = p.text, bg = maybe.surface })
