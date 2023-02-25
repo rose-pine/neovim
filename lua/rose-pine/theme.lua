@@ -7,13 +7,15 @@ function M._load(options)
 
 	local groups = options.groups or {}
 	local maybe = {
-		base = (options.disable_background and p.none) or p.base,
-		surface = (options.disable_float_background and p.none) or p.surface,
+		base = (options.disable_background and p.none) or groups.background,
+		surface = (options.disable_float_background and p.none) or groups.panel,
 		italic = not options.disable_italics,
 	}
 	maybe.bold_vert_split = (options.bold_vert_split and groups.border)
 		or p.none
-	maybe.dim_nc_background = (options.dim_nc_background and p.nc)
+	maybe.dim_nc_background = (
+		options.dim_nc_background and groups.background_nc
+	) or maybe.base
 
 	h('ColorColumn', { bg = p.overlay })
 	h('Conceal', { bg = p.none })
@@ -50,7 +52,7 @@ function M._load(options)
 	h('NormalFloat', { fg = p.text, bg = maybe.surface })
 	h('NormalNC', { fg = p.text, bg = maybe.dim_nc_background })
 	h('NvimInternalError', { fg = '#ffffff', bg = p.love })
-	h('Pmenu', { fg = p.subtle, bg = p.maybe_surface })
+	h('Pmenu', { fg = p.subtle, bg = maybe.surface })
 	h('PmenuSbar', { bg = p.highlight_low })
 	h('PmenuSel', { fg = p.text, bg = p.overlay })
 	h('PmenuThumb', { bg = p.highlight_med })
@@ -70,12 +72,12 @@ function M._load(options)
 		fg = p.text,
 		bg = (options.dim_nc_background and p.none) or maybe.base,
 	})
-	h('StatusLine', { fg = p.subtle, bg = p.surface })
-	h('StatusLineNC', { fg = p.muted, bg = maybe.base })
+	h('StatusLine', { fg = p.subtle, bg = groups.panel })
+	h('StatusLineNC', { fg = p.muted, bg = groups.panel_nc })
 	h('StatusLineTerm', { link = 'StatusLine' })
 	h('StatusLineTermNC', { link = 'StatusLineNC' })
-	h('TabLine', { fg = p.subtle, bg = p.surface })
-	h('TabLineFill', { bg = p.surface })
+	h('TabLine', { fg = p.subtle, bg = groups.panel })
+	h('TabLineFill', { bg = groups.panel })
 	h('TabLineSel', { fg = p.text, bg = p.overlay })
 	h('Title', { fg = p.text })
 	h('VertSplit', { fg = groups.border, bg = maybe.bold_vert_split })
@@ -183,10 +185,10 @@ function M._load(options)
 	h('DiagnosticSignHint', { fg = groups.hint })
 	h('DiagnosticSignInfo', { fg = groups.info })
 	h('DiagnosticSignWarn', { fg = groups.warn })
-	h('DiagnosticStatusLineError', { fg = groups.error, bg = p.surface })
-	h('DiagnosticStatusLineHint', { fg = groups.hint, bg = p.surface })
-	h('DiagnosticStatusLineInfo', { fg = groups.info, bg = p.surface })
-	h('DiagnosticStatusLineWarn', { fg = groups.warn, bg = p.surface })
+	h('DiagnosticStatusLineError', { fg = groups.error, bg = groups.panel })
+	h('DiagnosticStatusLineHint', { fg = groups.hint, bg = groups.panel })
+	h('DiagnosticStatusLineInfo', { fg = groups.info, bg = groups.panel })
+	h('DiagnosticStatusLineWarn', { fg = groups.warn, bg = groups.panel })
 	h('DiagnosticUnderlineError', { sp = groups.error, undercurl = true })
 	h('DiagnosticUnderlineHint', { sp = groups.hint, undercurl = true })
 	h('DiagnosticUnderlineInfo', { sp = groups.info, undercurl = true })
@@ -424,17 +426,15 @@ function M._load(options)
 	h('PounceGap', { link = 'Search' })
 	h('PounceMatch', { link = 'Search' })
 
+	local float_background = options.dim_nc_background
+			and (options.disable_float_background and groups.panel_nc or groups.panel)
+		or maybe.surface
+
 	-- nvim-telescope/telescope.nvim
-	h('TelescopeBorder', { fg = groups.border, bg = maybe.surface })
+	h('TelescopeBorder', { fg = groups.border, bg = float_background })
 	h('TelescopeMatching', { fg = p.rose })
-	h('TelescopeNormal', { fg = p.subtle, bg = maybe.surface })
-	h('TelescopePromptNormal', {
-		fg = p.text,
-		bg = (
-			options.dim_nc_background
-			and (options.disable_float_background and p.nc or p.surface)
-		) or maybe.surface,
-	})
+	h('TelescopeNormal', { fg = p.subtle, bg = float_background })
+	h('TelescopePromptNormal', { fg = p.text, bg = float_background })
 	h('TelescopePromptPrefix', { fg = p.subtle })
 	h('TelescopeSelection', { fg = p.text, bg = p.overlay })
 	h('TelescopeSelectionCaret', { fg = p.rose, bg = p.overlay })
