@@ -506,6 +506,12 @@ function M.get(config)
 		ReferencesIcon = { fg = p.rose },
 		SagaShadow = { bg = p.overlay },
 		TargetWord = { fg = p.iris },
+		SagaWinbarFilename = { fg = p.text, style = 'bold' },
+		SagaWinbarFolderName = { fg = p.foam },
+		SagaWinbarFolderIcon = { fg = p.foam },
+		SagaWinbarSep = { fg = p.love },
+		SagaWinbarWord = { fg = p.text },
+		SagaWinbarFunction = { fg = p.iris },
 
 		-- ray-x/lsp_signature.nvim
 		LspSignatureActiveParameter = { bg = p.overlay },
