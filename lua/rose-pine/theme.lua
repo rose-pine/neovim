@@ -424,6 +424,11 @@ function M._load(options)
 	h('PounceGap', { link = 'Search' })
 	h('PounceMatch', { link = 'Search' })
 
+	-- ggandor/leap.nvim
+	h('LeapMatch', { link = 'MatchParen' })
+	h('LeapLabelPrimary', { link = 'IncSearch' })
+	h('LeapLabelSecondary', { fg = p.base, bg = p.pine })
+
 	-- nvim-telescope/telescope.nvim
 	h('TelescopeBorder', { fg = groups.border, bg = maybe.surface })
 	h('TelescopeMatching', { fg = p.rose })
