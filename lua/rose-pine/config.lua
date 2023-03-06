@@ -2,7 +2,9 @@ local M = {}
 
 ---@class Groups
 ---@field background string
+---@field background_nc string
 ---@field panel string
+---@field panel_nc string
 ---@field border string
 ---@field comment string
 ---@field link string
@@ -52,7 +54,9 @@ local defaults = {
 
 	groups = {
 		background = 'base',
+		background_nc = '_experimental_nc',
 		panel = 'surface',
+		panel_nc = 'base',
 		border = 'highlight_med',
 		comment = 'muted',
 		link = 'iris',
