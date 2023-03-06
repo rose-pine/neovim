@@ -16,29 +16,19 @@
 > With [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
-{
-    'rose-pine/neovim',
-    name = 'rose-pine',
-    lazy = false,
-    priority = 1000,
-    config = function()
-        require("rose-pine").setup()
-        vim.cmd('colorscheme rose-pine')
-    end
-}
+require("lazy").setup({
+	{ 'rose-pine/neovim', name = 'rose-pine' }
+})
+
+vim.cmd('colorscheme rose-pine')
 ```
 
 > With [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use({
-    'rose-pine/neovim',
-    as = 'rose-pine',
-    config = function()
-        require("rose-pine").setup()
-        vim.cmd('colorscheme rose-pine')
-    end
-})
+use({ 'rose-pine/neovim', as = 'rose-pine' })
+
+vim.cmd('colorscheme rose-pine')
 ```
 
 _Supported plugins are listed in the [wiki](https://github.com/rose-pine/neovim/wiki#supported-plugins)_
@@ -114,7 +104,7 @@ require('rose-pine').setup({
 	}
 })
 
--- set colorscheme after options
+-- Set colorscheme after options
 vim.cmd('colorscheme rose-pine')
 ```
 
@@ -122,6 +112,6 @@ vim.cmd('colorscheme rose-pine')
 
 We welcome and appreciate any help in creating a lovely experience for all.
 
-- [Get highlight groups under cursor](https://github.com/nvim-treesitter/playground#show-treesitter-and-syntax-highlight-groups-under-the-cursor)
+- Get highlight groups under cursor via `:Inspect` in Neovim 0.9 or [nvim-treesitter/playground](https://github.com/nvim-treesitter/playground#show-treesitter-and-syntax-highlight-groups-under-the-cursor)
 - [Adding new highlight groups](https://github.com/rose-pine/neovim/issues/6#issuecomment-962466323)
 - [Palette reference by name](https://rosepinetheme.com/palette)
