@@ -429,6 +429,11 @@ function M._load(options)
 	local float_background = options.dim_nc_background
 			and (options.disable_float_background and groups.panel_nc or groups.panel)
 		or maybe.surface
+    
+	-- ggandor/leap.nvim
+	h('LeapMatch', { link = 'MatchParen' })
+	h('LeapLabelPrimary', { link = 'IncSearch' })
+	h('LeapLabelSecondary', { fg = p.base, bg = p.pine })
 
 	-- nvim-telescope/telescope.nvim
 	h('TelescopeBorder', { fg = groups.border, bg = float_background })
@@ -483,6 +488,37 @@ function M._load(options)
 	h('DashboardHeader', { fg = p.pine })
 	h('DashboardCenter', { fg = p.gold })
 	h('DashboardFooter', { fg = p.iris })
+
+	-- SmiteshP/nvim-navic
+	h('NavicIconsFile', { fg = p.base })
+	h('NavicIconsModule', { fg = p.rose })
+	h('NavicIconsNamespace', { fg = p.base })
+	h('NavicIconsPackage', { fg = p.base })
+	h('NavicIconsClass', { fg = p.gold })
+	h('NavicIconsMethod', { fg = p.pine })
+	h('NavicIconsProperty', { fg = p.foam })
+	h('NavicIconsField', { fg = p.foam })
+	h('NavicIconsConstructor', { fg = p.gold })
+	h('NavicIconsEnum', { fg = p.gold })
+	h('NavicIconsInterface', { fg = p.gold })
+	h('NavicIconsFunction', { fg = p.pine })
+	h('NavicIconsVariable', { fg = p.love })
+	h('NavicIconsConstant', { fg = p.love })
+	h('NavicIconsString', { fg = p.green })
+	h('NavicIconsNumber', { fg = p.gold })
+	h('NavicIconsBoolean', { fg = p.gold })
+	h('NavicIconsArray', { fg = p.gold })
+	h('NavicIconsObject', { fg = p.gold })
+	h('NavicIconsKey', { fg = p.iris })
+	h('NavicIconsKeyword', { fg = p.iris })
+	h('NavicIconsNull', { fg = p.gold })
+	h('NavicIconsEnumMember', { fg = p.foam })
+	h('NavicIconsStruct', { fg = p.gold })
+	h('NavicIconsEvent', { fg = p.gold })
+	h('NavicIconsOperator', { fg = p.base })
+	h('NavicIconsTypeParameter', { fg = p.foam })
+	h('NavicText', { fg = p.subtle })
+	h('NavicSeparator', { fg = p.subtle })
 
 	vim.g.terminal_color_0 = p.overlay -- black
 	vim.g.terminal_color_8 = p.subtle -- bright black
