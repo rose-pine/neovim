@@ -261,6 +261,18 @@ function M._load(options)
 	h('@type', { link = 'Type' })
 	h('@variable', { fg = p.text, italic = maybe.italic })
 	h('@variable.builtin', { fg = p.love })
+	h('@namespace', { link = '@include' })
+
+	-- LSP Semantic Token Groups
+	h('@lsp.type.enum', { link = '@type' })
+	h('@lsp.type.keyword', { link = '@keyword' })
+	h('@lsp.type.interface', { link = '@interface' })
+	h('@lsp.type.namespace', { link = '@namespace' })
+	h('@lsp.type.parameter', { link = '@parameter' })
+	h('@lsp.type.property', { link = '@property' })
+	h('@lsp.type.variable', {}) -- use treesitter styles for regular variables
+	h('@lsp.typemod.function.defaultLibrary', { link = 'Special' })
+	h('@lsp.typemod.variable.defaultLibrary', { link = '@variable.builtin' })
 
 	-- vim.lsp.buf.document_highlight()
 	h('LspReferenceText', { bg = p.highlight_med })
