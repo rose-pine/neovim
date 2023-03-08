@@ -520,6 +520,9 @@ function M._load(options)
 	h('NavicText', { fg = p.subtle })
 	h('NavicSeparator', { fg = p.subtle })
 
+	-- folke/noice.nvim
+	h('NoiceCursor', { fg = p.highlight_high, bg = p.text })
+
 	vim.g.terminal_color_0 = p.overlay -- black
 	vim.g.terminal_color_8 = p.subtle -- bright black
 	vim.g.terminal_color_1 = p.love -- red
