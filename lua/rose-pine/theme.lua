@@ -538,6 +538,10 @@ function M._load(options)
 	-- folke/noice.nvim
 	h('NoiceCursor', { fg = p.highlight_high, bg = p.text })
 
+	-- echasnovski/mini.indentscope
+	h('MiniIndentscopeSymbol', { fg = p.highlight_med })
+	h('MiniIndentscopeSymbolOff', { fg = p.highlight_med })
+
 	vim.g.terminal_color_0 = p.overlay -- black
 	vim.g.terminal_color_8 = p.subtle -- bright black
 	vim.g.terminal_color_1 = p.love -- red
