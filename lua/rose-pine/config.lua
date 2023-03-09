@@ -40,6 +40,7 @@ local M = {}
 ---@field disable_background boolean
 ---@field disable_float_background boolean
 ---@field disable_italics boolean
+---@field palettes table<table>
 ---@field groups Groups
 ---@field highlight_groups table<string, any>
 local defaults = {
@@ -51,6 +52,8 @@ local defaults = {
 	disable_float_background = false,
 	disable_italics = false,
 	highlight_groups = {},
+
+	palettes = {},
 
 	groups = {
 		background = 'base',

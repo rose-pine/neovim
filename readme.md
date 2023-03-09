@@ -65,6 +65,17 @@ require('rose-pine').setup({
 	disable_float_background = false,
 	disable_italics = false,
 
+    --- @usage palette tables with hex values
+    palettes = {
+        main = {
+            -- You can change an existing color
+            -- base = '#242424',
+
+            -- Or create a new one
+            -- custom = '#FF0000',
+        },
+    }
+
 	--- @usage string hex value or named color from rosepinetheme.com/palette
 	groups = {
 		background = 'base',

@@ -60,6 +60,8 @@ local variants = {
 	},
 }
 
+variants = vim.tbl_deep_extend('force', variants, options.palettes)
+
 if options.variant == 'main' then
 	return variants.main
 end
