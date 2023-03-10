@@ -285,7 +285,7 @@ function M.get(config)
 		['@tag.attribute'] = { link = '@property' },
 		['@tag.delimiter'] = { fg = p.subtle },
 		['@text'] = { fg = p.text },
-		['@text.strong'] = { bold = true },
+		['@text.strong'] = { style = 'bold', bold = true },
 		['@text.emphasis'] = { italic = true },
 		['@text.underline'] = { underline = true },
 		['@text.strike'] = { strikethrough = true },
