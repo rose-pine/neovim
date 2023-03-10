@@ -190,7 +190,7 @@ return {
 		bg = p.highlight_low,
 	},
 	modified_selected = {
-		fg = p.foam,
+		fg = p.love,
 		bg = p.overlay,
 	},
 	duplicate_selected = {
