@@ -12,7 +12,7 @@ function M.colorscheme(options)
 	end
 
 	vim.opt.termguicolors = true
-	vim.g.colors_name = 'rose-pine'
+	vim.g.colors_name = 'grace-rose-pine'
 
 	require('rose-pine.theme')._load(config.options)
 end
