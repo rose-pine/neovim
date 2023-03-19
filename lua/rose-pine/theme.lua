@@ -340,8 +340,8 @@ function M._load(options)
 	h('NvimTreeSpecialFile', { link = 'NvimTreeNormal' })
 	h('NvimTreeWindowPicker', { fg = p.love, bg = p.love, blend = 10 })
 
-  -- nvim-neo-tree/neo-tree.nvim
-  h('NeoTreeTitleBar', { fg = p.surface, bg = p.pine })
+	-- nvim-neo-tree/neo-tree.nvim
+	h('NeoTreeTitleBar', { fg = p.surface, bg = p.pine })
 
 	-- folke/which-key.nvim
 	h('WhichKey', { fg = p.iris })
