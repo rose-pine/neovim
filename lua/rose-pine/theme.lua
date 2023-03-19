@@ -340,8 +340,8 @@ function M._load(options)
 	h('NvimTreeSpecialFile', { link = 'NvimTreeNormal' })
 	h('NvimTreeWindowPicker', { fg = p.love, bg = p.love, blend = 10 })
 
-  -- nvim-neo-tree/neo-tree.nvim
-  h('NeoTreeTitleBar', { fg = p.surface, bg = p.pine })
+	-- nvim-neo-tree/neo-tree.nvim
+	h('NeoTreeTitleBar', { fg = p.surface, bg = p.pine })
 
 	-- folke/which-key.nvim
 	h('WhichKey', { fg = p.iris })
@@ -541,6 +541,12 @@ function M._load(options)
 	-- echasnovski/mini.indentscope
 	h('MiniIndentscopeSymbol', { fg = p.highlight_med })
 	h('MiniIndentscopeSymbolOff', { fg = p.highlight_med })
+
+	-- goolord/alpha-nvim
+	h('AlphaHeader', { fg = p.pine })
+	h('AlphaButtons', { fg = p.foam })
+	h('AlphaShortcut', { fg = p.rose })
+	h('AlphaFooter', { fg = p.gold })
 
 	vim.g.terminal_color_0 = p.overlay -- black
 	vim.g.terminal_color_8 = p.subtle -- bright black
