@@ -542,6 +542,12 @@ function M._load(options)
 	h('MiniIndentscopeSymbol', { fg = p.highlight_med })
 	h('MiniIndentscopeSymbolOff', { fg = p.highlight_med })
 
+	-- goolord/alpha-nvim
+	h('AlphaHeader', { fg = p.pine })
+	h('AlphaButtons', { fg = p.foam })
+	h('AlphaShortcut', { fg = p.rose })
+	h('AlphaFooter', { fg = p.gold })
+
 	vim.g.terminal_color_0 = p.overlay -- black
 	vim.g.terminal_color_8 = p.subtle -- bright black
 	vim.g.terminal_color_1 = p.love -- red
