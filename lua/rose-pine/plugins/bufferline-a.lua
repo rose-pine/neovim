@@ -6,6 +6,8 @@
 --- require('bufferline').setup({ highlights = highlights })
 
 local p = require('rose-pine.palette')
+local sel_text = p.text
+local is_bold = true
 
 return {
 	-- fill = {
@@ -21,7 +23,7 @@ return {
 		bg = p.surface,
 	},
 	tab_selected = {
-		fg = p.text,
+		fg = sel_text,
 		bg = p.overlay,
 	},
 	-- tab_close = {
@@ -45,9 +47,9 @@ return {
 		bg = p.surface,
 	},
 	numbers_selected = {
-		fg = p.text,
+		fg = p.sel_text,
 		bg = p.overlay,
-		bold = true,
+		bold = is_bold,
 		italic = false,
 		-- sp = '<color-value-here>',
 		-- underline = '<color-value-here>',
@@ -66,9 +68,9 @@ return {
 		-- bold = true,
 	},
 	buffer_selected = {
-		fg = p.text,
+		fg = sel_text,
 		bg = p.overlay,
-		bold = true,
+		bold = is_bold,
 		italic = false,
 	},
 	-- diagnostic = {
@@ -190,7 +192,7 @@ return {
 		bg = p.highlight_low,
 	},
 	modified_selected = {
-		fg = p.love,
+		fg = p.text,
 		bg = p.overlay,
 	},
 	duplicate_selected = {
@@ -246,13 +248,13 @@ return {
 	pick_visible = {
 		fg = p.love,
 		bg = p.surface,
-		bold = true,
+		bold = is_bold,
 		italic = true,
 	},
 	pick = {
 		fg = p.love,
 		bg = p.surface,
-		bold = true,
+		bold = is_bold,
 		italic = true,
 	},
 	offset_separator = {
