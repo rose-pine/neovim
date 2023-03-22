@@ -626,6 +626,12 @@ function M.get(config)
 		UfoFoldedBg             = { link = 'Visual' },
 		UfoFoldedEllipsisCustom = { fg   = p.text,  bg = p.highlight_med },
 
+		-- kylechui/nvim-surround
+		NvimSurroundHighlight = {
+			fg = p.love,
+			bg = p.highlight_med,
+			style = 'italic',
+		},
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
