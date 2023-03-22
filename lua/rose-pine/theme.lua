@@ -626,6 +626,10 @@ function M.get(config)
 		UfoFoldedBg             = { link = 'Visual' },
 		UfoFoldedEllipsisCustom = { fg   = p.text,  bg = p.highlight_med },
 
+		-- m-demare/hlargs.nvim
+		Hlarg9 = { fg = p.love },
+		Hlarg12 = { fg = p.pine },
+
 		-- kylechui/nvim-surround
 		NvimSurroundHighlight = {
 			fg = p.love,
