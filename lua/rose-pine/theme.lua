@@ -302,9 +302,9 @@ function M._load(options)
 	h('BufferVisibleTarget', { fg = p.gold })
 
 	-- lewis6991/gitsigns.nvim
-	h('GitSignsAdd', { fg = groups.git_add })
-	h('GitSignsChange', { fg = groups.git_change })
-	h('GitSignsDelete', { fg = groups.git_delete })
+	h('GitSignsAdd', { fg = groups.git_add, bg = groups.background })
+	h('GitSignsChange', { fg = groups.git_change, bg = groups.background })
+	h('GitSignsDelete', { fg = groups.git_delete, bg = groups.background })
 	h('SignAdd', { link = 'GitSignsAdd' })
 	h('SignChange', { link = 'GitSignsChange' })
 	h('SignDelete', { link = 'GitSignsDelete' })
