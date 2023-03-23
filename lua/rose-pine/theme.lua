@@ -274,6 +274,11 @@ function M._load(options)
 	h('@lsp.typemod.function.defaultLibrary', { link = 'Special' })
 	h('@lsp.typemod.variable.defaultLibrary', { link = '@variable.builtin' })
 
+	-- LSP Injected Groups
+	h('@lsp.typemod.operator.injected', { link = '@operator' })
+	h('@lsp.typemod.string.injected', { link = '@string' })
+	h('@lsp.typemod.variable.injected', { link = '@variable' })
+
 	-- vim.lsp.buf.document_highlight()
 	h('LspReferenceText', { bg = p.highlight_med })
 	h('LspReferenceRead', { bg = p.highlight_med })
