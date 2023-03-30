@@ -1,60 +1,39 @@
 local M = {}
 
----@class Groups
----@field background string
----@field background_nc string
----@field panel string
----@field panel_nc string
----@field border string
----@field comment string
----@field link string
----@field punctuation string
----@field error string
----@field hint string
----@field info string
----@field warn string
----@field git_add string
----@field git_change string
----@field git_delete string
----@field git_dirty string
----@field git_ignore string
----@field git_merge string
----@field git_rename string
----@field git_stage string
----@field git_text string
----@field headings Headings|string
+---@class Highlight
+---@field fg string
+---@field bg string
+---@field sp string
+---@field bold boolean
+---@field italic boolean
+---@field undercurl boolean
+---@field underline boolean
+---@field underdouble boolean
+---@field underdotted boolean
+---@field underdashed boolean
+---@field strikethrough boolean
 
----@class Headings
----@field h1 string
----@field h2 string
----@field h3 string
----@field h4 string
----@field h5 string
----@field h6 string
+---@alias Variant 'main' | 'moon' | 'dawn'
 
 ---@class Config
----@field variant 'auto'|'main'|'moon'|'dawn'
----@field dark_variant 'main'|'moon'|'dawn'
----@field bold_vert_split boolean
----@field dim_nc_background boolean
----@field disable_background boolean
----@field disable_float_background boolean
----@field disable_italics boolean
----@field groups Groups
----@field highlight_groups table<string, any>
 local defaults = {
+	---@type 'auto' | Variant
 	variant = 'auto',
+
+	---@type Variant
 	dark_variant = 'main',
+
 	bold_vert_split = false,
+
 	dim_nc_background = false,
+
 	disable_background = false,
 	disable_float_background = false,
 	disable_italics = false,
-	highlight_groups = {},
 
 	groups = {
 		background = 'base',
-		background_nc = '_experimental_nc',
+		background_nc = 'nc',
 		panel = 'surface',
 		panel_nc = 'base',
 		border = 'highlight_med',
@@ -83,6 +62,9 @@ local defaults = {
 			h6 = 'foam',
 		},
 	},
+
+	---@type table<string, Highlight>
+	highlight_groups = {},
 }
 
 ---@type Config
