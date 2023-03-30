@@ -20,10 +20,10 @@ return {
 	-- 	fg = '<color-value-here>',
 	-- 	bg = '<color-value-here>',
 	-- },
-	-- tab_selected = {
-	-- 	fg = '<color-value-here>',
-	-- 	bg = '<color-value-here>',
-	-- },
+	tab_selected = {
+		fg = p.text,
+		bg = p.overlay,
+	},
 	-- tab_close = {
 	-- 	fg = '<color-value-here>',
 	-- 	bg = '<color-value-here>',
