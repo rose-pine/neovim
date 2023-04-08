@@ -629,6 +629,7 @@ function M.get(config)
 		-- m-demare/hlargs.nvim
 		Hlarg9 = { fg = p.love },
 		Hlarg12 = { fg = p.pine },
+		Hlarg5 = { fg = 'iris' },
 
 		-- kylechui/nvim-surround
 		NvimSurroundHighlight = {
