@@ -636,6 +636,9 @@ function M.get(config)
 			bg = p.highlight_med,
 			style = 'italic',
 		},
+
+		-- kosayoda/nvim-lightbulb
+		LightBulbVirtualText = { fg = 'muted' },
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
