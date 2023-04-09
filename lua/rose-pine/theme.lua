@@ -395,6 +395,9 @@ function M.get(config)
 		IndentBlanklineContextStart = { style = 'underline', sp = p.foam },
 		IndentBlanklineIndentVisible = { fg = p.love, style = 'nocombine' },
 
+		-- echasnovski/mini.indentscope
+		MiniIndentscopeSymbol = { fg = p.foam },
+
 		-- hrsh7th/nvim-cmp
 		CmpItemAbbr = { fg = p.subtle },
 		CmpItemAbbrDeprecated = { fg = p.subtle, style = 'strikethrough' },
