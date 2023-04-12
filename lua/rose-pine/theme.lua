@@ -357,9 +357,9 @@ function M._load(options)
 	h('WhichKeyValue', { fg = p.rose })
 
 	-- luka-reineke/indent-blankline.nvim
-	h('IndentBlanklineChar', { fg = p.muted })
-	h('IndentBlanklineSpaceChar', { fg = p.muted })
-	h('IndentBlanklineSpaceCharBlankline', { fg = p.muted })
+	h('IndentBlanklineChar', { fg = p.muted, nocombine = true })
+	h('IndentBlanklineSpaceChar', { fg = p.muted, nocombine = true })
+	h('IndentBlanklineSpaceCharBlankline', { fg = p.muted, nocombine = true })
 
 	-- hrsh7th/nvim-cmp
 	h('CmpItemAbbr', { fg = p.subtle })
