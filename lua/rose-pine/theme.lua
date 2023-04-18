@@ -264,6 +264,7 @@ function M._load(options)
 	h('@namespace', { link = '@include' })
 
 	-- LSP Semantic Token Groups
+	h('@lsp.type.comment', {})
 	h('@lsp.type.enum', { link = '@type' })
 	h('@lsp.type.keyword', { link = '@keyword' })
 	h('@lsp.type.interface', { link = '@interface' })
