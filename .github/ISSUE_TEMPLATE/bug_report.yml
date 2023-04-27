@@ -46,25 +46,25 @@ body:
       label: Repro
       description: Minimal `init.lua` to reproduce this issue. Save as `repro.lua` and run with `nvim -u repro.lua`
       value: |
-vim.o.packpath = '/tmp/nvim/site'
+        vim.o.packpath = '/tmp/nvim/site'
 
-local plugins = {
-  rose_pine = 'https://github.com/rose-pine/neovim',
-  -- ADD OTHER PLUGINS _NECESSARY_ TO REPRODUCE THE ISSUE
-}
+        local plugins = {
+          rose_pine = 'https://github.com/rose-pine/neovim',
+          -- ADD OTHER PLUGINS _NECESSARY_ TO REPRODUCE THE ISSUE
+        }
 
-for name, url in pairs(plugins) do
-  local install_path = '/tmp/nvim/site/pack/test/start/' .. name
-  if vim.fn.isdirectory(install_path) == 0 then
-    vim.fn.system { 'git', 'clone', '--depth=1', url, install_path }
-  end
-end
+        for name, url in pairs(plugins) do
+          local install_path = '/tmp/nvim/site/pack/test/start/' .. name
+          if vim.fn.isdirectory(install_path) == 0 then
+            vim.fn.system { 'git', 'clone', '--depth=1', url, install_path }
+          end
+        end
 
-require('rose-pine').setup({
-  -- ADD ROSÉ PINE CONFIG THAT IS _NECESSARY_ FOR REPRODUCING THE ISSUE
-})
+        require('rose-pine').setup({
+          -- ADD ROSÉ PINE CONFIG THAT IS _NECESSARY_ FOR REPRODUCING THE ISSUE
+        })
 
-vim.cmd.colorscheme = "rose-pine"
+        vim.cmd.colorscheme = "rose-pine"
       render: Lua
     validations:
       required: false
