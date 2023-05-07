@@ -301,6 +301,7 @@ function M.get(config)
 		['@type'] = { link = 'Type' },
 		['@variable'] = { fg = p.text, style = styles.italic },
 		['@variable.builtin'] = { fg = p.love },
+		['@variable.global'] = { fg = p.love },
 
 		-- vim.lsp.buf.document_highlight()
 		LspReferenceText = { bg = p.highlight_med },
