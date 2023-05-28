@@ -15,6 +15,8 @@ function M.colorscheme(variant)
 	require('rose-pine.theme')._load(config.options)
 end
 
-M.setup = config.setup
+function M.setup(options)
+	config.extend(options)
+end
 
 return M

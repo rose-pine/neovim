@@ -1,6 +1,6 @@
 local M = {}
 
----@param options Config
+---@param options Options
 function M._load(options)
 	local h = require('rose-pine.util').highlight
 	local p = require('rose-pine.palette')
