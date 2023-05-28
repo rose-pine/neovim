@@ -1,25 +1,18 @@
+---@alias Variant "main" | "moon" | "dawn"
+---@alias Color { fg: string, bg: string, sp: string, bold: boolean, italic: boolean, undercurl: boolean, underline: boolean, underdouble: boolean, underdotted: boolean, underdashed: boolean, strikethrough: boolean }
+
 local M = {}
 
----@class Highlight
----@field fg string
----@field bg string
----@field sp string
----@field bold boolean
----@field italic boolean
----@field undercurl boolean
----@field underline boolean
----@field underdouble boolean
----@field underdotted boolean
----@field underdashed boolean
----@field strikethrough boolean
-
----@alias Variant 'main' | 'moon' | 'dawn'
-
----@class Config
-local defaults = {
-	---@type 'auto' | Variant
+---@class Options
+M.options = {
+	---Set the desired variant: "auto" will follow the vim background,
+	---defaulting to "main" for dark and "dawn" for light. To change the dark
+	---variant, use `options.dark_variant = "moon"`.
+	---@type "auto" | Variant
 	variant = 'auto',
 
+	---Set the desired dark variant: applies when `options.variant` is set to
+	---"auto" to match `vim.o.background`.
 	---@type Variant
 	dark_variant = 'main',
 
@@ -63,24 +56,13 @@ local defaults = {
 		},
 	},
 
-	---@type table<string, Highlight>
+	---@type table<string, Color>
 	highlight_groups = {},
 }
 
----@type Config
-M.options = {}
-
----@param options Config|nil
-function M.setup(options)
-	M.options = vim.tbl_deep_extend('force', {}, defaults, options or {})
-end
-
----@param options Config|nil
+---@param options Options|nil
 function M.extend(options)
-	M.options =
-		vim.tbl_deep_extend('force', {}, M.options or defaults, options or {})
+	M.options = vim.tbl_deep_extend('force', M.options, options or {})
 end
-
-M.setup()
 
 return M
