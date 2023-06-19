@@ -470,6 +470,12 @@ function M._load(options)
 	h('LeapLabelPrimary', { link = 'IncSearch' })
 	h('LeapLabelSecondary', { fg = p.base, bg = p.pine })
 
+	-- phaazon/hop.nvim
+	h('HopNextKey', { fg = p.love })
+	h('HopNextKey1', { fg = p.foam })
+	h('HopNextKey2', { fg = p.pine })
+	h('HopUnmatched', { fg = p.highlight_high })
+
 	-- nvim-telescope/telescope.nvim
 	h('TelescopeBorder', { fg = groups.border, bg = float_background })
 	h('TelescopeMatching', { fg = p.rose })
