@@ -362,6 +362,13 @@ function M._load(options)
 
 	-- nvim-neo-tree/neo-tree.nvim
 	h('NeoTreeTitleBar', { fg = p.surface, bg = p.pine })
+	h('NeoTreeGitAdded', { fg = p.foam })
+	h('NeoTreeGitModified', { fg = p.rose })
+	h('NeoTreeGitDeleted', { fg = p.love })
+	h('NeoTreeGitRenamed', { fg = p.pine })
+	h('NeoTreeGitIgnored', { fg = p.muted })
+	h('NeoTreeGitUntracked', { fg = p.gold })
+	h('NeoTreeGitConflict', { fg = p.iris })
 
 	-- folke/which-key.nvim
 	h('WhichKey', { fg = p.iris })
