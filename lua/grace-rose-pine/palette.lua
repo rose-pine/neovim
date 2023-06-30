@@ -3,6 +3,7 @@ local options = require('grace-rose-pine.config').options
 local variants = {
 	main = {
 		_experimental_nc = '#16141f',
+		float = '#000019',
 		base = '#191724',
 		surface = '#1f1d2e',
 		overlay = '#26233a',
