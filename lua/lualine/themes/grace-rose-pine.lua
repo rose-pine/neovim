@@ -27,12 +27,13 @@ return {
 	},
 	command = {
 		a = { bg = p.love, fg = p.base, gui = 'bold' },
+
 		b = { bg = blend(p.love, p.overlay, mix), fg = p.love },
 		c = { bg = blend(p.love, p.base, mix), fg = p.text },
 	},
 	inactive = {
-		a = { bg = p.base, fg = p.muted, gui = 'bold' },
-		b = { bg = p.base, fg = p.muted },
-		c = { bg = p.base, fg = p.muted },
+		a = { bg = p.surface, fg = p.muted, gui = 'bold' },
+		b = { bg = p.surface, fg = p.muted },
+		c = { bg = p.surface, fg = p.muted },
 	},
 }
