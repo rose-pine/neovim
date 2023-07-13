@@ -93,6 +93,10 @@ require('rose-pine').setup({
 		-- headings = 'subtle'
 	},
 
+	-- Whether or not highlight_groups optios should change only only update
+	-- the settings they touch or should reset the entire highlight_group.
+	respect_default_highlight_groups = true,
+
 	-- Change specific vim highlight groups
 	-- https://github.com/rose-pine/neovim/wiki/Recipes
 	highlight_groups = {

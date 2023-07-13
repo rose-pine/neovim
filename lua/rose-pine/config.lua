@@ -56,6 +56,10 @@ M.options = {
 		},
 	},
 
+	-- Whether highlight group settings will respect default highlight_groups and
+	-- only update options set in the high_light groups table.
+	respect_default_highlight_groups = true,
+
 	---@type table<string, Color>
 	highlight_groups = {},
 }
