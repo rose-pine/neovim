@@ -597,28 +597,23 @@ function M._load(options)
 	vim.g.terminal_color_7 = p.text -- white
 	vim.g.terminal_color_15 = p.text -- bright white
 
-	-- Set user highlights
+	-- Set users highlight_group customisations.
 	for group, opts in pairs(options.highlight_groups) do
-	-- opts = parse_group_colors(opts)
 		local default_opts = M.defaults[group]
 
-		-- vim.tbl_extend() doesn't do this check for us...
-		if options.respect_default_highlight_groups and default_opts ~= nil then
+		if (opts.inherit == nil or opts.inherit) and default_opts ~= nil then -- On merge.
+			opts.inherit = nil -- Don't add this key to the highlight_group after merge.
 			M.defaults[group] = vim.tbl_extend('force', default_opts, opts)
-		else
+		else -- On overwrite.
+			opts.inherit = nil -- Don't add this key to the highlight_group.
 			M.defaults[group] = opts
 		end
 	end
 
+	-- Set highlights.
 	for group, color in pairs(M.defaults) do
 		h(group, color)
 	end
-
-
-	-- Set user highlights
-	-- for group, color in pairs(options.highlight_groups) do
-	-- 	h(group, color)
-	-- end
 end
 
 return M
