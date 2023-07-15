@@ -17,569 +17,568 @@ function M._load(options)
 		options.dim_nc_background and groups.background_nc
 	) or maybe.base
 
-	h('ColorColumn', { bg = p.overlay })
-	h('Conceal', { bg = p.none })
-	h('CurSearch', { link = 'IncSearch' })
-	h('Cursor', { fg = p.text, bg = p.highlight_high })
-	h('CursorColumn', { bg = p.highlight_low })
-	-- CursorIM = {},
-	h('CursorLine', { bg = p.highlight_low })
-	h('CursorLineNr', { fg = p.text })
-	h('DarkenedPanel', { bg = maybe.surface })
-	h('DarkenedStatusline', { bg = maybe.surface })
-	h('DiffAdd', { bg = groups.git_add, blend = 20 })
-
-	h('DiffChange', { bg = p.overlay })
-	h('DiffDelete', { bg = groups.git_delete, blend = 20 })
-	h('DiffText', { bg = groups.git_text, blend = 20 })
-	h('diffAdded', { link = 'DiffAdd' })
-	h('diffChanged', { link = 'DiffChange' })
-	h('diffRemoved', { link = 'DiffDelete' })
-	h('Directory', { fg = p.foam, bg = p.none })
-	-- EndOfBuffer = {},
-	h('ErrorMsg', { fg = p.love, bold = true })
-	h('FloatBorder', { fg = groups.border, bg = maybe.surface })
-	h('FloatTitle', { fg = p.muted })
-	h('FoldColumn', { fg = p.muted })
-	h('Folded', { fg = p.text, bg = maybe.surface })
-	h('IncSearch', { fg = groups.background, bg = p.rose })
-	h('LineNr', { fg = p.muted })
-	h('MatchParen', { fg = p.text, bg = p.highlight_med })
-	h('ModeMsg', { fg = p.subtle })
-	h('MoreMsg', { fg = p.iris })
-	h('NonText', { fg = p.muted })
-	h('Normal', { fg = p.text, bg = maybe.base })
-	h('NormalFloat', { fg = p.text, bg = maybe.surface })
-	h('NormalNC', { fg = p.text, bg = maybe.dim_nc_background })
-	h('NvimInternalError', { fg = '#ffffff', bg = p.love })
-	h('Pmenu', { fg = p.subtle, bg = maybe.surface })
-	h('PmenuSbar', { bg = p.highlight_low })
-	h('PmenuSel', { fg = p.text, bg = p.overlay })
-	h('PmenuThumb', { bg = p.highlight_med })
-	h('Question', { fg = p.gold })
-	-- QuickFixLine = {},
-	-- RedrawDebugNormal = {}
-	h('RedrawDebugClear', { fg = '#ffffff', bg = p.gold })
-	h('RedrawDebugComposed', { fg = '#ffffff', bg = p.pine })
-	h('RedrawDebugRecompose', { fg = '#ffffff', bg = p.love })
-	h('Search', { bg = p.highlight_med })
-	h('SpecialKey', { fg = p.foam })
-	h('SpellBad', { sp = p.subtle, undercurl = true })
-	h('SpellCap', { sp = p.subtle, undercurl = true })
-	h('SpellLocal', { sp = p.subtle, undercurl = true })
-	h('SpellRare', { sp = p.subtle, undercurl = true })
-	h('SignColumn', {
-		fg = p.text,
-		bg = (options.dim_nc_background and p.none) or maybe.base,
-	})
-	h('StatusLine', { fg = p.subtle, bg = groups.panel })
-	h('StatusLineNC', { fg = p.muted, bg = groups.panel_nc })
-	h('StatusLineTerm', { link = 'StatusLine' })
-	h('StatusLineTermNC', { link = 'StatusLineNC' })
-	h('TabLine', { fg = p.subtle, bg = groups.panel })
-	h('TabLineFill', { bg = groups.panel })
-	h('TabLineSel', { fg = p.text, bg = p.overlay })
-	h('Title', { fg = p.text })
-	h('VertSplit', { fg = groups.border, bg = maybe.bold_vert_split })
-	h('Visual', { bg = p.highlight_med })
-	-- VisualNOS = {},
-	h('WarningMsg', { fg = p.gold })
-	-- Whitespace = {},
-	h('WildMenu', { link = 'IncSearch' })
-
-	h('Boolean', { fg = p.rose })
-	h('Character', { fg = p.gold })
-	h('Comment', { fg = groups.comment, italic = maybe.italic })
-	h('Conditional', { fg = p.pine })
-	h('Constant', { fg = p.gold })
-	h('Debug', { fg = p.rose })
-	h('Define', { fg = p.iris })
-	h('Delimiter', { fg = p.subtle })
-	h('Error', { fg = p.love })
-	h('Exception', { fg = p.pine })
-	h('Float', { fg = p.gold })
-	h('Function', { fg = p.rose })
-	h('Identifier', { fg = p.rose })
-	-- Ignore = {},
-	h('Include', { fg = p.pine })
-	h('Keyword', { fg = p.pine })
-	h('Label', { fg = p.foam })
-	h('Macro', { fg = p.iris })
-	h('Number', { fg = p.gold })
-	h('Operator', { fg = p.subtle })
-	h('PreCondit', { fg = p.iris })
-	h('PreProc', { fg = p.iris })
-	h('Repeat', { fg = p.pine })
-	h('Special', { fg = p.rose })
-	h('SpecialChar', { fg = p.rose })
-	h('SpecialComment', { fg = p.iris })
-	h('Statement', { fg = p.pine })
-	h('StorageClass', { fg = p.foam })
-	h('String', { fg = p.gold })
-	h('Structure', { fg = p.foam })
-	h('Tag', { fg = p.foam })
-	h('Todo', { fg = p.iris })
-	h('Type', { fg = p.foam })
-	h('Typedef', { link = 'Type' })
-	h('Underlined', { underline = true })
-
-	h('htmlArg', { fg = p.iris })
-	h('htmlBold', { bold = true })
-	h('htmlEndTag', { fg = p.subtle })
-	h('htmlH1', { fg = groups.headings.h1, bold = true })
-	h('htmlH2', { fg = groups.headings.h2, bold = true })
-	h('htmlH3', { fg = groups.headings.h3, bold = true })
-	h('htmlH4', { fg = groups.headings.h4, bold = true })
-	h('htmlH5', { fg = groups.headings.h5, bold = true })
-	h('htmlItalic', { italic = maybe.italic })
-	h('htmlLink', { fg = groups.link })
-	h('htmlTag', { fg = p.subtle })
-	h('htmlTagN', { fg = p.text })
-	h('htmlTagName', { fg = p.foam })
-
-	h('markdownDelimiter', { fg = p.subtle })
-	h('markdownH1', { fg = groups.headings.h1, bold = true })
-	h('markdownH1Delimiter', { link = 'markdownH1' })
-	h('markdownH2', { fg = groups.headings.h2, bold = true })
-	h('markdownH2Delimiter', { link = 'markdownH2' })
-	h('markdownH3', { fg = groups.headings.h3, bold = true })
-	h('markdownH3Delimiter', { link = 'markdownH3' })
-	h('markdownH4', { fg = groups.headings.h4, bold = true })
-	h('markdownH4Delimiter', { link = 'markdownH4' })
-	h('markdownH5', { fg = groups.headings.h5, bold = true })
-	h('markdownH5Delimiter', { link = 'markdownH5' })
-	h('markdownH6', { fg = groups.headings.h6, bold = true })
-	h('markdownH6Delimiter', { link = 'markdownH6' })
-	h(
-		'markdownLinkText',
-		{ fg = groups.link, sp = groups.link, underline = true }
-	)
-	h('markdownUrl', { link = 'markdownLinkText' })
-
-	h('mkdCode', { fg = p.foam, italic = maybe.italic })
-	h('mkdCodeDelimiter', { fg = p.rose })
-	h('mkdCodeEnd', { fg = p.foam })
-	h('mkdCodeStart', { fg = p.foam })
-	h('mkdFootnotes', { fg = p.foam })
-	h('mkdID', { fg = p.foam, underline = true })
-	h('mkdInlineURL', { fg = groups.link, underline = true })
-	h('mkdLink', { link = 'mkdInlineURL' })
-	h('mkdLinkDef', { link = 'mkdInlineURL' })
-	h('mkdListItemLine', { fg = p.text })
-	h('mkdRule', { fg = p.subtle })
-	h('mkdURL', { link = 'mkdInlineURL' })
-
-	h('DiagnosticError', { fg = groups.error })
-	h('DiagnosticHint', { fg = groups.hint })
-	h('DiagnosticInfo', { fg = groups.info })
-	h('DiagnosticWarn', { fg = groups.warn })
-	h('DiagnosticDefaultError', { fg = groups.error })
-	h('DiagnosticDefaultHint', { fg = groups.hint })
-	h('DiagnosticDefaultInfo', { fg = groups.info })
-	h('DiagnosticDefaultWarn', { fg = groups.warn })
-	h('DiagnosticFloatingError', { fg = groups.error })
-	h('DiagnosticFloatingHint', { fg = groups.hint })
-	h('DiagnosticFloatingInfo', { fg = groups.info })
-	h('DiagnosticFloatingWarn', { fg = groups.warn })
-	h('DiagnosticSignError', { fg = groups.error })
-	h('DiagnosticSignHint', { fg = groups.hint })
-	h('DiagnosticSignInfo', { fg = groups.info })
-	h('DiagnosticSignWarn', { fg = groups.warn })
-	h('DiagnosticStatusLineError', { fg = groups.error, bg = groups.panel })
-	h('DiagnosticStatusLineHint', { fg = groups.hint, bg = groups.panel })
-	h('DiagnosticStatusLineInfo', { fg = groups.info, bg = groups.panel })
-	h('DiagnosticStatusLineWarn', { fg = groups.warn, bg = groups.panel })
-	h('DiagnosticUnderlineError', { sp = groups.error, undercurl = true })
-	h('DiagnosticUnderlineHint', { sp = groups.hint, undercurl = true })
-	h('DiagnosticUnderlineInfo', { sp = groups.info, undercurl = true })
-	h('DiagnosticUnderlineWarn', { sp = groups.warn, undercurl = true })
-	h('DiagnosticVirtualTextError', { fg = groups.error })
-	h('DiagnosticVirtualTextHint', { fg = groups.hint })
-	h('DiagnosticVirtualTextInfo', { fg = groups.info })
-	h('DiagnosticVirtualTextWarn', { fg = groups.warn })
-
-	-- healthcheck
-	h('healthError', { fg = groups.error })
-	h('healthSuccess', { fg = groups.info })
-	h('healthWarning', { fg = groups.warn })
-
-	-- Treesitter
-	h('@boolean', { link = 'Boolean' })
-	h('@character', { link = 'Character' })
-	h('@character.special', { link = '@character' })
-	h('@class', { fg = p.foam })
-	h('@comment', { link = 'Comment' })
-	h('@conditional', { link = 'Conditional' })
-	h('@constant', { link = 'Constant' })
-	h('@constant.builtin', { fg = p.love })
-	h('@constant.macro', { link = '@constant' })
-	h('@constructor', { fg = p.foam })
-	h('@field', { fg = p.foam })
-	h('@function', { link = 'Function' })
-	h('@function.builtin', { fg = p.love })
-	h('@function.macro', { link = '@function' })
-	h('@include', { link = 'Include' })
-	h('@interface', { fg = p.foam })
-	h('@keyword', { link = 'Keyword' })
-	h('@keyword.operator', { fg = p.subtle })
-	h('@label', { link = 'Label' })
-	h('@macro', { link = 'Macro' })
-	h('@method', { fg = p.rose })
-	h('@number', { link = 'Number' })
-	h('@operator', { link = 'Operator' })
-	h('@parameter', { fg = p.iris, italic = maybe.italic })
-	h('@preproc', { link = 'PreProc' })
-	h('@property', { fg = p.foam, italic = maybe.italic })
-	h('@punctuation', { fg = groups.punctuation })
-	h('@punctuation.bracket', { link = '@punctuation' })
-	h('@punctuation.delimiter', { link = '@punctuation' })
-	h('@punctuation.special', { link = '@punctuation' })
-	h('@regexp', { link = 'String' })
-	h('@repeat', { link = 'Repeat' })
-	h('@storageclass', { link = 'StorageClass' })
-	h('@string', { link = 'String' })
-	h('@string.escape', { fg = p.pine })
-	h('@string.special', { link = '@string' })
-	h('@symbol', { link = 'Identifier' })
-	h('@tag', { link = 'Tag' })
-	h('@tag.attribute', { fg = p.iris })
-	h('@tag.delimiter', { fg = p.subtle })
-	h('@text', { fg = p.text })
-	h('@text.strong', { bold = true })
-	h('@text.emphasis', { italic = true })
-	h('@text.underline', { underline = true })
-	h('@text.strike', { strikethrough = true })
-	h('@text.math', { link = 'Special' })
-	h('@text.environment', { link = 'Macro' })
-	h('@text.environment.name', { link = 'Type' })
-	h('@text.title', { link = 'Title' })
-	h('@text.uri', { fg = groups.link })
-	h('@text.note', { link = 'SpecialComment' })
-	h('@text.warning', { fg = groups.warn })
-	h('@text.danger', { fg = groups.error })
-	h('@todo', { link = 'Todo' })
-	h('@type', { link = 'Type' })
-	h('@variable', { fg = p.text, italic = maybe.italic })
-	h('@variable.builtin', { fg = p.love })
-	h('@namespace', { link = '@include' })
-
-	-- LSP Semantic Token Groups
-	h('@lsp.type.comment', {})
-	h('@lsp.type.enum', { link = '@type' })
-	h('@lsp.type.keyword', { link = '@keyword' })
-	h('@lsp.type.interface', { link = '@interface' })
-	h('@lsp.type.namespace', { link = '@namespace' })
-	h('@lsp.type.parameter', { link = '@parameter' })
-	h('@lsp.type.property', { link = '@property' })
-	h('@lsp.type.variable', {}) -- use treesitter styles for regular variables
-	h('@lsp.typemod.function.defaultLibrary', { link = 'Special' })
-	h('@lsp.typemod.variable.defaultLibrary', { link = '@variable.builtin' })
-
-	-- LSP Injected Groups
-	h('@lsp.typemod.operator.injected', { link = '@operator' })
-	h('@lsp.typemod.string.injected', { link = '@string' })
-	h('@lsp.typemod.variable.injected', { link = '@variable' })
-
-	-- nvim-treesitter Markdown Headings
-	h('@text.title.1.markdown', { link = 'markdownH1' })
-	h('@text.title.1.marker.markdown', { link = 'markdownH1Delimiter' })
-	h('@text.title.2.markdown', { link = 'markdownH2' })
-	h('@text.title.2.marker.markdown', { link = 'markdownH2Delimiter' })
-	h('@text.title.3.markdown', { link = 'markdownH3' })
-	h('@text.title.3.marker.markdown', { link = 'markdownH3Delimiter' })
-	h('@text.title.4.markdown', { link = 'markdownH4' })
-	h('@text.title.4.marker.markdown', { link = 'markdownH4Delimiter' })
-	h('@text.title.5.markdown', { link = 'markdownH5' })
-	h('@text.title.5.marker.markdown', { link = 'markdownH5Delimiter' })
-	h('@text.title.6.markdown', { link = 'markdownH6' })
-	h('@text.title.6.marker.markdown', { link = 'markdownH6Delimiter' })
-
-	-- vim.lsp.buf.document_highlight()
-	h('LspReferenceText', { bg = p.highlight_med })
-	h('LspReferenceRead', { bg = p.highlight_med })
-	h('LspReferenceWrite', { bg = p.highlight_med })
-
-	-- lsp-highlight-codelens
-	h('LspCodeLens', { fg = p.subtle }) -- virtual text of code len
-	h('LspCodeLensSeparator', { fg = p.highlight_high }) -- separator between two or more code len
-
-	-- romgrk/barbar.nvim
-	h('BufferCurrent', { fg = p.text, bg = p.overlay })
-	h('BufferCurrentIndex', { fg = p.text, bg = p.overlay })
-	h('BufferCurrentMod', { fg = p.foam, bg = p.overlay })
-	h('BufferCurrentSign', { fg = p.subtle, bg = p.overlay })
-	h('BufferCurrentTarget', { fg = p.gold, bg = p.overlay })
-	h('BufferInactive', { fg = p.subtle })
-	h('BufferInactiveIndex', { fg = p.subtle })
-	h('BufferInactiveMod', { fg = p.foam })
-	h('BufferInactiveSign', { fg = p.muted })
-	h('BufferInactiveTarget', { fg = p.gold })
-	h('BufferTabpageFill', { fg = groups.background, bg = groups.background })
-	h('BufferVisible', { fg = p.subtle })
-	h('BufferVisibleIndex', { fg = p.subtle })
-	h('BufferVisibleMod', { fg = p.foam })
-	h('BufferVisibleSign', { fg = p.muted })
-	h('BufferVisibleTarget', { fg = p.gold })
-
-	-- lewis6991/gitsigns.nvim
-	h('GitSignsAdd', { fg = groups.git_add, bg = groups.background })
-	h('GitSignsChange', { fg = groups.git_change, bg = groups.background })
-	h('GitSignsDelete', { fg = groups.git_delete, bg = groups.background })
-	h('SignAdd', { link = 'GitSignsAdd' })
-	h('SignChange', { link = 'GitSignsChange' })
-	h('SignDelete', { link = 'GitSignsDelete' })
-
-	-- mvllow/modes.nvim
-	h('ModesCopy', { bg = p.gold })
-	h('ModesDelete', { bg = p.love })
-	h('ModesInsert', { bg = p.foam })
-	h('ModesVisual', { bg = p.iris })
-
-	-- kyazdani42/nvim-tree.lua
-	h('NvimTreeEmptyFolderName', { fg = p.muted })
-	h('NvimTreeFileDeleted', { fg = p.love })
-	h('NvimTreeFileDirty', { fg = p.rose })
-	h('NvimTreeFileMerge', { fg = p.iris })
-	h('NvimTreeFileNew', { fg = p.foam })
-	h('NvimTreeFileRenamed', { fg = p.pine })
-	h('NvimTreeFileStaged', { fg = p.iris })
-	h('NvimTreeFolderIcon', { fg = p.subtle })
-	h('NvimTreeFolderName', { fg = p.foam })
-	h('NvimTreeGitDeleted', { fg = groups.git_delete })
-	h('NvimTreeGitDirty', { fg = groups.git_dirty })
-	h('NvimTreeGitIgnored', { fg = groups.git_ignore })
-	h('NvimTreeGitMerge', { fg = groups.git_merge })
-	h('NvimTreeGitNew', { fg = groups.git_add })
-	h('NvimTreeGitRenamed', { fg = groups.git_rename })
-	h('NvimTreeGitStaged', { fg = groups.git_stage })
-	h('NvimTreeImageFile', { fg = p.text })
-	h('NvimTreeNormal', { fg = p.text })
-	h('NvimTreeOpenedFile', { fg = p.text, bg = p.highlight_med })
-	h('NvimTreeOpenedFolderName', { link = 'NvimTreeFolderName' })
-	h('NvimTreeRootFolder', { fg = p.iris })
-	h('NvimTreeSpecialFile', { link = 'NvimTreeNormal' })
-	h('NvimTreeWindowPicker', { fg = p.love, bg = p.love, blend = 10 })
-
-	-- nvim-neo-tree/neo-tree.nvim
-	h('NeoTreeTitleBar', { fg = p.surface, bg = p.pine })
-	h('NeoTreeGitAdded', { fg = p.foam })
-	h('NeoTreeGitModified', { fg = p.rose })
-	h('NeoTreeGitDeleted', { fg = p.love })
-	h('NeoTreeGitRenamed', { fg = p.pine })
-	h('NeoTreeGitIgnored', { fg = p.muted })
-	h('NeoTreeGitUntracked', { fg = p.gold })
-	h('NeoTreeGitConflict', { fg = p.iris })
-
-	-- folke/which-key.nvim
-	h('WhichKey', { fg = p.iris })
-	h('WhichKeyGroup', { fg = p.foam })
-	h('WhichKeySeparator', { fg = p.subtle })
-	h('WhichKeyDesc', { fg = p.gold })
-	h('WhichKeyFloat', { bg = maybe.surface })
-	h('WhichKeyValue', { fg = p.rose })
-
-	-- luka-reineke/indent-blankline.nvim
-	h('IndentBlanklineChar', { fg = p.muted, nocombine = true })
-	h('IndentBlanklineSpaceChar', { fg = p.muted, nocombine = true })
-	h('IndentBlanklineSpaceCharBlankline', { fg = p.muted, nocombine = true })
-
-	-- hrsh7th/nvim-cmp
-	h('CmpItemAbbr', { fg = p.subtle })
-	h('CmpItemAbbrDeprecated', { fg = p.subtle, strikethrough = true })
-	h('CmpItemAbbrMatch', { fg = p.text, bold = true })
-	h('CmpItemAbbrMatchFuzzy', { fg = p.text, bold = true })
-	h('CmpItemKind', { fg = p.subtle })
-	h('CmpItemKindClass', { fg = p.pine })
-	h('CmpItemKindFunction', { fg = p.rose })
-	h('CmpItemKindInterface', { fg = p.foam })
-	h('CmpItemKindMethod', { fg = p.iris })
-	h('CmpItemKindSnippet', { fg = p.gold })
-	h('CmpItemKindVariable', { fg = p.text })
-
-	-- TimUntersberger/neogit
-	h('NeogitDiffAddHighlight', { fg = p.foam, bg = p.highlight_med })
-	h('NeogitDiffContextHighlight', { bg = p.highlight_low })
-	h('NeogitDiffDeleteHighlight', { fg = p.love, bg = p.highlight_med })
-	h('NeogitHunkHeader', { bg = p.highlight_low })
-	h('NeogitHunkHeaderHighlight', { bg = p.highlight_low })
-
-	-- vimwiki/vimwiki
-	h('VimwikiHR', { fg = p.subtle })
-	h('VimwikiHeader1', { fg = groups.headings.h1, bold = true })
-	h('VimwikiHeader2', { fg = groups.headings.h2, bold = true })
-	h('VimwikiHeader3', { fg = groups.headings.h3, bold = true })
-	h('VimwikiHeader4', { fg = groups.headings.h4, bold = true })
-	h('VimwikiHeader5', { fg = groups.headings.h5, bold = true })
-	h('VimwikiHeader6', { fg = groups.headings.h6, bold = true })
-	h('VimwikiHeaderChar', { fg = p.pine })
-	h('VimwikiLink', { fg = groups.link, underline = true })
-	h('VimwikiList', { fg = p.iris })
-	h('VimwikiNoExistsLink', { fg = p.love })
-
-	-- nvim-neorg/neorg
-	h('NeorgHeading1Prefix', { fg = groups.headings.h1, bold = true })
-	h('NeorgHeading1Title', { link = 'NeorgHeading1Prefix' })
-	h('NeorgHeading2Prefix', { fg = groups.headings.h2, bold = true })
-	h('NeorgHeading2Title', { link = 'NeorgHeading2Prefix' })
-	h('NeorgHeading3Prefix', { fg = groups.headings.h3, bold = true })
-	h('NeorgHeading3Title', { link = 'NeorgHeading3Prefix' })
-	h('NeorgHeading4Prefix', { fg = groups.headings.h4, bold = true })
-	h('NeorgHeading4Title', { link = 'NeorgHeading4Prefix' })
-	h('NeorgHeading5Prefix', { fg = groups.headings.h5, bold = true })
-	h('NeorgHeading5Title', { link = 'NeorgHeading5Prefix' })
-	h('NeorgHeading6Prefix', { fg = groups.headings.h6, bold = true })
-	h('NeorgHeading6Title', { link = 'NeorgHeading6Prefix' })
-	h('NeorgMarkerTitle', { fg = p.text, bold = true })
-
-	-- tami5/lspsaga.nvim (fork of glepnir/lspsaga.nvim)
-	h('DefinitionCount', { fg = p.rose })
-	h('DefinitionIcon', { fg = p.rose })
-	h('DefintionPreviewTitle', { fg = p.rose, bold = true })
-	h('LspFloatWinBorder', { fg = groups.border })
-	h('LspFloatWinNormal', { bg = maybe.surface })
-	h('LspSagaAutoPreview', { fg = p.subtle })
-	h('LspSagaCodeActionBorder', { fg = groups.border })
-	h('LspSagaCodeActionContent', { fg = p.foam })
-	h('LspSagaCodeActionTitle', { fg = p.gold, bold = true })
-	h('LspSagaCodeActionTruncateLine', { link = 'LspSagaCodeActionBorder' })
-	h('LspSagaDefPreviewBorder', { fg = groups.border })
-	h('LspSagaDiagnosticBorder', { fg = groups.border })
-	h('LspSagaDiagnosticHeader', { fg = p.gold, bold = true })
-	h('LspSagaDiagnosticTruncateLine', { link = 'LspSagaDiagnosticBorder' })
-	h('LspSagaDocTruncateLine', { link = 'LspSagaHoverBorder' })
-	h('LspSagaFinderSelection', { fg = p.gold })
-	h('LspSagaHoverBorder', { fg = groups.border })
-	h('LspSagaLspFinderBorder', { fg = groups.border })
-	h('LspSagaRenameBorder', { fg = p.pine })
-	h('LspSagaRenamePromptPrefix', { fg = p.love })
-	h('LspSagaShTruncateLine', { link = 'LspSagaSignatureHelpBorder' })
-	h('LspSagaSignatureHelpBorder', { fg = p.pine })
-	h('ReferencesCount', { fg = p.rose })
-	h('ReferencesIcon', { fg = p.rose })
-	h('SagaShadow', { bg = p.overlay })
-	h('TargetWord', { fg = p.iris })
-
-	-- ray-x/lsp_signature.nvim
-	h('LspSignatureActiveParameter', { bg = p.overlay })
-
-	-- rlane/pounce.nvim
-	h('PounceAccept', { fg = p.love, bg = p.highlight_high })
-	h('PounceAcceptBest', { fg = p.base, bg = p.gold })
-	h('PounceGap', { link = 'Search' })
-	h('PounceMatch', { link = 'Search' })
-
 	local float_background = options.dim_nc_background
 			and (options.disable_float_background and groups.panel_nc or groups.panel)
 		or maybe.surface
 
-	-- ggandor/leap.nvim
-	h('LeapMatch', { link = 'MatchParen' })
-	h('LeapLabelPrimary', { link = 'IncSearch' })
-	h('LeapLabelSecondary', { fg = p.base, bg = p.pine })
+	M.defaults = {
+		['ColorColumn'] = { bg = p.overlay },
+		['Conceal'] = { bg = p.none },
+		['CurSearch'] = { link = 'IncSearch' },
+		['Cursor'] = { fg = p.text, bg = p.highlight_high },
+		['CursorColumn'] = { bg = p.highlight_low },
+		-- CursorIM = {},
+		['CursorLine'] = { bg = p.highlight_low },
+		['CursorLineNr'] = { fg = p.text },
+		['DarkenedPanel'] = { bg = maybe.surface },
+		['DarkenedStatusline'] = { bg = maybe.surface },
+		['DiffAdd'] = { bg = groups.git_add, blend = 20 },
 
-	-- phaazon/hop.nvim
-	h('HopNextKey', { fg = p.love })
-	h('HopNextKey1', { fg = p.foam })
-	h('HopNextKey2', { fg = p.pine })
-	h('HopUnmatched', { fg = p.highlight_high })
+		['DiffChange'] = { bg = p.overlay },
+		['DiffDelete'] = { bg = groups.git_delete, blend = 20 },
+		['DiffText'] = { bg = groups.git_text, blend = 20 },
+		['diffAdded'] = { link = 'DiffAdd' },
+		['diffChanged'] = { link = 'DiffChange' },
+		['diffRemoved'] = { link = 'DiffDelete' },
+		['Directory'] = { fg = p.foam, bg = p.none },
+		-- EndOfBuffer = {},
+		['ErrorMsg'] = { fg = p.love, bold = true },
+		['FloatBorder'] = { fg = groups.border, bg = maybe.surface },
+		['FloatTitle'] = { fg = p.muted },
+		['FoldColumn'] = { fg = p.muted },
+		['Folded'] = { fg = p.text, bg = maybe.surface },
+		['IncSearch'] = { fg = groups.background, bg = p.rose },
+		['LineNr'] = { fg = p.muted },
+		['MatchParen'] = { fg = p.text, bg = p.highlight_med },
+		['ModeMsg'] = { fg = p.subtle },
+		['MoreMsg'] = { fg = p.iris },
+		['NonText'] = { fg = p.muted },
+		['Normal'] = { fg = p.text, bg = maybe.base },
+		['NormalFloat'] = { fg = p.text, bg = maybe.surface },
+		['NormalNC'] = { fg = p.text, bg = maybe.dim_nc_background },
+		['NvimInternalError'] = { fg = '#ffffff', bg = p.love },
+		['Pmenu'] = { fg = p.subtle, bg = maybe.surface },
+		['PmenuSbar'] = { bg = p.highlight_low },
+		['PmenuSel'] = { fg = p.text, bg = p.overlay },
+		['PmenuThumb'] = { bg = p.highlight_med },
+		['Question'] = { fg = p.gold },
+		-- QuickFixLine = {},
+		-- RedrawDebugNormal = {}
+		['RedrawDebugClear'] = { fg = '#ffffff', bg = p.gold },
+		['RedrawDebugComposed'] = { fg = '#ffffff', bg = p.pine },
+		['RedrawDebugRecompose'] = { fg = '#ffffff', bg = p.love },
+		['Search'] = { bg = p.highlight_med },
+		['SpecialKey'] = { fg = p.foam },
+		['SpellBad'] = { sp = p.subtle, undercurl = true },
+		['SpellCap'] = { sp = p.subtle, undercurl = true },
+		['SpellLocal'] = { sp = p.subtle, undercurl = true },
+		['SpellRare'] = { sp = p.subtle, undercurl = true },
+		['SignColumn'] = {
+			fg = p.text,
+			bg = (options.dim_nc_background and p.none) or maybe.base,
+		},
+		['StatusLine'] = { fg = p.subtle, bg = groups.panel },
+		['StatusLineNC'] = { fg = p.muted, bg = groups.panel_nc },
+		['StatusLineTerm'] = { link = 'StatusLine' },
+		['StatusLineTermNC'] = { link = 'StatusLineNC' },
+		['TabLine'] = { fg = p.subtle, bg = groups.panel },
+		['TabLineFill'] = { bg = groups.panel },
+		['TabLineSel'] = { fg = p.text, bg = p.overlay },
+		['Title'] = { fg = p.text },
+		['VertSplit'] = { fg = groups.border, bg = maybe.bold_vert_split },
+		['Visual'] = { bg = p.highlight_med },
+		-- VisualNOS = {},
+		['WarningMsg'] = { fg = p.gold },
+		-- Whitespace = {},
+		['WildMenu'] = { link = 'IncSearch' },
 
-	-- nvim-telescope/telescope.nvim
-	h('TelescopeBorder', { fg = groups.border, bg = float_background })
-	h('TelescopeMatching', { fg = p.rose })
-	h('TelescopeNormal', { fg = p.subtle, bg = float_background })
-	h('TelescopePromptNormal', { fg = p.text, bg = float_background })
-	h('TelescopePromptPrefix', { fg = p.subtle })
-	h('TelescopeSelection', { fg = p.text, bg = p.overlay })
-	h('TelescopeSelectionCaret', { fg = p.rose, bg = p.overlay })
-	h('TelescopeTitle', { fg = p.subtle })
+		['Boolean'] = { fg = p.rose },
+		['Character'] = { fg = p.gold },
+		['Comment'] = { fg = groups.comment, italic = maybe.italic },
+		['Conditional'] = { fg = p.pine },
+		['Constant'] = { fg = p.gold },
+		['Debug'] = { fg = p.rose },
+		['Define'] = { fg = p.iris },
+		['Delimiter'] = { fg = p.subtle },
+		['Error'] = { fg = p.love },
+		['Exception'] = { fg = p.pine },
+		['Float'] = { fg = p.gold },
+		['Function'] = { fg = p.rose },
+		['Identifier'] = { fg = p.rose },
+		-- Ignore = {},
+		['Include'] = { fg = p.pine },
+		['Keyword'] = { fg = p.pine },
+		['Label'] = { fg = p.foam },
+		['Macro'] = { fg = p.iris },
+		['Number'] = { fg = p.gold },
+		['Operator'] = { fg = p.subtle },
+		['PreCondit'] = { fg = p.iris },
+		['PreProc'] = { fg = p.iris },
+		['Repeat'] = { fg = p.pine },
+		['Special'] = { fg = p.rose },
+		['SpecialChar'] = { fg = p.rose },
+		['SpecialComment'] = { fg = p.iris },
+		['Statement'] = { fg = p.pine },
+		['StorageClass'] = { fg = p.foam },
+		['String'] = { fg = p.gold },
+		['Structure'] = { fg = p.foam },
+		['Tag'] = { fg = p.foam },
+		['Todo'] = { fg = p.iris },
+		['Type'] = { fg = p.foam },
+		['Typedef'] = { link = 'Type' },
+		['Underlined'] = { underline = true },
 
-	-- rcarriga/nvim-notify
-	h('NotifyINFOBorder', { fg = p.foam })
-	h('NotifyINFOTitle', { link = 'NotifyINFOBorder' })
-	h('NotifyINFOIcon', { link = 'NotifyINFOBorder' })
-	h('NotifyWARNBorder', { fg = p.gold })
-	h('NotifyWARNTitle', { link = 'NotifyWARNBorder' })
-	h('NotifyWARNIcon', { link = 'NotifyWARNBorder' })
-	h('NotifyDEBUGBorder', { fg = p.muted })
-	h('NotifyDEBUGTitle', { link = 'NotifyDEBUGBorder' })
-	h('NotifyDEBUGIcon', { link = 'NotifyDEBUGBorder' })
-	h('NotifyTRACEBorder', { fg = p.iris })
-	h('NotifyTRACETitle', { link = 'NotifyTRACEBorder' })
-	h('NotifyTRACEIcon', { link = 'NotifyTRACEBorder' })
-	h('NotifyERRORBorder', { fg = p.love })
-	h('NotifyERRORTitle', { link = 'NotifyERRORBorder' })
-	h('NotifyERRORIcon', { link = 'NotifyERRORBorder' })
+		['htmlArg'] = { fg = p.iris },
+		['htmlBold'] = { bold = true },
+		['htmlEndTag'] = { fg = p.subtle },
+		['htmlH1'] = { fg = groups.headings.h1, bold = true },
+		['htmlH2'] = { fg = groups.headings.h2, bold = true },
+		['htmlH3'] = { fg = groups.headings.h3, bold = true },
+		['htmlH4'] = { fg = groups.headings.h4, bold = true },
+		['htmlH5'] = { fg = groups.headings.h5, bold = true },
+		['htmlItalic'] = { italic = maybe.italic },
+		['htmlLink'] = { fg = groups.link },
+		['htmlTag'] = { fg = p.subtle },
+		['htmlTagN'] = { fg = p.text },
+		['htmlTagName'] = { fg = p.foam },
 
-	-- rcarriga/nvim-dap-ui
-	h('DapUIVariable', { link = 'Normal' })
-	h('DapUIValue', { link = 'Normal' })
-	h('DapUIFrameName', { link = 'Normal' })
-	h('DapUIThread', { fg = p.gold })
-	h('DapUIWatchesValue', { link = 'DapUIThread' })
-	h('DapUIBreakpointsInfo', { link = 'DapUIThread' })
-	h('DapUIBreakpointsCurrentLine', { fg = p.gold, bold = true })
-	h('DapUIWatchesEmpty', { fg = p.love })
-	h('DapUIWatchesError', { link = 'DapUIWatchesEmpty' })
-	h('DapUIBreakpointsDisabledLine', { fg = p.muted })
-	h('DapUISource', { fg = p.iris })
-	h('DapUIBreakpointsPath', { fg = p.foam })
-	h('DapUIScope', { link = 'DapUIBreakpointsPath' })
-	h('DapUILineNumber', { link = 'DapUIBreakpointsPath' })
-	h('DapUIBreakpointsLine', { link = 'DapUIBreakpointsPath' })
-	h('DapUIFloatBorder', { link = 'DapUIBreakpointsPath' })
-	h('DapUIStoppedThread', { link = 'DapUIBreakpointsPath' })
-	h('DapUIDecoration', { link = 'DapUIBreakpointsPath' })
-	h('DapUIModifiedValue', { fg = p.foam, bold = true })
+		['markdownDelimiter'] = { fg = p.subtle },
+		['markdownH1'] = { fg = groups.headings.h1, bold = true },
+		['markdownH1Delimiter'] = { link = 'markdownH1' },
+		['markdownH2'] = { fg = groups.headings.h2, bold = true },
+		['markdownH2Delimiter'] = { link = 'markdownH2' },
+		['markdownH3'] = { fg = groups.headings.h3, bold = true },
+		['markdownH3Delimiter'] = { link = 'markdownH3' },
+		['markdownH4'] = { fg = groups.headings.h4, bold = true },
+		['markdownH4Delimiter'] = { link = 'markdownH4' },
+		['markdownH5'] = { fg = groups.headings.h5, bold = true },
+		['markdownH5Delimiter'] = { link = 'markdownH5' },
+		['markdownH6'] = { fg = groups.headings.h6, bold = true },
+		['markdownH6Delimiter'] = { link = 'markdownH6' },
+		['markdownLinkText'] = { fg = groups.link, sp = groups.link, underline = true },
+		['markdownUrl'] = { link = 'markdownLinkText' },
 
-	-- glepnir/dashboard-nvim
-	h('DashboardShortcut', { fg = p.love })
-	h('DashboardHeader', { fg = p.pine })
-	h('DashboardCenter', { fg = p.gold })
-	h('DashboardFooter', { fg = p.iris })
+		['mkdCode'] = { fg = p.foam, italic = maybe.italic },
+		['mkdCodeDelimiter'] = { fg = p.rose },
+		['mkdCodeEnd'] = { fg = p.foam },
+		['mkdCodeStart'] = { fg = p.foam },
+		['mkdFootnotes'] = { fg = p.foam },
+		['mkdID'] = { fg = p.foam, underline = true },
+		['mkdInlineURL'] = { fg = groups.link, underline = true },
+		['mkdLink'] = { link = 'mkdInlineURL' },
+		['mkdLinkDef'] = { link = 'mkdInlineURL' },
+		['mkdListItemLine'] = { fg = p.text },
+		['mkdRule'] = { fg = p.subtle },
+		['mkdURL'] = { link = 'mkdInlineURL' },
 
-	-- SmiteshP/nvim-navic
-	h('NavicIconsFile', { fg = p.base })
-	h('NavicIconsModule', { fg = p.rose })
-	h('NavicIconsNamespace', { fg = p.base })
-	h('NavicIconsPackage', { fg = p.base })
-	h('NavicIconsClass', { fg = p.foam })
-	h('NavicIconsMethod', { fg = p.iris })
-	h('NavicIconsProperty', { fg = p.foam })
-	h('NavicIconsField', { fg = p.foam })
-	h('NavicIconsConstructor', { fg = p.gold })
-	h('NavicIconsEnum', { fg = p.gold })
-	h('NavicIconsInterface', { fg = p.foam })
-	h('NavicIconsFunction', { fg = p.pine })
-	h('NavicIconsVariable', { fg = p.text })
-	h('NavicIconsConstant', { fg = p.gold })
-	h('NavicIconsString', { fg = p.gold })
-	h('NavicIconsNumber', { fg = p.gold })
-	h('NavicIconsBoolean', { fg = p.rose })
-	h('NavicIconsArray', { fg = p.gold })
-	h('NavicIconsObject', { fg = p.gold })
-	h('NavicIconsKey', { fg = p.iris })
-	h('NavicIconsKeyword', { fg = p.pine })
-	h('NavicIconsNull', { fg = p.love })
-	h('NavicIconsEnumMember', { fg = p.foam })
-	h('NavicIconsStruct', { fg = p.foam })
-	h('NavicIconsEvent', { fg = p.gold })
-	h('NavicIconsOperator', { fg = p.subtle })
-	h('NavicIconsTypeParameter', { fg = p.foam })
-	h('NavicText', { fg = p.subtle })
-	h('NavicSeparator', { fg = p.subtle })
+		['DiagnosticError'] = { fg = groups.error },
+		['DiagnosticHint'] = { fg = groups.hint },
+		['DiagnosticInfo'] = { fg = groups.info },
+		['DiagnosticWarn'] = { fg = groups.warn },
+		['DiagnosticDefaultError'] = { fg = groups.error },
+		['DiagnosticDefaultHint'] = { fg = groups.hint },
+		['DiagnosticDefaultInfo'] = { fg = groups.info },
+		['DiagnosticDefaultWarn'] = { fg = groups.warn },
+		['DiagnosticFloatingError'] = { fg = groups.error },
+		['DiagnosticFloatingHint'] = { fg = groups.hint },
+		['DiagnosticFloatingInfo'] = { fg = groups.info },
+		['DiagnosticFloatingWarn'] = { fg = groups.warn },
+		['DiagnosticSignError'] = { fg = groups.error },
+		['DiagnosticSignHint'] = { fg = groups.hint },
+		['DiagnosticSignInfo'] = { fg = groups.info },
+		['DiagnosticSignWarn'] = { fg = groups.warn },
+		['DiagnosticStatusLineError'] = { fg = groups.error, bg = groups.panel },
+		['DiagnosticStatusLineHint'] = { fg = groups.hint, bg = groups.panel },
+		['DiagnosticStatusLineInfo'] = { fg = groups.info, bg = groups.panel },
+		['DiagnosticStatusLineWarn'] = { fg = groups.warn, bg = groups.panel },
+		['DiagnosticUnderlineError'] = { sp = groups.error, undercurl = true },
+		['DiagnosticUnderlineHint'] = { sp = groups.hint, undercurl = true },
+		['DiagnosticUnderlineInfo'] = { sp = groups.info, undercurl = true },
+		['DiagnosticUnderlineWarn'] = { sp = groups.warn, undercurl = true },
+		['DiagnosticVirtualTextError'] = { fg = groups.error },
+		['DiagnosticVirtualTextHint'] = { fg = groups.hint },
+		['DiagnosticVirtualTextInfo'] = { fg = groups.info },
+		['DiagnosticVirtualTextWarn'] = { fg = groups.warn },
 
-	-- folke/noice.nvim
-	h('NoiceCursor', { fg = p.highlight_high, bg = p.text })
+		-- healthcheck
+		['healthError'] = { fg = groups.error },
+		['healthSuccess'] = { fg = groups.info },
+		['healthWarning'] = { fg = groups.warn },
 
-	-- echasnovski/mini.indentscope
-	h('MiniIndentscopeSymbol', { fg = p.highlight_med })
-	h('MiniIndentscopeSymbolOff', { fg = p.highlight_med })
+		-- Treesitter
+		['@boolean'] = { link = 'Boolean' },
+		['@character'] = { link = 'Character' },
+		['@character.special'] = { link = '@character' },
+		['@class'] = { fg = p.foam },
+		['@comment'] = { link = 'Comment' },
+		['@conditional'] = { link = 'Conditional' },
+		['@constant'] = { link = 'Constant' },
+		['@constant.builtin'] = { fg = p.love },
+		['@constant.macro'] = { link = '@constant' },
+		['@constructor'] = { fg = p.foam },
+		['@field'] = { fg = p.foam },
+		['@function'] = { link = 'Function' },
+		['@function.builtin'] = { fg = p.love },
+		['@function.macro'] = { link = '@function' },
+		['@include'] = { link = 'Include' },
+		['@interface'] = { fg = p.foam },
+		['@keyword'] = { link = 'Keyword' },
+		['@keyword.operator'] = { fg = p.subtle },
+		['@label'] = { link = 'Label' },
+		['@macro'] = { link = 'Macro' },
+		['@method'] = { fg = p.rose },
+		['@number'] = { link = 'Number' },
+		['@operator'] = { link = 'Operator' },
+		['@parameter'] = { fg = p.iris, italic = maybe.italic },
+		['@preproc'] = { link = 'PreProc' },
+		['@property'] = { fg = p.foam, italic = maybe.italic },
+		['@punctuation'] = { fg = groups.punctuation },
+		['@punctuation.bracket'] = { link = '@punctuation' },
+		['@punctuation.delimiter'] = { link = '@punctuation' },
+		['@punctuation.special'] = { link = '@punctuation' },
+		['@regexp'] = { link = 'String' },
+		['@repeat'] = { link = 'Repeat' },
+		['@storageclass'] = { link = 'StorageClass' },
+		['@string'] = { link = 'String' },
+		['@string.escape'] = { fg = p.pine },
+		['@string.special'] = { link = '@string' },
+		['@symbol'] = { link = 'Identifier' },
+		['@tag'] = { link = 'Tag' },
+		['@tag.attribute'] = { fg = p.iris },
+		['@tag.delimiter'] = { fg = p.subtle },
+		['@text'] = { fg = p.text },
+		['@text.strong'] = { bold = true },
+		['@text.emphasis'] = { italic = true },
+		['@text.underline'] = { underline = true },
+		['@text.strike'] = { strikethrough = true },
+		['@text.math'] = { link = 'Special' },
+		['@text.environment'] = { link = 'Macro' },
+		['@text.environment.name'] = { link = 'Type' },
+		['@text.title'] = { link = 'Title' },
+		['@text.uri'] = { fg = groups.link },
+		['@text.note'] = { link = 'SpecialComment' },
+		['@text.warning'] = { fg = groups.warn },
+		['@text.danger'] = { fg = groups.error },
+		['@todo'] = { link = 'Todo' },
+		['@type'] = { link = 'Type' },
+		['@variable'] = { fg = p.text, italic = maybe.italic },
+		['@variable.builtin'] = { fg = p.love },
+		['@namespace'] = { link = '@include' },
 
-	-- goolord/alpha-nvim
-	h('AlphaHeader', { fg = p.pine })
-	h('AlphaButtons', { fg = p.foam })
-	h('AlphaShortcut', { fg = p.rose })
-	h('AlphaFooter', { fg = p.gold })
+		-- LSP Semantic Token Groups
+		['@lsp.type.comment'] = {},
+		['@lsp.type.enum'] = { link = '@type' },
+		['@lsp.type.keyword'] = { link = '@keyword' },
+		['@lsp.type.interface'] = { link = '@interface' },
+		['@lsp.type.namespace'] = { link = '@namespace' },
+		['@lsp.type.parameter'] = { link = '@parameter' },
+		['@lsp.type.property'] = { link = '@property' },
+		['@lsp.type.variable'] = {}, -- use treesitter styles for regular variables
+		['@lsp.typemod.function.defaultLibrary'] = { link = 'Special' },
+		['@lsp.typemod.variable.defaultLibrary'] = { link = '@variable.builtin' },
+
+		-- LSP Injected Groups
+		['@lsp.typemod.operator.injected'] = { link = '@operator' },
+		['@lsp.typemod.string.injected'] = { link = '@string' },
+		['@lsp.typemod.variable.injected'] = { link = '@variable' },
+
+		-- nvim-treesitter Markdown Headings
+		['@text.title.1.markdown'] = { link = 'markdownH1' },
+		['@text.title.1.marker.markdown'] = { link = 'markdownH1Delimiter' },
+		['@text.title.2.markdown'] = { link = 'markdownH2' },
+		['@text.title.2.marker.markdown'] = { link = 'markdownH2Delimiter' },
+		['@text.title.3.markdown'] = { link = 'markdownH3' },
+		['@text.title.3.marker.markdown'] = { link = 'markdownH3Delimiter' },
+		['@text.title.4.markdown'] = { link = 'markdownH4' },
+		['@text.title.4.marker.markdown'] = { link = 'markdownH4Delimiter' },
+		['@text.title.5.markdown'] = { link = 'markdownH5' },
+		['@text.title.5.marker.markdown'] = { link = 'markdownH5Delimiter' },
+		['@text.title.6.markdown'] = { link = 'markdownH6' },
+		['@text.title.6.marker.markdown'] = { link = 'markdownH6Delimiter' },
+
+		-- vim.lsp.buf.document_highlight()
+		['LspReferenceText'] = { bg = p.highlight_med },
+		['LspReferenceRead'] = { bg = p.highlight_med },
+		['LspReferenceWrite'] = { bg = p.highlight_med },
+
+		-- lsp-highlight-codelens
+		['LspCodeLens'] = { fg = p.subtle }, -- virtual text of code len
+		['LspCodeLensSeparator'] = { fg = p.highlight_high }, -- separator between two or more code len
+
+		-- romgrk/barbar.nvim
+		['BufferCurrent'] = { fg = p.text, bg = p.overlay },
+		['BufferCurrentIndex'] = { fg = p.text, bg = p.overlay },
+		['BufferCurrentMod'] = { fg = p.foam, bg = p.overlay },
+		['BufferCurrentSign'] = { fg = p.subtle, bg = p.overlay },
+		['BufferCurrentTarget'] = { fg = p.gold, bg = p.overlay },
+		['BufferInactive'] = { fg = p.subtle },
+		['BufferInactiveIndex'] = { fg = p.subtle },
+		['BufferInactiveMod'] = { fg = p.foam },
+		['BufferInactiveSign'] = { fg = p.muted },
+		['BufferInactiveTarget'] = { fg = p.gold },
+		['BufferTabpageFill'] = { fg = groups.background, bg = groups.background },
+		['BufferVisible'] = { fg = p.subtle },
+		['BufferVisibleIndex'] = { fg = p.subtle },
+		['BufferVisibleMod'] = { fg = p.foam },
+		['BufferVisibleSign'] = { fg = p.muted },
+		['BufferVisibleTarget'] = { fg = p.gold },
+
+		-- lewis6991/gitsigns.nvim
+		['GitSignsAdd'] = { fg = groups.git_add, bg = groups.background },
+		['GitSignsChange'] = { fg = groups.git_change, bg = groups.background },
+		['GitSignsDelete'] = { fg = groups.git_delete, bg = groups.background },
+		['SignAdd'] = { link = 'GitSignsAdd' },
+		['SignChange'] = { link = 'GitSignsChange' },
+		['SignDelete'] = { link = 'GitSignsDelete' },
+
+		-- mvllow/modes.nvim
+		['ModesCopy'] = { bg = p.gold },
+		['ModesDelete'] = { bg = p.love },
+		['ModesInsert'] = { bg = p.foam },
+		['ModesVisual'] = { bg = p.iris },
+
+		-- kyazdani42/nvim-tree.lua
+		['NvimTreeEmptyFolderName'] = { fg = p.muted },
+		['NvimTreeFileDeleted'] = { fg = p.love },
+		['NvimTreeFileDirty'] = { fg = p.rose },
+		['NvimTreeFileMerge'] = { fg = p.iris },
+		['NvimTreeFileNew'] = { fg = p.foam },
+		['NvimTreeFileRenamed'] = { fg = p.pine },
+		['NvimTreeFileStaged'] = { fg = p.iris },
+		['NvimTreeFolderIcon'] = { fg = p.subtle },
+		['NvimTreeFolderName'] = { fg = p.foam },
+		['NvimTreeGitDeleted'] = { fg = groups.git_delete },
+		['NvimTreeGitDirty'] = { fg = groups.git_dirty },
+		['NvimTreeGitIgnored'] = { fg = groups.git_ignore },
+		['NvimTreeGitMerge'] = { fg = groups.git_merge },
+		['NvimTreeGitNew'] = { fg = groups.git_add },
+		['NvimTreeGitRenamed'] = { fg = groups.git_rename },
+		['NvimTreeGitStaged'] = { fg = groups.git_stage },
+		['NvimTreeImageFile'] = { fg = p.text },
+		['NvimTreeNormal'] = { fg = p.text },
+		['NvimTreeOpenedFile'] = { fg = p.text, bg = p.highlight_med },
+		['NvimTreeOpenedFolderName'] = { link = 'NvimTreeFolderName' },
+		['NvimTreeRootFolder'] = { fg = p.iris },
+		['NvimTreeSpecialFile'] = { link = 'NvimTreeNormal' },
+		['NvimTreeWindowPicker'] = { fg = p.love, bg = p.love, blend = 10 },
+
+		-- nvim-neo-tree/neo-tree.nvim
+		['NeoTreeTitleBar'] = { fg = p.surface, bg = p.pine },
+		['NeoTreeGitAdded'] = { fg = p.foam },
+		['NeoTreeGitModified'] = { fg = p.rose },
+		['NeoTreeGitDeleted'] = { fg = p.love },
+		['NeoTreeGitRenamed'] = { fg = p.pine },
+		['NeoTreeGitIgnored'] = { fg = p.muted },
+		['NeoTreeGitUntracked'] = { fg = p.gold },
+		['NeoTreeGitConflict'] = { fg = p.iris },
+
+		-- folke/which-key.nvim
+		['WhichKey'] = { fg = p.iris },
+		['WhichKeyGroup'] = { fg = p.foam },
+		['WhichKeySeparator'] = { fg = p.subtle },
+		['WhichKeyDesc'] = { fg = p.gold },
+		['WhichKeyFloat'] = { bg = maybe.surface },
+		['WhichKeyValue'] = { fg = p.rose },
+
+		-- luka-reineke/indent-blankline.nvim
+		['IndentBlanklineChar'] = { fg = p.muted, nocombine = true },
+		['IndentBlanklineSpaceChar'] = { fg = p.muted, nocombine = true },
+		['IndentBlanklineSpaceCharBlankline'] = { fg = p.muted, nocombine = true },
+
+		-- hrsh7th/nvim-cmp
+		['CmpItemAbbr'] = { fg = p.subtle },
+		['CmpItemAbbrDeprecated'] = { fg = p.subtle, strikethrough = true },
+		['CmpItemAbbrMatch'] = { fg = p.text, bold = true },
+		['CmpItemAbbrMatchFuzzy'] = { fg = p.text, bold = true },
+		['CmpItemKind'] = { fg = p.subtle },
+		['CmpItemKindClass'] = { fg = p.pine },
+		['CmpItemKindFunction'] = { fg = p.rose },
+		['CmpItemKindInterface'] = { fg = p.foam },
+		['CmpItemKindMethod'] = { fg = p.iris },
+		['CmpItemKindSnippet'] = { fg = p.gold },
+		['CmpItemKindVariable'] = { fg = p.text },
+
+		-- TimUntersberger/neogit
+		['NeogitDiffAddHighlight'] = { fg = p.foam, bg = p.highlight_med },
+		['NeogitDiffContextHighlight'] = { bg = p.highlight_low },
+		['NeogitDiffDeleteHighlight'] = { fg = p.love, bg = p.highlight_med },
+		['NeogitHunkHeader'] = { bg = p.highlight_low },
+		['NeogitHunkHeaderHighlight'] = { bg = p.highlight_low },
+
+		-- vimwiki/vimwiki
+		['VimwikiHR'] = { fg = p.subtle },
+		['VimwikiHeader1'] = { fg = groups.headings.h1, bold = true },
+		['VimwikiHeader2'] = { fg = groups.headings.h2, bold = true },
+		['VimwikiHeader3'] = { fg = groups.headings.h3, bold = true },
+		['VimwikiHeader4'] = { fg = groups.headings.h4, bold = true },
+		['VimwikiHeader5'] = { fg = groups.headings.h5, bold = true },
+		['VimwikiHeader6'] = { fg = groups.headings.h6, bold = true },
+		['VimwikiHeaderChar'] = { fg = p.pine },
+		['VimwikiLink'] = { fg = groups.link, underline = true },
+		['VimwikiList'] = { fg = p.iris },
+		['VimwikiNoExistsLink'] = { fg = p.love },
+
+		-- nvim-neorg/neorg
+		['NeorgHeading1Prefix'] = { fg = groups.headings.h1, bold = true },
+		['NeorgHeading1Title'] = { link = 'NeorgHeading1Prefix' },
+		['NeorgHeading2Prefix'] = { fg = groups.headings.h2, bold = true },
+		['NeorgHeading2Title'] = { link = 'NeorgHeading2Prefix' },
+		['NeorgHeading3Prefix'] = { fg = groups.headings.h3, bold = true },
+		['NeorgHeading3Title'] = { link = 'NeorgHeading3Prefix' },
+		['NeorgHeading4Prefix'] = { fg = groups.headings.h4, bold = true },
+		['NeorgHeading4Title'] = { link = 'NeorgHeading4Prefix' },
+		['NeorgHeading5Prefix'] = { fg = groups.headings.h5, bold = true },
+		['NeorgHeading5Title'] = { link = 'NeorgHeading5Prefix' },
+		['NeorgHeading6Prefix'] = { fg = groups.headings.h6, bold = true },
+		['NeorgHeading6Title'] = { link = 'NeorgHeading6Prefix' },
+		['NeorgMarkerTitle'] = { fg = p.text, bold = true },
+
+		-- tami5/lspsaga.nvim (fork of glepnir/lspsaga.nvim)
+		['DefinitionCount'] = { fg = p.rose },
+		['DefinitionIcon'] = { fg = p.rose },
+		['DefintionPreviewTitle'] = { fg = p.rose, bold = true },
+		['LspFloatWinBorder'] = { fg = groups.border },
+		['LspFloatWinNormal'] = { bg = maybe.surface },
+		['LspSagaAutoPreview'] = { fg = p.subtle },
+		['LspSagaCodeActionBorder'] = { fg = groups.border },
+		['LspSagaCodeActionContent'] = { fg = p.foam },
+		['LspSagaCodeActionTitle'] = { fg = p.gold, bold = true },
+		['LspSagaCodeActionTruncateLine'] = { link = 'LspSagaCodeActionBorder' },
+		['LspSagaDefPreviewBorder'] = { fg = groups.border },
+		['LspSagaDiagnosticBorder'] = { fg = groups.border },
+		['LspSagaDiagnosticHeader'] = { fg = p.gold, bold = true },
+		['LspSagaDiagnosticTruncateLine'] = { link = 'LspSagaDiagnosticBorder' },
+		['LspSagaDocTruncateLine'] = { link = 'LspSagaHoverBorder' },
+		['LspSagaFinderSelection'] = { fg = p.gold },
+		['LspSagaHoverBorder'] = { fg = groups.border },
+		['LspSagaLspFinderBorder'] = { fg = groups.border },
+		['LspSagaRenameBorder'] = { fg = p.pine },
+		['LspSagaRenamePromptPrefix'] = { fg = p.love },
+		['LspSagaShTruncateLine'] = { link = 'LspSagaSignatureHelpBorder' },
+		['LspSagaSignatureHelpBorder'] = { fg = p.pine },
+		['ReferencesCount'] = { fg = p.rose },
+		['ReferencesIcon'] = { fg = p.rose },
+		['SagaShadow'] = { bg = p.overlay },
+		['TargetWord'] = { fg = p.iris },
+
+		-- ray-x/lsp_signature.nvim
+		['LspSignatureActiveParameter'] = { bg = p.overlay },
+
+		-- rlane/pounce.nvim
+		['PounceAccept'] = { fg = p.love, bg = p.highlight_high },
+		['PounceAcceptBest'] = { fg = p.base, bg = p.gold },
+		['PounceGap'] = { link = 'Search' },
+		['PounceMatch'] = { link = 'Search' },
+
+		-- ggandor/leap.nvim
+		['LeapMatch'] = { link = 'MatchParen' },
+		['LeapLabelPrimary'] = { link = 'IncSearch' },
+		['LeapLabelSecondary'] = { fg = p.base, bg = p.pine },
+
+		-- phaazon/hop.nvim
+		['HopNextKey'] = { fg = p.love },
+		['HopNextKey1'] = { fg = p.foam },
+		['HopNextKey2'] = { fg = p.pine },
+		['HopUnmatched'] = { fg = p.highlight_high },
+
+		-- nvim-telescope/telescope.nvim
+		['TelescopeBorder'] = { fg = groups.border, bg = float_background },
+		['TelescopeMatching'] = { fg = p.rose },
+		['TelescopeNormal'] = { fg = p.subtle, bg = float_background },
+		['TelescopePromptNormal'] = { fg = p.text, bg = float_background },
+		['TelescopePromptPrefix'] = { fg = p.subtle },
+		['TelescopeSelection'] = { fg = p.text, bg = p.overlay },
+		['TelescopeSelectionCaret'] = { fg = p.rose, bg = p.overlay },
+		['TelescopeTitle'] = { fg = p.subtle },
+
+		-- rcarriga/nvim-notify
+		['NotifyINFOBorder'] = { fg = p.foam },
+		['NotifyINFOTitle'] = { link = 'NotifyINFOBorder' },
+		['NotifyINFOIcon'] = { link = 'NotifyINFOBorder' },
+		['NotifyWARNBorder'] = { fg = p.gold },
+		['NotifyWARNTitle'] = { link = 'NotifyWARNBorder' },
+		['NotifyWARNIcon'] = { link = 'NotifyWARNBorder' },
+		['NotifyDEBUGBorder'] = { fg = p.muted },
+		['NotifyDEBUGTitle'] = { link = 'NotifyDEBUGBorder' },
+		['NotifyDEBUGIcon'] = { link = 'NotifyDEBUGBorder' },
+		['NotifyTRACEBorder'] = { fg = p.iris },
+		['NotifyTRACETitle'] = { link = 'NotifyTRACEBorder' },
+		['NotifyTRACEIcon'] = { link = 'NotifyTRACEBorder' },
+		['NotifyERRORBorder'] = { fg = p.love },
+		['NotifyERRORTitle'] = { link = 'NotifyERRORBorder' },
+		['NotifyERRORIcon'] = { link = 'NotifyERRORBorder' },
+
+		-- rcarriga/nvim-dap-ui
+		['DapUIVariable'] = { link = 'Normal' },
+		['DapUIValue'] = { link = 'Normal' },
+		['DapUIFrameName'] = { link = 'Normal' },
+		['DapUIThread'] = { fg = p.gold },
+		['DapUIWatchesValue'] = { link = 'DapUIThread' },
+		['DapUIBreakpointsInfo'] = { link = 'DapUIThread' },
+		['DapUIBreakpointsCurrentLine'] = { fg = p.gold, bold = true },
+		['DapUIWatchesEmpty'] = { fg = p.love },
+		['DapUIWatchesError'] = { link = 'DapUIWatchesEmpty' },
+		['DapUIBreakpointsDisabledLine'] = { fg = p.muted },
+		['DapUISource'] = { fg = p.iris },
+		['DapUIBreakpointsPath'] = { fg = p.foam },
+		['DapUIScope'] = { link = 'DapUIBreakpointsPath' },
+		['DapUILineNumber'] = { link = 'DapUIBreakpointsPath' },
+		['DapUIBreakpointsLine'] = { link = 'DapUIBreakpointsPath' },
+		['DapUIFloatBorder'] = { link = 'DapUIBreakpointsPath' },
+		['DapUIStoppedThread'] = { link = 'DapUIBreakpointsPath' },
+		['DapUIDecoration'] = { link = 'DapUIBreakpointsPath' },
+		['DapUIModifiedValue'] = { fg = p.foam, bold = true },
+
+		-- glepnir/dashboard-nvim
+		['DashboardShortcut'] = { fg = p.love },
+		['DashboardHeader'] = { fg = p.pine },
+		['DashboardCenter'] = { fg = p.gold },
+		['DashboardFooter'] = { fg = p.iris },
+
+		-- SmiteshP/nvim-navic
+		['NavicIconsFile'] = { fg = p.base },
+		['NavicIconsModule'] = { fg = p.rose },
+		['NavicIconsNamespace'] = { fg = p.base },
+		['NavicIconsPackage'] = { fg = p.base },
+		['NavicIconsClass'] = { fg = p.foam },
+		['NavicIconsMethod'] = { fg = p.iris },
+		['NavicIconsProperty'] = { fg = p.foam },
+		['NavicIconsField'] = { fg = p.foam },
+		['NavicIconsConstructor'] = { fg = p.gold },
+		['NavicIconsEnum'] = { fg = p.gold },
+		['NavicIconsInterface'] = { fg = p.foam },
+		['NavicIconsFunction'] = { fg = p.pine },
+		['NavicIconsVariable'] = { fg = p.text },
+		['NavicIconsConstant'] = { fg = p.gold },
+		['NavicIconsString'] = { fg = p.gold },
+		['NavicIconsNumber'] = { fg = p.gold },
+		['NavicIconsBoolean'] = { fg = p.rose },
+		['NavicIconsArray'] = { fg = p.gold },
+		['NavicIconsObject'] = { fg = p.gold },
+		['NavicIconsKey'] = { fg = p.iris },
+		['NavicIconsKeyword'] = { fg = p.pine },
+		['NavicIconsNull'] = { fg = p.love },
+		['NavicIconsEnumMember'] = { fg = p.foam },
+		['NavicIconsStruct'] = { fg = p.foam },
+		['NavicIconsEvent'] = { fg = p.gold },
+		['NavicIconsOperator'] = { fg = p.subtle },
+		['NavicIconsTypeParameter'] = { fg = p.foam },
+		['NavicText'] = { fg = p.subtle },
+		['NavicSeparator'] = { fg = p.subtle },
+
+		-- folke/noice.nvim
+		['NoiceCursor'] = { fg = p.highlight_high, bg = p.text },
+
+		-- echasnovski/mini.indentscope
+		['MiniIndentscopeSymbol'] = { fg = p.highlight_med },
+		['MiniIndentscopeSymbolOff'] = { fg = p.highlight_med },
+
+		-- goolord/alpha-nvim
+		['AlphaHeader'] = { fg = p.pine },
+		['AlphaButtons'] = { fg = p.foam },
+		['AlphaShortcut'] = { fg = p.rose },
+		['AlphaFooter'] = { fg = p.gold },
+	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
 	vim.g.terminal_color_8 = p.subtle -- bright black
@@ -598,8 +597,21 @@ function M._load(options)
 	vim.g.terminal_color_7 = p.text -- white
 	vim.g.terminal_color_15 = p.text -- bright white
 
-	-- Set user highlights
-	for group, color in pairs(options.highlight_groups) do
+	-- Set users highlight_group customisations.
+	for group, opts in pairs(options.highlight_groups) do
+		local default_opts = M.defaults[group]
+
+		if (opts.inherit == nil or opts.inherit) and default_opts ~= nil then -- On merge.
+			opts.inherit = nil -- Don't add this key to the highlight_group after merge.
+			M.defaults[group] = vim.tbl_extend('force', default_opts, opts)
+		else -- On overwrite.
+			opts.inherit = nil -- Don't add this key to the highlight_group.
+			M.defaults[group] = opts
+		end
+	end
+
+	-- Set highlights.
+	for group, color in pairs(M.defaults) do
 		h(group, color)
 	end
 end
