@@ -33,6 +33,8 @@ vim.cmd('colorscheme rose-pine')
 
 _Supported plugins are listed in the [wiki](https://github.com/rose-pine/neovim/wiki#supported-plugins)_
 
+**Note**: rose-pine-dawn, rose-pine-main, and rose-pine-moon colorschemes are available. But they may conflict with variant in setup, so use either of them.
+
 ## Gallery
 
 **Rosé Pine**
