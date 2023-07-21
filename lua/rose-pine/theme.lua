@@ -77,6 +77,7 @@ function M._load(options)
 			fg = p.text,
 			bg = (options.dim_nc_background and p.none) or maybe.base,
 		},
+		['Substitute'] = { bg = p.base },
 		['StatusLine'] = { fg = p.subtle, bg = groups.panel },
 		['StatusLineNC'] = { fg = p.muted, bg = groups.panel_nc },
 		['StatusLineTerm'] = { link = 'StatusLine' },
@@ -578,9 +579,6 @@ function M._load(options)
 		['AlphaButtons'] = { fg = p.foam },
 		['AlphaShortcut'] = { fg = p.rose },
 		['AlphaFooter'] = { fg = p.gold },
-
-		-- folke/flash.nvim
-		['Substitute'] = { bg = p.love },
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
