@@ -77,6 +77,7 @@ function M._load(options)
 			fg = p.text,
 			bg = (options.dim_nc_background and p.none) or maybe.base,
 		},
+		['Substitute'] = { fg = p.base, bg = p.love },
 		['StatusLine'] = { fg = p.subtle, bg = groups.panel },
 		['StatusLineNC'] = { fg = p.muted, bg = groups.panel_nc },
 		['StatusLineTerm'] = { link = 'StatusLine' },
