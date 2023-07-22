@@ -93,10 +93,6 @@ require('rose-pine').setup({
 		-- headings = 'subtle'
 	},
 
-	-- Whether or not highlight_groups optios should change only only update
-	-- the settings they touch or should reset the entire highlight_group.
-	respect_default_highlight_groups = true,
-
 	-- Change specific vim highlight groups
 	-- https://github.com/rose-pine/neovim/wiki/Recipes
 	highlight_groups = {
@@ -105,6 +101,11 @@ require('rose-pine').setup({
 		-- Blend colours against the "base" background
 		CursorLine = { bg = 'foam', blend = 10 },
 		StatusLine = { fg = 'love', bg = 'love', blend = 10 },
+
+		-- By default each group adds to the existing config.
+		-- If you only want to set what is written in this config exactly,
+		-- you can set the inherit option:
+		Search = { bg = 'gold', inherit = false },
 	}
 })
 
