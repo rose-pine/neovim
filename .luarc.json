@@ -1,0 +1,32 @@
+{
+    "workspace.library": [
+        "/home/tasia/.local/share/nvim/lazy/neodev.nvim/types/stable",
+        "/usr/local/share/nvim/runtime/lua",
+        "/home/tasia/.local/share/nvim/lazy/null-ls.nvim/lua",
+        "/home/tasia/.local/share/nvim/lazy/vim-illuminate/lua",
+        "/home/tasia/.local/share/nvim/lazy/gitsigns.nvim/lua",
+        "/home/tasia/.local/share/nvim/lazy/nvim-dap/lua",
+        "/home/tasia/.local/share/nvim/lazy/lazy.nvim/lua",
+        "/home/tasia/.local/share/nvim/lazy/neovim-session-manager/lua",
+        "/home/tasia/dotfiles/nvim_plugins/grace-rose-pine/lua",
+        "/home/tasia/.local/share/nvim/lazy/nvim-dap-ui/lua",
+        "/home/tasia/.local/share/nvim/lazy/cmp-nvim-lsp/lua",
+        "/home/tasia/.local/share/nvim/lazy/mason.nvim/lua",
+        "/home/tasia/.local/share/nvim/lazy/cmp-dap/lua",
+        "/home/tasia/.local/share/nvim/lazy/nvim-treesitter/lua",
+        "/home/tasia/.local/share/nvim/lazy/lualine.nvim/lua",
+        "/home/tasia/.local/share/nvim/lazy/mason-lspconfig.nvim/lua",
+        "/home/tasia/.local/share/nvim/lazy/nvim-treesitter-context/lua",
+        "/home/tasia/.local/share/nvim/lazy/cmp-buffer/lua",
+        "/home/tasia/.local/share/nvim/lazy/nvim-web-devicons/lua",
+        "/home/tasia/.local/share/nvim/lazy/nvim-lspconfig/lua",
+        "/home/tasia/.local/share/nvim/lazy/LuaSnip/lua",
+        "/home/tasia/.local/share/nvim/lazy/nvim-cmp/lua",
+        "/home/tasia/.local/share/nvim/lazy/neodev.nvim/lua",
+        "/home/tasia/.local/share/nvim/lazy/telescope.nvim/lua",
+        "/home/tasia/.local/share/nvim/lazy/cmp_luasnip/lua",
+        "/home/tasia/.local/share/nvim/lazy/plenary.nvim/lua",
+        "/home/tasia/dotfiles/nvim_plugins/grace-rose-pine/lua",
+        "${3rd}/luv/library"
+    ]
+}
