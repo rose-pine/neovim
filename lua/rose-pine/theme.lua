@@ -92,6 +92,7 @@ function M._load(options)
 		['WarningMsg'] = { fg = p.gold },
 		-- Whitespace = {},
 		['WildMenu'] = { link = 'IncSearch' },
+		["WinBar"] = { link = 'TabLine' },
 
 		['Boolean'] = { fg = p.rose },
 		['Character'] = { fg = p.gold },
