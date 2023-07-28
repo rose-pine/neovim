@@ -11,27 +11,31 @@
     </a>
 </p>
 
-## Usage
+## Install
 
-> With [lazy.nvim](https://github.com/folke/lazy.nvim)
+**[Paq](https://github.com/savq/paq-nvim)**
+
+```lua
+require('paq')({
+  { 'rose-pine/neovim', as = 'rose-pine' }
+})
+```
+
+**[lazy.nvim](https://github.com/folke/lazy.nvim)**
 
 ```lua
 require("lazy").setup({
-	{ 'rose-pine/neovim', name = 'rose-pine' }
+  { 'rose-pine/neovim', name = 'rose-pine' }
 })
-
-vim.cmd('colorscheme rose-pine')
 ```
 
-> With [packer.nvim](https://github.com/wbthomason/packer.nvim)
+**[packer.nvim](https://github.com/wbthomason/packer.nvim)**
 
 ```lua
-use({ 'rose-pine/neovim', as = 'rose-pine' })
-
-vim.cmd('colorscheme rose-pine')
-```
-
-_Supported plugins are listed in the [wiki](https://github.com/rose-pine/neovim/wiki#supported-plugins)_
+require('packer').startup(function(use)
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
+end)
+```∞
 
 ## Gallery
 
