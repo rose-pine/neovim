@@ -35,7 +35,7 @@ require("lazy").setup({
 require('packer').startup(function(use)
   use({ 'rose-pine/neovim', as = 'rose-pine' })
 end)
-```∞
+```
 
 ## Gallery
 
