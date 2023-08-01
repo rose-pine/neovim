@@ -11,9 +11,9 @@ return {
 		c = { bg = p.surface, fg = p.text },
 	},
 	insert = {
-		a = { bg = p.foam, fg = p.base, gui = 'bold' },
-		b = { bg = blend(p.foam, p.overlay, mix), fg = p.foam },
-		c = { bg = blend(p.foam, p.base, mix), fg = p.text },
+		a = { bg = p.love, fg = p.base, gui = 'bold' },
+		b = { bg = blend(p.love, p.overlay, mix), fg = p.love },
+		c = { bg = blend(p.love, p.base, mix), fg = p.text },
 	},
 	visual = {
 		a = { bg = p.iris, fg = p.base, gui = 'bold' },
@@ -26,10 +26,9 @@ return {
 		c = { bg = blend(p.pine, p.base, mix), fg = p.text },
 	},
 	command = {
-		a = { bg = p.love, fg = p.base, gui = 'bold' },
-
-		b = { bg = blend(p.love, p.overlay, mix), fg = p.love },
-		c = { bg = blend(p.love, p.base, mix), fg = p.text },
+		a = { bg = p.foam, fg = p.base, gui = 'bold' },
+		b = { bg = blend(p.foam, p.overlay, mix), fg = p.foam },
+		c = { bg = blend(p.foam, p.base, mix), fg = p.text },
 	},
 	inactive = {
 		a = { bg = p.surface, fg = p.muted, gui = 'bold' },
