@@ -18,9 +18,9 @@ local variants = {
 		moss = '#50b39c',
 		foam = '#9ccfd8',
 		iris = '#c4a7e7',
-		highlight_low = '#21202e',
-		highlight_med = '#403d52',
-		highlight_high = '#524f67',
+		highlight_low = '#2a283e',
+		highlight_med = '#44415a',
+		highlight_high = '#56526e',
 		none = 'NONE',
 	},
 	moon = {
