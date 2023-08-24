@@ -5,7 +5,7 @@
 --- local highlights = require('rose-pine.plugins.bufferline')
 --- require('bufferline').setup({ highlights = highlights })
 
-local p = require('rose-pine.palette')
+local p = require("rose-pine.palette")
 
 return {
 	-- fill = {
@@ -20,10 +20,10 @@ return {
 	-- 	fg = '<color-value-here>',
 	-- 	bg = '<color-value-here>',
 	-- },
-	-- tab_selected = {
-	-- 	fg = '<color-value-here>',
-	-- 	bg = '<color-value-here>',
-	-- },
+	tab_selected = {
+		fg = p.text,
+		bg = p.overlay,
+	},
 	-- tab_close = {
 	-- 	fg = '<color-value-here>',
 	-- 	bg = '<color-value-here>',

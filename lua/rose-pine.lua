@@ -1,17 +1,22 @@
-local util = require("rose-pine.util")
-
+local config = require('rose-pine.config')
 local M = {}
 
-function M.colorscheme()
-  if vim.g.colors_name then vim.cmd('hi clear') end
+---@param variant Variant|nil
+function M.colorscheme(variant)
+	config.extend({ variant = variant })
 
-  vim.opt.termguicolors = true
-  vim.g.colors_name = "rose-pine"
+	vim.opt.termguicolors = true
+	if vim.g.colors_name then
+		vim.cmd('hi clear')
+		vim.cmd('syntax reset')
+	end
+	vim.g.colors_name = 'rose-pine'
 
-  local theme = require("rose-pine.theme").get_theme()
+	require('rose-pine.theme')._load(config.options)
+end
 
-  -- Set theme highlights
-  for group, color in pairs(theme) do util.highlight(group, color) end
+function M.setup(options)
+	config.extend(options)
 end
 
 return M
