@@ -480,10 +480,10 @@ function M._load(options)
 		["HopUnmatched"] = { fg = p.highlight_high },
 
 		-- nvim-telescope/telescope.nvim
-		["TelescopeBorder"] = { fg = groups.border, bg = float_background },
+		["TelescopeBorder"] = { fg = groups.border, bg = maybe.dim_nc_background },
 		["TelescopeMatching"] = { fg = p.rose },
-		["TelescopeNormal"] = { fg = p.subtle, bg = float_background },
-		["TelescopePromptNormal"] = { fg = p.text, bg = float_background },
+		["TelescopeNormal"] = { fg = p.subtle, bg = maybe.dim_nc_background },
+		["TelescopePromptNormal"] = { fg = p.text, bg = maybe.dim_nc_background },
 		["TelescopePromptPrefix"] = { fg = p.subtle },
 		["TelescopeSelection"] = { fg = p.text, bg = p.overlay },
 		["TelescopeSelectionCaret"] = { fg = p.rose, bg = p.overlay },
