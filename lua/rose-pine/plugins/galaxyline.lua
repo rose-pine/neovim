@@ -3,17 +3,17 @@
 ---
 --- @usage
 --- local highlights = require('rose-pine.plugins.galaxyline')
-local p = require('rose-pine.palette')
+local p = require("rose-pine.palette")
 
 return {
-  bg = p.surface,
-  fg = p.text,
-  fg_alt = p.subtle,
-  yellow = p.gold,
-  cyan = p.rose,
-  green = p.pine,
-  orange = p.muted,
-  magenta = p.iris,
-  blue = p.foam,
-  red = p.love
+	bg = p.surface,
+	fg = p.text,
+	fg_alt = p.subtle,
+	yellow = p.gold,
+	cyan = p.rose,
+	green = p.pine,
+	orange = p.muted,
+	magenta = p.iris,
+	blue = p.foam,
+	red = p.love,
 }
