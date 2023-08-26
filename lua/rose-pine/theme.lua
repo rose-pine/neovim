@@ -227,7 +227,7 @@ function M._load(options)
 		["@method"] = { fg = p.rose },
 		["@number"] = { link = "Number" },
 		["@operator"] = { link = "Operator" },
-		["@parameter"] = { fg = p.iris, italic = maybe.italic },
+		["@parameter"] = { fg = p.iris },
 		["@preproc"] = { link = "PreProc" },
 		["@property"] = { fg = p.rose, italic = maybe.italic },
 		["@punctuation"] = { fg = groups.punctuation },
@@ -259,7 +259,7 @@ function M._load(options)
 		["@text.danger"] = { fg = groups.error },
 		["@todo"] = { link = "Todo" },
 		["@type"] = { link = "Type" },
-		["@variable"] = { fg = p.text, italic = maybe.italic },
+		["@variable"] = { fg = p.text },
 		["@variable.builtin"] = { fg = p.love },
 		["@namespace"] = { link = "@include" },
 
