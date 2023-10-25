@@ -53,6 +53,7 @@ end)
 
 ## Options
 
+> [!NOTE]
 > Options should be set **before** colorscheme
 
 Variant respects `vim.o.background`, using dawn when light and `dark_variant` when dark
