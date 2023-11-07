@@ -43,7 +43,7 @@ function M._load(options)
 		["FloatBorder"] = { fg = groups.border, bg = maybe.surface },
 		["FloatTitle"] = { fg = p.muted },
 		["FoldColumn"] = { fg = p.muted },
-		["Folded"] = { fg = p.text, bg = maybe.surface },
+		["Folded"] = { fg = p.text, bg = maybe.dim_nc_background },
 		["IncSearch"] = { fg = p.base, bg = p.rose }, -- idk
 		["LineNr"] = { fg = p.muted },
 		["MatchParen"] = { fg = p.text, bg = p.highlight_med },
@@ -54,7 +54,7 @@ function M._load(options)
 		["NormalFloat"] = { fg = p.text, bg = maybe.surface },
 		["NormalNC"] = { fg = p.text, bg = maybe.dim_nc_background },
 		["NvimInternalError"] = { fg = "#ffffff", bg = p.love },
-		["Pmenu"] = { fg = p.subtle, bg = maybe.surface },
+		["Pmenu"] = { fg = p.subtle, bg = maybe.dim_nc_background },
 		["PmenuSbar"] = { bg = p.highlight_low },
 		["PmenuSel"] = { fg = p.text, bg = p.overlay },
 		["PmenuThumb"] = { bg = p.highlight_med },
@@ -105,7 +105,7 @@ function M._load(options)
 		["Identifier"] = { fg = p.rose },
 		-- Ignore = {},
 		["Include"] = { fg = p.sand },
-		["Keyword"] = { fg = p.sand, italic = maybe.italic },
+		["Keyword"] = { fg = p.sand, bold = true },
 		["Label"] = { fg = p.foam },
 		["Macro"] = { fg = p.iris },
 		["Number"] = { fg = p.gold },
@@ -384,7 +384,7 @@ function M._load(options)
 		["IndentBlanklineSpaceCharBlankline"] = { fg = p.muted, nocombine = true },
 
 		-- hrsh7th/nvim-cmp
-		["CmpItemAbbr"] = { fg = p.subtle },
+		["CmpItemAbbr"] = { fg = p.ocean },
 		["CmpItemAbbrDeprecated"] = { fg = p.subtle, strikethrough = true },
 		["CmpItemAbbrMatch"] = { fg = p.text, bold = true },
 		["CmpItemAbbrMatchFuzzy"] = { fg = p.text, bold = true },
