@@ -5,7 +5,7 @@
 --- local highlights = require('rose-pine.plugins.bufferline')
 --- require('bufferline').setup({ highlights = highlights })
 
-local p = require('rose-pine.palette')
+local p = require("rose-pine.palette")
 
 return {
 	-- fill = {
