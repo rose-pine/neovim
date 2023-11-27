@@ -88,7 +88,7 @@ config.options = {
 	-- dim_nc_background = false,
 	---@deprecated Replaced by `options.enable.transparency`
 	-- disable_background = false,
-	---@deprecated Replaced by `options.enable.transparency`
+	---@deprecated Replaced by `options.highlight_groups["NormalFloat"]`
 	-- disable_float_background = false,
 	---@deprecated Replaced by `options.styles.italic`
 	-- disable_italics = false,
@@ -99,6 +99,10 @@ config.options = {
 local function migrate(options)
 	if options.bold_vert_split then
 		options.highlight_groups["VertSplit"] = { fg = "muted", bg = "muted" }
+	end
+
+	if options.disable_float_background then
+		options.highlight_groups["NormalFloat"] = { bg = "NONE" }
 	end
 
 	options.dim_inactive_windows = options.dim_nc_background or options.dim_inactive_windows
@@ -115,8 +119,7 @@ local function migrate(options)
 		options.highlight_groups["@punctuation"] = { fg = options.groups.punctuation }
 	end
 
-	options.styles.transparency = (options.disable_background or options.disable_float_background)
-		or options.styles.transparency
+	options.styles.transparency = options.disable_background or options.styles.transparency
 
 	-- These never actually existed, but may be set intuitively by the user
 	-- because of `disable_italics` existing.

@@ -470,7 +470,7 @@ local function set_highlights()
 		-- nvim-telescope/telescope.nvim
 		TelescopeBorder = make_border(),
 		TelescopeMatching = { fg = palette.rose },
-		TelescopeNormal = { bg = groups.panel },
+		TelescopeNormal = { link = "NormalFloat" },
 		TelescopePromptNormal = { link = "TelescopeNormal" },
 		TelescopePromptPrefix = { fg = palette.subtle },
 		TelescopeSelection = { fg = palette.text, bg = palette.overlay },
@@ -587,10 +587,10 @@ local function set_highlights()
 		TabLineFill = { bg = "NONE" },
 		TabLineSel = { fg = palette.text, bg = "NONE", bold = styles.bold },
 
-		TelescopeNormal = { fg = palette.text, bg = "NONE" },
+		TelescopeNormal = { fg = palette.subtle, bg = "NONE" },
 		TelescopePromptNormal = { fg = palette.text, bg = "NONE" },
 		TelescopeSelection = { fg = palette.text, bg = "NONE", bold = styles.bold },
-		TelescopeSelectionCaret = { fg = palette.rose, bg = "NONE" },
+		TelescopeSelectionCaret = { fg = palette.rose, bg = palette.rose },
 
 		WhichKeyFloat = { bg = "NONE" },
 	}
