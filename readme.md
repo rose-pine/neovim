@@ -117,6 +117,17 @@ require('rose-pine').setup({
 -- Set colorscheme after options
 vim.cmd('colorscheme rose-pine')
 ```
+**[lualine.nvim](https://github.com/wbthomason/packer.nvim)**
+```lua
+require('lualine').setup {
+  options = {
+    -- ... your lualine config
+    --- @usage 'rose-pine'|'rose-pine-alt'
+    theme = 'rose-pine',
+    -- ... your lualine config
+  }
+}
+```
 
 ## Contributing
 
