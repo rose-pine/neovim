@@ -80,7 +80,7 @@ local function set_highlights()
 		Substitute = { link = "IncSearch" },
 		TabLine = { link = "StatusLine" },
 		TabLineFill = { bg = groups.panel },
-		TabLineSel = { fg = palette.text, bg = palette.overlay },
+		TabLineSel = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
 		Title = make_title(),
 		VertSplit = make_border(),
 		Visual = { fg = palette.base, bg = palette.pine },
