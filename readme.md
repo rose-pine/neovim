@@ -117,17 +117,8 @@ require('rose-pine').setup({
 -- Set colorscheme after options
 vim.cmd('colorscheme rose-pine')
 ```
-**[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)**
-```lua
-require('lualine').setup {
-  options = {
-    -- ... your lualine config
-    --- @usage 'rose-pine'|'rose-pine-alt'
-    theme = 'rose-pine',
-    -- ... your lualine config
-  }
-}
-```
+> [!NOTE]
+> For more information on customizing certain plugins such as [Lualine](https://github.com/nvim-lualine/lualine.nvim), [Bufferline](https://github.com/akinsho/bufferline.nvim), and [toggleterm](https://github.com/akinsho/toggleterm.nvim), please [visit the Rose Pine Wiki](https://github.com/rose-pine/neovim/wiki).
 
 ## Contributing
 
