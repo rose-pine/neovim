@@ -120,6 +120,9 @@ vim.cmd('colorscheme rose-pine')
 -- vim.cmd('colorscheme rose-pine-dawn')
 ```
 
+> [!NOTE]
+> Visit the [wiki](https://github.com/rose-pine/neovim/wiki) for [plugin configurations](https://github.com/rose-pine/neovim/wiki/Plugin-configurations) and [recipes](https://github.com/rose-pine/neovim/wiki/Recipes).
+
 ## Contributing
 
 We welcome and appreciate contributions of any kind. Create an issue or start a discussion for any proposed changes. Pull requests are encouraged for supporting additional plugins.
