@@ -88,7 +88,7 @@ local function set_highlights()
 		WarningMsg = { fg = groups.warn, bold = styles.bold },
 		-- Whitespace = {},
 		WildMenu = { link = "IncSearch" },
-		WinSeparator = { link = "VertSplit" },
+		WinSeparator = make_border(),
 
 		DiagnosticError = { fg = groups.error },
 		DiagnosticHint = { fg = groups.hint },
