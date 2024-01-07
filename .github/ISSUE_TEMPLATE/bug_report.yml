@@ -15,30 +15,14 @@ body:
       required: true
   - type: input
     attributes:
-      label: "Terminal"
-      placeholder: "Kitty"
+      label: "Terminal / multiplexer"
+      placeholder: "Kitty / tmux"
     validations:
       required: true
   - type: textarea
     attributes:
       label: Describe the bug
-      description: A clear and concise description of what the bug is. Please include any related errors you see in Neovim.
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Steps To Reproduce
-      description: Steps to reproduce the behavior.
-      placeholder: |
-        1.
-        2.
-        3.
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Expected Behavior
-      description: A concise description of what you expected to happen.
+      description: A clear and concise description of what the bug is. Please include screenshots if possible and any related errors you see in Neovim.
     validations:
       required: true
   - type: textarea
@@ -61,7 +45,7 @@ body:
         end
 
         require("rose-pine").setup({
-          -- ADD ROSÉ PINE CONFIG THAT IS _NECESSARY_ FOR REPRODUCING THE ISSUE
+          -- ADD ROSÉ PINE CONFIG THAT IS _NECESSARY_ TO REPRODUCE THE ISSUE
         })
 
         vim.cmd("colorscheme rose-pine")
