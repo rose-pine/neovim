@@ -21,7 +21,7 @@ config.options = {
 
 	---Extend background behind borders. Appearance differs based on which
 	---border characters you are using.
-	extend_background_behind_borders = false,
+	extend_background_behind_borders = true,
 
 	enable = {
 		terminal = true,
