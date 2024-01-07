@@ -17,6 +17,7 @@ local variants = {
 		highlight_low = "#21202e",
 		highlight_med = "#403d52",
 		highlight_high = "#524f67",
+		none = "NONE",
 	},
 	moon = {
 		_nc = "#1f1d30",
@@ -35,6 +36,7 @@ local variants = {
 		highlight_low = "#2a283e",
 		highlight_med = "#44415a",
 		highlight_high = "#56526e",
+		none = "NONE",
 	},
 	dawn = {
 		_nc = "#f8f0e7",
@@ -53,6 +55,7 @@ local variants = {
 		highlight_low = "#f4ede8",
 		highlight_med = "#dfdad9",
 		highlight_high = "#cecacd",
+		none = "NONE",
 	},
 }
 
