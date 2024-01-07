@@ -477,6 +477,15 @@ local function set_highlights()
 		TelescopeSelectionCaret = { fg = palette.rose, bg = palette.overlay },
 		TelescopeTitle = make_title(),
 
+		-- ibhagwan/fzf-lua
+		FzfLuaNormal = { link = "NormalFloat" },
+		FwzfLuaTitle = make_title(),
+		FzfLuaBorder = make_border(),
+		FzfLuaHeaderText = { fg = palette.love },
+		FzfLuaHeaderBind = { fg = palette.rose },
+		FzfLuaBufFlagCur = { fg = palette.subtle },
+		FzfLuaBufFlagAlt = { fg = palette.subtle },
+
 		-- rcarriga/nvim-notify
 		NotifyDEBUGBorder = make_border(),
 		NotifyDEBUGIcon = { link = "NotifyDEBUGTitle" },
