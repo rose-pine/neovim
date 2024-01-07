@@ -611,11 +611,11 @@ local function set_highlights()
 	end
 
 	for group, options in pairs(config.options.highlight_groups) do
-		local default_opts = highlights[group]
+		local default_opts = highlights[group] or {}
 
 		if (options.inherit == nil or options.inherit) and default_opts ~= nil then -- On merge.
 			options.inherit = nil -- Don't add this key to the highlight_group after merge.
-			M.defaults[group] = vim.tbl_extend("force", default_opts, options)
+			highlights[group] = vim.tbl_extend("force", default_opts, options)
 		else -- On overwrite.
 			options.inherit = nil -- Don't add this key to the highlight_group.
 			highlights[group] = options
