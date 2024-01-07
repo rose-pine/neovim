@@ -492,6 +492,15 @@ function M._load(options)
 		['TelescopeSelectionCaret'] = { fg = p.rose, bg = p.overlay },
 		['TelescopeTitle'] = { fg = p.subtle },
 
+		-- ibhagwan/fzf-lua
+		['FzfLuaNormal'] = { fg = p.subtle, bg = float_background },
+		['FzfLuaTitle'] = { fg = p.subtle },
+		['FzfLuaBorder'] = { fg = groups.border, bg = float_background },
+		['FzfLuaHeaderText'] = { fg = p.love },
+		['FzfLuaHeaderBind'] = { fg = p.rose },
+		['FzfLuaBufFlagCur'] = { fg = p.subtle },
+		['FzfLuaBufFlagAlt'] = { fg = p.subtle },
+
 		-- rcarriga/nvim-notify
 		['NotifyINFOBorder'] = { fg = p.foam },
 		['NotifyINFOTitle'] = { link = 'NotifyINFOBorder' },
