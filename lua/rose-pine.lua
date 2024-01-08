@@ -62,7 +62,7 @@ local function set_highlights()
 		PmenuKind = { fg = palette.foam, bg = groups.panel },
 		PmenuKindSel = { fg = palette.subtle, bg = palette.overlay },
 		PmenuSbar = { bg = groups.panel },
-		PmenuSel = { fg = palette.title, bg = palette.overlay },
+		PmenuSel = { fg = palette.text, bg = palette.overlay },
 		PmenuThumb = { bg = palette.muted },
 		Question = { fg = palette.gold },
 		-- QuickFixLink = {},
