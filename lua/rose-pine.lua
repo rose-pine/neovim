@@ -9,7 +9,11 @@ local function set_highlights()
 
 	local function make_border(fg)
 		fg = fg or groups.border
-		return { fg = fg, bg = config.options.extend_background_behind_borders and palette.surface or "NONE" }
+		return {
+			fg = fg,
+			bg = (config.options.extend_background_behind_borders and not styles.transparency) and palette.surface
+				or "NONE",
+		}
 	end
 
 	local function make_title(fg)
