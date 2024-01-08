@@ -587,6 +587,7 @@ local function set_highlights()
 		FloatBorder = { fg = palette.muted, bg = "NONE" },
 		Folded = { fg = palette.text, bg = "NONE" },
 		NormalFloat = { bg = "NONE" },
+		Normal = { fg = palette.text, bg = "NONE" },
 		NormalNC = { fg = palette.text, bg = config.options.dim_inactive_windows and palette._nc or "NONE" },
 		Pmenu = { fg = palette.subtle, bg = "NONE" },
 		PmenuKind = { fg = palette.foam, bg = "NONE" },
