@@ -98,7 +98,9 @@ config.options = {
 
 local function migrate(options)
 	if options.bold_vert_split then
-		options.highlight_groups["VertSplit"] = { fg = "muted", bg = "muted" }
+		local border = options.groups.border or "muted"
+		options.highlight_groups["VertSplit"] = { fg = border, bg = border }
+		options.highlight_groups["WinSeparator"] = { fg = border, bg = border }
 	end
 
 	if options.disable_float_background then
