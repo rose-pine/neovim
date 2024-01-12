@@ -369,10 +369,9 @@ local function set_highlights()
 		WhichKeySeparator = { fg = palette.subtle },
 		WhichKeyValue = { fg = palette.rose },
 
-		-- luka-reineke/indent-blankline.nvim
-		IndentBlanklineChar = { fg = palette.muted, nocombine = true },
-		IndentBlanklineSpaceChar = { fg = palette.muted, nocombine = true },
-		IndentBlanklineSpaceCharBlankline = { fg = palette.muted, nocombine = true },
+		-- lukas-reineke/indent-blankline.nvim
+		IblIndent = { fg = palette.overlay },
+		IblScope = { fg = palette.foam },
 
 		-- hrsh7th/nvim-cmp
 		CmpItemAbbr = { fg = palette.subtle },
