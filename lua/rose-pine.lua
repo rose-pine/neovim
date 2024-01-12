@@ -372,6 +372,12 @@ local function set_highlights()
 		-- lukas-reineke/indent-blankline.nvim
 		IblIndent = { fg = palette.overlay },
 		IblScope = { fg = palette.foam },
+		IblWhitespace = { fg = palette.overlay },
+
+		-- for legacy usage
+		IndentBlanklineChar = { fg = palette.muted, nocombine = true },
+		IndentBlanklineSpaceChar = { fg = palette.muted, nocombine = true },
+		IndentBlanklineSpaceCharBlankline = { fg = palette.muted, nocombine = true },
 
 		-- hrsh7th/nvim-cmp
 		CmpItemAbbr = { fg = palette.subtle },
@@ -616,6 +622,10 @@ local function set_highlights()
 		TelescopeSelectionCaret = { fg = palette.rose },
 
 		WhichKeyFloat = { bg = "NONE" },
+
+		IblIndent = { fg = palette.overlay, bg = "NONE" },
+		IblScope = { fg = palette.foam, bg = "NONE" },
+		IblWhitespace = { fg = palette.overlay, bg = "NONE" },
 	}
 
 	if styles.transparency then
