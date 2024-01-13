@@ -361,6 +361,9 @@ local function set_highlights()
 		NeoTreeGitUntracked = { fg = groups.git_untracked },
 		NeoTreeTitleBar = { link = "StatusLineTerm" },
 
+		-- folke/flash.nvim
+		FlashLabel = { fg = palette.base, bg = palette.love },
+
 		-- folke/which-key.nvim
 		WhichKey = { fg = palette.iris },
 		WhichKeyDesc = { fg = palette.gold },
