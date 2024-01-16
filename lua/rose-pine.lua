@@ -82,7 +82,7 @@ local function set_highlights()
 		StatusLineTerm = { fg = palette.base, bg = palette.pine },
 		StatusLineTermNC = { fg = palette.base, bg = palette.pine, blend = 60 },
 		Substitute = { link = "IncSearch" },
-		TabLine = { link = "StatusLine" },
+		TabLine = { fg = palette.subtle, bg = groups.panel },
 		TabLineFill = { bg = groups.panel },
 		TabLineSel = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
 		Title = make_title(),
