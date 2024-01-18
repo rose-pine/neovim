@@ -586,6 +586,13 @@ local function set_highlights()
 		-- folke/noice.nvim
 		NoiceCursor = { fg = palette.highlight_high, bg = palette.text },
 
+		-- echasnovski/mini.clue
+		MiniClueTitle = { bg = groups.panel, bold = styles.bold },
+
+		-- echasnovski/mini.pick
+		MiniPickBorderText = { bg = groups.panel },
+		MiniPickPrompt = { bg = groups.panel, bold = styles.bold },
+
 		-- echasnovski/mini.indentscope
 		MiniIndentscopeSymbol = { fg = palette.muted },
 		MiniIndentscopeSymbolOff = { fg = palette.muted },
@@ -629,6 +636,11 @@ local function set_highlights()
 		IblIndent = { fg = palette.overlay, bg = "NONE" },
 		IblScope = { fg = palette.foam, bg = "NONE" },
 		IblWhitespace = { fg = palette.overlay, bg = "NONE" },
+
+		MiniClueTitle = { bg = "NONE", bold = styles.bold },
+
+		MiniPickBorderText = { bg = "NONE" },
+		MiniPickPrompt = { bg = "NONE", bold = styles.bold },
 	}
 
 	if styles.transparency then
