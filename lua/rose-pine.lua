@@ -92,6 +92,8 @@ local function set_highlights()
 		WarningMsg = { fg = groups.warn, bold = styles.bold },
 		-- Whitespace = {},
 		WildMenu = { link = "IncSearch" },
+		WinBar = { fg = palette.subtle, bg = groups.panel },
+		WinBarNC = { fg = palette.muted, bg = groups.panel, blend = 60 },
 		WinSeparator = { fg = groups.border },
 
 		DiagnosticError = { fg = groups.error },
