@@ -58,7 +58,6 @@ function utilities.highlight(group, highlight, blend_on)
 	highlight.fg = fg
 	highlight.bg = bg
 	highlight.sp = sp
-	-- highlight = vim.tbl_extend("force", highlight, { fg = fg, bg = bg, sp = sp })
 
 	vim.api.nvim_set_hl(0, group, highlight)
 end

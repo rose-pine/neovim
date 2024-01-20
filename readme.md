@@ -57,6 +57,14 @@ require('rose-pine').setup({
     dim_inactive_windows = false,
     extend_background_behind_borders = true,
 
+    enable = {
+        terminal = true,
+        -- Improve compatibility for previous versions of Neovim
+        legacy_highlights = true,
+	-- Handle deprecated options automatically
+        migrations = true,
+    },
+
     styles = {
         bold = true,
         italic = true,
@@ -71,6 +79,8 @@ require('rose-pine').setup({
         error = "love",
         hint = "iris",
         info = "foam",
+        note = "pine",
+        todo = "rose",
         warn = "gold",
 
         git_add = "foam",
@@ -92,8 +102,6 @@ require('rose-pine').setup({
             h5 = "pine",
             h6 = "foam",
         },
-        -- Alternatively, set all headings at once.
-        -- headings = "subtle",
     },
 
     highlight_groups = {
@@ -125,6 +133,6 @@ vim.cmd('colorscheme rose-pine')
 
 ## Contributing
 
-We welcome and appreciate contributions of any kind. Create an issue or start a discussion for any proposed changes. Pull requests are encouraged for supporting additional plugins.
+We welcome and appreciate contributions of any kind. Create an issue or start a discussion for any proposed changes. Pull requests are encouraged for supporting additional plugins or [treesitter improvements](https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights).
 
 Feel free to update the [wiki](https://github.com/rose-pine/neovim/wiki/) with any [recipes](https://github.com/rose-pine/neovim/wiki/Recipes).

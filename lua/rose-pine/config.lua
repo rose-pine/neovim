@@ -1,7 +1,7 @@
 ---@alias Variant "main" | "moon" | "dawn"
 ---@alias Palette { base: string, surface: string, overlay: string, muted: string, subtle: string, text: string, love: string, gold: string, rose: string, pine: string, foam: string, iris: string }
 ---@alias PaletteColor "base" | "surface" | "overlay" | "muted" | "subtle" | "text" | "love" | "gold" | "rose" | "pine" | "foam" | "iris" | "highlight_low" | "highlight_med" | "highlight_high"
----@alias Highlight { fg: string, bg: string, sp: string, bold: boolean, italic: boolean, undercurl: boolean, underline: boolean, underdouble: boolean, underdotted: boolean, underdashed: boolean, strikethrough: boolean }
+---@alias Highlight { fg: string, bg: string, sp: string, bold: boolean, italic: boolean, undercurl: boolean, underline: boolean, underdouble: boolean, underdotted: boolean, underdashed: boolean, strikethrough: boolean, inherit: boolean }
 
 local config = {}
 
@@ -24,8 +24,9 @@ config.options = {
 	extend_background_behind_borders = true,
 
 	enable = {
-		terminal = true,
+		legacy_highlights = true,
 		migrations = true,
+		terminal = true,
 	},
 
 	styles = {
@@ -43,6 +44,8 @@ config.options = {
 		error = "love",
 		hint = "iris",
 		info = "foam",
+		note = "pine",
+		todo = "rose",
 		warn = "gold",
 
 		git_add = "foam",
@@ -56,7 +59,7 @@ config.options = {
 		git_text = "rose",
 		git_untracked = "subtle",
 
-		---@type string | PaletteColor | table<string, string | PaletteColor>
+		---@type table<string, string | PaletteColor>
 		headings = {
 			h1 = "iris",
 			h2 = "foam",
@@ -72,6 +75,8 @@ config.options = {
 		-- comment = "subtle",
 		---@deprecated Replaced by `options.highlight_groups["@punctuation"]`
 		-- punctuation = "muted",
+		---@deprecated Expects a table with values h1...h6
+		-- headings = "text",
 	},
 
 	---@type table<string, Highlight>
@@ -103,6 +108,10 @@ local function migrate(options)
 		options.highlight_groups["WinSeparator"] = { fg = border, bg = border }
 	end
 
+	if options.disable_background then
+		options.highlight_groups["Normal"] = { bg = "NONE" }
+	end
+
 	if options.disable_float_background then
 		options.highlight_groups["NormalFloat"] = { bg = "NONE" }
 	end
@@ -121,7 +130,8 @@ local function migrate(options)
 		options.highlight_groups["@punctuation"] = { fg = options.groups.punctuation }
 	end
 
-	options.styles.transparency = options.disable_background or options.styles.transparency
+	options.styles.transparency = (options.disable_background and options.disable_float_background)
+		or options.styles.transparency
 
 	-- These never actually existed, but may be set intuitively by the user
 	-- because of `disable_italics` existing.
