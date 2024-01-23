@@ -59,15 +59,13 @@ config.options = {
 		git_text = "rose",
 		git_untracked = "subtle",
 
-		---@type table<string, string | PaletteColor>
-		headings = {
-			h1 = "iris",
-			h2 = "foam",
-			h3 = "rose",
-			h4 = "gold",
-			h5 = "pine",
-			h6 = "foam",
-		},
+		---@type string | PaletteColor
+		h1 = "iris",
+		h2 = "foam",
+		h3 = "rose",
+		h4 = "gold",
+		h5 = "pine",
+		h6 = "foam",
 
 		---@deprecated Replaced by `options.highlight_groups["Normal"]`
 		-- background = "base",
@@ -151,6 +149,14 @@ local function migrate(options)
 			h5 = options.groups.headings,
 			h6 = options.groups.headings,
 		}
+	end
+	if type(options.groups.headings) == "table" then
+		options.groups.h1 = options.groups.headings.h1 or options.groups.h1
+		options.groups.h2 = options.groups.headings.h2 or options.groups.h2
+		options.groups.h3 = options.groups.headings.h3 or options.groups.h3
+		options.groups.h4 = options.groups.headings.h4 or options.groups.h4
+		options.groups.h5 = options.groups.headings.h5 or options.groups.h5
+		options.groups.h6 = options.groups.headings.h6 or options.groups.h6
 	end
 
 	return options

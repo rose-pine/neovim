@@ -94,14 +94,12 @@ require('rose-pine').setup({
         git_text = "rose",
         git_untracked = "subtle",
 
-        headings = {
-            h1 = "iris",
-            h2 = "foam",
-            h3 = "rose",
-            h4 = "gold",
-            h5 = "pine",
-            h6 = "foam",
-        },
+        h1 = "iris",
+        h2 = "foam",
+        h3 = "rose",
+        h4 = "gold",
+        h5 = "pine",
+        h6 = "foam",
     },
 
     highlight_groups = {

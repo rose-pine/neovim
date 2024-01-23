@@ -5,7 +5,11 @@ local function set_highlights()
 	local utilities = require("rose-pine.utilities")
 	local palette = require("rose-pine.palette")
 	local styles = config.options.styles
-	local groups = config.options.groups
+
+	local groups = {}
+	for group, color in pairs(config.options.groups) do
+		groups[group] = utilities.parse_color(color)
+	end
 
 	local function make_border(fg)
 		fg = fg or groups.border
@@ -16,10 +20,8 @@ local function set_highlights()
 		}
 	end
 
-	local function make_title(fg)
-		fg = fg or palette.foam
-		return { fg = styles.bold and palette.text or fg, bold = styles.bold }
-	end
+	local adaptive_title = { fg = styles.bold and palette.text or palette.foam, bold = styles.bold }
+	local adaptive_border = make_border()
 
 	local highlights = {}
 	local legacy_highlights = {
@@ -96,10 +98,10 @@ local function set_highlights()
 		diffAdded = { link = "DiffAdd" },
 		diffChanged = { link = "DiffChange" },
 		diffRemoved = { link = "DiffDelete" },
-		Directory = make_title(),
+		Directory = adaptive_title,
 		-- EndOfBuffer = {},
 		ErrorMsg = { fg = groups.error, bold = styles.bold },
-		FloatBorder = make_border(),
+		FloatBorder = adaptive_border,
 		FloatTitle = { link = "Directory" },
 		FoldColumn = { fg = palette.muted },
 		Folded = { fg = palette.text, bg = groups.panel },
@@ -142,7 +144,7 @@ local function set_highlights()
 		TabLine = { fg = palette.subtle, bg = groups.panel },
 		TabLineFill = { bg = groups.panel },
 		TabLineSel = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
-		Title = make_title(),
+		Title = adaptive_title,
 		VertSplit = { fg = groups.border },
 		Visual = { bg = palette.highlight_med },
 		-- VisualNOS = {},
@@ -238,17 +240,17 @@ local function set_highlights()
 		htmlTagName = { fg = palette.foam },
 
 		markdownDelimiter = { fg = palette.subtle },
-		markdownH1 = { fg = groups.headings.h1, bold = styles.bold },
+		markdownH1 = { fg = groups.h1, bold = styles.bold },
 		markdownH1Delimiter = { link = "markdownH1" },
-		markdownH2 = { fg = groups.headings.h2, bold = styles.bold },
+		markdownH2 = { fg = groups.h2, bold = styles.bold },
 		markdownH2Delimiter = { link = "markdownH2" },
-		markdownH3 = { fg = groups.headings.h3, bold = styles.bold },
+		markdownH3 = { fg = groups.h3, bold = styles.bold },
 		markdownH3Delimiter = { link = "markdownH3" },
-		markdownH4 = { fg = groups.headings.h4, bold = styles.bold },
+		markdownH4 = { fg = groups.h4, bold = styles.bold },
 		markdownH4Delimiter = { link = "markdownH4" },
-		markdownH5 = { fg = groups.headings.h5, bold = styles.bold },
+		markdownH5 = { fg = groups.h5, bold = styles.bold },
 		markdownH5Delimiter = { link = "markdownH5" },
-		markdownH6 = { fg = groups.headings.h6, bold = styles.bold },
+		markdownH6 = { fg = groups.h6, bold = styles.bold },
 		markdownH6Delimiter = { link = "markdownH6" },
 		markdownLinkText = { link = "markdownUrl" },
 		markdownUrl = { fg = groups.link, sp = groups.link, underline = true },
@@ -355,7 +357,7 @@ local function set_highlights()
 		["@markup.strikethrough"] = { strikethrough = true },
 		["@markup.underline"] = { underline = true },
 
-		["@markup.heading"] = make_title(),
+		["@markup.heading"] = adaptive_title,
 
 		["@markup.quote"] = { fg = palette.subtle },
 		["@markup.math"] = { link = "Special" },
@@ -457,7 +459,7 @@ local function set_highlights()
 		NvimTreeNormal = { link = "Normal" },
 		NvimTreeOpenedFile = { fg = palette.text, bg = palette.overlay },
 		NvimTreeOpenedFolderName = { link = "NvimTreeFolderName" },
-		NvimTreeRootFolder = make_title(),
+		NvimTreeRootFolder = adaptive_title,
 		NvimTreeSpecialFile = { link = "NvimTreeNormal" },
 		NvimTreeWindowPicker = { link = "StatusLineTerm" },
 
@@ -543,22 +545,22 @@ local function set_highlights()
 		NeorgHeading5Title = { link = "markdownH5" },
 		NeorgHeading6Prefix = { link = "markdownH6Delimiter" },
 		NeorgHeading6Title = { link = "markdownH6" },
-		NeorgMarkerTitle = make_title(),
+		NeorgMarkerTitle = adaptive_title,
 
 		-- tami5/lspsaga.nvim (fork of glepnir/lspsaga.nvim)
 		DefinitionCount = { fg = palette.rose },
 		DefinitionIcon = { fg = palette.rose },
 		DefintionPreviewTitle = { fg = palette.rose, bold = styles.bold },
-		LspFloatWinBorder = make_border(),
+		LspFloatWinBorder = adaptive_border,
 		LspFloatWinNormal = { bg = groups.panel },
 		LspSagaAutoPreview = { fg = palette.subtle },
 		LspSagaCodeActionBorder = make_border(palette.rose),
 		LspSagaCodeActionContent = { fg = palette.foam },
 		LspSagaCodeActionTitle = { fg = palette.gold, bold = styles.bold },
 		LspSagaCodeActionTruncateLine = { link = "LspSagaCodeActionBorder" },
-		LspSagaDefPreviewBorder = make_border(),
+		LspSagaDefPreviewBorder = adaptive_border,
 		LspSagaDiagnosticBorder = make_border(palette.gold),
-		LspSagaDiagnosticHeader = make_title(),
+		LspSagaDiagnosticHeader = adaptive_title,
 		LspSagaDiagnosticTruncateLine = { link = "LspSagaDiagnosticBorder" },
 		LspSagaDocTruncateLine = { link = "LspSagaHoverBorder" },
 		LspSagaFinderSelection = { fg = palette.gold },
@@ -595,26 +597,26 @@ local function set_highlights()
 		HopUnmatched = { fg = palette.muted },
 
 		-- nvim-telescope/telescope.nvim
-		TelescopeBorder = make_border(),
+		TelescopeBorder = adaptive_border,
 		TelescopeMatching = { fg = palette.rose },
 		TelescopeNormal = { link = "NormalFloat" },
 		TelescopePromptNormal = { link = "TelescopeNormal" },
 		TelescopePromptPrefix = { fg = palette.subtle },
 		TelescopeSelection = { fg = palette.text, bg = palette.overlay },
 		TelescopeSelectionCaret = { fg = palette.rose, bg = palette.overlay },
-		TelescopeTitle = make_title(),
+		TelescopeTitle = adaptive_title,
 
 		-- ibhagwan/fzf-lua
 		FzfLuaNormal = { link = "NormalFloat" },
-		FwzfLuaTitle = make_title(),
-		FzfLuaBorder = make_border(),
+		FwzfLuaTitle = adaptive_title,
+		FzfLuaBorder = adaptive_border,
 		FzfLuaHeaderText = { fg = palette.love },
 		FzfLuaHeaderBind = { fg = palette.rose },
 		FzfLuaBufFlagCur = { fg = palette.subtle },
 		FzfLuaBufFlagAlt = { fg = palette.subtle },
 
 		-- rcarriga/nvim-notify
-		NotifyDEBUGBorder = make_border(),
+		NotifyDEBUGBorder = adaptive_border,
 		NotifyDEBUGIcon = { link = "NotifyDEBUGTitle" },
 		NotifyDEBUGTitle = { fg = palette.muted },
 		NotifyERRORBorder = make_border(groups.error),
@@ -637,7 +639,7 @@ local function set_highlights()
 		DapUIBreakpointsLine = { link = "DapUIBreakpointsPath" },
 		DapUIBreakpointsPath = { fg = palette.foam },
 		DapUIDecoration = { link = "DapUIBreakpointsPath" },
-		DapUIFloatBorder = make_border(),
+		DapUIFloatBorder = adaptive_border,
 		DapUIFrameName = { fg = palette.text },
 		DapUILineNumber = { link = "DapUIBreakpointsPath" },
 		DapUIModifiedValue = { fg = palette.foam, bold = styles.bold },
@@ -763,25 +765,41 @@ local function set_highlights()
 			highlights[group] = highlight
 		end
 	end
-	if config.options.highlight_groups ~= nil and next(config.options.highlight_groups) ~= nil then
-		vim.print(config.options.highlight_groups)
-		for group, options in pairs(config.options.highlight_groups) do
-			local default_opts = highlights[group] or {}
 
-			if (options.inherit == nil or options.inherit) and default_opts ~= nil then
-				options.inherit = nil
-				highlights[group] = vim.tbl_extend("force", default_opts, options)
-			else
-				options.inherit = nil
-				highlights[group] = options
+	-- Reconcile highlights with config
+	if config.options.highlight_groups ~= nil and next(config.options.highlight_groups) ~= nil then
+		for group, highlight in pairs(config.options.highlight_groups) do
+			local existing = highlights[group] or {}
+			local parsed = vim.tbl_extend("force", {}, highlight)
+
+			if highlight.fg ~= nil then
+				parsed.fg = utilities.parse_color(highlight.fg) or highlight.fg
+			end
+			if highlight.bg ~= nil then
+				parsed.bg = utilities.parse_color(highlight.bg) or highlight.bg
+			end
+			if highlight.sp ~= nil then
+				parsed.sp = utilities.parse_color(highlight.sp) or highlight.sp
 			end
 
-			highlights[group] = vim.tbl_extend("force", highlights[group] or {}, options)
+			if (highlight.inherit == nil or highlight.inherit) and existing ~= nil then
+				highlight.inherit = nil
+				highlights[group] = vim.tbl_extend("force", existing, parsed)
+			else
+				highlight.inherit = nil
+				highlights[group] = parsed
+			end
 		end
 	end
+
 	for group, highlight in pairs(highlights) do
-		config.options.before_highlight(group, highlight, palette)
-		utilities.highlight(group, highlight)
+		if config.options.before_highlight ~= nil then
+			config.options.before_highlight(group, highlight, palette)
+		end
+		if highlight.blend ~= nil and (highlight.blend >= 0 and highlight.blend <= 100) and highlight.bg ~= nil then
+			highlight.bg = utilities.blend(highlight.bg, highlight.blend_on or palette.base, highlight.blend / 100)
+		end
+		vim.api.nvim_set_hl(0, group, highlight)
 	end
 
 	--- Terminal
