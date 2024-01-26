@@ -20,9 +20,6 @@ local function set_highlights()
 		}
 	end
 
-	local adaptive_title = { fg = styles.bold and palette.text or palette.foam, bold = styles.bold }
-	local adaptive_border = make_border()
-
 	local highlights = {}
 	local legacy_highlights = {
 		["@attribute.diff"] = { fg = palette.gold },
@@ -98,10 +95,10 @@ local function set_highlights()
 		diffAdded = { link = "DiffAdd" },
 		diffChanged = { link = "DiffChange" },
 		diffRemoved = { link = "DiffDelete" },
-		Directory = adaptive_title,
+		Directory = { fg = palette.foam, bold = styles.bold },
 		-- EndOfBuffer = {},
 		ErrorMsg = { fg = groups.error, bold = styles.bold },
-		FloatBorder = adaptive_border,
+		FloatBorder = make_border(),
 		FloatTitle = { link = "Directory" },
 		FoldColumn = { fg = palette.muted },
 		Folded = { fg = palette.text, bg = groups.panel },
@@ -144,7 +141,7 @@ local function set_highlights()
 		TabLine = { fg = palette.subtle, bg = groups.panel },
 		TabLineFill = { bg = groups.panel },
 		TabLineSel = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
-		Title = adaptive_title,
+		Title = { fg = palette.foam, bold = styles.bold },
 		VertSplit = { fg = groups.border },
 		Visual = { bg = palette.highlight_med },
 		-- VisualNOS = {},
@@ -357,7 +354,7 @@ local function set_highlights()
 		["@markup.strikethrough"] = { strikethrough = true },
 		["@markup.underline"] = { underline = true },
 
-		["@markup.heading"] = adaptive_title,
+		["@markup.heading"] = { fg = palette.foam, bold = styles.bold },
 
 		["@markup.quote"] = { fg = palette.subtle },
 		["@markup.math"] = { link = "Special" },
@@ -459,7 +456,7 @@ local function set_highlights()
 		NvimTreeNormal = { link = "Normal" },
 		NvimTreeOpenedFile = { fg = palette.text, bg = palette.overlay },
 		NvimTreeOpenedFolderName = { link = "NvimTreeFolderName" },
-		NvimTreeRootFolder = adaptive_title,
+		NvimTreeRootFolder = { fg = palette.foam, bold = styles.bold },
 		NvimTreeSpecialFile = { link = "NvimTreeNormal" },
 		NvimTreeWindowPicker = { link = "StatusLineTerm" },
 
@@ -545,22 +542,22 @@ local function set_highlights()
 		NeorgHeading5Title = { link = "markdownH5" },
 		NeorgHeading6Prefix = { link = "markdownH6Delimiter" },
 		NeorgHeading6Title = { link = "markdownH6" },
-		NeorgMarkerTitle = adaptive_title,
+		NeorgMarkerTitle = { fg = palette.foam, bold = styles.bold },
 
 		-- tami5/lspsaga.nvim (fork of glepnir/lspsaga.nvim)
 		DefinitionCount = { fg = palette.rose },
 		DefinitionIcon = { fg = palette.rose },
 		DefintionPreviewTitle = { fg = palette.rose, bold = styles.bold },
-		LspFloatWinBorder = adaptive_border,
+		LspFloatWinBorder = make_border(),
 		LspFloatWinNormal = { bg = groups.panel },
 		LspSagaAutoPreview = { fg = palette.subtle },
 		LspSagaCodeActionBorder = make_border(palette.rose),
 		LspSagaCodeActionContent = { fg = palette.foam },
 		LspSagaCodeActionTitle = { fg = palette.gold, bold = styles.bold },
 		LspSagaCodeActionTruncateLine = { link = "LspSagaCodeActionBorder" },
-		LspSagaDefPreviewBorder = adaptive_border,
+		LspSagaDefPreviewBorder = make_border(),
 		LspSagaDiagnosticBorder = make_border(palette.gold),
-		LspSagaDiagnosticHeader = adaptive_title,
+		LspSagaDiagnosticHeader = { fg = palette.foam, bold = styles.bold },
 		LspSagaDiagnosticTruncateLine = { link = "LspSagaDiagnosticBorder" },
 		LspSagaDocTruncateLine = { link = "LspSagaHoverBorder" },
 		LspSagaFinderSelection = { fg = palette.gold },
@@ -597,26 +594,26 @@ local function set_highlights()
 		HopUnmatched = { fg = palette.muted },
 
 		-- nvim-telescope/telescope.nvim
-		TelescopeBorder = adaptive_border,
+		TelescopeBorder = make_border(),
 		TelescopeMatching = { fg = palette.rose },
 		TelescopeNormal = { link = "NormalFloat" },
 		TelescopePromptNormal = { link = "TelescopeNormal" },
 		TelescopePromptPrefix = { fg = palette.subtle },
 		TelescopeSelection = { fg = palette.text, bg = palette.overlay },
 		TelescopeSelectionCaret = { fg = palette.rose, bg = palette.overlay },
-		TelescopeTitle = adaptive_title,
+		TelescopeTitle = { fg = palette.foam, bold = styles.bold },
 
 		-- ibhagwan/fzf-lua
 		FzfLuaNormal = { link = "NormalFloat" },
-		FwzfLuaTitle = adaptive_title,
-		FzfLuaBorder = adaptive_border,
+		FwzfLuaTitle = { fg = palette.foam, bold = styles.bold },
+		FzfLuaBorder = make_border(),
 		FzfLuaHeaderText = { fg = palette.love },
 		FzfLuaHeaderBind = { fg = palette.rose },
 		FzfLuaBufFlagCur = { fg = palette.subtle },
 		FzfLuaBufFlagAlt = { fg = palette.subtle },
 
 		-- rcarriga/nvim-notify
-		NotifyDEBUGBorder = adaptive_border,
+		NotifyDEBUGBorder = make_border(),
 		NotifyDEBUGIcon = { link = "NotifyDEBUGTitle" },
 		NotifyDEBUGTitle = { fg = palette.muted },
 		NotifyERRORBorder = make_border(groups.error),
@@ -639,7 +636,7 @@ local function set_highlights()
 		DapUIBreakpointsLine = { link = "DapUIBreakpointsPath" },
 		DapUIBreakpointsPath = { fg = palette.foam },
 		DapUIDecoration = { link = "DapUIBreakpointsPath" },
-		DapUIFloatBorder = adaptive_border,
+		DapUIFloatBorder = make_border(),
 		DapUIFrameName = { fg = palette.text },
 		DapUILineNumber = { link = "DapUIBreakpointsPath" },
 		DapUIModifiedValue = { fg = palette.foam, bold = styles.bold },
