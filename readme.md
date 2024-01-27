@@ -18,13 +18,13 @@ Install `rose-pine/neovim` using your favourite plugin manager:
 **paq-nvim**
 
 ```lua
-{ 'rose-pine/neovim', as = 'rose-pine' }
+{ "rose-pine/neovim", as = "rose-pine" }
 ```
 
 **lazy.nvim**
 
 ```lua
-{ 'rose-pine/neovim', name = 'rose-pine' }
+{ "rose-pine/neovim", name = "rose-pine" }
 ```
 
 ## Gallery
@@ -51,7 +51,7 @@ Rosé Pine has three variants: main, moon, and dawn. By default, `vim.o.backgrou
 Colour values accept named colours from the [Rosé Pine palette](https://rosepinetheme.com/palette/ingredients/), e.g. "foam", or valid hex, e.g. "#fa8072".
 
 ```lua
-require('rose-pine').setup({
+require("rose-pine").setup({
     variant = "auto", -- auto, main, moon, or dawn
     dark_variant = "main", -- main, moon, or dawn
     dim_inactive_windows = false,
@@ -59,10 +59,8 @@ require('rose-pine').setup({
 
     enable = {
         terminal = true,
-        -- Improve compatibility for previous versions of Neovim
-        legacy_highlights = true,
-	-- Handle deprecated options automatically
-        migrations = true,
+        legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
+        migrations = true, -- Handle deprecated options automatically
     },
 
     styles = {
@@ -120,10 +118,10 @@ require('rose-pine').setup({
     end,
 })
 
-vim.cmd('colorscheme rose-pine')
--- vim.cmd('colorscheme rose-pine-main')
--- vim.cmd('colorscheme rose-pine-moon')
--- vim.cmd('colorscheme rose-pine-dawn')
+vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme rose-pine-main")
+-- vim.cmd("colorscheme rose-pine-moon")
+-- vim.cmd("colorscheme rose-pine-dawn")
 ```
 
 > [!NOTE]
