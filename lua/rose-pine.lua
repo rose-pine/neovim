@@ -202,8 +202,8 @@ local function set_highlights()
 		Macro = { fg = palette.iris },
 		Number = { fg = palette.gold },
 		Operator = { fg = palette.subtle },
-		PreConduit = { fg = palette.iris },
-		PreProc = { link = "PreConduit" },
+		PreCondit = { fg = palette.iris },
+		PreProc = { link = "PreCondit" },
 		Repeat = { fg = palette.pine },
 		Special = { fg = palette.foam },
 		SpecialChar = { link = "Special" },
@@ -547,7 +547,7 @@ local function set_highlights()
 		-- tami5/lspsaga.nvim (fork of glepnir/lspsaga.nvim)
 		DefinitionCount = { fg = palette.rose },
 		DefinitionIcon = { fg = palette.rose },
-		DefintionPreviewTitle = { fg = palette.rose, bold = styles.bold },
+		DefinitionPreviewTitle = { fg = palette.rose, bold = styles.bold },
 		LspFloatWinBorder = make_border(),
 		LspFloatWinNormal = { bg = groups.panel },
 		LspSagaAutoPreview = { fg = palette.subtle },
@@ -605,7 +605,7 @@ local function set_highlights()
 
 		-- ibhagwan/fzf-lua
 		FzfLuaNormal = { link = "NormalFloat" },
-		FwzfLuaTitle = { fg = palette.foam, bold = styles.bold },
+		FzfLuaTitle = { fg = palette.foam, bold = styles.bold },
 		FzfLuaBorder = make_border(),
 		FzfLuaHeaderText = { fg = palette.love },
 		FzfLuaHeaderBind = { fg = palette.rose },
