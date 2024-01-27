@@ -780,10 +780,10 @@ local function set_highlights()
 			end
 
 			if (highlight.inherit == nil or highlight.inherit) and existing ~= nil then
-				highlight.inherit = nil
+				parsed.inherit = nil
 				highlights[group] = vim.tbl_extend("force", existing, parsed)
 			else
-				highlight.inherit = nil
+				parsed.inherit = nil
 				highlights[group] = parsed
 			end
 		end

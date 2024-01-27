@@ -141,16 +141,13 @@ local function migrate(options)
 
 	-- Set h1 through h6 to the same color if only one is specified
 	if type(options.groups.headings) == "string" then
-		options.groups.headings = {
-			h1 = options.groups.headings,
-			h2 = options.groups.headings,
-			h3 = options.groups.headings,
-			h4 = options.groups.headings,
-			h5 = options.groups.headings,
-			h6 = options.groups.headings,
-		}
-	end
-	if type(options.groups.headings) == "table" then
+		options.groups.h1 = options.groups.headings
+		options.groups.h2 = options.groups.headings
+		options.groups.h3 = options.groups.headings
+		options.groups.h4 = options.groups.headings
+		options.groups.h5 = options.groups.headings
+		options.groups.h6 = options.groups.headings
+	elseif options.groups.headings == "table" then
 		options.groups.h1 = options.groups.headings.h1 or options.groups.h1
 		options.groups.h2 = options.groups.headings.h2 or options.groups.h2
 		options.groups.h3 = options.groups.headings.h3 or options.groups.h3
@@ -158,6 +155,7 @@ local function migrate(options)
 		options.groups.h5 = options.groups.headings.h5 or options.groups.h5
 		options.groups.h6 = options.groups.headings.h6 or options.groups.h6
 	end
+	options.groups.headings = nil
 
 	return options
 end
