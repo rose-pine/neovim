@@ -460,6 +460,26 @@ local function set_highlights()
 		NvimTreeSpecialFile = { link = "NvimTreeNormal" },
 		NvimTreeWindowPicker = { link = "StatusLineTerm" },
 
+		-- nvim-neotest/neotest
+		NeotestAdapterName = { fg = palette.iris },
+		NeotestBorder = { fg = palette.highlight_med },
+		NeotestDir = { fg = palette.foam },
+		NeotestExpandMarker = { fg = palette.highlight_med },
+		NeotestFailed = { fg = palette.love },
+		NeotestFile = { fg = palette.text },
+		NeotestFocused = { fg = palette.gold, bg = palette.highlight_med },
+		NeotestIndent = { fg = "" },
+		NeotestMarked = { fg = palette.rose, bold = styles.bold },
+		NeotestNamespace = { fg = palette.gold },
+		NeotestPassed = { fg = palette.pine },
+		NeotestRunning = { fg = palette.gold },
+		NeotestWinSelect = { fg = palette.muted },
+		NeotestSkipped = { fg = palette.subtle },
+		NeotestTarget = { fg = palette.love },
+		NeotestTest = { fg = palette.gold },
+		NeotestUnknown = { fg = palette.subtle },
+		NeotestWatching = { fg = palette.iris },
+
 		-- nvim-neo-tree/neo-tree.nvim
 		NeoTreeGitAdded = { fg = groups.git_add },
 		NeoTreeGitConflict = { fg = groups.git_merge },
