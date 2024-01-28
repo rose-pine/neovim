@@ -267,7 +267,7 @@ local function set_highlights()
 
 		--- Identifiers
 		["@variable"] = { fg = palette.text, italic = styles.italic },
-		["@variable.builtin"] = { fg = palette.text, bold = styles.bold },
+		["@variable.builtin"] = { fg = palette.love, bold = styles.bold },
 		["@variable.parameter"] = { fg = palette.iris, italic = styles.italic },
 		["@variable.member"] = { fg = palette.foam },
 
@@ -395,7 +395,7 @@ local function set_highlights()
 		["@lsp.type.namespace"] = { link = "@namespace" },
 		["@lsp.type.parameter"] = { link = "@parameter" },
 		["@lsp.type.property"] = { link = "@property" },
-		["@lsp.type.variable"] = {},
+		["@lsp.type.variable"] = { link = "@variable" },
 		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
 		["@lsp.typemod.operator.injected"] = { link = "@operator" },
 		["@lsp.typemod.string.injected"] = { link = "@string" },
