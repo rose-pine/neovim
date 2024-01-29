@@ -372,6 +372,20 @@ local function set_highlights()
 		["@markup.list.checked"] = { fg = palette.foam, bg = palette.foam, blend = 10 },
 		["@markup.list.unchecked"] = { fg = palette.text },
 
+		-- Markdown headings
+		["@markup.heading.1.markdown"] = { link = "markdownH1" },
+		["@markup.heading.2.markdown"] = { link = "markdownH2" },
+		["@markup.heading.3.markdown"] = { link = "markdownH3" },
+		["@markup.heading.4.markdown"] = { link = "markdownH4" },
+		["@markup.heading.5.markdown"] = { link = "markdownH5" },
+		["@markup.heading.6.markdown"] = { link = "markdownH6" },
+		["@markup.heading.1.marker.markdown"] = { link = "markdownH1Delimiter" },
+		["@markup.heading.2.marker.markdown"] = { link = "markdownH2Delimiter" },
+		["@markup.heading.3.marker.markdown"] = { link = "markdownH3Delimiter" },
+		["@markup.heading.4.marker.markdown"] = { link = "markdownH4Delimiter" },
+		["@markup.heading.5.marker.markdown"] = { link = "markdownH5Delimiter" },
+		["@markup.heading.6.marker.markdown"] = { link = "markdownH6Delimiter" },
+
 		["@diff.plus"] = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
 		["@diff.minus"] = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
 		["@diff.delta"] = { bg = groups.git_change, blend = 20 },
