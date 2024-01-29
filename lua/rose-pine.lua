@@ -787,6 +787,12 @@ local function set_highlights()
 	if config.options.highlight_groups ~= nil and next(config.options.highlight_groups) ~= nil then
 		for group, highlight in pairs(config.options.highlight_groups) do
 			local existing = highlights[group] or {}
+			-- Traverse link due to
+			-- "If link is used in combination with other attributes; only the link will take effect"
+			-- see: https://neovim.io/doc/user/api.html#nvim_set_hl()
+			while existing.link ~= nil do
+				existing = highlights[existing.link] or {}
+			end
 			local parsed = vim.tbl_extend("force", {}, highlight)
 
 			if highlight.fg ~= nil then
