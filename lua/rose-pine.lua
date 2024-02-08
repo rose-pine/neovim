@@ -362,11 +362,13 @@ local function set_highlights()
 		["@markup.environment.name"] = { link = "@type" },
 
 		-- ["@markup.link"] = {},
-		["@markup.link.label"] = { fg = palette.text },
+		["@markup.link.markdown_inline"] = { fg = palette.subtle },
+		["@markup.link.label.markdown_inline"] = { fg = palette.foam },
 		["@markup.link.url"] = { fg = groups.link },
 
 		-- ["@markup.raw"] = { bg = palette.surface },
 		-- ["@markup.raw.block"] = { bg = palette.surface },
+		["@markup.raw.delimiter.markdown"] = { bg = palette.subtle },
 
 		["@markup.list"] = { fg = palette.text },
 		["@markup.list.checked"] = { fg = palette.foam, bg = palette.foam, blend = 10 },
@@ -397,6 +399,7 @@ local function set_highlights()
 		--- Non-highlighting captures
 		-- ["@none"] = {},
 		["@conceal"] = { link = "Conceal" },
+		["@conceal.markdown"] = { fg = palette.subtle },
 
 		-- ["@spell"] = {},
 		-- ["@nospell"] = {},
@@ -764,6 +767,7 @@ local function set_highlights()
 		TabLineSel = { fg = palette.text, bg = "NONE", bold = styles.bold },
 
 		-- ["@markup.raw"] = { bg = "none" },
+		["@markup.raw.markdown_inline"] = { fg = palette.gold },
 		-- ["@markup.raw.block"] = { bg = "none" },
 
 		TelescopeNormal = { fg = palette.subtle, bg = "NONE" },
