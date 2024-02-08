@@ -368,7 +368,7 @@ local function set_highlights()
 
 		-- ["@markup.raw"] = { bg = palette.surface },
 		-- ["@markup.raw.block"] = { bg = palette.surface },
-		["@markup.raw.delimiter.markdown"] = { bg = palette.subtle },
+		["@markup.raw.delimiter.markdown"] = { fg = palette.subtle },
 
 		["@markup.list"] = { fg = palette.text },
 		["@markup.list.checked"] = { fg = palette.foam, bg = palette.foam, blend = 10 },
