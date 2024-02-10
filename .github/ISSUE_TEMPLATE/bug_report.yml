@@ -15,30 +15,14 @@ body:
       required: true
   - type: input
     attributes:
-      label: "Terminal"
-      placeholder: "Kitty"
+      label: "Terminal / multiplexer"
+      placeholder: "Kitty / tmux"
     validations:
       required: true
   - type: textarea
     attributes:
       label: Describe the bug
-      description: A clear and concise description of what the bug is. Please include any related errors you see in Neovim.
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Steps To Reproduce
-      description: Steps to reproduce the behavior.
-      placeholder: |
-        1.
-        2.
-        3.
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Expected Behavior
-      description: A concise description of what you expected to happen.
+      description: A clear and concise description of what the bug is. Please include screenshots if possible and any related errors you see in Neovim.
     validations:
       required: true
   - type: textarea
@@ -46,36 +30,25 @@ body:
       label: Repro
       description: Minimal `init.lua` to reproduce this issue. Save as `repro.lua` and run with `nvim -u repro.lua`
       value: |
-        -- DO NOT change the paths and do not remove the colorscheme
-        local root = vim.fn.fnamemodify("./.repro", ":p")
+        vim.o.packpath = "/tmp/nvim/site"
 
-        -- Set stdpaths to use .repro
-        for _, name in ipairs({ "config", "data", "state", "cache" }) do
-          vim.env[("XDG_%s_HOME"):format(name:upper())] = root .. "/" .. name
-        end
-
-        -- Bootstrap lazy.nvim
-        local lazypath = root .. "/plugins/lazy.nvim"
-        if not vim.loop.fs_stat(lazypath) then
-          vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", lazypath, })
-        end
-        vim.opt.runtimepath:prepend(lazypath)
-
-        -- Install plugins
         local plugins = {
-          "rose-pine/neovim",
-          name = "rose-pine",
-          config = function()
-            -- Add relevant Rosé Pine config below
-            require("rose-pine").setup({})
-          end
+          rose_pine = "https://github.com/rose-pine/neovim",
+          -- ADD OTHER PLUGINS _NECESSARY_ TO REPRODUCE THE ISSUE
         }
-        require("lazy").setup(plugins, {
-          root = root .. "/plugins",
+
+        for name, url in pairs(plugins) do
+          local install_path = "/tmp/nvim/site/pack/test/start/" .. name
+          if vim.fn.isdirectory(install_path) == 0 then
+            vim.fn.system({ "git", "clone", "--depth=1", url, install_path })
+          end
+        end
+
+        require("rose-pine").setup({
+          -- ADD ROSÉ PINE CONFIG THAT IS _NECESSARY_ TO REPRODUCE THE ISSUE
         })
 
-        vim.cmd.colorscheme("rose-pine")
-        -- Add anything else here
+        vim.cmd("colorscheme rose-pine")
       render: Lua
     validations:
       required: false

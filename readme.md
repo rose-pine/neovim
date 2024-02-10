@@ -11,27 +11,21 @@
     </a>
 </p>
 
-## Usage
+## Getting started
 
-> With [lazy.nvim](https://github.com/folke/lazy.nvim)
+Install `rose-pine/neovim` using your favourite plugin manager:
 
-```lua
-require("lazy").setup({
-	{ 'rose-pine/neovim', name = 'rose-pine' }
-})
-
-vim.cmd('colorscheme rose-pine')
-```
-
-> With [packer.nvim](https://github.com/wbthomason/packer.nvim)
+**paq-nvim**
 
 ```lua
-use({ 'rose-pine/neovim', as = 'rose-pine' })
-
-vim.cmd('colorscheme rose-pine')
+{ "rose-pine/neovim", as = "rose-pine" }
 ```
 
-_Supported plugins are listed in the [wiki](https://github.com/rose-pine/neovim/wiki#supported-plugins)_
+**lazy.nvim**
+
+```lua
+{ "rose-pine/neovim", name = "rose-pine" }
+```
 
 ## Gallery
 
@@ -49,69 +43,92 @@ _Supported plugins are listed in the [wiki](https://github.com/rose-pine/neovim/
 
 ## Options
 
-> Options should be set **before** colorscheme
+> [!IMPORTANT]
+> Configure options _before_ setting colorscheme.
 
-Variant respects `vim.o.background`, using dawn when light and `dark_variant` when dark
+Rosé Pine has three variants: main, moon, and dawn. By default, `vim.o.background` is followed, using dawn when light and `dark_variant` when dark.
+
+Colour values accept named colours from the [Rosé Pine palette](https://rosepinetheme.com/palette/ingredients/), e.g. "foam", or valid hex, e.g. "#fa8072".
 
 ```lua
-require('rose-pine').setup({
-	--- @usage 'auto'|'main'|'moon'|'dawn'
-	variant = 'auto',
-	--- @usage 'main'|'moon'|'dawn'
-	dark_variant = 'main',
-	bold_vert_split = false,
-	dim_nc_background = false,
-	disable_background = false,
-	disable_float_background = false,
-	disable_italics = false,
+require("rose-pine").setup({
+    variant = "auto", -- auto, main, moon, or dawn
+    dark_variant = "main", -- main, moon, or dawn
+    dim_inactive_windows = false,
+    extend_background_behind_borders = true,
 
-	--- @usage string hex value or named color from rosepinetheme.com/palette
-	groups = {
-		background = 'base',
-		background_nc = '_experimental_nc',
-		panel = 'surface',
-		panel_nc = 'base',
-		border = 'highlight_med',
-		comment = 'muted',
-		link = 'iris',
-		punctuation = 'subtle',
+    enable = {
+        terminal = true,
+        legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
+        migrations = true, -- Handle deprecated options automatically
+    },
 
-		error = 'love',
-		hint = 'iris',
-		info = 'foam',
-		warn = 'gold',
+    styles = {
+        bold = true,
+        italic = true,
+        transparency = false,
+    },
 
-		headings = {
-			h1 = 'iris',
-			h2 = 'foam',
-			h3 = 'rose',
-			h4 = 'gold',
-			h5 = 'pine',
-			h6 = 'foam',
-		}
-		-- or set all headings at once
-		-- headings = 'subtle'
-	},
+    groups = {
+        border = "muted",
+        link = "iris",
+        panel = "surface",
 
-	-- Change specific vim highlight groups
-	-- https://github.com/rose-pine/neovim/wiki/Recipes
-	highlight_groups = {
-		ColorColumn = { bg = 'rose' },
+        error = "love",
+        hint = "iris",
+        info = "foam",
+        note = "pine",
+        todo = "rose",
+        warn = "gold",
 
-		-- Blend colours against the "base" background
-		CursorLine = { bg = 'foam', blend = 10 },
-		StatusLine = { fg = 'love', bg = 'love', blend = 10 },
-	}
+        git_add = "foam",
+        git_change = "rose",
+        git_delete = "love",
+        git_dirty = "rose",
+        git_ignore = "muted",
+        git_merge = "iris",
+        git_rename = "pine",
+        git_stage = "iris",
+        git_text = "rose",
+        git_untracked = "subtle",
+
+        h1 = "iris",
+        h2 = "foam",
+        h3 = "rose",
+        h4 = "gold",
+        h5 = "pine",
+        h6 = "foam",
+    },
+
+    highlight_groups = {
+        -- Comment = { fg = "foam" },
+        -- VertSplit = { fg = "muted", bg = "muted" },
+    },
+
+    before_highlight = function(group, highlight, palette)
+        -- Disable all undercurls
+        -- if highlight.undercurl then
+        --     highlight.undercurl = false
+        -- end
+        --
+        -- Change palette colour
+        -- if highlight.fg == palette.pine then
+        --     highlight.fg = palette.foam
+        -- end
+    end,
 })
 
--- Set colorscheme after options
-vim.cmd('colorscheme rose-pine')
+vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme rose-pine-main")
+-- vim.cmd("colorscheme rose-pine-moon")
+-- vim.cmd("colorscheme rose-pine-dawn")
 ```
+
+> [!NOTE]
+> Visit the [wiki](https://github.com/rose-pine/neovim/wiki) for [plugin configurations](https://github.com/rose-pine/neovim/wiki/Plugin-configurations) and [recipes](https://github.com/rose-pine/neovim/wiki/Recipes).
 
 ## Contributing
 
-We welcome and appreciate any help in creating a lovely experience for all.
+We welcome and appreciate contributions of any kind. Create an issue or start a discussion for any proposed changes. Pull requests are encouraged for supporting additional plugins or [treesitter improvements](https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights).
 
-- Get highlight groups under cursor via `:Inspect` in Neovim 0.9 or [nvim-treesitter/playground](https://github.com/nvim-treesitter/playground#show-treesitter-and-syntax-highlight-groups-under-the-cursor)
-- [Adding new highlight groups](https://github.com/rose-pine/neovim/issues/6#issuecomment-962466323)
-- [Palette reference by name](https://rosepinetheme.com/palette)
+Feel free to update the [wiki](https://github.com/rose-pine/neovim/wiki/) with any [recipes](https://github.com/rose-pine/neovim/wiki/Recipes).

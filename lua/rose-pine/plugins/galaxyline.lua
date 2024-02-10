@@ -2,9 +2,9 @@
 --- https://github.com/NTBBloodbath/galaxyline.nvim
 ---
 --- @usage
---- local highlights = require('rose-pine.plugins.galaxyline')
+--- local highlights = require("rose-pine.plugins.galaxyline")
 
-local p = require('rose-pine.palette')
+local p = require("rose-pine.palette")
 
 return {
 	bg = p.surface,

@@ -1,1 +1,2 @@
-require('rose-pine').colorscheme({ variant = 'dawn' })
+package.loaded["rose-pine.palette"] = nil
+require("rose-pine").colorscheme("dawn")
