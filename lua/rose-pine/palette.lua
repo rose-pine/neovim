@@ -1,4 +1,4 @@
-local options = require('grace-rose-pine.config').options
+local options = require('rose-pine.config').options
 
 local variants = {
 	main = {

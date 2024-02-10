@@ -2,7 +2,7 @@
 --- https://github.com/akinsho/toggleterm.nvim
 ---
 --- @usage
---- local highlights = require('grace-rose-pine.plugins.toggleterm')
+--- local highlights = require('rose-pine.plugins.toggleterm')
 --- require('toggleterm').setup({ highlights = highlights })
 
 return {

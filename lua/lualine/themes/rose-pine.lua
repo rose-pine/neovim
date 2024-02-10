@@ -1,5 +1,5 @@
-local p = require('grace-rose-pine.palette')
-local blend = require('grace-rose-pine.util').blend
+local p = require('rose-pine.palette')
+local blend = require('rose-pine.util').blend
 
 local mix = 0.08
 
