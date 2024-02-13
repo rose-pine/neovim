@@ -18,13 +18,13 @@ Install `rose-pine/neovim` using your favourite plugin manager:
 **paq-nvim**
 
 ```lua
-{ 'rose-pine/neovim', as = 'rose-pine' }
+{ "rose-pine/neovim", as = "rose-pine" }
 ```
 
 **lazy.nvim**
 
 ```lua
-{ 'rose-pine/neovim', name = 'rose-pine' }
+{ "rose-pine/neovim", name = "rose-pine" }
 ```
 
 ## Gallery
@@ -51,11 +51,17 @@ Rosé Pine has three variants: main, moon, and dawn. By default, `vim.o.backgrou
 Colour values accept named colours from the [Rosé Pine palette](https://rosepinetheme.com/palette/ingredients/), e.g. "foam", or valid hex, e.g. "#fa8072".
 
 ```lua
-require('rose-pine').setup({
+require("rose-pine").setup({
     variant = "auto", -- auto, main, moon, or dawn
     dark_variant = "main", -- main, moon, or dawn
     dim_inactive_windows = false,
     extend_background_behind_borders = true,
+
+    enable = {
+        terminal = true,
+        legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
+        migrations = true, -- Handle deprecated options automatically
+    },
 
     styles = {
         bold = true,
@@ -71,6 +77,8 @@ require('rose-pine').setup({
         error = "love",
         hint = "iris",
         info = "foam",
+        note = "pine",
+        todo = "rose",
         warn = "gold",
 
         git_add = "foam",
@@ -84,16 +92,12 @@ require('rose-pine').setup({
         git_text = "rose",
         git_untracked = "subtle",
 
-        headings = {
-            h1 = "iris",
-            h2 = "foam",
-            h3 = "rose",
-            h4 = "gold",
-            h5 = "pine",
-            h6 = "foam",
-        },
-        -- Alternatively, set all headings at once.
-        -- headings = "subtle",
+        h1 = "iris",
+        h2 = "foam",
+        h3 = "rose",
+        h4 = "gold",
+        h5 = "pine",
+        h6 = "foam",
     },
 
     highlight_groups = {
@@ -114,10 +118,10 @@ require('rose-pine').setup({
     end,
 })
 
-vim.cmd('colorscheme rose-pine')
--- vim.cmd('colorscheme rose-pine-main')
--- vim.cmd('colorscheme rose-pine-moon')
--- vim.cmd('colorscheme rose-pine-dawn')
+vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme rose-pine-main")
+-- vim.cmd("colorscheme rose-pine-moon")
+-- vim.cmd("colorscheme rose-pine-dawn")
 ```
 
 > [!NOTE]
@@ -125,6 +129,6 @@ vim.cmd('colorscheme rose-pine')
 
 ## Contributing
 
-We welcome and appreciate contributions of any kind. Create an issue or start a discussion for any proposed changes. Pull requests are encouraged for supporting additional plugins.
+We welcome and appreciate contributions of any kind. Create an issue or start a discussion for any proposed changes. Pull requests are encouraged for supporting additional plugins or [treesitter improvements](https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights).
 
 Feel free to update the [wiki](https://github.com/rose-pine/neovim/wiki/) with any [recipes](https://github.com/rose-pine/neovim/wiki/Recipes).
