@@ -133,11 +133,11 @@ local function migrate(options)
 
 	-- These never actually existed, but may be set intuitively by the user
 	-- because of `disable_italics` existing.
-	options.styles.bold = (options.disable_bold or options.disable_bolds) and false or options.styles.bold
+	options.styles.bold = not (options.disable_bold or options.disable_bolds) and options.styles.bold or false
 
 	-- Similar to bold options, `disable_italic` never existed but could be a
 	-- common typo of the actual `disable_italics`.
-	options.styles.italic = (options.disable_italic or options.disable_italics) and false or options.styles.italic
+	options.styles.italic = not (options.disable_italic or options.disable_italics) and options.styles.italic or false
 
 	-- Set h1 through h6 to the same color if only one is specified
 	if type(options.groups.headings) == "string" then
