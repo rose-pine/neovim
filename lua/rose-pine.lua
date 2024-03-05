@@ -727,6 +727,11 @@ local function set_highlights()
 		-- folke/noice.nvim
 		NoiceCursor = { fg = palette.highlight_high, bg = palette.text },
 
+		-- folke/trouble.nvim
+		TroubleText = { fg = palette.subtle },
+		TroubleCount = { fg = palette.iris, bg = palette.surface },
+		TroubleNormal = { fg = palette.text, bg = groups.panel },
+
 		-- echasnovski/mini.clue
 		MiniClueTitle = { bg = groups.panel, bold = styles.bold },
 
