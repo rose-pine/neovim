@@ -743,6 +743,18 @@ local function set_highlights()
 		MiniIndentscopeSymbol = { fg = palette.muted },
 		MiniIndentscopeSymbolOff = { fg = palette.muted },
 
+		-- echasnovski/mini.statusline
+		MiniStatuslineDevinfo = { fg = palette.subtle, bg = palette.overlay },
+		MiniStatuslineFileinfo = { link = "MiniStatuslineDevinfo" },
+		MiniStatuslineFilename = { fg = palette.muted, bg = palette.surface },
+		MiniStatuslineInactive = { link = "MiniStatuslineFilename" },
+		MiniStatuslineModeCommand = { fg = palette.base, bg = palette.love, bold = styles.bold },
+		MiniStatuslineModeInsert = { fg = palette.base, bg = palette.foam, bold = styles.bold },
+		MiniStatuslineModeNormal = { fg = palette.base, bg = palette.rose, bold = styles.bold },
+		MiniStatuslineModeOther = { fg = palette.base, bg = palette.rose, bold = styles.bold },
+		MiniStatuslineModeReplace = { fg = palette.base, bg = palette.pine, bold = styles.bold },
+		MiniStatuslineModeVisual = { fg = palette.base, bg = palette.iris, bold = styles.bold },
+
 		-- goolord/alpha-nvim
 		AlphaButtons = { fg = palette.foam },
 		AlphaFooter = { fg = palette.gold },
