@@ -44,4 +44,14 @@ function utilities.blend(fg, bg, alpha)
 	return string.format("#%02X%02X%02X", blend_channel(1), blend_channel(2), blend_channel(3))
 end
 
+---@param group string
+---@param hl table<string, boolean>
+function utilities.highlight(group, hl)
+	if hl.style then
+		hl = vim.tbl_extend("force", hl, hl.style)
+		hl.style = nil
+	end
+	vim.api.nvim_set_hl(0, group, hl)
+end
+
 return utilities

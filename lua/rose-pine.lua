@@ -179,7 +179,7 @@ local function set_highlights()
 
 		Boolean = { fg = palette.rose },
 		Character = { fg = palette.gold },
-		Comment = { fg = palette.subtle, italic = styles.italic },
+		Comment = { fg = palette.subtle, style = styles.comments },
 		Conditional = { fg = palette.pine },
 		Constant = { fg = palette.gold },
 		Debug = { fg = palette.rose },
@@ -188,10 +188,10 @@ local function set_highlights()
 		Error = { fg = palette.love },
 		Exception = { fg = palette.pine },
 		Float = { fg = palette.gold },
-		Function = { fg = palette.rose },
-		Identifier = { fg = palette.text },
+		Function = { fg = palette.rose, style = styles.functions },
+		Identifier = { fg = palette.text, style = styles.variables },
 		Include = { fg = palette.pine },
-		Keyword = { fg = palette.pine },
+		Keyword = { fg = palette.pine, style = styles.keywords },
 		Label = { fg = palette.foam },
 		LspCodeLens = { fg = palette.subtle },
 		LspCodeLensSeparator = { fg = palette.muted },
@@ -266,9 +266,9 @@ local function set_highlights()
 		mkdURL = { link = "markdownUrl" },
 
 		--- Identifiers
-		["@variable"] = { fg = palette.text, italic = styles.italic },
-		["@variable.builtin"] = { fg = palette.love, bold = styles.bold },
-		["@variable.parameter"] = { fg = palette.iris, italic = styles.italic },
+		["@variable"] = { fg = palette.text, style = styles.variables },
+		["@variable.builtin"] = { fg = palette.love },
+		["@variable.parameter"] = { fg = palette.iris },
 		["@variable.member"] = { fg = palette.foam },
 
 		["@constant"] = { fg = palette.gold },
@@ -303,7 +303,7 @@ local function set_highlights()
 		-- ["@type.qualifier"] = {},
 
 		-- ["@attribute"] = {},
-		["@property"] = { fg = palette.foam, italic = styles.italic },
+		["@property"] = { fg = palette.foam, style = styles.variables },
 
 		--- Functions
 		["@function"] = { fg = palette.rose },
@@ -857,7 +857,7 @@ local function set_highlights()
 		if highlight.blend ~= nil and (highlight.blend >= 0 and highlight.blend <= 100) and highlight.bg ~= nil then
 			highlight.bg = utilities.blend(highlight.bg, highlight.blend_on or palette.base, highlight.blend / 100)
 		end
-		vim.api.nvim_set_hl(0, group, highlight)
+		utilities.highlight(group, highlight)
 	end
 
 	--- Terminal
