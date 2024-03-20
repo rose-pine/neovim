@@ -882,9 +882,13 @@ local function set_highlights()
 
 		-- Support StatusLineTerm & StatusLineTermNC from vim
 		vim.cmd([[
-		autocmd TermOpen * if &buftype=='terminal'
-			\|setlocal winhighlight=StatusLine:StatusLineTerm,StatusLineNC:StatusLineTermNC
-			\|else|setlocal winhighlight=|endif
+		augroup rose-pine
+			autocmd!
+			autocmd TermOpen * if &buftype=='terminal'
+				\|setlocal winhighlight=StatusLine:StatusLineTerm,StatusLineNC:StatusLineTermNC
+				\|else|setlocal winhighlight=|endif
+			autocmd ColorSchemePre * autocmd! rose-pine
+		augroup END
 		]])
 	end
 end
