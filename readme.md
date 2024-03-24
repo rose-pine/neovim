@@ -64,6 +64,10 @@ require("rose-pine").setup({
     },
 
     styles = {
+        comments = { italic = true },
+        functions = {},
+        keywords = { italic = true },
+        variables = {},
         bold = true,
         italic = true,
         transparency = false,
