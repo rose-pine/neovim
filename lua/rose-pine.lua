@@ -773,6 +773,10 @@ local function set_highlights()
 
 		-- github/copilot.vim
 		CopilotSuggestion = { fg = palette.muted, italic = styles.italic },
+
+		-- nvim-treesitter/nvim-treesitter-context
+		TreesitterContext = { bg = "overlay" },
+		TreesitterContextLineNumber = { fg = "rose", bg = "overlay" }
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
