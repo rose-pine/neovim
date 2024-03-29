@@ -736,6 +736,15 @@ local function set_highlights()
 		-- echasnovski/mini.clue
 		MiniClueTitle = { bg = groups.panel, bold = styles.bold },
 
+		-- echasnovski/mini.diff
+		MiniDiffOverAdd = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
+		MiniDiffOverChange = { fg = groups.git_change, bg = groups.git_change, blend = 20 },
+		MiniDiffOverContext = { bg = palette.surface },
+		MiniDiffOverDelete = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
+		MiniDiffSignAdd = { fg = groups.git_add },
+		MiniDiffSignChange = { fg = groups.git_change },
+		MiniDiffSignDelete = { fg = groups.git_delete },
+
 		-- echasnovski/mini.pick
 		MiniPickBorderText = { bg = groups.panel },
 		MiniPickPrompt = { bg = groups.panel, bold = styles.bold },
