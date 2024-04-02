@@ -816,6 +816,10 @@ local function set_highlights()
 
 		MiniPickBorderText = { bg = "NONE" },
 		MiniPickPrompt = { bg = "NONE", bold = styles.bold },
+
+		IlluminatedWordText = { link = "LspReferenceText" },
+		IlluminatedWordRead = { link = "LspReferenceRead" },
+		IlluminatedWordWrite = { link = "LspReferenceWrite" },
 	}
 
 	if config.options.enable.legacy_highlights then
