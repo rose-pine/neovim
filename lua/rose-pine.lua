@@ -410,9 +410,10 @@ local function set_highlights()
 		["@lsp.type.interface"] = { link = "@interface" },
 		["@lsp.type.keyword"] = { link = "@keyword" },
 		["@lsp.type.namespace"] = { link = "@namespace" },
+		["@lsp.type.namespace.python"] = { link = "@variable" },
 		["@lsp.type.parameter"] = { link = "@parameter" },
 		["@lsp.type.property"] = { link = "@property" },
-		["@lsp.type.variable"] = {}, --defer to treesitter for regular variables
+		["@lsp.type.variable"] = {}, -- defer to treesitter for regular variables
 		["@lsp.type.variable.svelte"] = { link = "@variable" },
 		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
 		["@lsp.typemod.operator.injected"] = { link = "@operator" },
@@ -420,7 +421,6 @@ local function set_highlights()
 		["@lsp.typemod.variable.constant"] = { link = "@constant" },
 		["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
 		["@lsp.typemod.variable.injected"] = { link = "@variable" },
-		["@lsp.type.namespace.python"] = { link = "@variable" },
 
 		--- Plugins
 		-- romgrk/barbar.nvim
@@ -778,7 +778,12 @@ local function set_highlights()
 
 		-- nvim-treesitter/nvim-treesitter-context
 		TreesitterContext = { bg = palette.overlay },
-		TreesitterContextLineNumber = { fg = palette.rose, bg = palette.overlay }
+		TreesitterContextLineNumber = { fg = palette.rose, bg = palette.overlay },
+
+		-- RRethy/vim-illuminate
+		IlluminatedWordRead = { link = "LspReferenceRead" },
+		IlluminatedWordText = { link = "LspReferenceText" },
+		IlluminatedWordWrite = { link = "LspReferenceWrite" },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
@@ -818,10 +823,6 @@ local function set_highlights()
 
 		MiniPickBorderText = { bg = "NONE" },
 		MiniPickPrompt = { bg = "NONE", bold = styles.bold },
-
-		IlluminatedWordText = { link = "LspReferenceText" },
-		IlluminatedWordRead = { link = "LspReferenceRead" },
-		IlluminatedWordWrite = { link = "LspReferenceWrite" },
 	}
 
 	if config.options.enable.legacy_highlights then
