@@ -801,6 +801,7 @@ local function set_highlights()
 		SignColumn = { fg = palette.text, bg = "NONE" },
 		StatusLine = { fg = palette.subtle, bg = "NONE" },
 		StatusLineNC = { fg = palette.muted, bg = "NONE" },
+		TabLine = { bg = "NONE", fg = palette.subtle },
 		TabLineFill = { bg = "NONE" },
 		TabLineSel = { fg = palette.text, bg = "NONE", bold = styles.bold },
 
