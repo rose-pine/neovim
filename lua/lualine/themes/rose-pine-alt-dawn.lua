@@ -1,4 +1,4 @@
-local p = require("rose-pine.variants")
+local p = require("rose-pine.variants").dawn
 
 return {
 	normal = {
