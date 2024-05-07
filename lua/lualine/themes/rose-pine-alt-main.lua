@@ -1,4 +1,4 @@
-local p = require("rose-pine.variants").main
+local p = require("rose-pine.palette").variants.main
 local generator = require("lualine.generate")
 
 return generator.alternate(p)
