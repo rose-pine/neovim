@@ -1,6 +1,8 @@
-local M = {}
+local palette = require("rose-pine.palette")
 
-function M.alternate(p)
+local generator = {}
+
+function generator.alternate(p)
 	return {
 		normal = {
 			a = { bg = p.surface, fg = p.rose, gui = "bold" },
@@ -24,10 +26,11 @@ function M.alternate(p)
 			b = { bg = p.base, fg = p.subtle },
 			c = { bg = p.base, fg = p.subtle, gui = "italic" },
 		},
+		variants = {},
 	}
 end
 
-function M.normal(p)
+function generator.normal(p)
 	local config = require("rose-pine.config")
 
 	local bg_base = p.base
@@ -44,29 +47,79 @@ function M.normal(p)
 		insert = {
 			a = { bg = p.foam, fg = p.base, gui = "bold" },
 			b = { bg = p.overlay, fg = p.foam },
-			c = { bg = bg_base, fg = p.text },
 		},
 		visual = {
 			a = { bg = p.iris, fg = p.base, gui = "bold" },
 			b = { bg = p.overlay, fg = p.iris },
-			c = { bg = bg_base, fg = p.text },
 		},
 		replace = {
 			a = { bg = p.pine, fg = p.base, gui = "bold" },
 			b = { bg = p.overlay, fg = p.pine },
-			c = { bg = bg_base, fg = p.text },
 		},
 		command = {
 			a = { bg = p.love, fg = p.base, gui = "bold" },
 			b = { bg = p.overlay, fg = p.love },
-			c = { bg = bg_base, fg = p.text },
 		},
 		inactive = {
 			a = { bg = bg_base, fg = p.muted, gui = "bold" },
 			b = { bg = bg_base, fg = p.muted },
 			c = { bg = bg_base, fg = p.muted },
 		},
+		variants = {},
 	}
 end
 
-return M
+function generator.grey(p)
+	return {
+		normal = {
+			a = { bg = p.rose, fg = p.base, gui = "bold" },
+			b = { bg = p.highlight_med, fg = p.rose },
+			c = { bg = p.highlight_high, fg = p.text },
+		},
+		insert = {
+			a = { bg = p.foam, fg = p.base, gui = "bold" },
+			b = { bg = p.highlight_med, fg = p.foam },
+		},
+		visual = {
+			a = { bg = p.iris, fg = p.base, gui = "bold" },
+			b = { bg = p.highlight_med, fg = p.iris },
+		},
+		replace = {
+			a = { bg = p.pine, fg = p.base, gui = "bold" },
+			b = { bg = p.highlight_med, fg = p.pine },
+		},
+		command = {
+			a = { bg = p.love, fg = p.base, gui = "bold" },
+			b = { bg = p.highlight_med, fg = p.love },
+		},
+		inactive = {
+			a = { bg = p.muted, fg = p.overlay, gui = "bold" },
+			b = { bg = p.muted, fg = p.overlay },
+			c = { bg = p.muted, fg = p.base },
+		},
+		variants = {}
+	}
+end
+
+function generator.inverse(p)
+	if p.base == palette.variants.moon.base then
+		return generator.normal(palette.variants.dawn)
+	elseif p.base == palette.variants.main.base then
+		return generator.normal(palette.variants.dawn)
+	elseif p.base == palette.variants.dawn.base then
+		return generator.normal(palette.variants.moon)
+	end
+end
+
+-- function generator.
+
+local default = {}
+
+for t, fn in pairs(generator) do
+	default[t] = fn(palette)
+	for k, v in pairs(palette.variants) do
+		default[t].variants[k] = fn(v)
+	end
+end
+
+return default
