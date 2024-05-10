@@ -69,7 +69,7 @@ function generator.normal(p)
 	}
 end
 
-function generator.grey(p)
+function generator.neutral(p)
 	return {
 		normal = {
 			a = { bg = p.rose, fg = p.base, gui = "bold" },
