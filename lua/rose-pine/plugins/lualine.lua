@@ -121,6 +121,8 @@ function make()
 			default[t].variants[k] = fn(v)
 		end
 	end
+
+	return default
 end
 
 return make
