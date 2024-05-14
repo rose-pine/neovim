@@ -64,10 +64,13 @@ local variants = {
 local chosen
 if variants[options.variant] ~= nil then
 	chosen = variants[options.variant]
-else
-	chosen = vim.o.background == "light" and variants.dawn or variants[options.dark_variant or "main"]
+elseif vim.o.background == "light" then
+	chosen = variants.dawn
+elseif options.dark_variant then
+	chosen = variants[options.dark_variant]
+else --fallback
+	chosen = variants.main
 end
 
 chosen.variants = variants
-
 return chosen
