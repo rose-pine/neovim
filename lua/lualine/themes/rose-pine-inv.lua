@@ -1,2 +1,2 @@
-return require("rose-pine.plugins.lualine").inverse
+return require("rose-pine.plugins.lualine")().inverse
 

@@ -112,14 +112,15 @@ function generator.inverse(p)
 end
 
 -- function generator.
+function make()
+	local default = {}
 
-local default = {}
-
-for t, fn in pairs(generator) do
-	default[t] = fn(palette)
-	for k, v in pairs(palette.variants) do
-		default[t].variants[k] = fn(v)
+	for t, fn in pairs(generator) do
+		default[t] = fn(palette)
+		for k, v in pairs(palette.variants) do
+			default[t].variants[k] = fn(v)
+		end
 	end
 end
 
-return default
+return make

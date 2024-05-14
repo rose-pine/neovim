@@ -1,1 +1,1 @@
-return require("rose-pine.plugins.lualine").alternate
+return require("rose-pine.plugins.lualine")().alternate
