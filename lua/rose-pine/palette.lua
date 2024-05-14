@@ -1,5 +1,4 @@
 local options = require("rose-pine.config").options
-
 local variants = {
 	main = {
 		_nc = "#16141f",
@@ -60,14 +59,8 @@ local variants = {
 	},
 }
 
-
-local chosen
 if variants[options.variant] ~= nil then
-	chosen = variants[options.variant]
-else
-	chosen = vim.o.background == "light" and variants.dawn or variants[options.dark_variant or "main"]
+	return variants[options.variant]
 end
 
-chosen.variants = variants
-
-return chosen
+return vim.o.background == "light" and variants.dawn or variants[options.dark_variant or "main"]
