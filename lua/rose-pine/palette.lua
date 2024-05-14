@@ -61,7 +61,7 @@ local variants = {
 }
 
 
-local chosen
+local chosen = {}
 if variants[options.variant] ~= nil then
 	chosen = variants[options.variant]
 elseif vim.o.background == "light" then

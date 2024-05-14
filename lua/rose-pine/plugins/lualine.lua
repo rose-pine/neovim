@@ -1,5 +1,3 @@
-local palette = require("rose-pine.palette")
-
 local generator = {}
 
 function generator.alternate(p)
@@ -102,6 +100,8 @@ function generator.neutral(p)
 end
 
 function generator.inverse(p)
+	-- To prevent cached import during background change
+	local palette = require("rose-pine.palette")
 	if p.base == palette.variants.moon.base then
 		return generator.normal(palette.variants.dawn)
 	elseif p.base == palette.variants.main.base then
@@ -112,9 +112,11 @@ function generator.inverse(p)
 end
 
 -- function generator.
-function make()
-	local default = {}
+local function make()
+	-- To prevent cached import during background change
+	local palette = require("rose-pine.palette")
 
+	local default = {}
 	for t, fn in pairs(generator) do
 		default[t] = fn(palette)
 		for k, v in pairs(palette.variants) do
