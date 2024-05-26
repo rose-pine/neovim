@@ -295,6 +295,7 @@ local function set_highlights()
 		["@boolean"] = { link = "Boolean" },
 		["@number"] = { link = "Number" },
 		["@number.float"] = { link = "Number" },
+		["@float"] = { link = "Number" },
 
 		--- Types
 		["@type"] = { fg = palette.foam },
