@@ -454,6 +454,7 @@ local function set_highlights()
 		ModesCopy = { bg = palette.gold },
 		ModesDelete = { bg = palette.love },
 		ModesInsert = { bg = palette.foam },
+		ModesReplace = { bg = palette.pine },
 		ModesVisual = { bg = palette.iris },
 
 		-- kyazdani42/nvim-tree.lua
