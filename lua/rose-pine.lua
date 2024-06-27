@@ -779,8 +779,8 @@ local function set_highlights()
 		MiniFilesDirectory = { link = "Directory" },
 		MiniFilesFile = { fg = palette.text },
 		MiniFilesNormal = { link = "NormalFloat" },
-		MiniFilesTitle = { link = "FloatTitle" },
-		MiniFilesTitleFocused = { fg = palette.rose, bold = styles.bold },
+		MiniFilesTitle = { bg = groups.panel, fg = palette.foam, bold = styles.bold },
+		MiniFilesTitleFocused = { bg = groups.panel, fg = palette.rose, bold = styles.bold },
 
 		MiniHipatternsFixme = { fg = palette.base, bg = groups.error, bold = styles.bold },
 		MiniHipatternsHack = { fg = palette.base, bg = groups.warn, bold = styles.bold },
