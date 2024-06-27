@@ -737,10 +737,34 @@ local function set_highlights()
 		TroubleCount = { fg = palette.iris, bg = palette.surface },
 		TroubleNormal = { fg = palette.text, bg = groups.panel },
 
-		-- echasnovski/mini.clue
+		-- echasnovski/mini.nvim
+		MiniAnimateCursor = { reverse = true, nocombine = true },
+		MiniAnimateNormalFloat = { link = "NormalFloat" },
+
+		MiniClueBorder = { link = "FloatBorder" },
+		MiniClueDescGroup = { link = "DiagnosticFloatingWarn" },
+		MiniClueDescSingle = { link = "NormalFloat" },
+		MiniClueNextKey = { link = "DiagnosticFloatingHint" },
+		MiniClueNextKeyWithPostkeys = { link = "DiagnosticFloatingError" },
+		MiniClueSeparator = { link = "DiagnosticFloatingInfo" },
 		MiniClueTitle = { bg = groups.panel, bold = styles.bold },
 
-		-- echasnovski/mini.diff
+		MiniCompletionActiveParameter = { underline = true },
+
+		MiniCursorword = { underline = true },
+		MiniCursorwordCurrent = { underline = true },
+
+		MiniDepsChangeAdded = { fg = groups.git_add },
+		MiniDepsChangeRemoved = { fg = groups.git_delete },
+		MiniDepsHint = { link = "DiagnosticHint" },
+		MiniDepsInfo = { link = "DiagnosticInfo" },
+		MiniDepsMsgBreaking = { link = "DiagnosticWarn" },
+		MiniDepsPlaceholder = { link = "Comment" },
+		MiniDepsTitle = { link = "Title" },
+		MiniDepsTitleError = { link = "DiffDelete" },
+		MiniDepsTitleSame = { link = "DiffText" },
+		MiniDepsTitleUpdate = { link = "DiffAdd" },
+
 		MiniDiffOverAdd = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
 		MiniDiffOverChange = { fg = groups.git_change, bg = groups.git_change, blend = 20 },
 		MiniDiffOverContext = { bg = palette.surface },
@@ -749,15 +773,75 @@ local function set_highlights()
 		MiniDiffSignChange = { fg = groups.git_change },
 		MiniDiffSignDelete = { fg = groups.git_delete },
 
-		-- echasnovski/mini.pick
+		MiniFilesBorder = { link = "FloatBorder" },
+		MiniFilesBorderModified = { link = "DiagnosticFloatingWarn" },
+		MiniFilesCursorLine = { link = "CursorLine" },
+		MiniFilesDirectory = { link = "Directory" },
+		MiniFilesFile = { fg = palette.text },
+		MiniFilesNormal = { link = "NormalFloat" },
+		MiniFilesTitle = { link = "FloatTitle" },
+		MiniFilesTitleFocused = { fg = palette.rose, bold = styles.bold },
+
+		MiniHipatternsFixme = { fg = palette.base, bg = groups.error, bold = styles.bold },
+		MiniHipatternsHack = { fg = palette.base, bg = groups.warn, bold = styles.bold },
+		MiniHipatternsNote = { fg = palette.base, bg = groups.info, bold = styles.bold },
+		MiniHipatternsTodo = { fg = palette.base, bg = groups.hint, bold = styles.bold },
+
+		MiniIconsAzure = { fg = palette.foam },
+		MiniIconsBlue = { fg = palette.pine },
+		MiniIconsCyan = { fg = palette.pine },
+		MiniIconsGreen = { fg = palette.foam },
+		MiniIconsGrey = { fg = palette.text },
+		MiniIconsOrange = { fg = palette.gold },
+		MiniIconsPurple = { fg = palette.iris },
+		MiniIconsRed = { fg = palette.love },
+		MiniIconsYellow = { fg = palette.gold },
+
+		MiniIndentscopeSymbol = { fg = palette.muted },
+		MiniIndentscopeSymbolOff = { fg = palette.gold },
+
+		MiniJump = { sp = palette.gold, undercurl = true },
+
+		MiniJump2dDim = { fg = palette.subtle },
+		MiniJump2dSpot = { fg = palette.gold, bold = styles.bold, nocombine = true },
+		MiniJump2dSpotAhead = { fg = palette.foam, bg = palette.surface, nocombine = true },
+		MiniJump2dSpotUnique = { fg = palette.rose, bold = styles.bold, nocombine = true },
+
+		MiniMapNormal = { link = "NormalFloat" },
+		MiniMapSymbolCount = { link = "Special" },
+		MiniMapSymbolLine = { link = "Title" },
+		MiniMapSymbolView = { link = "Delimiter" },
+
+		MiniNotifyBorder = { link = "FloatBorder" },
+		MiniNotifyNormal = { link = "NormalFloat" },
+		MiniNotifyTitle = { link = "FloatTitle" },
+
+		MiniOperatorsExchangeFrom = { link = "IncSearch" },
+
+		MiniPickBorder = { link = "FloatBorder" },
+		MiniPickBorderBusy = { link = "DiagnosticFloatingWarn" },
 		MiniPickBorderText = { bg = groups.panel },
+		MiniPickIconDirectory = { link = "Directory" },
+		MiniPickIconFile = { link = "MiniPickNormal" },
+		MiniPickHeader = { link = "DiagnosticFloatingHint" },
+		MiniPickMatchCurrent = { link = "CursorLine" },
+		MiniPickMatchMarked = { link = "Visual" },
+		MiniPickMatchRanges = { fg = palette.foam },
+		MiniPickNormal = { link = "NormalFloat" },
+		MiniPickPreviewLine = { link = "CursorLine" },
+		MiniPickPreviewRegion = { link = "IncSearch" },
 		MiniPickPrompt = { bg = groups.panel, bold = styles.bold },
 
-		-- echasnovski/mini.indentscope
-		MiniIndentscopeSymbol = { fg = palette.muted },
-		MiniIndentscopeSymbolOff = { fg = palette.muted },
+		MiniStarterCurrent = { nocombine = true },
+		MiniStarterFooter = { fg = palette.subtle },
+		MiniStarterHeader = { link = "Title" },
+		MiniStarterInactive = { link = "Comment" },
+		MiniStarterItem = { link = "Normal" },
+		MiniStarterItemBullet = { link = "Delimiter" },
+		MiniStarterItemPrefix = { link = "WarningMsg" },
+		MiniStarterSection = { fg = palette.rose },
+		MiniStarterQuery = { link = "MoreMsg" },
 
-		-- echasnovski/mini.statusline
 		MiniStatuslineDevinfo = { fg = palette.subtle, bg = palette.overlay },
 		MiniStatuslineFileinfo = { link = "MiniStatuslineDevinfo" },
 		MiniStatuslineFilename = { fg = palette.muted, bg = palette.surface },
@@ -768,6 +852,23 @@ local function set_highlights()
 		MiniStatuslineModeOther = { fg = palette.base, bg = palette.rose, bold = styles.bold },
 		MiniStatuslineModeReplace = { fg = palette.base, bg = palette.pine, bold = styles.bold },
 		MiniStatuslineModeVisual = { fg = palette.base, bg = palette.iris, bold = styles.bold },
+
+		MiniSurround = { link = "IncSearch" },
+
+		MiniTablineCurrent = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
+		MiniTablineFill = { link = "TabLineFill" },
+		MiniTablineHidden = { fg = palette.subtle, bg = groups.panel },
+		MiniTablineModifiedCurrent = { fg = palette.overlay, bg = palette.text, bold = styles.bold },
+		MiniTablineModifiedHidden = { fg = groups.panel, bg = palette.subtle },
+		MiniTablineModifiedVisible = { fg = groups.panel, bg = palette.text },
+		MiniTablineTabpagesection = { link = "Search" },
+		MiniTablineVisible = { fg = palette.text, bg = groups.panel },
+
+		MiniTestEmphasis = { bold = styles.bold },
+		MiniTestFail = { fg = palette.love, bold = styles.bold },
+		MiniTestPass = { fg = palette.foam, bold = styles.bold },
+
+		MiniTrailspace = { bg = palette.love },
 
 		-- goolord/alpha-nvim
 		AlphaButtons = { fg = palette.foam },
@@ -821,11 +922,6 @@ local function set_highlights()
 		IblIndent = { fg = palette.overlay, bg = "NONE" },
 		IblScope = { fg = palette.foam, bg = "NONE" },
 		IblWhitespace = { fg = palette.overlay, bg = "NONE" },
-
-		MiniClueTitle = { bg = "NONE", bold = styles.bold },
-
-		MiniPickBorderText = { bg = "NONE" },
-		MiniPickPrompt = { bg = "NONE", bold = styles.bold },
 	}
 
 	if config.options.enable.legacy_highlights then
