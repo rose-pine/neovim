@@ -407,6 +407,8 @@ local function set_highlights()
 
 		--- Semantic
 		["@lsp.type.comment"] = {},
+		["@lsp.type.comment.c"] = { link = "@comment" },
+		["@lsp.type.comment.cpp"] = { link = "@comment" },
 		["@lsp.type.enum"] = { link = "@type" },
 		["@lsp.type.interface"] = { link = "@interface" },
 		["@lsp.type.keyword"] = { link = "@keyword" },
