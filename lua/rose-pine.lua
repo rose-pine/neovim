@@ -76,9 +76,6 @@ local function set_highlights()
 		IndentBlanklineChar = { fg = palette.muted, nocombine = true },
 		IndentBlanklineSpaceChar = { fg = palette.muted, nocombine = true },
 		IndentBlanklineSpaceCharBlankline = { fg = palette.muted, nocombine = true },
-
-		-- folke/which-key.nvim
-		WhichKeyFloat = { bg = groups.panel },
 	}
 	local default_highlights = {
 		ColorColumn = { bg = palette.surface },
@@ -524,6 +521,7 @@ local function set_highlights()
 		WhichKey = { fg = palette.iris },
 		WhichKeyBorder = make_border(),
 		WhichKeyDesc = { fg = palette.gold },
+		WhichKeyFloat = { bg = groups.panel },
 		WhichKeyGroup = { fg = palette.foam },
 		WhichKeyNormal = { link = "NormalFloat" },
 		WhichKeySeparator = { fg = palette.subtle },
