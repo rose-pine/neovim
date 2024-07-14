@@ -525,7 +525,7 @@ local function set_highlights()
 		WhichKeyGroup = { fg = palette.foam },
 		WhichKeyNormal = { link = "NormalFloat" },
 		WhichKeySeparator = { fg = palette.subtle },
-		WhichKeyTitle = make_border(palette.foam),
+		WhichKeyTitle = { fg = palette.foam, bg = groups.panel, bold = styles.bold },
 		WhichKeyValue = { fg = palette.rose },
 
 		-- lukas-reineke/indent-blankline.nvim
