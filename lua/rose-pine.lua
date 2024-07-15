@@ -519,10 +519,13 @@ local function set_highlights()
 
 		-- folke/which-key.nvim
 		WhichKey = { fg = palette.iris },
+		WhichKeyBorder = make_border(),
 		WhichKeyDesc = { fg = palette.gold },
 		WhichKeyFloat = { bg = groups.panel },
 		WhichKeyGroup = { fg = palette.foam },
+		WhichKeyNormal = { link = "NormalFloat" },
 		WhichKeySeparator = { fg = palette.subtle },
+		WhichKeyTitle = make_border(palette.foam),
 		WhichKeyValue = { fg = palette.rose },
 
 		-- lukas-reineke/indent-blankline.nvim
@@ -920,6 +923,7 @@ local function set_highlights()
 		TelescopeSelectionCaret = { fg = palette.rose },
 
 		WhichKeyFloat = { bg = "NONE" },
+		WhichKeyNormal = { bg = "NONE" },
 
 		IblIndent = { fg = palette.overlay, bg = "NONE" },
 		IblScope = { fg = palette.foam, bg = "NONE" },
