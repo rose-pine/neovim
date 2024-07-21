@@ -908,6 +908,15 @@ local function set_highlights()
 		IlluminatedWordRead = { link = "LspReferenceRead" },
 		IlluminatedWordText = { link = "LspReferenceText" },
 		IlluminatedWordWrite = { link = "LspReferenceWrite" },
+
+		-- HiPhish/rainbow-delimiters.nvim
+		RainbowDelimiterBlue = { fg = palette.pine },
+		RainbowDelimiterCyan = { fg = palette.foam },
+		RainbowDelimiterGreen = { fg = palette.leaf },
+		RainbowDelimiterOrange = { fg = palette.rose },
+		RainbowDelimiterRed = { fg = palette.love },
+		RainbowDelimiterViolet = { fg = palette.iris },
+		RainbowDelimiterYellow = { fg = palette.gold },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
