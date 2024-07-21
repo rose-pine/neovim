@@ -44,9 +44,10 @@ config.options = {
 		error = "love",
 		hint = "iris",
 		info = "foam",
+		ok = "leaf",
+		warn = "gold",
 		note = "pine",
 		todo = "rose",
-		warn = "gold",
 
 		git_add = "foam",
 		git_change = "rose",
