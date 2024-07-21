@@ -529,7 +529,7 @@ local function set_highlights()
 		WhichKeyDesc = { fg = palette.gold },
 		WhichKeyFloat = { bg = groups.panel },
 		WhichKeyGroup = { fg = palette.foam },
-		WhichKeyIcon = { link = "Normal" },
+		WhichKeyIcon = { fg = palette.pine },
 		WhichKeyIconAzure = { fg = palette.pine },
 		WhichKeyIconBlue = { fg = palette.pine },
 		WhichKeyIconCyan = { fg = palette.foam },
