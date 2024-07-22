@@ -954,6 +954,9 @@ local function set_highlights()
 		IblIndent = { fg = palette.overlay, bg = "NONE" },
 		IblScope = { fg = palette.foam, bg = "NONE" },
 		IblWhitespace = { fg = palette.overlay, bg = "NONE" },
+
+		TreesitterContext = { bg = "NONE" },
+		TreesitterContextLineNumber = { fg = palette.rose, bg = "NONE" },
 	}
 
 	if config.options.enable.legacy_highlights then
