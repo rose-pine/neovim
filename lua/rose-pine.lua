@@ -91,7 +91,7 @@ local function set_highlights()
 		DiffAdd = { bg = groups.git_add, blend = 20 },
 		DiffChange = { bg = groups.git_change, blend = 20 },
 		DiffDelete = { bg = groups.git_delete, blend = 20 },
-		DiffText = { bg = groups.git_text, blend = 20 },
+		DiffText = { bg = groups.git_text, blend = 40 },
 		diffAdded = { link = "DiffAdd" },
 		diffChanged = { link = "DiffChange" },
 		diffRemoved = { link = "DiffDelete" },
