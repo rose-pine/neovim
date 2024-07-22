@@ -99,7 +99,7 @@ local function set_highlights()
 		-- EndOfBuffer = {},
 		ErrorMsg = { fg = groups.error, bold = styles.bold },
 		FloatBorder = make_border(),
-		FloatTitle = { link = "Directory" },
+		FloatTitle = { fg = palette.foam, bg = groups.panel, bold = styles.bold },
 		FoldColumn = { fg = palette.muted },
 		Folded = { fg = palette.text, bg = groups.panel },
 		IncSearch = { link = "CurSearch" },
@@ -800,8 +800,8 @@ local function set_highlights()
 		MiniFilesDirectory = { link = "Directory" },
 		MiniFilesFile = { fg = palette.text },
 		MiniFilesNormal = { link = "NormalFloat" },
-		MiniFilesTitle = { bg = groups.panel, fg = palette.foam, bold = styles.bold },
-		MiniFilesTitleFocused = { bg = groups.panel, fg = palette.rose, bold = styles.bold },
+		MiniFilesTitle = { link = "FloatTitle" },
+		MiniFilesTitleFocused = { fg = palette.rose, bg = groups.panel, bold = styles.bold },
 
 		MiniHipatternsFixme = { fg = palette.base, bg = groups.error, bold = styles.bold },
 		MiniHipatternsHack = { fg = palette.base, bg = groups.warn, bold = styles.bold },
@@ -926,6 +926,7 @@ local function set_highlights()
 		DiagnosticVirtualTextWarn = { fg = groups.warn },
 
 		FloatBorder = { fg = palette.muted, bg = "NONE" },
+		FloatTitle = { fg = palette.foam, bg = "NONE", bold = styles.bold },
 		Folded = { fg = palette.text, bg = "NONE" },
 		NormalFloat = { bg = "NONE" },
 		Normal = { fg = palette.text, bg = "NONE" },
@@ -957,6 +958,11 @@ local function set_highlights()
 
 		TreesitterContext = { bg = "NONE" },
 		TreesitterContextLineNumber = { fg = palette.rose, bg = "NONE" },
+
+		MiniFilesTitleFocused = { fg = palette.rose, bg = "NONE", bold = styles.bold },
+
+		MiniPickPrompt = { bg = "NONE", bold = styles.bold },
+		MiniPickBorderText = { bg = "NONE" },
 	}
 
 	if config.options.enable.legacy_highlights then
