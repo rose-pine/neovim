@@ -498,7 +498,7 @@ local function set_highlights()
 		NeotestFailed = { fg = palette.love },
 		NeotestFile = { fg = palette.text },
 		NeotestFocused = { fg = palette.gold, bg = palette.highlight_med },
-		NeotestIndent = { fg = "" },
+		NeotestIndent = { fg = palette.highlight_med },
 		NeotestMarked = { fg = palette.rose, bold = styles.bold },
 		NeotestNamespace = { fg = palette.gold },
 		NeotestPassed = { fg = palette.pine },
