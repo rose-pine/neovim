@@ -541,7 +541,7 @@ local function set_highlights()
 		WhichKeyIconYellow = { fg = palette.gold },
 		WhichKeyNormal = { link = "NormalFloat" },
 		WhichKeySeparator = { fg = palette.subtle },
-		WhichKeyTitle = make_border(palette.foam),
+		WhichKeyTitle = { link = "FloatTitle" },
 		WhichKeyValue = { fg = palette.rose },
 
 		-- lukas-reineke/indent-blankline.nvim
