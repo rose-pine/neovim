@@ -671,10 +671,11 @@ local function set_highlights()
 		FzfLuaBufFlagAlt = { fg = palette.subtle },
 		FzfLuaBufFlagCur = { fg = palette.subtle },
 		FzfLuaCursorLine = { fg = palette.text, bg = palette.overlay },
+		FzfLuaFilePart = { fg = palette.text },
 		FzfLuaHeaderBind = { fg = palette.rose },
 		FzfLuaHeaderText = { fg = palette.love },
-		FzfLuaNormal = { fg = palette.text, bg = palette.surface },
-		FzfLuaTitle = { fg = palette.foam, bg = palette.surface, bold = styles.bold },
+		FzfLuaNormal = { link = "NormalFloat" },
+		FzfLuaTitle = { link = "FloatTitle" },
 
 		-- rcarriga/nvim-notify
 		NotifyDEBUGBorder = make_border(),
