@@ -541,7 +541,7 @@ local function set_highlights()
 		WhichKeyIconYellow = { fg = palette.gold },
 		WhichKeyNormal = { link = "NormalFloat" },
 		WhichKeySeparator = { fg = palette.subtle },
-		WhichKeyTitle = make_border(palette.foam),
+		WhichKeyTitle = { link = "FloatTitle" },
 		WhichKeyValue = { fg = palette.rose },
 
 		-- lukas-reineke/indent-blankline.nvim
@@ -667,13 +667,15 @@ local function set_highlights()
 		TelescopeTitle = { fg = palette.foam, bold = styles.bold },
 
 		-- ibhagwan/fzf-lua
-		FzfLuaNormal = { link = "NormalFloat" },
-		FzfLuaTitle = { fg = palette.foam, bold = styles.bold },
 		FzfLuaBorder = make_border(),
-		FzfLuaHeaderText = { fg = palette.love },
-		FzfLuaHeaderBind = { fg = palette.rose },
-		FzfLuaBufFlagCur = { fg = palette.subtle },
 		FzfLuaBufFlagAlt = { fg = palette.subtle },
+		FzfLuaBufFlagCur = { fg = palette.subtle },
+		FzfLuaCursorLine = { fg = palette.text, bg = palette.overlay },
+		FzfLuaFilePart = { fg = palette.text },
+		FzfLuaHeaderBind = { fg = palette.rose },
+		FzfLuaHeaderText = { fg = palette.love },
+		FzfLuaNormal = { link = "NormalFloat" },
+		FzfLuaTitle = { link = "FloatTitle" },
 
 		-- rcarriga/nvim-notify
 		NotifyDEBUGBorder = make_border(),
