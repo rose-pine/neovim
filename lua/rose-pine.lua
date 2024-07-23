@@ -673,7 +673,7 @@ local function set_highlights()
 		FzfLuaCursorLine = { fg = palette.text, bg = palette.overlay },
 		FzfLuaHeaderBind = { fg = palette.rose },
 		FzfLuaHeaderText = { fg = palette.love },
-		FzfLuaNormal = { fg = palette.text },
+		FzfLuaNormal = { fg = palette.text, bg = palette.surface },
 		FzfLuaTitle = { fg = palette.foam, bg = palette.surface, bold = styles.bold },
 
 		-- rcarriga/nvim-notify
