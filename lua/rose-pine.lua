@@ -518,6 +518,10 @@ local function set_highlights()
 		NeoTreeGitModified = { fg = groups.git_dirty },
 		NeoTreeGitRenamed = { fg = groups.git_rename },
 		NeoTreeGitUntracked = { fg = groups.git_untracked },
+		NeoTreeTabActive = { fg = palette.text, bg = palette.overlay },
+		NeoTreeTabInactive = { fg = palette.subtle },
+		NeoTreeTabSeparatorActive = { link = "WinSeparator" },
+		NeoTreeTabSeparatorInactive = { link = "WinSeparator" },
 		NeoTreeTitleBar = { link = "StatusLineTerm" },
 
 		-- folke/flash.nvim
