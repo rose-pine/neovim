@@ -66,7 +66,7 @@ config.options = {
 		h3 = "rose",
 		h4 = "gold",
 		h5 = "pine",
-		h6 = "foam",
+		h6 = "leaf",
 
 		---@deprecated Replaced by `options.highlight_groups["Normal"]`
 		-- background = "base",
