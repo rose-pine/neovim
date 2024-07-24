@@ -363,7 +363,7 @@ local function set_highlights()
 
 		["@markup.heading"] = { fg = palette.foam, bold = styles.bold },
 
-		["@markup.quote"] = { fg = palette.subtle },
+		["@markup.quote"] = { fg = palette.text },
 		["@markup.math"] = { link = "Special" },
 		["@markup.environment"] = { link = "Macro" },
 		["@markup.environment.name"] = { link = "@type" },
@@ -925,9 +925,9 @@ local function set_highlights()
 		RainbowDelimiterYellow = { fg = palette.gold },
 
 		-- MeanderingProgrammer/markdown.nvim
-		RenderMarkdownBullet = { fg = palette.subtle },
+		RenderMarkdownBullet = { fg = palette.rose },
 		RenderMarkdownChecked = { fg = palette.foam },
-		RenderMarkdownCode = { bg = palette.surface },
+		RenderMarkdownCode = { bg = palette.overlay },
 		RenderMarkdownCodeInline = { fg = palette.text, bg = palette.overlay },
 		RenderMarkdownDash = { fg = palette.muted },
 		RenderMarkdownH1Bg = { bg = palette.iris, blend = 20 },
@@ -936,10 +936,11 @@ local function set_highlights()
 		RenderMarkdownH4Bg = { bg = palette.gold, blend = 20 },
 		RenderMarkdownH5Bg = { bg = palette.pine, blend = 20 },
 		RenderMarkdownH6Bg = { bg = palette.leaf, blend = 20 },
+		RenderMarkdownQuote = { fg = palette.subtle },
 		RenderMarkdownTableFill = { link = "Conceal" },
 		RenderMarkdownTableHead = { fg = palette.subtle },
 		RenderMarkdownTableRow = { fg = palette.subtle },
-		RenderMarkdownUnchecked = { link = "Normal" },
+		RenderMarkdownUnchecked = { fg = palette.subtle },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
