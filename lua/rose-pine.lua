@@ -377,7 +377,7 @@ local function set_highlights()
 		-- ["@markup.raw.block"] = { bg = palette.surface },
 		["@markup.raw.delimiter.markdown"] = { fg = palette.subtle },
 
-		["@markup.list"] = { fg = palette.text },
+		["@markup.list"] = { fg = palette.pine },
 		["@markup.list.checked"] = { fg = palette.foam, bg = palette.foam, blend = 10 },
 		["@markup.list.unchecked"] = { fg = palette.text },
 
@@ -923,6 +923,23 @@ local function set_highlights()
 		RainbowDelimiterRed = { fg = palette.love },
 		RainbowDelimiterViolet = { fg = palette.iris },
 		RainbowDelimiterYellow = { fg = palette.gold },
+
+		-- MeanderingProgrammer/markdown.nvim
+		RenderMarkdownBullet = { fg = palette.subtle },
+		RenderMarkdownChecked = { fg = palette.foam },
+		RenderMarkdownCode = { bg = palette.surface },
+		RenderMarkdownCodeInline = { fg = palette.text, bg = palette.overlay },
+		RenderMarkdownDash = { fg = palette.muted },
+		RenderMarkdownH1Bg = { bg = palette.iris, blend = 20 },
+		RenderMarkdownH2Bg = { bg = palette.foam, blend = 20 },
+		RenderMarkdownH3Bg = { bg = palette.rose, blend = 20 },
+		RenderMarkdownH4Bg = { bg = palette.gold, blend = 20 },
+		RenderMarkdownH5Bg = { bg = palette.pine, blend = 20 },
+		RenderMarkdownH6Bg = { bg = palette.leaf, blend = 20 },
+		RenderMarkdownTableFill = { link = "Conceal" },
+		RenderMarkdownTableHead = { fg = palette.subtle },
+		RenderMarkdownTableRow = { fg = palette.subtle },
+		RenderMarkdownUnchecked = { link = "Normal" },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
