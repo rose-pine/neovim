@@ -363,7 +363,7 @@ local function set_highlights()
 
 		["@markup.heading"] = { fg = palette.foam, bold = styles.bold },
 
-		["@markup.quote"] = { fg = palette.subtle },
+		["@markup.quote"] = { fg = palette.text },
 		["@markup.math"] = { link = "Special" },
 		["@markup.environment"] = { link = "Macro" },
 		["@markup.environment.name"] = { link = "@type" },
@@ -377,7 +377,7 @@ local function set_highlights()
 		-- ["@markup.raw.block"] = { bg = palette.surface },
 		["@markup.raw.delimiter.markdown"] = { fg = palette.subtle },
 
-		["@markup.list"] = { fg = palette.text },
+		["@markup.list"] = { fg = palette.pine },
 		["@markup.list.checked"] = { fg = palette.foam, bg = palette.foam, blend = 10 },
 		["@markup.list.unchecked"] = { fg = palette.text },
 
@@ -923,6 +923,24 @@ local function set_highlights()
 		RainbowDelimiterRed = { fg = palette.love },
 		RainbowDelimiterViolet = { fg = palette.iris },
 		RainbowDelimiterYellow = { fg = palette.gold },
+
+		-- MeanderingProgrammer/markdown.nvim
+		RenderMarkdownBullet = { fg = palette.rose },
+		RenderMarkdownChecked = { fg = palette.foam },
+		RenderMarkdownCode = { bg = palette.overlay },
+		RenderMarkdownCodeInline = { fg = palette.text, bg = palette.overlay },
+		RenderMarkdownDash = { fg = palette.muted },
+		RenderMarkdownH1Bg = { bg = groups.h1, blend = 20 },
+		RenderMarkdownH2Bg = { bg = groups.h2, blend = 20 },
+		RenderMarkdownH3Bg = { bg = groups.h3, blend = 20 },
+		RenderMarkdownH4Bg = { bg = groups.h4, blend = 20 },
+		RenderMarkdownH5Bg = { bg = groups.h5, blend = 20 },
+		RenderMarkdownH6Bg = { bg = groups.h6, blend = 20 },
+		RenderMarkdownQuote = { fg = palette.subtle },
+		RenderMarkdownTableFill = { link = "Conceal" },
+		RenderMarkdownTableHead = { fg = palette.subtle },
+		RenderMarkdownTableRow = { fg = palette.subtle },
+		RenderMarkdownUnchecked = { fg = palette.subtle },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
