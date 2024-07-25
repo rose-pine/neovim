@@ -954,7 +954,7 @@ local function set_highlights()
 		GrugFarResultsActionMessage = { fg = palette.foam },
 		GrugFarResultsChangeIndicator = { fg = groups.git_change },
 		GrugFarResultsHeader = { fg = palette.pine },
-		GrugFarResultsMatch = { link = "Search" },
+		GrugFarResultsMatch = { link = "CurSearch" },
 		GrugFarResultsPath = { fg = palette.foam },
 		GrugFarResultsStats = { fg = palette.iris },
 	}
