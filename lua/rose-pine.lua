@@ -126,7 +126,7 @@ local function set_highlights()
 		RedrawDebugClear = { fg = palette.base, bg = palette.gold },
 		RedrawDebugComposed = { fg = palette.base, bg = palette.pine },
 		RedrawDebugRecompose = { fg = palette.base, bg = palette.love },
-		Search = { fg = palette.base, bg = palette.text },
+		Search = { fg = palette.base, bg = palette.rose },
 		SignColumn = { fg = palette.text, bg = "NONE" },
 		SpecialKey = { fg = palette.foam },
 		SpellBad = { sp = palette.subtle, undercurl = true },
@@ -941,6 +941,22 @@ local function set_highlights()
 		RenderMarkdownTableHead = { fg = palette.subtle },
 		RenderMarkdownTableRow = { fg = palette.subtle },
 		RenderMarkdownUnchecked = { fg = palette.subtle },
+
+		-- MagicDuck/grug-far.nvim
+		GrugFarHelpHeader = { fg = palette.pine },
+		GrugFarHelpHeaderKey = { fg = palette.gold },
+		GrugFarHelpWinActionKey = { fg = palette.gold },
+		GrugFarHelpWinActionPrefix = { fg = palette.foam },
+		GrugFarHelpWinActionText = { fg = palette.pine },
+		GrugFarHelpWinHeader = { link = "FloatTitle" },
+		GrugFarInputLabel = { fg = palette.foam },
+		GrugFarInputPlaceholder = { link = "Comment" },
+		GrugFarResultsActionMessage = { fg = palette.foam },
+		GrugFarResultsChangeIndicator = { fg = groups.git_change },
+		GrugFarResultsHeader = { fg = palette.pine },
+		GrugFarResultsMatch = { link = "Search" },
+		GrugFarResultsPath = { fg = palette.foam },
+		GrugFarResultsStats = { fg = palette.iris },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
