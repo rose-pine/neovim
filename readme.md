@@ -106,8 +106,6 @@ require("rose-pine").setup({
         --     base = '#18191a',
         --     overlay = '#363738',
         -- },
-	--
-	-- use "all" instead of variant name to override colors in all variants
     },
 
     highlight_groups = {

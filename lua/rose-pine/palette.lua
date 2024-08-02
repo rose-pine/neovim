@@ -63,13 +63,6 @@ local variants = {
 }
 
 if options.palette ~= nil and next(options.palette) then
-	-- handle override of all variants if defined in config
-	if options.palette["all"] then
-		for variant_name in pairs(variants) do
-			variants[variant_name] = vim.tbl_extend("force", variants[variant_name], options.palette["all"])
-		end
-	end
-
 	-- handle variant specific overrides
 	for variant_name, override_palette in pairs(options.palette) do
 		-- ignore pseudo variant all as is was allready handeld
