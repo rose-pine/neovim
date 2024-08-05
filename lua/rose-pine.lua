@@ -924,7 +924,7 @@ local function set_highlights()
 		RainbowDelimiterViolet = { fg = palette.iris },
 		RainbowDelimiterYellow = { fg = palette.gold },
 
-		-- MeanderingProgrammer/markdown.nvim
+		-- MeanderingProgrammer/render-markdown.nvim
 		RenderMarkdownBullet = { fg = palette.rose },
 		RenderMarkdownChecked = { fg = palette.foam },
 		RenderMarkdownCode = { bg = palette.overlay },
