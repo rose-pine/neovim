@@ -35,6 +35,9 @@ config.options = {
 		transparency = false,
 	},
 
+	---@type table<string, table<string, string>>
+	palette = {},
+
 	---@type table<string, string | PaletteColor>
 	groups = {
 		border = "muted",
