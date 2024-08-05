@@ -697,7 +697,7 @@ local function set_highlights()
 		NotifyWARNBorder = make_border(groups.warn),
 		NotifyWARNIcon = { link = "NotifyWARNTitle" },
 		NotifyWARNTitle = { fg = groups.warn },
-
+		NotifyBackground = { bg = palette.surface },
 		-- rcarriga/nvim-dap-ui
 		DapUIBreakpointsCurrentLine = { fg = palette.gold, bold = styles.bold },
 		DapUIBreakpointsDisabledLine = { fg = palette.muted },
