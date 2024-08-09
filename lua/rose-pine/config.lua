@@ -44,9 +44,10 @@ config.options = {
 		error = "love",
 		hint = "iris",
 		info = "foam",
+		ok = "leaf",
+		warn = "gold",
 		note = "pine",
 		todo = "rose",
-		warn = "gold",
 
 		git_add = "foam",
 		git_change = "rose",
@@ -65,7 +66,7 @@ config.options = {
 		h3 = "rose",
 		h4 = "gold",
 		h5 = "pine",
-		h6 = "foam",
+		h6 = "leaf",
 
 		---@deprecated Replaced by `options.highlight_groups["Normal"]`
 		-- background = "base",
