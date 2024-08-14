@@ -100,8 +100,8 @@ require("rose-pine").setup({
         h6 = "foam",
     },
 
-    pallet = {
-        -- override (or append) default color palette of specified variants
+    pallete = {
+        -- Override the builtin palette per variant
         -- moon = {
         --     base = '#18191a',
         --     overlay = '#363738',
