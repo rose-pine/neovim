@@ -959,6 +959,14 @@ local function set_highlights()
 		GrugFarResultsMatch = { link = "CurSearch" },
 		GrugFarResultsPath = { fg = palette.foam },
 		GrugFarResultsStats = { fg = palette.iris },
+
+		-- yetone/avante.nvim
+		AvanteTitle = { fg = pallete.highlight_high, bg = pallete.rose },
+		AvanteReversedTitle = { fg = pallete.rose },
+		AvanteSubtitle = { fg = pallete.text, bg = pallete.foam },
+		AvanteReversedSubtitle = { fg = pallete.foam },
+		AvanteThirdTitle = { fg = pallete.highlight_med, bg = pallete.iris },
+		AvanteReversedThirdTitle = { fg = pallete.iris },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
