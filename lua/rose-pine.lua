@@ -999,6 +999,8 @@ local function set_highlights()
 		TelescopeSelection = { fg = palette.text, bg = "NONE", bold = styles.bold },
 		TelescopeSelectionCaret = { fg = palette.rose },
 
+		TroubleNormal = { bg = "NONE" },
+
 		WhichKeyFloat = { bg = "NONE" },
 		WhichKeyNormal = { bg = "NONE" },
 
