@@ -963,7 +963,7 @@ local function set_highlights()
 		-- yetone/avante.nvim
 		AvanteTitle = { fg = pallete.highlight_high, bg = pallete.rose },
 		AvanteReversedTitle = { fg = pallete.rose },
-		AvanteSubtitle = { fg = pallete.text, bg = pallete.foam },
+		AvanteSubtitle = { fg = pallete.highlight_med, bg = pallete.foam },
 		AvanteReversedSubtitle = { fg = pallete.foam },
 		AvanteThirdTitle = { fg = pallete.highlight_med, bg = pallete.iris },
 		AvanteReversedThirdTitle = { fg = pallete.iris },
