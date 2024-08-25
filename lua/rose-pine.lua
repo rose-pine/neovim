@@ -961,12 +961,12 @@ local function set_highlights()
 		GrugFarResultsStats = { fg = palette.iris },
 
 		-- yetone/avante.nvim
-		AvanteTitle = { fg = pallete.highlight_high, bg = pallete.rose },
-		AvanteReversedTitle = { fg = pallete.rose },
-		AvanteSubtitle = { fg = pallete.highlight_med, bg = pallete.foam },
-		AvanteReversedSubtitle = { fg = pallete.foam },
-		AvanteThirdTitle = { fg = pallete.highlight_med, bg = pallete.iris },
-		AvanteReversedThirdTitle = { fg = pallete.iris },
+		AvanteTitle = { fg = palette.highlight_high, bg = palette.rose },
+		AvanteReversedTitle = { fg = palette.rose },
+		AvanteSubtitle = { fg = palette.highlight_med, bg = palette.foam },
+		AvanteReversedSubtitle = { fg = palette.foam },
+		AvanteThirdTitle = { fg = palette.highlight_med, bg = palette.iris },
+		AvanteReversedThirdTitle = { fg = palette.iris },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
