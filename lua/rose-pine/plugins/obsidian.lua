@@ -1,9 +1,9 @@
---- Rosé Pine for toggleterm
+--- Rosé Pine for Obsidian(epwalsh)
 --- https://github.com/epwalsh/obsidian.nvim
 ---
 --- @usage
 --- local highlights = require("rose-pine.plugins.obsidian")
---- require("obsidian").setup({ highlights = highlights })
+--- require("obsidian").setup({ ui = {hl_groups = highlights} })
 
 local p = require("rose-pine.palette")
 
