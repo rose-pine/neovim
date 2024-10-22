@@ -554,10 +554,6 @@ local function set_highlights()
 		IblWhitespace = { fg = palette.overlay },
 
 
-		-- epwalsh/obsidian.nvim
-		ObsidianBullet = { fg = palette.muted },
-		ObsidianRefText = { underline = true, fg = palette.iris },
-		ObsidianDone = { bold = true, fg = palette.foam },
 
 		-- hrsh7th/nvim-cmp
 		CmpItemAbbr = { fg = palette.subtle },
