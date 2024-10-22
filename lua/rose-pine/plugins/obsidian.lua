@@ -6,7 +6,9 @@
 --- require("obsidian").setup({ highlights = highlights })
 
 return {
-	ObsidianBullet = { fg = "muted" },
-	ObsidianRefText = { underline = true, fg = "iris" },
-	ObsidianDone = { bold = true, fg = "foam" }
+	hl_groups = {
+		ObsidianBullet = { fg = "muted" },
+		ObsidianRefText = { underline = true, fg = "iris" },
+		ObsidianDone = { bold = true, fg = "foam" }
+	}
 }
