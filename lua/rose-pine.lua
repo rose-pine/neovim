@@ -553,8 +553,6 @@ local function set_highlights()
 		IblScope = { fg = palette.foam },
 		IblWhitespace = { fg = palette.overlay },
 
-
-
 		-- hrsh7th/nvim-cmp
 		CmpItemAbbr = { fg = palette.subtle },
 		CmpItemAbbrDeprecated = { fg = palette.subtle, strikethrough = true },
