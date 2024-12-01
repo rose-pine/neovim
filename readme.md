@@ -26,6 +26,18 @@ Install `rose-pine/neovim` using your favourite plugin manager:
 ```lua
 { "rose-pine/neovim", name = "rose-pine" }
 ```
+If you use "Structured Setup":
+
+```lua
+--plugins/rose-pine.lua
+return { 
+	"rose-pine/neovim", 
+	name = "rose-pine",
+	config = function()
+		vim.cmd("colorscheme rose-pine")
+	end
+}
+```
 
 ## Gallery
 
