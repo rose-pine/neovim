@@ -725,6 +725,12 @@ local function set_highlights()
 		DashboardHeader = { fg = palette.pine },
 		DashboardShortcut = { fg = palette.love },
 
+		-- folke/snacks.nvim
+		SnacksDashboardDesc = { fg = palette.love },
+		SnacksDashboardHeader = { fg = palette.pine },
+		SnacksDashboardIcon = { fg = palette.love },
+		SnacksDashboardFooter = { fg = palette.iris, italic = styles.italic },
+
 		-- SmiteshP/nvim-navic
 		NavicIconsArray = { fg = palette.gold },
 		NavicIconsBoolean = { fg = palette.rose },
