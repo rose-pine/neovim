@@ -726,10 +726,17 @@ local function set_highlights()
 		DashboardShortcut = { fg = palette.love },
 
 		-- folke/snacks.nvim
-		SnacksDashboardDesc = { fg = palette.love },
-		SnacksDashboardHeader = { fg = palette.pine },
-		SnacksDashboardIcon = { fg = palette.love },
+		SnacksDashboardNormal = { fg = palette.text },
+		SnacksDashboardDesc = { fg = palette.pine },
+		SnacksDashboardFile = { fg = palette.lavender },
+		SnacksDashboardDir = { link = "NonText" },
 		SnacksDashboardFooter = { fg = palette.iris, italic = styles.italic },
+		SnacksDashboardHeader = { fg = palette.love },
+		SnacksDashboardIcon = { fg = palette.pine, bold = styles.bold },
+		SnacksDashboardKey = { fg = palette.gold },
+		SnacksDashboardTerminal = { link = "SnacksDashboardNormal" },
+		SnacksDashboardSpecial = { link = "Special" },
+		SnacksDashboardTitle = { link = "Title" },
 
 		-- SmiteshP/nvim-navic
 		NavicIconsArray = { fg = palette.gold },
