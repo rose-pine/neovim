@@ -565,6 +565,16 @@ local function set_highlights()
 		CmpItemKindMethod = { link = "PreProc" },
 		CmpItemKindSnippet = { link = "String" },
 		CmpItemKindVariable = { link = "Identifier" },
+		CmpItemMenu = { fg = palette.text },
+
+		CmpItemKindKeyword = { link = "Keyword" },
+		CmpItemKindText = { fg = palette.text },
+		CmpItemKindConstructor = { link = "@constructor" },
+		CmpItemKindFolder = { link = "NvimTreeFolderIcon" },
+		CmpItemKindModule = { link = "@module" },
+		CmpItemKindConstant = { link = "Constant" },
+		CmpItemKindProperty = { link = "@property" },
+		CmpItemKindEnum = { link = "@lsp.type.enum" },
 
 		-- NeogitOrg/neogit
 		-- https://github.com/NeogitOrg/neogit/blob/master/lua/neogit/lib/hl.lua#L109-L198
