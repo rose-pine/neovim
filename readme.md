@@ -13,15 +13,30 @@
 
 ## Getting started
 
-Install `rose-pine/neovim` using your favourite plugin manager:
+Install `rose-pine/neovim` using your favourite package manager:
 
-**paq-nvim**
+### [pam.nvim](https://github.com/mvllow/pam.nvim)
 
 ```lua
-{ "rose-pine/neovim", as = "rose-pine" }
+{ source = "rose-pine/neovim", as = "rose-pine" }
 ```
 
-**lazy.nvim**
+### [lazy.nvim](https://lazy.folke.io/installation)
+
+**Structured Setup**
+
+```lua
+-- lua/plugins/rose-pine.lua
+return { 
+	"rose-pine/neovim", 
+	name = "rose-pine",
+	config = function()
+		vim.cmd("colorscheme rose-pine")
+	end
+}
+```
+
+**Single file**
 
 ```lua
 { "rose-pine/neovim", name = "rose-pine" }
