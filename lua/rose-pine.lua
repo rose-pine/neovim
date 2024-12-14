@@ -720,10 +720,18 @@ local function set_highlights()
 		DapUIWatchesValue = { link = "DapUIThread" },
 
 		-- glepnir/dashboard-nvim
-		DashboardCenter = { fg = palette.gold },
-		DashboardFooter = { fg = palette.iris },
+		DashboardDesc = { fg = palette.foam },
+		DashboardFiles = { fg = palette.iris },
+		DashboardFooter = { fg = palette.iris, italic = styles.italic },
 		DashboardHeader = { fg = palette.pine },
-		DashboardShortcut = { fg = palette.love },
+		DashboardIcon = { fg = palette.rose },
+		DashboardKey = { fg = palette.gold },
+		DashboardMruIcon = { fg = palette.foam },
+		DashboardMruTitle = { fg = palette.foam },
+		DashboardProjectIcon = { link = "DashboardIcon" },
+		DashboardProjectTitle = { fg = palette.foam },
+		DashboardShortcut = { fg = palette.gold },
+		DashboardShortcutIcon = { link = "DashboardIcon" },
 
 		-- SmiteshP/nvim-navic
 		NavicIconsArray = { fg = palette.gold },
