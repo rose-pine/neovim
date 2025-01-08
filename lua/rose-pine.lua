@@ -143,7 +143,7 @@ local function set_highlights()
 		TabLineSel = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
 		Title = { fg = palette.foam, bold = styles.bold },
 		VertSplit = { fg = groups.border },
-		Visual = { bg = palette.highlight_med },
+		Visual = { bg = palette.iris, blend = 15 },
 		-- VisualNOS = {},
 		WarningMsg = { fg = groups.warn, bold = styles.bold },
 		-- Whitespace = {},
