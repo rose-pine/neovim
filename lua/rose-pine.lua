@@ -683,23 +683,23 @@ local function set_highlights()
 
 		-- rcarriga/nvim-notify
 		NotifyBackground = { link = "NormalFloat" },
-		NotifyDEBUGBody = { link = 'NormalFloat' },
+		NotifyDEBUGBody = { link = "NormalFloat" },
 		NotifyDEBUGBorder = make_border(),
 		NotifyDEBUGIcon = { link = "NotifyDEBUGTitle" },
 		NotifyDEBUGTitle = { fg = palette.muted },
-		NotifyERRORBody = { link = 'NormalFloat' },
+		NotifyERRORBody = { link = "NormalFloat" },
 		NotifyERRORBorder = make_border(groups.error),
 		NotifyERRORIcon = { link = "NotifyERRORTitle" },
 		NotifyERRORTitle = { fg = groups.error },
-		NotifyINFOBody = { link = 'NormalFloat' },
+		NotifyINFOBody = { link = "NormalFloat" },
 		NotifyINFOBorder = make_border(groups.info),
 		NotifyINFOIcon = { link = "NotifyINFOTitle" },
 		NotifyINFOTitle = { fg = groups.info },
-		NotifyTRACEBody = { link = 'NormalFloat' },
+		NotifyTRACEBody = { link = "NormalFloat" },
 		NotifyTRACEBorder = make_border(palette.iris),
 		NotifyTRACEIcon = { link = "NotifyTRACETitle" },
 		NotifyTRACETitle = { fg = palette.iris },
-		NotifyWARNBody = { link = 'NormalFloat' },
+		NotifyWARNBody = { link = "NormalFloat" },
 		NotifyWARNBorder = make_border(groups.warn),
 		NotifyWARNIcon = { link = "NotifyWARNTitle" },
 		NotifyWARNTitle = { fg = groups.warn },
@@ -1013,6 +1013,12 @@ local function set_highlights()
 		BlinkCmpKindCopilot = { fg = palette.foam },
 		BlinkCmpKindSupermaven = { fg = palette.foam },
 		BlinkCmpKindTabNine = { fg = palette.foam },
+
+		-- folke/snacks.nvim
+		SnacksIndent = { fg = palette.overlay },
+		SnacksIndentChunk = { fg = palette.overlay },
+		SnacksIndentBlank = { fg = palette.overlay },
+		SnacksIndentScope = { fg = palette.foam },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
