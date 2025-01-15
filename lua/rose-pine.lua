@@ -1019,6 +1019,8 @@ local function set_highlights()
 		SnacksIndentChunk = { fg = palette.overlay },
 		SnacksIndentBlank = { fg = palette.overlay },
 		SnacksIndentScope = { fg = palette.foam },
+
+		SnacksPickerMatch = { fg = palette.rose, bold = styles.bold },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
