@@ -78,6 +78,9 @@ local function set_highlights()
 		IndentBlanklineSpaceCharBlankline = { fg = palette.muted, nocombine = true },
 	}
 	local default_highlights = {
+		-- Trouble.nvim highlights
+		TroubleBasename = { fg = palette.gold, bold = styles.bold },
+
 		ColorColumn = { bg = palette.surface },
 		Conceal = { bg = "NONE" },
 		CurSearch = { fg = palette.base, bg = palette.gold },
