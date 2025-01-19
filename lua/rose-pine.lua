@@ -80,6 +80,7 @@ local function set_highlights()
 	local default_highlights = {
 		-- Trouble.nvim highlights
 		TroubleBasename = { fg = palette.gold, bold = styles.bold },
+		TroubleCode = { fg = palette.gold, bold = styles.bold },
 
 		ColorColumn = { bg = palette.surface },
 		Conceal = { bg = "NONE" },
