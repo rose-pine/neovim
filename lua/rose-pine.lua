@@ -272,7 +272,7 @@ local function set_highlights()
 		mkdURL = { link = "markdownUrl" },
 
 		--- Identifiers
-		["@variable"] = { fg = palette.text, italic = styles.italic },
+		["@variable"] = { fg = palette.text },
 		["@variable.builtin"] = { fg = palette.love, bold = styles.bold },
 		["@variable.parameter"] = { fg = palette.iris, italic = styles.italic },
 		["@variable.member"] = { fg = palette.foam },
