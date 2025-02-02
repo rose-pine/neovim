@@ -451,9 +451,9 @@ local function set_highlights()
 		BufferVisibleTarget = { fg = palette.gold },
 
 		-- lewis6991/gitsigns.nvim
-		GitSignsAdd = { link = "SignAdd" },
-		GitSignsChange = { link = "SignChange" },
-		GitSignsDelete = { link = "SignDelete" },
+		GitSignsAdd = { fg = groups.git_add, bg = "NONE" },
+		GitSignsChange = { fg = groups.git_change, bg = "NONE" },
+		GitSignsDelete = { fg = groups.git_delete, bg = "NONE" },
 		SignAdd = { fg = groups.git_add, bg = "NONE" },
 		SignChange = { fg = groups.git_change, bg = "NONE" },
 		SignDelete = { fg = groups.git_delete, bg = "NONE" },
