@@ -271,7 +271,8 @@ local function set_highlights()
 		mkdRule = { fg = palette.subtle },
 		mkdURL = { link = "markdownUrl" },
 
-		--- Identifiers
+		--- Treesitter
+		--- |:help treesitter-highlight-groups|
 		["@variable"] = { fg = palette.text, italic = styles.italic },
 		["@variable.builtin"] = { fg = palette.love, bold = styles.bold },
 		["@variable.parameter"] = { fg = palette.iris, italic = styles.italic },
@@ -285,7 +286,6 @@ local function set_highlights()
 		["@module.builtin"] = { fg = palette.text, bold = styles.bold },
 		["@label"] = { link = "Label" },
 
-		--- Literals
 		["@string"] = { link = "String" },
 		-- ["@string.documentation"] = {},
 		["@string.regexp"] = { fg = palette.iris },
@@ -303,27 +303,24 @@ local function set_highlights()
 		["@number.float"] = { link = "Number" },
 		["@float"] = { link = "Number" },
 
-		--- Types
 		["@type"] = { fg = palette.foam },
 		["@type.builtin"] = { fg = palette.foam, bold = styles.bold },
 		-- ["@type.definition"] = {},
-		-- ["@type.qualifier"] = {},
 
 		-- ["@attribute"] = {},
 		["@property"] = { fg = palette.foam, italic = styles.italic },
 
-		--- Functions
 		["@function"] = { fg = palette.rose },
 		["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
 		-- ["@function.call"] = {},
 		["@function.macro"] = { link = "Function" },
+
 		["@function.method"] = { fg = palette.rose },
 		["@function.method.call"] = { fg = palette.iris },
 
 		["@constructor"] = { fg = palette.foam },
 		["@operator"] = { link = "Operator" },
 
-		--- Keywords
 		["@keyword"] = { link = "Keyword" },
 		-- ["@keyword.coroutine"] = {},
 		-- ["@keyword.function"] = {},
@@ -334,8 +331,10 @@ local function set_highlights()
 		["@keyword.return"] = { fg = palette.pine },
 		["@keyword.debug"] = { fg = palette.rose },
 		["@keyword.exception"] = { fg = palette.pine },
+
 		["@keyword.conditional"] = { fg = palette.pine },
 		["@keyword.conditional.ternary"] = { fg = palette.pine },
+
 		["@keyword.directive"] = { fg = palette.iris },
 		["@keyword.directive.define"] = { fg = palette.iris },
 
