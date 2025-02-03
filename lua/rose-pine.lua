@@ -308,8 +308,8 @@ local function set_highlights()
 		["@type.builtin"] = { fg = palette.foam, bold = styles.bold },
 		-- ["@type.definition"] = {},
 
-		["@attribute"] = { fg = "iris" },
-		["@attribute.builtin"] = { fg = "iris", bold = styles.bold },
+		["@attribute"] = { fg = palette.iris },
+		["@attribute.builtin"] = { fg = palette.iris, bold = styles.bold },
 		["@property"] = { fg = palette.foam, italic = styles.italic },
 
 		["@function"] = { fg = palette.rose },
