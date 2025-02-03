@@ -274,8 +274,9 @@ local function set_highlights()
 		--- Treesitter
 		--- |:help treesitter-highlight-groups|
 		["@variable"] = { fg = palette.text, italic = styles.italic },
-		["@variable.builtin"] = { fg = palette.love, bold = styles.bold },
+		["@variable.builtin"] = { fg = palette.love, italic = styles.italic, bold = styles.bold },
 		["@variable.parameter"] = { fg = palette.iris, italic = styles.italic },
+		["@variable.parameter.builtin"] = { fg = palette.iris, italic = styles.italic, bold = styles.bold },
 		["@variable.member"] = { fg = palette.foam },
 
 		["@constant"] = { fg = palette.gold },
