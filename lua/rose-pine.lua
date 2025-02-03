@@ -351,10 +351,10 @@ local function set_highlights()
 
 		["@comment.error"] = { fg = groups.error },
 		["@comment.warning"] = { fg = groups.warn },
-		["@comment.todo"] = { fg = groups.todo, bg = groups.todo, blend = 20 },
-		["@comment.hint"] = { fg = groups.hint, bg = groups.hint, blend = 20 },
-		["@comment.info"] = { fg = groups.info, bg = groups.info, blend = 20 },
-		["@comment.note"] = { fg = groups.note, bg = groups.note, blend = 20 },
+		["@comment.todo"] = { fg = groups.todo, bg = groups.todo, blend = 15 },
+		["@comment.hint"] = { fg = groups.hint, bg = groups.hint, blend = 15 },
+		["@comment.info"] = { fg = groups.info, bg = groups.info, blend = 15 },
+		["@comment.note"] = { fg = groups.note, bg = groups.note, blend = 15 },
 
 		--- Markup
 		["@markup.strong"] = { bold = styles.bold },
