@@ -275,6 +275,7 @@ local function set_highlights()
 		["@variable"] = { fg = palette.text },
 		["@variable.builtin"] = { fg = palette.love, bold = styles.bold },
 		["@variable.parameter"] = { fg = palette.iris, italic = styles.italic },
+		["@variable.parameter.builtin"] = { fg = palette.iris, italic = styles.italic, bold = styles.bold },
 		["@variable.member"] = { fg = palette.foam },
 
 		["@constant"] = { fg = palette.gold },
@@ -285,7 +286,6 @@ local function set_highlights()
 		["@module.builtin"] = { fg = palette.text, bold = styles.bold },
 		["@label"] = { link = "Label" },
 
-		--- Literals
 		["@string"] = { link = "String" },
 		-- ["@string.documentation"] = {},
 		["@string.regexp"] = { fg = palette.iris },
@@ -303,27 +303,25 @@ local function set_highlights()
 		["@number.float"] = { link = "Number" },
 		["@float"] = { link = "Number" },
 
-		--- Types
 		["@type"] = { fg = palette.foam },
 		["@type.builtin"] = { fg = palette.foam, bold = styles.bold },
 		-- ["@type.definition"] = {},
-		-- ["@type.qualifier"] = {},
 
-		-- ["@attribute"] = {},
+		["@attribute"] = { fg = palette.iris },
+		["@attribute.builtin"] = { fg = palette.iris, bold = styles.bold },
 		["@property"] = { fg = palette.foam, italic = styles.italic },
 
-		--- Functions
 		["@function"] = { fg = palette.rose },
 		["@function.builtin"] = { fg = palette.rose, bold = styles.bold },
 		-- ["@function.call"] = {},
 		["@function.macro"] = { link = "Function" },
+
 		["@function.method"] = { fg = palette.rose },
 		["@function.method.call"] = { fg = palette.iris },
 
 		["@constructor"] = { fg = palette.foam },
 		["@operator"] = { link = "Operator" },
 
-		--- Keywords
 		["@keyword"] = { link = "Keyword" },
 		-- ["@keyword.coroutine"] = {},
 		-- ["@keyword.function"] = {},
@@ -334,8 +332,10 @@ local function set_highlights()
 		["@keyword.return"] = { fg = palette.pine },
 		["@keyword.debug"] = { fg = palette.rose },
 		["@keyword.exception"] = { fg = palette.pine },
+
 		["@keyword.conditional"] = { fg = palette.pine },
 		["@keyword.conditional.ternary"] = { fg = palette.pine },
+
 		["@keyword.directive"] = { fg = palette.iris },
 		["@keyword.directive.define"] = { fg = palette.iris },
 
@@ -350,10 +350,10 @@ local function set_highlights()
 
 		["@comment.error"] = { fg = groups.error },
 		["@comment.warning"] = { fg = groups.warn },
-		["@comment.todo"] = { fg = groups.todo, bg = groups.todo, blend = 20 },
-		["@comment.hint"] = { fg = groups.hint, bg = groups.hint, blend = 20 },
-		["@comment.info"] = { fg = groups.info, bg = groups.info, blend = 20 },
-		["@comment.note"] = { fg = groups.note, bg = groups.note, blend = 20 },
+		["@comment.todo"] = { fg = groups.todo, bg = groups.todo, blend = 15 },
+		["@comment.hint"] = { fg = groups.hint, bg = groups.hint, blend = 15 },
+		["@comment.info"] = { fg = groups.info, bg = groups.info, blend = 15 },
+		["@comment.note"] = { fg = groups.note, bg = groups.note, blend = 15 },
 
 		--- Markup
 		["@markup.strong"] = { bold = styles.bold },
@@ -451,9 +451,9 @@ local function set_highlights()
 		BufferVisibleTarget = { fg = palette.gold },
 
 		-- lewis6991/gitsigns.nvim
-		GitSignsAdd = { link = "SignAdd" },
-		GitSignsChange = { link = "SignChange" },
-		GitSignsDelete = { link = "SignDelete" },
+		GitSignsAdd = { fg = groups.git_add, bg = "NONE" },
+		GitSignsChange = { fg = groups.git_change, bg = "NONE" },
+		GitSignsDelete = { fg = groups.git_delete, bg = "NONE" },
 		SignAdd = { fg = groups.git_add, bg = "NONE" },
 		SignChange = { fg = groups.git_change, bg = "NONE" },
 		SignDelete = { fg = groups.git_delete, bg = "NONE" },
