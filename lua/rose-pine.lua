@@ -355,6 +355,8 @@ local function set_highlights()
 		["@comment.info"] = { fg = groups.info, bg = groups.info, blend = 15 },
 		["@comment.note"] = { fg = groups.note, bg = groups.note, blend = 15 },
 
+		["TodoBgTODO"] = { bg = palette.rose },
+
 		--- Markup
 		["@markup.strong"] = { bold = styles.bold },
 		["@markup.italic"] = { italic = styles.italic },
