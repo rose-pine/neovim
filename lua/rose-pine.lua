@@ -1022,6 +1022,11 @@ local function set_highlights()
 		SnacksIndentScope = { fg = palette.foam },
 
 		SnacksPickerMatch = { fg = palette.rose, bold = styles.bold },
+
+		-- justinmk/vim-sneak
+		Sneak = { fg = palette.base, bg = palette.love },
+		SneakCurrent = { link = "StatusLineTerm" },
+		SneakScope = { link = "IncSearch" },
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
