@@ -27,8 +27,8 @@ Install `rose-pine/neovim` using your favourite package manager:
 
 ```lua
 -- lua/plugins/rose-pine.lua
-return { 
-	"rose-pine/neovim", 
+return {
+	"rose-pine/neovim",
 	name = "rose-pine",
 	config = function()
 		vim.cmd("colorscheme rose-pine")
@@ -123,9 +123,13 @@ require("rose-pine").setup({
         -- },
     },
 
+	-- NOTE: Highlight groups are extended (merged) by default. Disable this
+	-- per group via `inherit = false`
     highlight_groups = {
         -- Comment = { fg = "foam" },
+        -- StatusLine = { fg = "love", bg = "love", blend = 15 },
         -- VertSplit = { fg = "muted", bg = "muted" },
+        -- Visual = { fg = "base", bg = "text", inherit = false },
     },
 
     before_highlight = function(group, highlight, palette)
