@@ -1,4 +1,10 @@
 local p = require("rose-pine.palette")
+local config = require("rose-pine.config")
+
+local bg_base = p.base
+if config.options.styles.transparency then
+	bg_base = "NONE"
+end
 
 return {
 	normal = {
@@ -19,8 +25,8 @@ return {
 		a = { bg = p.surface, fg = p.love, gui = "bold" },
 	},
 	inactive = {
-		a = { bg = p.base, fg = p.subtle, gui = "bold" },
-		b = { bg = p.base, fg = p.subtle },
-		c = { bg = p.base, fg = p.subtle, gui = "italic" },
+		a = { bg = bg_base, fg = p.subtle, gui = "bold" },
+		b = { bg = bg_base, fg = p.subtle },
+		c = { bg = bg_base, fg = p.subtle, gui = "italic" },
 	},
 }
