@@ -722,6 +722,7 @@ local function set_highlights()
 		DapUIThread = { fg = palette.gold },
 		DapUIValue = { fg = palette.text },
 		DapUIVariable = { fg = palette.text },
+		DapUIType = { fg = palette.iris },
 		DapUIWatchesEmpty = { fg = palette.love },
 		DapUIWatchesError = { link = "DapUIWatchesEmpty" },
 		DapUIWatchesValue = { link = "DapUIThread" },
