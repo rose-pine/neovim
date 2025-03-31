@@ -1182,6 +1182,12 @@ function M.colorscheme(variant)
 	end
 	vim.g.colors_name = "rose-pine"
 
+	if variant == "dawn" then
+		vim.o.background = "light"
+	elseif variant == "main" or variant == "moon" then
+		vim.o.background = "dark"
+	end
+
 	set_highlights()
 end
 
