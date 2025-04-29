@@ -19,7 +19,7 @@ local variants = {
 		iris = '#c4a7e7',
 		leaf = "#95b1ac",
 		highlight_low = '#2a283e',
-		highlight_med = '#44415a',
+		highlight_med = '#403d52',
 		highlight_high = '#56526e',
 		none = 'NONE',
 
