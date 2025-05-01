@@ -977,7 +977,6 @@ local function set_highlights()
 		AvanteReversedThirdTitle = { fg = palette.iris },
 
 		-- Saghen/blink.cmp
-		BlinkCmpDoc = { fg = palette.text },
 		BlinkCmpDocBorder = { fg = palette.highlight_high },
 		BlinkCmpGhostText = { fg = palette.muted },
 
