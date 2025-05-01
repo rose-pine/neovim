@@ -1,7 +1,7 @@
 local p = require("rose-pine.palette")
 local config = require("rose-pine.config")
 
-local bg_base = p.base
+local bg_base = p.surface
 if config.options.styles.transparency then
 	bg_base = "NONE"
 end
