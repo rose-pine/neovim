@@ -121,7 +121,7 @@ local function set_highlights()
 		PmenuSel = { fg = palette.text, bg = palette.overlay },
 		PmenuThumb = { bg = palette.muted },
 		Question = { fg = palette.gold },
-		-- QuickFixLink = {},
+		QuickFixLine = { fg = palette.foam },
 		-- RedrawDebugNormal = {},
 		RedrawDebugClear = { fg = palette.base, bg = palette.gold },
 		RedrawDebugComposed = { fg = palette.base, bg = palette.pine },
