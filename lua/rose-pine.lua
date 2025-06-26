@@ -462,6 +462,7 @@ local function set_highlights()
 		-- mvllow/modes.nvim
 		ModesCopy = { bg = palette.gold },
 		ModesDelete = { bg = palette.love },
+		ModesFormat = { bg = palette.rose },
 		ModesInsert = { bg = palette.foam },
 		ModesReplace = { bg = palette.pine },
 		ModesVisual = { bg = palette.iris },
