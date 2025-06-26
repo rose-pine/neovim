@@ -961,6 +961,8 @@ local function set_highlights()
 		GrugFarInputPlaceholder = { link = "Comment" },
 		GrugFarResultsActionMessage = { fg = palette.foam },
 		GrugFarResultsChangeIndicator = { fg = groups.git_change },
+		GrugFarResultsRemoveIndicator = { fg = groups.git_delete },
+		GrugFarResultsAddIndicator = { fg = groups.git_add },
 		GrugFarResultsHeader = { fg = palette.pine },
 		GrugFarResultsLineNo = { fg = palette.iris },
 		GrugFarResultsLineColumn = { link = "GrugFarResultsLineNo" },
