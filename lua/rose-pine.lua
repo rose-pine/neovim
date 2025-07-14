@@ -45,8 +45,8 @@ local function set_highlights()
 		["@symbol"] = { link = "Identifier" },
 		["@text"] = { fg = palette.text },
 		["@text.danger"] = { fg = groups.error },
-		["@text.diff.add"] = { fg = groups.git_add, bg = groups.git_add, opacity = 20 },
-		["@text.diff.delete"] = { fg = groups.git_delete, bg = groups.git_delete, opacity = 20 },
+		["@text.diff.add"] = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
+		["@text.diff.delete"] = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
 		["@text.emphasis"] = { italic = styles.italic },
 		["@text.environment"] = { link = "Macro" },
 		["@text.environment.name"] = { link = "Type" },
@@ -88,10 +88,10 @@ local function set_highlights()
 		CursorLineNr = { fg = palette.text, bold = styles.bold },
 		-- DarkenedPanel = { },
 		-- DarkenedStatusline = {},
-		DiffAdd = { bg = groups.git_add, opacity = 20 },
-		DiffChange = { bg = groups.git_change, opacity = 20 },
-		DiffDelete = { bg = groups.git_delete, opacity = 20 },
-		DiffText = { bg = groups.git_text, opacity = 40 },
+		DiffAdd = { bg = groups.git_add, blend = 20 },
+		DiffChange = { bg = groups.git_change, blend = 20 },
+		DiffDelete = { bg = groups.git_delete, blend = 20 },
+		DiffText = { bg = groups.git_text, blend = 40 },
 		diffAdded = { link = "DiffAdd" },
 		diffChanged = { link = "DiffChange" },
 		diffRemoved = { link = "DiffDelete" },
@@ -104,7 +104,7 @@ local function set_highlights()
 		Folded = { fg = palette.text, bg = groups.panel },
 		IncSearch = { link = "CurSearch" },
 		LineNr = { fg = palette.muted },
-		MatchParen = { fg = palette.pine, bg = palette.pine, opacity = 25 },
+		MatchParen = { fg = palette.pine, bg = palette.pine, blend = 25 },
 		ModeMsg = { fg = palette.subtle },
 		MoreMsg = { fg = palette.iris },
 		NonText = { fg = palette.muted },
@@ -126,7 +126,7 @@ local function set_highlights()
 		RedrawDebugClear = { fg = palette.base, bg = palette.gold },
 		RedrawDebugComposed = { fg = palette.base, bg = palette.pine },
 		RedrawDebugRecompose = { fg = palette.base, bg = palette.love },
-		Search = { fg = palette.text, bg = palette.gold, opacity = 20 },
+		Search = { fg = palette.text, bg = palette.gold, blend = 20 },
 		SignColumn = { fg = palette.text, bg = "NONE" },
 		SpecialKey = { fg = palette.foam },
 		SpellBad = { sp = palette.subtle, undercurl = true },
@@ -134,22 +134,22 @@ local function set_highlights()
 		SpellLocal = { sp = palette.subtle, undercurl = true },
 		SpellRare = { sp = palette.subtle, undercurl = true },
 		StatusLine = { fg = palette.subtle, bg = groups.panel },
-		StatusLineNC = { fg = palette.muted, bg = groups.panel, opacity = 60 },
+		StatusLineNC = { fg = palette.muted, bg = groups.panel, blend = 60 },
 		StatusLineTerm = { fg = palette.base, bg = palette.pine },
-		StatusLineTermNC = { fg = palette.base, bg = palette.pine, opacity = 60 },
+		StatusLineTermNC = { fg = palette.base, bg = palette.pine, blend = 60 },
 		Substitute = { link = "IncSearch" },
 		TabLine = { fg = palette.subtle, bg = groups.panel },
 		TabLineFill = { bg = groups.panel },
 		TabLineSel = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
 		Title = { fg = palette.foam, bold = styles.bold },
 		VertSplit = { fg = groups.border },
-		Visual = { bg = palette.iris, opacity = 15 },
+		Visual = { bg = palette.iris, blend = 15 },
 		-- VisualNOS = {},
 		WarningMsg = { fg = groups.warn, bold = styles.bold },
 		-- Whitespace = {},
 		WildMenu = { link = "IncSearch" },
 		WinBar = { fg = palette.subtle, bg = groups.panel },
-		WinBarNC = { fg = palette.muted, bg = groups.panel, opacity = 60 },
+		WinBarNC = { fg = palette.muted, bg = groups.panel, blend = 60 },
 		WinSeparator = { fg = groups.border },
 
 		DiagnosticError = { fg = groups.error },
@@ -177,11 +177,11 @@ local function set_highlights()
 		DiagnosticUnderlineInfo = { sp = groups.info, undercurl = true },
 		DiagnosticUnderlineOk = { sp = groups.ok, undercurl = true },
 		DiagnosticUnderlineWarn = { sp = groups.warn, undercurl = true },
-		DiagnosticVirtualTextError = { fg = groups.error, bg = groups.error, opacity = 10 },
-		DiagnosticVirtualTextHint = { fg = groups.hint, bg = groups.hint, opacity = 10 },
-		DiagnosticVirtualTextInfo = { fg = groups.info, bg = groups.info, opacity = 10 },
-		DiagnosticVirtualTextOk = { fg = groups.ok, bg = groups.ok, opacity = 10 },
-		DiagnosticVirtualTextWarn = { fg = groups.warn, bg = groups.warn, opacity = 10 },
+		DiagnosticVirtualTextError = { fg = groups.error, bg = groups.error, blend = 10 },
+		DiagnosticVirtualTextHint = { fg = groups.hint, bg = groups.hint, blend = 10 },
+		DiagnosticVirtualTextInfo = { fg = groups.info, bg = groups.info, blend = 10 },
+		DiagnosticVirtualTextOk = { fg = groups.ok, bg = groups.ok, blend = 10 },
+		DiagnosticVirtualTextWarn = { fg = groups.warn, bg = groups.warn, blend = 10 },
 
 		Boolean = { fg = palette.rose },
 		Character = { fg = palette.gold },
@@ -201,7 +201,7 @@ local function set_highlights()
 		Label = { fg = palette.foam },
 		LspCodeLens = { fg = palette.subtle },
 		LspCodeLensSeparator = { fg = palette.muted },
-		LspInlayHint = { fg = palette.muted, bg = palette.muted, opacity = 10 },
+		LspInlayHint = { fg = palette.muted, bg = palette.muted, blend = 10 },
 		LspReferenceRead = { bg = palette.highlight_med },
 		LspReferenceText = { bg = palette.highlight_med },
 		LspReferenceWrite = { bg = palette.highlight_med },
@@ -219,7 +219,7 @@ local function set_highlights()
 		String = { fg = palette.gold },
 		Structure = { fg = palette.foam },
 		Tag = { fg = palette.foam },
-		Todo = { fg = palette.rose, bg = palette.rose, opacity = 20 },
+		Todo = { fg = palette.rose, bg = palette.rose, blend = 20 },
 		Type = { fg = palette.foam },
 		TypeDef = { link = "Type" },
 		Underlined = { fg = palette.iris, underline = true },
@@ -351,10 +351,10 @@ local function set_highlights()
 
 		["@comment.error"] = { fg = groups.error },
 		["@comment.warning"] = { fg = groups.warn },
-		["@comment.todo"] = { fg = groups.todo, bg = groups.todo, opacity = 15 },
-		["@comment.hint"] = { fg = groups.hint, bg = groups.hint, opacity = 15 },
-		["@comment.info"] = { fg = groups.info, bg = groups.info, opacity = 15 },
-		["@comment.note"] = { fg = groups.note, bg = groups.note, opacity = 15 },
+		["@comment.todo"] = { fg = groups.todo, bg = groups.todo, blend = 15 },
+		["@comment.hint"] = { fg = groups.hint, bg = groups.hint, blend = 15 },
+		["@comment.info"] = { fg = groups.info, bg = groups.info, blend = 15 },
+		["@comment.note"] = { fg = groups.note, bg = groups.note, blend = 15 },
 
 		--- Markup
 		["@markup.strong"] = { bold = styles.bold },
@@ -379,7 +379,7 @@ local function set_highlights()
 		["@markup.raw.delimiter.markdown"] = { fg = palette.subtle },
 
 		["@markup.list"] = { fg = palette.pine },
-		["@markup.list.checked"] = { fg = palette.foam, bg = palette.foam, opacity = 10 },
+		["@markup.list.checked"] = { fg = palette.foam, bg = palette.foam, blend = 10 },
 		["@markup.list.unchecked"] = { fg = palette.text },
 
 		-- Markdown headings
@@ -396,9 +396,9 @@ local function set_highlights()
 		["@markup.heading.5.marker.markdown"] = { link = "markdownH5Delimiter" },
 		["@markup.heading.6.marker.markdown"] = { link = "markdownH6Delimiter" },
 
-		["@diff.plus"] = { fg = groups.git_add, bg = groups.git_add, opacity = 20 },
-		["@diff.minus"] = { fg = groups.git_delete, bg = groups.git_delete, opacity = 20 },
-		["@diff.delta"] = { bg = groups.git_change, opacity = 20 },
+		["@diff.plus"] = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
+		["@diff.minus"] = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
+		["@diff.delta"] = { bg = groups.git_change, blend = 20 },
 
 		["@tag"] = { link = "Tag" },
 		["@tag.attribute"] = { fg = palette.iris },
@@ -645,8 +645,8 @@ local function set_highlights()
 		LspSignatureActiveParameter = { bg = palette.overlay },
 
 		-- rlane/pounce.nvim
-		PounceAccept = { fg = palette.love, bg = palette.love, opacity = 20 },
-		PounceAcceptBest = { fg = palette.gold, bg = palette.gold, opacity = 20 },
+		PounceAccept = { fg = palette.love, bg = palette.love, blend = 20 },
+		PounceAcceptBest = { fg = palette.gold, bg = palette.gold, blend = 20 },
 		PounceGap = { link = "Search" },
 		PounceMatch = { link = "Search" },
 
@@ -657,9 +657,9 @@ local function set_highlights()
 
 		-- phaazon/hop.nvim
 		-- smoka7/hop.nvim
-		HopNextKey = { fg = palette.love, bg = palette.love, opacity = 20 },
-		HopNextKey1 = { fg = palette.foam, bg = palette.foam, opacity = 20 },
-		HopNextKey2 = { fg = palette.pine, bg = palette.pine, opacity = 20 },
+		HopNextKey = { fg = palette.love, bg = palette.love, blend = 20 },
+		HopNextKey1 = { fg = palette.foam, bg = palette.foam, blend = 20 },
+		HopNextKey2 = { fg = palette.pine, bg = palette.pine, blend = 20 },
 		HopUnmatched = { fg = palette.muted },
 
 		-- nvim-telescope/telescope.nvim
@@ -801,10 +801,10 @@ local function set_highlights()
 		MiniDepsTitleSame = { link = "DiffText" },
 		MiniDepsTitleUpdate = { link = "DiffAdd" },
 
-		MiniDiffOverAdd = { fg = groups.git_add, bg = groups.git_add, opacity = 20 },
-		MiniDiffOverChange = { fg = groups.git_change, bg = groups.git_change, opacity = 20 },
+		MiniDiffOverAdd = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
+		MiniDiffOverChange = { fg = groups.git_change, bg = groups.git_change, blend = 20 },
 		MiniDiffOverContext = { bg = palette.surface },
-		MiniDiffOverDelete = { fg = groups.git_delete, bg = groups.git_delete, opacity = 20 },
+		MiniDiffOverDelete = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
 		MiniDiffSignAdd = { fg = groups.git_add },
 		MiniDiffSignChange = { fg = groups.git_change },
 		MiniDiffSignDelete = { fg = groups.git_delete },
@@ -939,12 +939,12 @@ local function set_highlights()
 		RenderMarkdownCode = { bg = palette.overlay },
 		RenderMarkdownCodeInline = { fg = palette.text, bg = palette.overlay },
 		RenderMarkdownDash = { fg = palette.muted },
-		RenderMarkdownH1Bg = { bg = groups.h1, opacity = 20 },
-		RenderMarkdownH2Bg = { bg = groups.h2, opacity = 20 },
-		RenderMarkdownH3Bg = { bg = groups.h3, opacity = 20 },
-		RenderMarkdownH4Bg = { bg = groups.h4, opacity = 20 },
-		RenderMarkdownH5Bg = { bg = groups.h5, opacity = 20 },
-		RenderMarkdownH6Bg = { bg = groups.h6, opacity = 20 },
+		RenderMarkdownH1Bg = { bg = groups.h1, blend = 20 },
+		RenderMarkdownH2Bg = { bg = groups.h2, blend = 20 },
+		RenderMarkdownH3Bg = { bg = groups.h3, blend = 20 },
+		RenderMarkdownH4Bg = { bg = groups.h4, blend = 20 },
+		RenderMarkdownH5Bg = { bg = groups.h5, blend = 20 },
+		RenderMarkdownH6Bg = { bg = groups.h6, blend = 20 },
 		RenderMarkdownQuote = { fg = palette.subtle },
 		RenderMarkdownTableFill = { link = "Conceal" },
 		RenderMarkdownTableHead = { fg = palette.subtle },
@@ -1133,11 +1133,10 @@ local function set_highlights()
 			config.options.before_highlight(group, highlight, palette)
 		end
 
-		if highlight.opacity ~= nil and (highlight.opacity >= 0 and highlight.opacity <= 100) and highlight.bg ~= nil then
-			highlight.bg = utilities.blend(highlight.bg, highlight.blend_on or palette.base, highlight.opacity / 100)
+		if highlight.blend ~= nil and (highlight.blend >= 0 and highlight.blend <= 100) and highlight.bg ~= nil then
+			highlight.bg = utilities.blend(highlight.bg, highlight.blend_on or palette.base, highlight.blend / 100)
 		end
 
-		highlight.opacity = nil
 		highlight.blend_on = nil
 
 		vim.api.nvim_set_hl(0, group, highlight)
