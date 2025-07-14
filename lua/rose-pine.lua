@@ -1137,7 +1137,12 @@ local function set_highlights()
 			highlight.bg = utilities.blend(highlight.bg, highlight.blend_on or palette.base, highlight.blend / 100)
 		end
 
+		highlight.blend = nil
 		highlight.blend_on = nil
+
+		if highlight._nvim_blend ~= nil then
+			highlight.blend = highlight._nvim_blend
+		end
 
 		vim.api.nvim_set_hl(0, group, highlight)
 	end
