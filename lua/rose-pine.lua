@@ -1140,6 +1140,10 @@ local function set_highlights()
 		highlight.blend = nil
 		highlight.blend_on = nil
 
+		if highlight._nvim_blend ~= nil then
+			highlight.blend = highlight._nvim_blend
+		end
+
 		vim.api.nvim_set_hl(0, group, highlight)
 	end
 
