@@ -978,8 +978,8 @@ local function set_highlights()
 		AvanteReversedSubtitle = { fg = palette.foam },
 		AvanteThirdTitle = { fg = palette.highlight_med, bg = palette.iris },
 		AvanteReversedThirdTitle = { fg = palette.iris },
-		AvantePromptInput = { bg = groups.panel, fg = palette.text },
-		AvantePromptInputBorder = groups.border,
+		AvantePromptInput = { fg = palette.text, bg = groups.panel },
+		AvantePromptInputBorder = { fg = groups.border },
 
 		-- Saghen/blink.cmp
 		BlinkCmpDoc = { bg = palette.highlight_low },
