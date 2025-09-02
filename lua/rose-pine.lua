@@ -85,7 +85,8 @@ local function set_highlights()
 		CursorColumn = { bg = palette.overlay },
 		-- CursorIM = {},
 		CursorLine = { bg = palette.overlay },
-		CursorLineNr = { fg = palette.text, bold = styles.bold },
+		CursorLineNr = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
+		CursorLineSign = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
 		-- DarkenedPanel = { },
 		-- DarkenedStatusline = {},
 		DiffAdd = { bg = groups.git_add, blend = 20 },
@@ -127,7 +128,7 @@ local function set_highlights()
 		RedrawDebugComposed = { fg = palette.base, bg = palette.pine },
 		RedrawDebugRecompose = { fg = palette.base, bg = palette.love },
 		Search = { fg = palette.text, bg = palette.gold, blend = 20 },
-		SignColumn = { fg = palette.text, bg = "NONE" },
+		SignColumn = { fg = palette.text },
 		SpecialKey = { fg = palette.foam },
 		SpellBad = { sp = palette.subtle, undercurl = true },
 		SpellCap = { sp = palette.subtle, undercurl = true },
@@ -452,12 +453,12 @@ local function set_highlights()
 		BufferVisibleTarget = { fg = palette.gold },
 
 		-- lewis6991/gitsigns.nvim
-		GitSignsAdd = { fg = groups.git_add, bg = "NONE" },
-		GitSignsChange = { fg = groups.git_change, bg = "NONE" },
-		GitSignsDelete = { fg = groups.git_delete, bg = "NONE" },
-		SignAdd = { fg = groups.git_add, bg = "NONE" },
-		SignChange = { fg = groups.git_change, bg = "NONE" },
-		SignDelete = { fg = groups.git_delete, bg = "NONE" },
+		GitSignsAdd = { fg = groups.git_add},
+		GitSignsChange = { fg = groups.git_change},
+		GitSignsDelete = { fg = groups.git_delete},
+		SignAdd = { fg = groups.git_add},
+		SignChange = { fg = groups.git_change},
+		SignDelete = { fg = groups.git_delete},
 
 		-- mvllow/modes.nvim
 		ModesCopy = { bg = palette.gold },
