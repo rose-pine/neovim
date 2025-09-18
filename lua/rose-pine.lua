@@ -86,7 +86,7 @@ local function set_highlights()
 		-- CursorIM = {},
 		CursorLine = { bg = palette.overlay },
 		CursorLineNr = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
-		CursorLineSign = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
+		CursorLineSign = { fg = palette.text, bold = styles.bold },
 		-- DarkenedPanel = { },
 		-- DarkenedStatusline = {},
 		DiffAdd = { bg = groups.git_add, blend = 20 },
