@@ -1082,6 +1082,7 @@ local function set_highlights()
 		Normal = { fg = palette.text, bg = "NONE" },
 		NormalNC = { fg = palette.text, bg = config.options.dim_inactive_windows and palette._nc or "NONE" },
 		Pmenu = { fg = palette.subtle, bg = "NONE" },
+		PmenuExtra = { fg = palette.text, bg = "NONE" },
 		PmenuKind = { fg = palette.foam, bg = "NONE" },
 		SignColumn = { fg = palette.text, bg = "NONE" },
 		StatusLine = { fg = palette.subtle, bg = "NONE" },
